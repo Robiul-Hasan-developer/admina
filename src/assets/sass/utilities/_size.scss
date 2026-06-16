@@ -5,6 +5,10 @@
   }
 }
 
+.text-40-px {
+  font-size: clamp(1.5rem, 1.02rem + 2.4vw, 2.5rem) !important; // 40px > 24px;
+}
+
 .py-res-120 {
   padding: clamp(3.75rem, -0.8142rem + 9.5087vw, 7.5rem) 0;
 }

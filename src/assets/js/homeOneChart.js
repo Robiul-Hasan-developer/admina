@@ -1,4 +1,3 @@
-// ========================== Home One chart js start ======================================
 // ================================ Total Revenue - Bar chart with one highlighted bar ================================
 var barChartOptions = {
   series: [
@@ -141,35 +140,7 @@ var columnChart = new ApexCharts(
   columnChartOptions,
 );
 columnChart.render();
-
-// Update all charts to use the new primary color
-function updateChartColors(newColor) {
-  barChart.updateOptions({
-    colors: [trackColor, trackColor, trackColor, trackColor, newColor, trackColor],
-  });
-
-  lineChart.updateOptions({
-    colors: [newColor],
-  });
-
-  radialChart.updateOptions({
-    fill: { colors: [newColor] },
-    plotOptions: {
-      radialBar: {
-        dataLabels: {
-          value: { color: newColor },
-        },
-      },
-    },
-  });
-
-  columnChart.updateOptions({
-    colors: [newColor],
-  });
-}
-
 // ========================== Home One chart js end ======================================
-
 
 
 // ================================ Delivery Status - Stacked Bar (Horizontal Progress) ================================
@@ -182,7 +153,7 @@ var deliveryBarChart = new ApexCharts(document.querySelector("#deliveryBarChart"
   ],
   chart: {
     type: 'bar',
-    height: 50,
+    height: 70,
     stacked: true,
     stackType: '100%',
     sparkline: { enabled: true }
@@ -190,8 +161,8 @@ var deliveryBarChart = new ApexCharts(document.querySelector("#deliveryBarChart"
   plotOptions: {
     bar: {
       horizontal: true,
-      barHeight: '40%',
-      borderRadius: 0,
+      barHeight: '16px',
+      borderRadius: 4,
       borderRadiusWhenStacked: 'all',
       borderRadiusApplication: 'around'
     }
@@ -201,10 +172,12 @@ var deliveryBarChart = new ApexCharts(document.querySelector("#deliveryBarChart"
     enabled: true,
     formatter: function (val) { return Math.round(val) + '%'; },
     style: {
-      fontSize: '16px',
+      fontSize: '18px',
       fontWeight: 500,
       colors: ['#434956']
-    }
+    },
+    offsetY: -28,   // ✅ moves labels above the bar
+    distributed: false
   },
   xaxis: { labels: { show: false } },
   yaxis: { labels: { show: false } },
@@ -215,7 +188,7 @@ var deliveryBarChart = new ApexCharts(document.querySelector("#deliveryBarChart"
 deliveryBarChart.render();
 
 // ================================ Returning Clients - Area Chart ================================
-var returningClientsChart = new ApexCharts(document.querySelector("#returningClientsChart"), {
+var returningClientsChartOptions = {
   series: [{
     name: 'Retention',
     data: [60, 75, 55, 80, 65, 85, 70, 90, 75, 85]
@@ -242,8 +215,103 @@ var returningClientsChart = new ApexCharts(document.querySelector("#returningCli
       stops: [0, 100]
     }
   },
-  colors: ['#7c3aed'],
+  colors: [primaryColor],
   dataLabels: { enabled: false },
-  tooltip:     { enabled: false }
-});
+  tooltip: { enabled: false }
+};
+var returningClientsChart = new ApexCharts(
+  document.querySelector("#returningClientsChart"),
+  returningClientsChartOptions,
+);
 returningClientsChart.render();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Update all charts primary color ✅ ONE merged function — replaces BOTH previous updateChartColors definitions
+function updateChartColors(newColor) {
+  barChart.updateOptions({
+    colors: [trackColor, trackColor, trackColor, trackColor, newColor, trackColor],
+  });
+
+  lineChart.updateOptions({
+    colors: [newColor],
+  });
+
+  radialChart.updateOptions({
+    fill: { colors: [newColor] },
+    plotOptions: {
+      radialBar: {
+        dataLabels: {
+          value: { color: newColor },
+        },
+      },
+    },
+  });
+
+  columnChart.updateOptions({
+    colors: [newColor],
+  });
+
+  returningClientsChart.updateOptions({
+    colors: [newColor],
+  });
+}
+
+
+// =========================== Color Schema js Start ================================
+const colorPickerButtons = document.querySelectorAll(".color-picker-btn");
+const colors = {
+  blue: "#2563eb",
+  red: "#dc2626",
+  green: "#16a34a",
+  yellow: "#ff9f29",
+  cyan: "#00b8f2",
+  violet: "#7c3aed",
+};
+
+function applyColor(color) {
+  const newColor = colors[color];
+  document.documentElement.style.setProperty("--primary-600", newColor);
+  localStorage.setItem("templateColor", color);
+
+  // Update charts instantly with the new color
+  updateChartColors(newColor);
+}
+
+colorPickerButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const color = btn.getAttribute("data-color");
+    if (!color) return;
+    applyColor(color);
+    colorPickerButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
+});
+
+// Load saved color on refresh
+const savedColor = localStorage.getItem("templateColor");
+if (savedColor && colors[savedColor]) {
+  applyColor(savedColor);
+  document
+    .querySelector(`.color-picker-btn[data-color="${savedColor}"]`)
+    .classList.add("active");
+} else {
+  document
+    .querySelector(`.color-picker-btn[data-color="blue"]`)
+    .classList.add("active");
+}
+// =========================== Color Schema js End ================================
