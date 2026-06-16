@@ -18,7 +18,14 @@ var barChartOptions = {
       distributed: true,
     },
   },
-  colors: [trackColor, trackColor, trackColor, trackColor, primaryColor, trackColor],
+  colors: [
+    trackColor,
+    trackColor,
+    trackColor,
+    trackColor,
+    primaryColor,
+    trackColor,
+  ],
   dataLabels: { enabled: false },
   tooltip: { enabled: false },
 };
@@ -142,82 +149,88 @@ var columnChart = new ApexCharts(
 columnChart.render();
 // ========================== Home One chart js end ======================================
 
-
 // ================================ Delivery Status - Stacked Bar (Horizontal Progress) ================================
-var deliveryBarChart = new ApexCharts(document.querySelector("#deliveryBarChart"), {
-  series: [
-    { name: 'On-Time Delivery', data: [25] },
-    { name: 'Delivered',        data: [45] },
-    { name: 'In Transit',       data: [15] },
-    { name: 'Delayed',          data: [15] }
-  ],
-  chart: {
-    type: 'bar',
-    height: 70,
-    stacked: true,
-    stackType: '100%',
-    sparkline: { enabled: true }
-  },
-  plotOptions: {
-    bar: {
-      horizontal: true,
-      barHeight: '16px',
-      borderRadius: 4,
-      borderRadiusWhenStacked: 'all',
-      borderRadiusApplication: 'around'
-    }
-  },
-  colors: ['#00B8D9', '#22C55E', '#FDC70F', '#F6776E'],
-  dataLabels: {
-    enabled: true,
-    formatter: function (val) { return Math.round(val) + '%'; },
-    style: {
-      fontSize: '18px',
-      fontWeight: 500,
-      colors: ['#434956']
+var deliveryBarChart = new ApexCharts(
+  document.querySelector("#deliveryBarChart"),
+  {
+    series: [
+      { name: "On-Time Delivery", data: [25] },
+      { name: "Delivered", data: [45] },
+      { name: "In Transit", data: [15] },
+      { name: "Delayed", data: [15] },
+    ],
+    chart: {
+      type: "bar",
+      height: 70,
+      stacked: true,
+      stackType: "100%",
+      sparkline: { enabled: true },
     },
-    offsetY: -28,   // ✅ moves labels above the bar
-    distributed: false
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        barHeight: "16px",
+        borderRadius: 4,
+        borderRadiusWhenStacked: "all",
+        borderRadiusApplication: "around",
+      },
+    },
+    colors: ["#00B8D9", "#22C55E", "#FDC70F", "#F6776E"],
+    dataLabels: {
+      enabled: true,
+      formatter: function (val) {
+        return Math.round(val) + "%";
+      },
+      style: {
+        fontSize: "18px",
+        fontWeight: 500,
+        colors: ["#434956"],
+      },
+      offsetY: -28, // ✅ moves labels above the bar
+      distributed: false,
+    },
+    xaxis: { labels: { show: false } },
+    yaxis: { labels: { show: false } },
+    grid: { show: false },
+    legend: { show: false },
+    tooltip: { enabled: false },
   },
-  xaxis: { labels: { show: false } },
-  yaxis: { labels: { show: false } },
-  grid:  { show: false },
-  legend: { show: false },
-  tooltip: { enabled: false }
-});
+);
 deliveryBarChart.render();
 
 // ================================ Returning Clients - Area Chart ================================
 var returningClientsChartOptions = {
-  series: [{
-    name: 'Retention',
-    data: [60, 75, 55, 80, 65, 85, 70, 90, 75, 85]
-  }],
+  series: [
+    {
+      name: "Retention",
+      data: [60, 75, 55, 80, 65, 85, 70, 90, 75, 85],
+    },
+  ],
   chart: {
-    type: 'area',
+    type: "area",
     height: 180,
     sparkline: { enabled: true },
-    toolbar: { show: false }
+    toolbar: { show: false },
   },
   stroke: {
-    curve: 'smooth',
-    width: 2
+    curve: "smooth",
+    width: 2,
   },
   fill: {
-    type: 'gradient',
+    type: "gradient",
     gradient: {
-      shade: 'light',
-      type: 'vertical',
+      shade: "light",
+      type: "vertical",
       shadeIntensity: 0.4,
-      gradientToColors: ['#ffffff'],
+      gradientToColors: ["#ffffff"],
       opacityFrom: 0.6,
       opacityTo: 0.05,
-      stops: [0, 100]
-    }
+      stops: [0, 100],
+    },
   },
   colors: [primaryColor],
   dataLabels: { enabled: false },
-  tooltip: { enabled: false }
+  tooltip: { enabled: false },
 };
 var returningClientsChart = new ApexCharts(
   document.querySelector("#returningClientsChart"),
@@ -225,26 +238,159 @@ var returningClientsChart = new ApexCharts(
 );
 returningClientsChart.render();
 
+// ================================ Sales Overview - Dual Line Chart ================================
+var salesOverviewChart = new ApexCharts(
+  document.querySelector("#salesOverviewChart"),
+  {
+    series: [
+      {
+        name: "This Year",
+        data: [75, 60, 55, 70, 65, 60, 55, 65, 60, 55, 60, 55],
+      },
+      {
+        name: "Last Year",
+        data: [38, 55, 25, 60, 40, 55, 35, 50, 42, 55, 38, 78],
+      },
+    ],
+    chart: { type: "line", height: 160, toolbar: { show: false } },
+    stroke: { curve: "smooth", width: [2, 2], dashArray: [0, 5] },
+    colors: [primaryColor, "#eab308"],
+    xaxis: {
+      categories: ["02 Jan", "04 Jan", "06 Jan", "08 Jan", "10 Jan", "12 Jan"],
+      tickAmount: 5,
+      labels: { style: { fontSize: "10px", colors: "#9ca3af" } },
+      axisBorder: { show: false },
+      axisTicks: { show: false },
+    },
+    yaxis: {
+      labels: { style: { fontSize: "10px", colors: "#9ca3af" } },
+      min: 0,
+      max: 100,
+      tickAmount: 4,
+    },
+    grid: { borderColor: "#f3f4f6", strokeDashArray: 3 },
+    legend: { show: false },
+    markers: {
+      size: 4,
+      strokeWidth: 2,
+      strokeColors: ["#fff", "#fff"],
+      fillColors: [primaryColor, "#eab308"],
+    },
+    annotations: {
+      xaxis: [
+        {
+          x: "06 Jan",
+          borderColor: "#00b8f2",
+          strokeDashArray: 4,
+          borderWidth: 1.5,
+        },
+      ],
+    },
+    tooltip: { shared: true },
+  },
+);
+salesOverviewChart.render();
 
+// ================================ Order Summary - Donut Chart ================================
+var orderSummaryChart = new ApexCharts(
+  document.querySelector("#orderSummaryChart"),
+  {
+    series: [45, 30, 25],
+    chart: { type: "donut", height: 260 },
+    colors: [primaryColor, "#00b8f2", "#f87171"],
+    labels: ["Completed", "New Order", "Pending"],
+    plotOptions: {
+      pie: {
+        donut: {
+          size: "65%",
+          labels: {
+            show: true,
+            total: {
+              show: true,
+              label: "Total Orders",
+              fontSize: "12px",
+              color: "#9ca3af",
+              formatter: () => "4.5K",
+            },
+            value: { show: false },
+          },
+        },
+      },
+    },
+    dataLabels: {
+      enabled: true,
+      formatter: (val) => Math.round(val) + "%",
+      style: { fontSize: "12px", fontWeight: 500, colors: ["#fff"] },
+      dropShadow: { enabled: false },
+    },
+    legend: { show: false },
+    stroke: { width: 2 },
+  },
+);
+orderSummaryChart.render();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ================================ Revenue by Category - Half Donut ================================
+var revenueByCategoryChart = new ApexCharts(
+  document.querySelector("#revenueByCategoryChart"),
+  {
+    series: [30, 20, 15, 12, 13, 10],
+    chart: { type: "donut", height: 300 },
+    colors: [
+      primaryColor,
+      "#f87171",
+      "#00b8f2",
+      "#a855f7",
+      "#22c55e",
+      "#eab308",
+    ],
+    labels: [
+      "Fashion",
+      "Beauty",
+      "Medical",
+      "Sports",
+      "Electronics",
+      "Furniture",
+    ],
+    plotOptions: {
+      pie: {
+        startAngle: -90,
+        endAngle: 90,
+        offsetY: 60,
+        donut: {
+          size: "65%",
+          labels: {
+            show: false,
+            total: {
+              show: true,
+              label: "Total Products",
+              fontSize: "12px",
+              color: "#9ca3af",
+              formatter: () => "25.59K",
+            },
+            value: { show: false },
+          },
+        },
+      },
+    },
+    dataLabels: { enabled: false },
+    legend: { show: false },
+    stroke: { width: 2 },
+    grid: { padding: { bottom: -80 } },
+  },
+);
+revenueByCategoryChart.render();
 
 // Update all charts primary color ✅ ONE merged function — replaces BOTH previous updateChartColors definitions
 function updateChartColors(newColor) {
   barChart.updateOptions({
-    colors: [trackColor, trackColor, trackColor, trackColor, newColor, trackColor],
+    colors: [
+      trackColor,
+      trackColor,
+      trackColor,
+      trackColor,
+      newColor,
+      trackColor,
+    ],
   });
 
   lineChart.updateOptions({
@@ -269,8 +415,16 @@ function updateChartColors(newColor) {
   returningClientsChart.updateOptions({
     colors: [newColor],
   });
-}
 
+  salesOverviewChart.updateOptions({
+    colors: [newColor, "#eab308"],
+    markers: { fillColors: [newColor, "#eab308"] },
+  });
+  orderSummaryChart.updateOptions({ colors: [newColor, "#00b8f2", "#f87171"] });
+  revenueByCategoryChart.updateOptions({
+    colors: [newColor, "#f87171", "#00b8f2", "#a855f7", "#22c55e", "#eab308"],
+  });
+}
 
 // =========================== Color Schema js Start ================================
 const colorPickerButtons = document.querySelectorAll(".color-picker-btn");

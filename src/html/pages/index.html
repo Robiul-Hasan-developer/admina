@@ -285,14 +285,13 @@
           </div>
         </div>
       </div>
-
       <!-- Delivery Status Card -->
       <div class="col-xl-3">
         <div class="bg-base p-24 radius-20">
-          <div
-            class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20">
+          <div class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20">
             <div class="d-flex align-items-center gap-12">
-              <div class="w-48-px h-48-px bg-primary-50 border border-primary-100 rounded-circle d-flex align-items-center justify-content-center">
+              <div
+                class="w-48-px h-48-px bg-primary-50 border border-primary-100 rounded-circle d-flex align-items-center justify-content-center">
                 <iconify-icon icon="solar:box-outline" class="icon text-primary-600 text-2xl"></iconify-icon>
               </div>
               <div>
@@ -339,32 +338,32 @@
           </div>
 
           <!-- Legend List -->
-          <ul class="mt-20 d-flex flex-column gap-0">
+          <ul class="d-flex flex-column gap-0">
             <li
               class="d-flex align-items-center justify-content-between py-13 border-bottom border-top border-neutral-200">
               <div class="d-flex align-items-center gap-8">
-                <span class="w-8-px h-8-px bg-cyan rounded-circle"></span>
+                <span class="flex-shrink-0 w-6-px h-6-px bg-cyan rounded-circle"></span>
                 <span class="text-secondary-light text-sm fw-normal">On-Time Delivery</span>
               </div>
               <span class="text-primary-light fw-semibold text-sm">1253</span>
             </li>
             <li class="d-flex align-items-center justify-content-between py-13 border-bottom border-neutral-200">
               <div class="d-flex align-items-center gap-8">
-                <span class="w-8-px h-8-px bg-success-600 rounded-circle"></span>
+                <span class="flex-shrink-0 w-6-px h-6-px bg-success-600 rounded-circle"></span>
                 <span class="text-secondary-light text-sm fw-normal">Delivered</span>
               </div>
               <span class="text-primary-light fw-semibold text-sm">859</span>
             </li>
             <li class="d-flex align-items-center justify-content-between py-13 border-bottom border-neutral-200">
               <div class="d-flex align-items-center gap-8">
-                <span class="w-8-px h-8-px bg-warning-600 rounded-circle"></span>
+                <span class="flex-shrink-0 w-6-px h-6-px bg-warning-600 rounded-circle"></span>
                 <span class="text-secondary-light text-sm fw-normal">In Transit</span>
               </div>
               <span class="text-primary-light fw-semibold text-sm">320</span>
             </li>
             <li class="d-flex align-items-center justify-content-between py-13">
               <div class="d-flex align-items-center gap-8">
-                <span class="w-8-px h-8-px bg-danger-600 rounded-circle"></span>
+                <span class="flex-shrink-0 w-6-px h-6-px bg-danger-600 rounded-circle"></span>
                 <span class="text-secondary-light text-sm fw-normal">Delayed</span>
               </div>
               <span class="text-primary-light fw-semibold text-sm">320</span>
@@ -376,10 +375,10 @@
       <!-- Returning Clients Card -->
       <div class="col-xl-3">
         <div class="bg-base p-24 radius-20">
-          <div
-            class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20">
+          <div class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20">
             <div class="d-flex align-items-center gap-12">
-              <div class="w-48-px h-48-px bg-danger-50 border border-danger-100 rounded-circle d-flex align-items-center justify-content-center">
+              <div
+                class="w-48-px h-48-px bg-danger-50 border border-danger-100 rounded-circle d-flex align-items-center justify-content-center">
                 <iconify-icon icon="solar:users-group-rounded-outline"
                   class="icon text-danger-600 text-2xl"></iconify-icon>
               </div>
@@ -438,8 +437,160 @@
         </div>
       </div>
 
-    </div>
+      <!-- Card 1: Sales Overview -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20">
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-success-50 border border-success-200 rounded-circle d-flex align-items-center justify-content-center">
+                <span class="icon text-success-600 text-2xl">
+                  <i class="ph ph-tag"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0">Sales Overview</h6>
+                <span class="text-secondary-light text-sm fw-normal">Manage customer info and order updates while
+                  keeping sales records.</span>
+              </div>
+            </div>
+            <div class="">
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Yearly</option>
+                <option>Monthly</option>
+                <option>Weekly</option>
+                <option>Today</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex gap-16">
+            <div class="d-flex flex-column gap-12">
+              <div class="bg-primary-50 radius-12 p-12">
+                <h5 class="fw-bold text-primary-600 mb-0">5,458</h5>
+                <span class="text-primary-600 text-sm">Sales Amount</span>
+              </div>
+              <div class="bg-warning-50 radius-12 p-12">
+                <h5 class="fw-bold text-warning-600 mb-0">1,254</h5>
+                <span class="text-warning-600 text-sm">Active Orders</span>
+              </div>
+            </div>
+            <div class="flex-grow-1">
+              <div id="salesOverviewChart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Card 2: Order Summary -->
+      <div class="col-xl-3">
+        <div class="bg-base p-24 radius-20">
+          <div class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-cyan-50 border border-cyan-100 rounded-circle d-flex align-items-center justify-content-center">
+                <iconify-icon icon="solar:bag-outline" class="icon text-cyan text-2xl"></iconify-icon>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0">Order Summary</h6>
+                <span class="text-secondary-light text-sm fw-normal">Orders overview snapshot</span>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+              </button>
+              <ul class="dropdown-menu p-12 border bg-base shadow">
+                <li><button
+                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">View</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="orderSummaryChart"></div>
+          <ul class="d-flex align-items-center justify-content-center gap-16 mt-12 flex-wrap">
+            <li class="d-flex align-items-center gap-8">
+              <span class="flex-shrink-0 w-6-px h-6-px bg-primary-600 rounded-circle"></span>
+              <span class="text-secondary-light text-sm">Completed</span>
+            </li>
+            <li class="d-flex align-items-center gap-8">
+              <span class="flex-shrink-0 w-6-px h-6-px bg-cyan rounded-circle"></span>
+              <span class="text-secondary-light text-sm">New Order</span>
+            </li>
+            <li class="d-flex align-items-center gap-8">
+              <span class="flex-shrink-0 w-6-px h-6-px bg-danger-400 rounded-circle"></span>
+              <span class="text-secondary-light text-sm">Pending</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3: Revenue by Category -->
+      <div class="col-xl-3">
+        <div class="bg-base p-24 radius-20">
+          <div class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-warning-50 border border-warning-100 rounded-circle d-flex align-items-center justify-content-center">
+                <iconify-icon icon="solar:bag-2-outline" class="icon text-warning-600 text-2xl"></iconify-icon>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0">Revenue by Category</h6>
+                <span class="text-secondary-light text-sm fw-normal">Revenue breakdown</span>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+              </button>
+              <ul class="dropdown-menu p-12 border bg-base shadow">
+                <li><button
+                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">View</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="position-relative">
+            <div class="revenueByCategoryChart">
+              <div id="revenueByCategoryChart"></div>
+            </div>
+            <div class="position-absolute bottom-0 start-50 translate-middle-x mb-60">
+              <span class="text-neutral-400 text-sm"> Total Products</span>
+              <h2 class="h6 fw-bold mb-0">25.59K</h2>
+            </div>
+          </div>
+          <ul class="list-style-gap d-flex flex-wrap mt-12">
+            <li class="d-flex align-items-center gap-8"><span
+                class="flex-shrink-0 w-6-px h-6-px bg-primary-600 rounded-circle"></span>
+              <span class="text-secondary-light text-sm">Fashion</span>
+            </li>
+            <li class="d-flex align-items-center gap-8">
+              <span class="flex-shrink-0 w-6-px h-6-px bg-danger-400 rounded-circle"></span>
+              <span class="text-secondary-light text-sm">Beauty</span>
+            </li>
+            <li class="d-flex align-items-center gap-8">
+              <span class="flex-shrink-0 w-6-px h-6-px bg-cyan rounded-circle"></span>
+              <span class="text-secondary-light text-sm">Medical</span>
+            </li>
+            <li class="d-flex align-items-center gap-8">
+              <span class="flex-shrink-0 w-6-px h-6-px bg-purple rounded-circle"></span>
+              <span class="text-secondary-light text-sm">Sports</span>
+            </li>
+            <li class="d-flex align-items-center gap-8"><span
+                class="flex-shrink-0 w-6-px h-6-px bg-success-600 rounded-circle"></span>
+              <span class="text-secondary-light text-sm">Electronics</span>
+            </li>
+            <li class="d-flex align-items-center gap-8"><span
+                class="flex-shrink-0 w-6-px h-6-px bg-warning-400 rounded-circle"></span>
+              <span class="text-secondary-light text-sm">Furniture</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+    </div>
   </div>
 
   @@include('../layouts/_footer.html')

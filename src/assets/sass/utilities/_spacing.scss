@@ -136,3 +136,13 @@
 .gap-100-px {
   gap: clamp(1.5rem, -12.75rem + 19vw, 6.25rem);
 }
+
+
+
+.list-style-gap {
+  row-gap: 10px;
+}
+
+.list-style-gap li {
+    width: 33.33%;
+}
