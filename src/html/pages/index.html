@@ -1,0 +1,451 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main">
+  @@include('../layouts/_nav.html')
+
+  <div class="dashboard-main-body">
+    @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Dashboard",
+    activePage: "AI"
+    })
+
+
+    <div class="row gy-4">
+      <div class="col-xl-6">
+        <div class="row gy-4">
+          <div class="col-sm-6">
+            <div class="bg-base p-24 radius-20">
+              <div
+                class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+                <span class="text-neutral-700 fw-medium">Total Revenue</span>
+                <div class="dropdown">
+                  <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                  </button>
+                  <ul class="dropdown-menu p-12 border bg-base shadow">
+                    <li>
+                      <button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalView">
+                        <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>
+                        View
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalEdit">
+                        <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>
+                        Edit
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button"
+                        class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalDelete">
+                        <iconify-icon icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>
+                        Delete
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-8">
+                <div>
+                  <h2 class="text-2xl mb-0">$124,563</h2>
+                  <div class="mt-16">
+                    <span class="text-primary-600 text-lg line-height-1">
+                      <i class="ph ph-arrow-up"></i>
+                    </span>
+                    <span class="text-primary-600 fw-medium">92.4% Avg</span>
+                  </div>
+                </div>
+                <div>
+                  <div id="barChart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="bg-base p-24 radius-20">
+              <div
+                class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+                <span class="text-neutral-700 fw-medium">Total Orders</span>
+                <div class="dropdown">
+                  <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                  </button>
+                  <ul class="dropdown-menu p-12 border bg-base shadow">
+                    <li>
+                      <button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalViewOrders">
+                        <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>
+                        View
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalEditOrders">
+                        <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>
+                        Edit
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button"
+                        class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalDeleteOrders">
+                        <iconify-icon icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>
+                        Delete
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-8">
+                <div>
+                  <h2 class="text-2xl mb-0">18,425</h2>
+                  <div class="mt-16">
+                    <span class="text-warning-600 text-lg line-height-1">
+                      <i class="ph ph-arrows-down-up"></i>
+                    </span>
+                    <span class="text-warning-600 fw-medium">60.2% Avg</span>
+                  </div>
+                </div>
+                <div style="width:140px">
+                  <div id="lineChart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="bg-base p-24 radius-20">
+              <div
+                class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+                <span class="text-neutral-700 fw-medium">Conversion Rate</span>
+                <div class="dropdown">
+                  <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                  </button>
+                  <ul class="dropdown-menu p-12 border bg-base shadow">
+                    <li>
+                      <button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalViewConversion">
+                        <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>
+                        View
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalEditConversion">
+                        <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>
+                        Edit
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button"
+                        class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalDeleteConversion">
+                        <iconify-icon icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>
+                        Delete
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-8">
+                <div>
+                  <h2 class="text-2xl mb-0">35.5%</h2>
+                  <div class="mt-16">
+                    <span class="text-danger-600 text-lg line-height-1">
+                      <i class="ph ph-arrow-down"></i>
+                    </span>
+                    <span class="text-danger-600 fw-medium">09.4% Avg</span>
+                  </div>
+                </div>
+                <div>
+                  <div id="radialChart" style="min-width:90px; min-height:90px;"></div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- <div class="bg-base p-24 radius-20">
+          <div
+            class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+            <span class="text-neutral-700 fw-medium">Conversion Rate</span>
+            <div class="dropdown">
+              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+              </button>
+              <ul class="dropdown-menu p-12 border bg-base shadow">
+                <li>
+                  <button type="button"
+                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalViewConversion">
+                    <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>
+                    View
+                  </button>
+                </li>
+                <li>
+                  <button type="button"
+                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalEditConversion">
+                    <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>
+                    Edit
+                  </button>
+                </li>
+                <li>
+                  <button type="button"
+                    class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalDeleteConversion">
+                    <iconify-icon icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>
+                    Delete
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-between gap-8">
+            <div>
+              <h2 class="text-2xl mb-0">35.5%</h2>
+              <div class="mt-16">
+                <span class="text-danger-600 text-lg line-height-1">
+                  <i class="ph ph-arrow-down"></i>
+                </span>
+                <span class="text-danger-600 fw-medium">09.4% Avg</span>
+              </div>
+            </div>
+            <div>
+              <div id="radialChart"></div>
+            </div>
+          </div>
+        </div> -->
+          </div>
+
+          <div class="col-sm-6">
+            <div class="bg-base p-24 radius-20">
+              <div
+                class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+                <span class="text-neutral-700 fw-medium">Total Customers</span>
+                <div class="dropdown">
+                  <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                  </button>
+                  <ul class="dropdown-menu p-12 border bg-base shadow">
+                    <li>
+                      <button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalViewCustomers">
+                        <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>
+                        View
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalEditCustomers">
+                        <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>
+                        Edit
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button"
+                        class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalDeleteCustomers">
+                        <iconify-icon icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>
+                        Delete
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-8">
+                <div>
+                  <h2 class="text-2xl mb-0">58,426</h2>
+                  <div class="mt-16">
+                    <span class="text-success-600 text-lg line-height-1">
+                      <i class="ph ph-arrow-down-right"></i>
+                    </span>
+                    <span class="text-success-600 fw-medium">44.7% Avg</span>
+                  </div>
+                </div>
+                <div style="width:140px">
+                  <div id="columnChart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery Status Card -->
+      <div class="col-xl-3">
+        <div class="bg-base p-24 radius-20">
+          <div
+            class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+            <div class="d-flex align-items-center gap-12">
+              <div class="w-48-px h-48-px bg-primary-50 radius-8 d-flex align-items-center justify-content-center">
+                <iconify-icon icon="solar:box-outline" class="icon text-primary-600 text-2xl"></iconify-icon>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0">Delivery Status</h6>
+                <span class="text-secondary-light text-sm fw-normal">Delivery performance</span>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+              </button>
+              <ul class="dropdown-menu p-12 border bg-base shadow">
+                <li>
+                  <button type="button"
+                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalView">
+                    <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>
+                    View
+                  </button>
+                </li>
+                <li>
+                  <button type="button"
+                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalEdit">
+                    <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>
+                    Edit
+                  </button>
+                </li>
+                <li>
+                  <button type="button"
+                    class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalDelete">
+                    <iconify-icon icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>
+                    Delete
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div id="deliveryBarChart"></div>
+
+          <!-- Legend List -->
+          <ul class="mt-20 d-flex flex-column gap-0">
+            <li class="d-flex align-items-center justify-content-between py-12 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-8-px h-8-px bg-cyan rounded-circle"></span>
+                <span class="text-secondary-light text-sm fw-normal">On-Time Delivery</span>
+              </div>
+              <span class="text-primary-light fw-semibold text-sm">1253</span>
+            </li>
+            <li class="d-flex align-items-center justify-content-between py-12 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-8-px h-8-px bg-success-600 rounded-circle"></span>
+                <span class="text-secondary-light text-sm fw-normal">Delivered</span>
+              </div>
+              <span class="text-primary-light fw-semibold text-sm">859</span>
+            </li>
+            <li class="d-flex align-items-center justify-content-between py-12 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-8-px h-8-px bg-warning-600 rounded-circle"></span>
+                <span class="text-secondary-light text-sm fw-normal">In Transit</span>
+              </div>
+              <span class="text-primary-light fw-semibold text-sm">320</span>
+            </li>
+            <li class="d-flex align-items-center justify-content-between py-12">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-8-px h-8-px bg-danger-600 rounded-circle"></span>
+                <span class="text-secondary-light text-sm fw-normal">Delayed</span>
+              </div>
+              <span class="text-primary-light fw-semibold text-sm">320</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Returning Clients Card -->
+      <div class="col-xl-3">
+        <div class="bg-base p-24 radius-20">
+          <div
+            class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+            <div class="d-flex align-items-center gap-12">
+              <div class="w-48-px h-48-px bg-danger-50 radius-8 d-flex align-items-center justify-content-center">
+                <iconify-icon icon="solar:users-group-rounded-outline"
+                  class="icon text-danger-600 text-2xl"></iconify-icon>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0">Returning Clients</h6>
+                <span class="text-secondary-light text-sm fw-normal">Customer retention rate</span>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+              </button>
+              <ul class="dropdown-menu p-12 border bg-base shadow">
+                <li>
+                  <button type="button"
+                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalViewClients">
+                    <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>
+                    View
+                  </button>
+                </li>
+                <li>
+                  <button type="button"
+                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalEditClients">
+                    <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>
+                    Edit
+                  </button>
+                </li>
+                <li>
+                  <button type="button"
+                    class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalDeleteClients">
+                    <iconify-icon icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>
+                    Delete
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Big Percentage -->
+          <div class="mb-20">
+            <h2 class="text-4xl fw-semibold mb-8">85%</h2>
+            <div class="d-flex align-items-center gap-8">
+              <span class="text-primary-600 text-lg line-height-1">
+                <i class="ph ph-arrow-up"></i>
+              </span>
+              <span class="text-primary-600 fw-medium">+5.2% from last month</span>
+            </div>
+          </div>
+
+          <div class="border-top border-neutral-200 pt-0">
+            <div id="returningClientsChart"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  @@include('../layouts/_footer.html')
+</main>
+
+@@include('../partial-html/_template-bottom.html')
+
+<script src="assets/js/homeOneChart.js"></script>
+
+</body>
+
+</html>

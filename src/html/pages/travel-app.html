@@ -1,0 +1,609 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main">
+    @@include('../layouts/_nav.html')
+
+    <div class="dashboard-main-body">
+
+        @@include('../layouts/_breadcrumb.html',{
+        pageTitle: "Travel App",
+        activePage: "Travel App"
+        })
+
+        <div class="">
+            <div class="row gy-4">
+                <div class="col-lg-8">
+                    <div class="">
+                        <form class="navbar-search w-100">
+                            <input type="text" name="search" class="bg-base w-100" placeholder="Search">
+                            <iconify-icon icon="ion:search-outline" class="icon"></iconify-icon>
+                        </form>
+                        <div class="mt-40">
+                            <div class="row gy-4">
+                                <div class="col-xxl-4 col-sm-6">
+                                    <div
+                                        class="position-relative bg-primary gradient-overlay-two z-1 rounded-4 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img1.png"
+                                            class="w-100 h-100 object-fit-cover rounded-4 min-h-320-px">
+                                        <div class="position-absolute bottom-0 start-0 ms-16 mb-16 z-1">
+                                            <h2 class="text-md fw-semibold text-white mb-4">
+                                                <a href="#" class="text-white">Bali Beach Escape</a>
+                                            </h2>
+                                            <div class="d-flex gap-16">
+                                                <span class="text-white text-sm"><i class="ri-map-pin-line"></i>
+                                                    Indonesia</span>
+                                                <span class="text-white text-sm"><i
+                                                        class="ri-star-fill text-warning-400"></i> 4.8</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="w-36-px h-36-px bg-black bg-opacity-50 text-white d-flex justify-content-center align-items-center rounded-circle position-absolute top-0 end-0 mt-16 me-16 bg-hover-primary-600">
+                                            <i class="ri-heart-3-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6">
+                                    <div
+                                        class="position-relative bg-primary gradient-overlay-two z-1 rounded-4 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img2.png"
+                                            class="w-100 h-100 object-fit-cover rounded-4 min-h-320-px">
+                                        <div class="position-absolute bottom-0 start-0 ms-16 mb-16 z-1">
+                                            <h2 class="text-md fw-semibold text-white mb-4">
+                                                <a href="#" class="text-white">Swiss Mountain View</a>
+                                            </h2>
+                                            <div class="d-flex gap-16">
+                                                <span class="text-white text-sm"><i class="ri-map-pin-line"></i>
+                                                    Switzerland</span>
+                                                <span class="text-white text-sm"><i
+                                                        class="ri-star-fill text-warning-400"></i> 4.9</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="w-36-px h-36-px bg-black bg-opacity-50 text-white d-flex justify-content-center align-items-center rounded-circle position-absolute top-0 end-0 mt-16 me-16 bg-hover-primary-600">
+                                            <i class="ri-heart-3-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6">
+                                    <div
+                                        class="position-relative bg-primary gradient-overlay-two z-1 rounded-4 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img3.png"
+                                            class="w-100 h-100 object-fit-cover rounded-4 min-h-320-px">
+                                        <div class="position-absolute bottom-0 start-0 ms-16 mb-16 z-1">
+                                            <h2 class="text-md fw-semibold text-white mb-4">
+                                                <a href="#" class="text-white">Dubai Luxury Resort</a>
+                                            </h2>
+                                            <div class="d-flex gap-16">
+                                                <span class="text-white text-sm"><i class="ri-map-pin-line"></i>
+                                                    UAE</span>
+                                                <span class="text-white text-sm"><i
+                                                        class="ri-star-fill text-warning-400"></i> 4.7</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="w-36-px h-36-px bg-black bg-opacity-50 text-white d-flex justify-content-center align-items-center rounded-circle position-absolute top-0 end-0 mt-16 me-16 bg-hover-primary-600">
+                                            <i class="ri-heart-3-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6">
+                                    <div
+                                        class="position-relative bg-primary gradient-overlay-two z-1 rounded-4 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img4.png"
+                                            class="w-100 h-100 object-fit-cover rounded-4 min-h-320-px">
+                                        <div class="position-absolute bottom-0 start-0 ms-16 mb-16 z-1">
+                                            <h2 class="text-md fw-semibold text-white mb-4">
+                                                <a href="#" class="text-white">Paris Romantic Stay</a>
+                                            </h2>
+                                            <div class="d-flex gap-16">
+                                                <span class="text-white text-sm"><i class="ri-map-pin-line"></i>
+                                                    France</span>
+                                                <span class="text-white text-sm"><i
+                                                        class="ri-star-fill text-warning-400"></i> 4.6</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="w-36-px h-36-px bg-black bg-opacity-50 text-white d-flex justify-content-center align-items-center rounded-circle position-absolute top-0 end-0 mt-16 me-16 bg-hover-primary-600">
+                                            <i class="ri-heart-3-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6">
+                                    <div
+                                        class="position-relative bg-primary gradient-overlay-two z-1 rounded-4 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img5.png"
+                                            class="w-100 h-100 object-fit-cover rounded-4 min-h-320-px">
+                                        <div class="position-absolute bottom-0 start-0 ms-16 mb-16 z-1">
+                                            <h2 class="text-md fw-semibold text-white mb-4">
+                                                <a href="#" class="text-white">Tokyo Urban Hotel</a>
+                                            </h2>
+                                            <div class="d-flex gap-16">
+                                                <span class="text-white text-sm"><i class="ri-map-pin-line"></i>
+                                                    Japan</span>
+                                                <span class="text-white text-sm"><i
+                                                        class="ri-star-fill text-warning-400"></i> 4.9</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="w-36-px h-36-px bg-black bg-opacity-50 text-white d-flex justify-content-center align-items-center rounded-circle position-absolute top-0 end-0 mt-16 me-16 bg-hover-primary-600">
+                                            <i class="ri-heart-3-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6">
+                                    <div
+                                        class="position-relative bg-primary gradient-overlay-two z-1 rounded-4 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img6.png"
+                                            class="w-100 h-100 object-fit-cover rounded-4 min-h-320-px">
+                                        <div class="position-absolute bottom-0 start-0 ms-16 mb-16 z-1">
+                                            <h2 class="text-md fw-semibold text-white mb-4">
+                                                <a href="#" class="text-white">Maldives Ocean Villa</a>
+                                            </h2>
+                                            <div class="d-flex gap-16">
+                                                <span class="text-white text-sm"><i class="ri-map-pin-line"></i>
+                                                    Maldives</span>
+                                                <span class="text-white text-sm"><i
+                                                        class="ri-star-fill text-warning-400"></i> 5.0</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="w-36-px h-36-px bg-black bg-opacity-50 text-white d-flex justify-content-center align-items-center rounded-circle position-absolute top-0 end-0 mt-16 me-16 bg-hover-primary-600">
+                                            <i class="ri-heart-3-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6">
+                                    <div
+                                        class="position-relative bg-primary gradient-overlay-two z-1 rounded-4 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img7.png"
+                                            class="w-100 h-100 object-fit-cover rounded-4 min-h-320-px">
+                                        <div class="position-absolute bottom-0 start-0 ms-16 mb-16 z-1">
+                                            <h2 class="text-md fw-semibold text-white mb-4">
+                                                <a href="#" class="text-white">Santorini Sunset View</a>
+                                            </h2>
+                                            <div class="d-flex gap-16">
+                                                <span class="text-white text-sm"><i class="ri-map-pin-line"></i>
+                                                    Greece</span>
+                                                <span class="text-white text-sm"><i
+                                                        class="ri-star-fill text-warning-400"></i> 4.8</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="w-36-px h-36-px bg-black bg-opacity-50 text-white d-flex justify-content-center align-items-center rounded-circle position-absolute top-0 end-0 mt-16 me-16 bg-hover-primary-600">
+                                            <i class="ri-heart-3-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6">
+                                    <div
+                                        class="position-relative bg-primary gradient-overlay-two z-1 rounded-4 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img8.png"
+                                            class="w-100 h-100 object-fit-cover rounded-4 min-h-320-px">
+                                        <div class="position-absolute bottom-0 start-0 ms-16 mb-16 z-1">
+                                            <h2 class="text-md fw-semibold text-white mb-4">
+                                                <a href="#" class="text-white">New York City Stay</a>
+                                            </h2>
+                                            <div class="d-flex gap-16">
+                                                <span class="text-white text-sm"><i class="ri-map-pin-line"></i>
+                                                    USA</span>
+                                                <span class="text-white text-sm"><i
+                                                        class="ri-star-fill text-warning-400"></i> 4.7</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="w-36-px h-36-px bg-black bg-opacity-50 text-white d-flex justify-content-center align-items-center rounded-circle position-absolute top-0 end-0 mt-16 me-16 bg-hover-primary-600">
+                                            <i class="ri-heart-3-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6">
+                                    <div
+                                        class="position-relative bg-primary gradient-overlay-two z-1 rounded-4 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img9.png"
+                                            class="w-100 h-100 object-fit-cover rounded-4 min-h-320-px">
+                                        <div class="position-absolute bottom-0 start-0 ms-16 mb-16 z-1">
+                                            <h2 class="text-md fw-semibold text-white mb-4">
+                                                <a href="#" class="text-white">Sydney Harbour Hotel</a>
+                                            </h2>
+                                            <div class="d-flex gap-16">
+                                                <span class="text-white text-sm"><i class="ri-map-pin-line"></i>
+                                                    Australia</span>
+                                                <span class="text-white text-sm"><i
+                                                        class="ri-star-fill text-warning-400"></i> 4.8</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="w-36-px h-36-px bg-black bg-opacity-50 text-white d-flex justify-content-center align-items-center rounded-circle position-absolute top-0 end-0 mt-16 me-16 bg-hover-primary-600">
+                                            <i class="ri-heart-3-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body p-24">
+                            <div class="d-flex justify-content-between align-items-center gap-16 mb-20">
+                                <h2 class="text-lg mb-0">Top Hotels</h2>
+                                <div class="dropdown">
+                                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                        class=" d-flex">
+                                        <iconify-icon icon="entypo:dots-three-vertical"
+                                            class="icon text-secondary-light"></iconify-icon>
+                                    </button>
+                                    <ul class="dropdown-menu p-12 border bg-base shadow">
+                                        <li>
+                                            <button type="button"
+                                                class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                                                data-bs-toggle="modal" data-bs-target="#exampleModalView">
+                                                Action
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button"
+                                                class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                                                data-bs-toggle="modal" data-bs-target="#exampleModalView">
+                                                Another Action
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button"
+                                                class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                                                data-bs-toggle="modal" data-bs-target="#exampleModalView">
+                                                Something Else
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-column gap-24">
+                                <div class="d-flex align-items-center justify-content-between gap-8">
+                                    <div class="d-flex align-items-center gap-12">
+                                        <div class="w-48-px h-48-px rounded-2 overflow-hidden">
+                                            <img src="assets/images/gallery/gallery-img1.png" alt="Image"
+                                                class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div>
+                                            <h2 class="text-sm fw-bold text-primary-light mb-4">
+                                                <a href="#" class="text-primary-light text-hover-primary-600">Bali Beach
+                                                    Resort</a>
+                                            </h2>
+                                            <div class="d-flex align-items-center gap-16">
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-map-pin-line"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">Indonesia</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-star-fill text-warning-500"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">4.8</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <span class="text-md fw-medium text-primary-light">$120</span>
+                                        <span class="text-xs text-secondary-light">/day</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-8">
+                                    <div class="d-flex align-items-center gap-12">
+                                        <div class="w-48-px h-48-px rounded-2 overflow-hidden">
+                                            <img src="assets/images/gallery/gallery-img2.png" alt="Image"
+                                                class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div>
+                                            <h2 class="text-sm fw-bold text-primary-light mb-4">
+                                                <a href="#" class="text-primary-light text-hover-primary-600">Swiss Alps
+                                                    Retreat</a>
+                                            </h2>
+                                            <div class="d-flex align-items-center gap-16">
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-map-pin-line"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">Switzerland</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-star-fill text-warning-500"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">4.9</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <span class="text-md fw-medium text-primary-light">$220</span>
+                                        <span class="text-xs text-secondary-light">/day</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-8">
+                                    <div class="d-flex align-items-center gap-12">
+                                        <div class="w-48-px h-48-px rounded-2 overflow-hidden">
+                                            <img src="assets/images/gallery/gallery-img3.png" alt="Image"
+                                                class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div>
+                                            <h2 class="text-sm fw-bold text-primary-light mb-4">
+                                                <a href="#" class="text-primary-light text-hover-primary-600">Dubai
+                                                    Luxury Stay</a>
+                                            </h2>
+                                            <div class="d-flex align-items-center gap-16">
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-map-pin-line"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">UAE</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-star-fill text-warning-500"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">4.7</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <span class="text-md fw-medium text-primary-light">$180</span>
+                                        <span class="text-xs text-secondary-light">/day</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-8">
+                                    <div class="d-flex align-items-center gap-12">
+                                        <div class="w-48-px h-48-px rounded-2 overflow-hidden">
+                                            <img src="assets/images/gallery/gallery-img4.png" alt="Image"
+                                                class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div>
+                                            <h2 class="text-sm fw-bold text-primary-light mb-4">
+                                                <a href="#" class="text-primary-light text-hover-primary-600">Paris City
+                                                    Lights</a>
+                                            </h2>
+                                            <div class="d-flex align-items-center gap-16">
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-map-pin-line"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">France</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-star-fill text-warning-500"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">4.6</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <span class="text-md fw-medium text-primary-light">$150</span>
+                                        <span class="text-xs text-secondary-light">/day</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-8">
+                                    <div class="d-flex align-items-center gap-12">
+                                        <div class="w-48-px h-48-px rounded-2 overflow-hidden">
+                                            <img src="assets/images/gallery/gallery-img5.png" alt="Image"
+                                                class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div>
+                                            <h2 class="text-sm fw-bold text-primary-light mb-4">
+                                                <a href="#" class="text-primary-light text-hover-primary-600">Tokyo
+                                                    Urban Hotel</a>
+                                            </h2>
+                                            <div class="d-flex align-items-center gap-16">
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-map-pin-line"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">Japan</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <span class="d-flex text-secondary-light text-sm">
+                                                        <i class="ri-star-fill text-warning-500"></i>
+                                                    </span>
+                                                    <span class="text-secondary-light text-sm">4.9</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <span class="text-md fw-medium text-primary-light">$200</span>
+                                        <span class="text-xs text-secondary-light">/day</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-24">
+                        <div class="d-flex justify-content-between align-items-center gap-16 mb-20">
+                            <h2 class="text-lg mb-0">My Plan</h2>
+                            <div class="dropdown">
+                                <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class=" d-flex">
+                                    <iconify-icon icon="entypo:dots-three-vertical"
+                                        class="icon text-secondary-light"></iconify-icon>
+                                </button>
+                                <ul class="dropdown-menu p-12 border bg-base shadow">
+                                    <li>
+                                        <button type="button"
+                                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModalView">
+                                            <iconify-icon icon="gravity-ui:envelope-open"
+                                                class="icon text-lg line-height-1"></iconify-icon>
+                                            Action
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button"
+                                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModalView">
+                                            <iconify-icon icon="gravity-ui:envelope-open"
+                                                class="icon text-lg line-height-1"></iconify-icon>
+                                            Another Action
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button"
+                                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModalView">
+                                            <iconify-icon icon="gravity-ui:envelope-open"
+                                                class="icon text-lg line-height-1"></iconify-icon>
+                                            Something Else
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column gap-16">
+                            <div class="d-flex flex-column gap-16">
+                                <div class="d-flex align-items-center gap-12 bg-base rounded-2 p-8">
+                                    <div class="w-80-px h-80-px rounded-2 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img1.png"
+                                            class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <div>
+                                        <h2 class="text-md fw-bold text-primary-light mb-6">
+                                            <a href="#" class="text-primary-light text-hover-primary-600">Picnic on
+                                                Forest</a>
+                                        </h2>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <i class="ri-calendar-2-line text-secondary-light text-sm"></i>
+                                            <span class="text-secondary-light text-sm">22 May - 28 May</span>
+                                        </div>
+                                        <div class="d-flex mt-4">
+                                            <img src="assets/images/avatar/avatar-group1.png"
+                                                class="w-24-px h-24-px rounded-circle">
+                                            <img src="assets/images/avatar/avatar-group4.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                            <img src="assets/images/avatar/avatar-group5.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                            <img src="assets/images/avatar/avatar-group6.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-12 bg-base rounded-2 p-8">
+                                    <div class="w-80-px h-80-px rounded-2 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img2.png"
+                                            class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <div>
+                                        <h2 class="text-md fw-bold text-primary-light mb-6">
+                                            <a href="#" class="text-primary-light text-hover-primary-600">Beach Camping
+                                                Trip</a>
+                                        </h2>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <i class="ri-calendar-2-line text-secondary-light text-sm"></i>
+                                            <span class="text-secondary-light text-sm">5 Jun - 10 Jun</span>
+                                        </div>
+                                        <div class="d-flex mt-4">
+                                            <img src="assets/images/avatar/avatar-group2.png"
+                                                class="w-24-px h-24-px rounded-circle">
+                                            <img src="assets/images/avatar/avatar-group3.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                            <img src="assets/images/avatar/avatar-group6.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-12 bg-base rounded-2 p-8">
+                                    <div class="w-80-px h-80-px rounded-2 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img3.png"
+                                            class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <div>
+                                        <h2 class="text-md fw-bold text-primary-light mb-6">
+                                            <a href="#" class="text-primary-light text-hover-primary-600">Mountain
+                                                Hiking Tour</a>
+                                        </h2>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <i class="ri-calendar-2-line text-secondary-light text-sm"></i>
+                                            <span class="text-secondary-light text-sm">12 Jul - 18 Jul</span>
+                                        </div>
+                                        <div class="d-flex mt-4">
+                                            <img src="assets/images/avatar/avatar-group5.png"
+                                                class="w-24-px h-24-px rounded-circle">
+                                            <img src="assets/images/avatar/avatar-group1.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                            <img src="assets/images/avatar/avatar-group4.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                            <img src="assets/images/avatar/avatar-group2.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-12 bg-base rounded-2 p-8">
+                                    <div class="w-80-px h-80-px rounded-2 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img4.png"
+                                            class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <div>
+                                        <h2 class="text-md fw-bold text-primary-light mb-6">
+                                            <a href="#" class="text-primary-light text-hover-primary-600">City Food
+                                                Festival</a>
+                                        </h2>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <i class="ri-calendar-2-line text-secondary-light text-sm"></i>
+                                            <span class="text-secondary-light text-sm">1 Aug - 3 Aug</span>
+                                        </div>
+                                        <div class="d-flex mt-4">
+                                            <img src="assets/images/avatar/avatar-group3.png"
+                                                class="w-24-px h-24-px rounded-circle">
+                                            <img src="assets/images/avatar/avatar-group6.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-12 bg-base rounded-2 p-8">
+                                    <div class="w-80-px h-80-px rounded-2 overflow-hidden">
+                                        <img src="assets/images/gallery/gallery-img2.png"
+                                            class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <div>
+                                        <h2 class="text-md fw-bold text-primary-light mb-6">
+                                            <a href="#" class="text-primary-light text-hover-primary-600">Beach Camping
+                                                Trip</a>
+                                        </h2>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <i class="ri-calendar-2-line text-secondary-light text-sm"></i>
+                                            <span class="text-secondary-light text-sm">5 Jun - 10 Jun</span>
+                                        </div>
+                                        <div class="d-flex mt-4">
+                                            <img src="assets/images/avatar/avatar-group2.png"
+                                                class="w-24-px h-24-px rounded-circle">
+                                            <img src="assets/images/avatar/avatar-group3.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                            <img src="assets/images/avatar/avatar-group6.png"
+                                                class="w-24-px h-24-px rounded-circle ms--10px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    @@include('../layouts/_footer.html')
+</main>
+
+@@include('../partial-html/_template-bottom.html')
+</body>
+
+</html>

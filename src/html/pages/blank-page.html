@@ -1,0 +1,21 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main">
+  @@include('../layouts/_nav.html')
+
+  <div class="dashboard-main-body">
+    @@include('../layouts/_breadcrumb.html',{
+      pageTitle: "Blank Page",
+      activePage: "Blank Page"
+    })
+  </div>
+
+  @@include('../layouts/_footer.html')
+</main>
+  
+@@include('../partial-html/_template-bottom.html')
+
+</body>
+</html>
