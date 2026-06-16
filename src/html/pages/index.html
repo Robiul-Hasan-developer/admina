@@ -295,7 +295,7 @@
                 <iconify-icon icon="solar:box-outline" class="icon text-primary-600 text-2xl"></iconify-icon>
               </div>
               <div>
-                <h6 class="fw-semibold mb-0">Delivery Status</h6>
+                <h6 class="fw-semibold mb-0 text-lg">Delivery Status</h6>
                 <span class="text-secondary-light text-sm fw-normal">Delivery performance</span>
               </div>
             </div>
@@ -383,7 +383,7 @@
                   class="icon text-danger-600 text-2xl"></iconify-icon>
               </div>
               <div>
-                <h6 class="fw-semibold mb-0">Returning Clients</h6>
+                <h6 class="fw-semibold mb-0 text-lg">Returning Clients</h6>
                 <span class="text-secondary-light text-sm fw-normal">Customer retention rate</span>
               </div>
             </div>
@@ -443,23 +443,23 @@
           <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
             <div class="d-flex align-items-center gap-12">
               <div
-                class="w-48-px h-48-px bg-success-50 border border-success-200 rounded-circle d-flex align-items-center justify-content-center">
+                class="w-48-px h-48-px bg-success-50 border border-success-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
                 <span class="icon text-success-600 text-2xl">
                   <i class="ph ph-tag"></i>
                 </span>
               </div>
               <div>
-                <h6 class="fw-semibold mb-0">Sales Overview</h6>
+                <h6 class="fw-semibold mb-0 text-lg">Sales Overview</h6>
                 <span class="text-secondary-light text-sm fw-normal">Manage customer info and order updates while
                   keeping sales records.</span>
               </div>
             </div>
             <div class="">
               <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
-                <option>Yearly</option>
-                <option>Monthly</option>
-                <option>Weekly</option>
-                <option>Today</option>
+                <option>This Yearly</option>
+                <option>This Monthly</option>
+                <option>This Weekly</option>
+                <option>This Today</option>
               </select>
             </div>
           </div>
@@ -484,14 +484,14 @@
       <!-- Card 2: Order Summary -->
       <div class="col-xl-3">
         <div class="bg-base p-24 radius-20">
-          <div class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20">
+          <div class="d-flex align-items-center justify-content-between gap-8 pb-20">
             <div class="d-flex align-items-center gap-12">
               <div
                 class="w-48-px h-48-px bg-cyan-50 border border-cyan-100 rounded-circle d-flex align-items-center justify-content-center">
                 <iconify-icon icon="solar:bag-outline" class="icon text-cyan text-2xl"></iconify-icon>
               </div>
               <div>
-                <h6 class="fw-semibold mb-0">Order Summary</h6>
+                <h6 class="fw-semibold mb-0 text-lg">Order Summary</h6>
                 <span class="text-secondary-light text-sm fw-normal">Orders overview snapshot</span>
               </div>
             </div>
@@ -534,7 +534,7 @@
                 <iconify-icon icon="solar:bag-2-outline" class="icon text-warning-600 text-2xl"></iconify-icon>
               </div>
               <div>
-                <h6 class="fw-semibold mb-0">Revenue by Category</h6>
+                <h6 class="fw-semibold mb-0 text-lg">Revenue by Category</h6>
                 <span class="text-secondary-light text-sm fw-normal">Revenue breakdown</span>
               </div>
             </div>
@@ -553,7 +553,7 @@
             <div class="revenueByCategoryChart">
               <div id="revenueByCategoryChart"></div>
             </div>
-            <div class="position-absolute bottom-0 start-50 translate-middle-x mb-60">
+            <div class="position-absolute bottom-0 start-50 translate-middle-x mb-56">
               <span class="text-neutral-400 text-sm"> Total Products</span>
               <h2 class="h6 fw-bold mb-0">25.59K</h2>
             </div>
@@ -584,6 +584,486 @@
               <span class="text-secondary-light text-sm">Furniture</span>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <div class="col-xl-3">
+        <div class="bg-base p-24 radius-20">
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-success-50 border border-success-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-success-600 text-xl">
+                  <i class="ph ph-users-three"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Top Customers</h6>
+                <span class="text-secondary-light text-sm fw-normal">Best customer growth</span>
+              </div>
+            </div>
+            <div class="">
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Yearly</option>
+                <option>Monthly</option>
+                <option>Weekly</option>
+                <option>Today</option>
+              </select>
+            </div>
+          </div>
+
+             <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                    <div class="d-flex align-items-center gap-12">
+                        <div
+                            class="w-40-px h-40-px radius-8 flex-shrink-0 bg-info-50 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/homes/dashboard-img1.png" alt="Image" class="">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="text-md mb-0 fw-semibold">Guy Hawkins</h6>
+                            <span class="text-sm text-secondary-light fw-normal">15 Purchases</span>
+                        </div>
+                    </div>
+                    <span class=" text-neutral-900 fw-medium text-lg ">
+                        $7,750
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                    <div class="d-flex align-items-center gap-12">
+                        <div
+                            class="w-40-px h-40-px radius-8 flex-shrink-0 bg-info-50 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/homes/dashboard-img2.png" alt="Image" class="">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="text-md mb-0 fw-semibold">Cody Fisher</h6>
+                            <span class="text-sm text-secondary-light fw-normal">18 Purchases</span>
+                        </div>
+                    </div>
+                    <span class=" text-neutral-900 fw-medium text-lg ">
+                        $2,100
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                    <div class="d-flex align-items-center gap-12">
+                        <div
+                            class="w-40-px h-40-px radius-8 flex-shrink-0 bg-info-50 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/homes/dashboard-img3.png" alt="Image" class="">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="text-md mb-0 fw-semibold">Theresa Webb</h6>
+                            <span class="text-sm text-secondary-light fw-normal">24 Purchases</span>
+                        </div>
+                    </div>
+                    <span class=" text-neutral-900 fw-medium text-lg ">
+                        $9,450
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                    <div class="d-flex align-items-center gap-12">
+                        <div
+                            class="w-40-px h-40-px radius-8 flex-shrink-0 bg-info-50 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/homes/dashboard-img4.png" alt="Image" class="">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="text-md mb-0 fw-semibold">Ronald Richards</h6>
+                            <span class="text-sm text-secondary-light fw-normal">27 Purchases</span>
+                        </div>
+                    </div>
+                    <span class=" text-neutral-900 fw-medium text-lg ">
+                        $1,000
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                    <div class="d-flex align-items-center gap-12">
+                        <div
+                            class="w-40-px h-40-px radius-8 flex-shrink-0 bg-info-50 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/homes/dashboard-img5.png" alt="Image" class="">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="text-md mb-0 fw-semibold">Arlene McCoy</h6>
+                            <span class="text-sm text-secondary-light fw-normal">21 Purchases</span>
+                        </div>
+                    </div>
+                    <span class=" text-neutral-900 fw-medium text-lg ">
+                        $2,700
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                    <div class="d-flex align-items-center gap-12">
+                        <div
+                            class="w-40-px h-40-px radius-8 flex-shrink-0 bg-info-50 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/homes/dashboard-img6.png" alt="Image" class="">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="text-md mb-0 fw-semibold">Kristin Watson</h6>
+                            <span class="text-sm text-secondary-light fw-normal">37 Purchases</span>
+                        </div>
+                    </div>
+                    <span class=" text-neutral-900 fw-medium text-lg ">
+                        $7,000
+                    </span>
+                </div>
+
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-2 text-primary-600 text-md text-hover-primary-800 mt-3">
+                  See All Customers
+                  <span>
+                    <i class="ph-bold ph-arrow-right"></i>
+                  </span>
+                </a>
+
+            </div>
+
+        </div>
+      </div>
+
+      <div class="col-xl-3">
+        <div class="bg-base p-24 radius-20">
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-danger-600 text-xl">
+                  <i class="ph-bold ph-users"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Top Sellers</h6>
+                <span class="text-secondary-light text-sm fw-normal">Track best-selling items</span>
+              </div>
+            </div>
+            <div class="">
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Yearly</option>
+                <option>Monthly</option>
+                <option>Weekly</option>
+                <option>Today</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card-body">
+
+            <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                <div class="d-flex align-items-center">
+                    <img src="assets/images/homes/dashboard-img12.png" alt="Image"
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center gap-1 text-md">
+                        <h6 class="text-md mb-0 fw-semibold">Robert Fox</h6>
+                        <span class="text-success-500">
+                          <i class="ph-fill ph-seal-check"></i>
+                        </span>
+                      </div>
+                        <span class="text-sm text-secondary-light fw-medium">Customer ID #76431</span>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i class="ph-fill ph-star-half"></i></span>
+                    </div>
+                    <span class="text-primary-light text-sm d-block text-end">Out of 5.00</span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                <div class="d-flex align-items-center">
+                    <img src="assets/images/homes/dashboard-img11.png" alt="Image"
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center gap-1 text-md">
+                        <h6 class="text-md mb-0 fw-semibold">Kristin Watson</h6>
+                        <span class="text-success-500">
+                          <i class="ph-fill ph-seal-check"></i>
+                        </span>
+                      </div>
+                        <span class="text-sm text-secondary-light fw-medium">Customer ID #76431</span>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i class="ph-fill ph-star-half"></i></span>
+                    </div>
+                    <span class="text-primary-light text-sm d-block text-end">Out of 5.00</span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                <div class="d-flex align-items-center">
+                    <img src="assets/images/homes/dashboard-img10.png" alt="Image"
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center gap-1 text-md">
+                        <h6 class="text-md mb-0 fw-semibold">Jacob Jones</h6>
+                        <span class="text-success-500">
+                          <i class="ph-fill ph-seal-check"></i>
+                        </span>
+                      </div>
+                        <span class="text-sm text-secondary-light fw-medium">Customer ID #76431</span>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i class="ph-fill ph-star-half"></i></span>
+                    </div>
+                    <span class="text-primary-light text-sm d-block text-end">Out of 5.00</span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                <div class="d-flex align-items-center">
+                    <img src="assets/images/homes/dashboard-img9.png" alt="Image"
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center gap-1 text-md">
+                        <h6 class="text-md mb-0 fw-semibold">Arlene McCoy</h6>
+                        <span class="text-success-500">
+                          <i class="ph-fill ph-seal-check"></i>
+                        </span>
+                      </div>
+                        <span class="text-sm text-secondary-light fw-medium">Customer ID #76431</span>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i class="ph-fill ph-star-half"></i></span>
+                    </div>
+                    <span class="text-primary-light text-sm d-block text-end">Out of 5.00</span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                <div class="d-flex align-items-center">
+                    <img src="assets/images/homes/dashboard-img8.png" alt="Image"
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center gap-1 text-md">
+                        <h6 class="text-md mb-0 fw-semibold">Darrell Steward</h6>
+                        <span class="text-success-500">
+                          <i class="ph-fill ph-seal-check"></i>
+                        </span>
+                      </div>
+                        <span class="text-sm text-secondary-light fw-medium">Customer ID #76431</span>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i class="ph-fill ph-star-half"></i></span>
+                    </div>
+                    <span class="text-primary-light text-sm d-block text-end">Out of 5.00</span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between gap-3 p-3 bg-hover-primary-05 rounded-4">
+                <div class="d-flex align-items-center">
+                    <img src="assets/images/homes/dashboard-img7.png" alt="Image"
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-center gap-1 text-md">
+                        <h6 class="text-md mb-0 fw-semibold">Courtney Henry</h6>
+                        <span class="text-success-500">
+                          <i class="ph-fill ph-seal-check"></i>
+                        </span>
+                      </div>
+                        <span class="text-sm text-secondary-light fw-medium">Customer ID #76431</span>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i
+                                class="ri-star-fill"></i></span>
+                        <span class="text-lg text-warning-500 d-flex line-height-1"><i class="ph-fill ph-star-half"></i></span>
+                    </div>
+                    <span class="text-primary-light text-sm d-block text-end">Out of 5.00</span>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" class="d-flex align-items-center gap-2 text-primary-600 text-md text-hover-primary-800 mt-3">
+              See All Customers
+              <span>
+                <i class="ph-bold ph-arrow-right"></i>
+              </span>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20">
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-success-50 border border-success-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-success-600 text-xl">
+                  <i class="ph-bold ph-users"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Revenue By Locations</h6>
+                <span class="text-secondary-light text-sm fw-normal">Analyze revenue distribution across global locations</span>
+              </div>
+            </div>
+            <span class="text-2xxl">
+              <i class="ph-bold ph-dots-three-vertical"></i>
+            </span>
+          </div>
+
+          <div class="row gy-5">
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-6">
+              <div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img13.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      United States
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    85%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img14.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      China
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    67%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img15.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      Australia 
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    74%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img16.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      Germany  
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    63%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img17.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      Canada  
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    81%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img18.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      France   
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    75%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-2 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-2 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img19.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      Turkey   
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    55%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
