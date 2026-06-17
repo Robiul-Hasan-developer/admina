@@ -469,3 +469,78 @@ if (savedColor && colors[savedColor]) {
     .classList.add("active");
 }
 // =========================== Color Schema js End ================================
+
+// ================================ J Vector Map Start ================================
+$("#world-map").vectorMap({
+  map: "world_mill_en",
+  backgroundColor: "transparent",
+  borderColor: "#fff",
+  borderOpacity: 0.25,
+  borderWidth: 0,
+  color: "#000000",
+  regionStyle: {
+    initial: {
+      fill: "#D1D5DB",
+    },
+  },
+  markerStyle: {
+    initial: {
+      r: 5,
+      fill: "#fff",
+      "fill-opacity": 1,
+      stroke: "#000",
+      "stroke-width": 1,
+      "stroke-opacity": 0.4,
+    },
+  },
+  markers: [
+    {
+      latLng: [35.8617, 104.1954],
+      name: "China : 250",
+    },
+
+    {
+      latLng: [25.2744, 133.7751],
+      name: "AustrCalia : 250",
+    },
+
+    {
+      latLng: [36.77, -119.41],
+      name: "USA : 82%",
+    },
+
+    {
+      latLng: [55.37, -3.41],
+      name: "UK   : 250",
+    },
+
+    {
+      latLng: [25.2, 55.27],
+      name: "UAE : 250",
+    },
+  ],
+
+  series: {
+    regions: [
+      {
+        values: {
+          US: "#487FFF ",
+          SA: "#FF9F29",
+          AU: "#45B369",
+          CN: "#F86624",
+          GB: "#487FFF",
+        },
+        attribute: "fill",
+      },
+    ],
+  },
+  hoverOpacity: null,
+  normalizeFunction: "linear",
+  zoomOnScroll: false,
+  scaleColors: ["#000000", "#000000"],
+  selectedColor: "#000000",
+  selectedRegions: [],
+  enableZoom: false,
+  hoverColor: "#fff",
+});
+// ================================ J Vector Map End ================================

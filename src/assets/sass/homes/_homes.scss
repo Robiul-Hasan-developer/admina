@@ -1,0 +1,6 @@
+.map-border-left {
+    @media (min-width: 1400px) {
+        border-inline-start: 1px solid var(--neutral-100);
+        padding-inline-start: 28px;
+    }
+}
