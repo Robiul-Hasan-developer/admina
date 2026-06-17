@@ -608,20 +608,48 @@ div.dt-container {
 
 
 
+td {
+    vertical-align: middle;
+}
+
 .table-style {
+    border-collapse: separate;
+
     thead {
         tr {
             th {
                 background-color: rgba(246, 119, 110, 0.0509803922) !important;
                 border-top: 1px solid #EBECED;
                 border-bottom: 1px solid #EBECED !important;
+
                 &:first-child {
                     border-inline-start: 1px solid #EBECED !important;
-                    border-radius: 50rem 0 0 50rem !important;
+                    border-radius: 8px 0 0 8px !important;
                 }
+
                 &:last-child {
                     border-inline-end: 1px solid #EBECED !important;
-                    border-radius: 0 50rem 50rem 0 !important;
+                    border-radius: 0 8px 8px 0 !important;
+                }
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            &:hover {
+                td {
+                    background-color: #4F46E50D;
+                    box-shadow: none !important;
+                    &:first-child {
+                        border-inline-start: 1px solid #EBECED !important;
+                        border-radius: 16px 0 0 16px !important;
+                    }
+    
+                    &:last-child {
+                        border-inline-end: 1px solid #EBECED !important;
+                        border-radius: 0 16px 16px 0 !important;
+                    }
                 }
             }
         }
