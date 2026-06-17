@@ -544,3 +544,108 @@ $("#world-map").vectorMap({
   hoverColor: "#fff",
 });
 // ================================ J Vector Map End ================================
+
+
+
+
+// ================================ Payment Methods - Donut Chart ================================
+var paymentMethodsChart = new ApexCharts(document.querySelector("#paymentMethodsChart"), {
+  series: [30, 25, 15, 20, 10],
+  chart: {
+    type: 'polarArea',
+    height: 380,
+    toolbar: { show: false }
+  },
+  labels: ['Visa', 'Strips', 'Google Pay', 'PayPal', 'Apple Pay'],
+  colors: ['#4F46E5', '#FDC70F', '#F6776E', '#00B8D9', '#22C55E'],
+  fill: {
+    opacity: 1
+  },
+  stroke: {
+    width: 0,
+    colors: ['#fff']
+  },
+  plotOptions: {
+    polarArea: {
+      rings: {
+        strokeWidth: 0
+      },
+      spokes: {
+        strokeWidth: 0
+      }
+    }
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.globals.labels[opts.seriesIndex];
+    },
+    style: {
+      fontSize: '16px',
+      fontWeight: 500,
+      colors: ['#333']
+    },
+    background: {
+      enabled: false
+    },
+    dropShadow: {
+      enabled: false
+    },
+  },
+  legend: {
+    show: true,
+    position: 'bottom',
+    horizontalAlign: 'center',
+    fontSize: '13px',
+    fontWeight: 500,
+    markers: {
+      width: 10,
+      height: 10,
+      radius: 50
+    },
+    itemMargin: {
+      horizontal: 10,
+      vertical: 4
+    },
+    labels: {
+      colors: '#6B7280'
+    }
+  },
+  yaxis: {
+    show: false
+  },
+  xaxis: {
+    labels: { show: false }
+  },
+  grid: {
+    show: false
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) { return val + '%'; }
+    }
+  },
+  theme: {
+    monochrome: { enabled: false }
+  }
+});
+paymentMethodsChart.render();
+
+
+// ================================ Recent Orders - DataTable ================================
+$(document).ready(function () {
+  $('#recentOrdersTable').DataTable({
+    pageLength: 11,
+    lengthMenu: [11, 25, 50, 100],
+    ordering: true,
+    info: false,
+    searching: false,
+    dom: 'tp',
+    language: {
+      paginate: {
+        previous: '<i class="ph ph-caret-left"></i>',
+        next: '<i class="ph ph-caret-right"></i>'
+      }
+    }
+  });
+});
