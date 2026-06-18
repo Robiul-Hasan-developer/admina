@@ -2003,7 +2003,7 @@
       </div>
 
       <!-- Customer Growth Card -->
-      <div class="col-xl-6">
+      <div class="col-xl-8">
         <div class="bg-base p-24 radius-20 mb-24">
           <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-8">
             <div class="d-flex align-items-center gap-12">
@@ -2032,6 +2032,90 @@
 
           <div id="customerGrowthChart"></div>
 
+        </div>
+      </div>
+
+      <!-- Quick Actions Card -->
+      <div class="col-xl-4">
+        <div class="p-24 radius-20 mb-24" style="background: #4f46e5;">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-8">
+            <div class="d-flex align-items-center gap-12">
+              <div class="w-48-px h-48-px rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                style="background: rgba(255,255,255,0.15);">
+                <i class="ph ph-lightning text-white text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg text-white">Quick Actions</h6>
+                <span class="text-sm fw-normal" style="color: rgba(255,255,255,0.75);">Create products, coupons, &
+                  invoices quickly.</span>
+              </div>
+            </div>
+            <div>
+              <div class="dropdown">
+                <button type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                  style="background:none; border:none; cursor:pointer;">
+                  <iconify-icon icon="entypo:dots-three-vertical" class="icon"
+                    style="color: rgba(255,255,255,0.75); font-size:18px;"></iconify-icon>
+                </button>
+                <ul class="dropdown-menu p-12 border bg-base shadow">
+                  <li>
+                    <button type="button"
+                      class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                      data-bs-toggle="modal" data-bs-target="#exampleModalView">
+                      <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button"
+                      class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
+                      data-bs-toggle="modal" data-bs-target="#exampleModalEdit">
+                      <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button"
+                      class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"
+                      data-bs-toggle="modal" data-bs-target="#exampleModalDelete">
+                      <iconify-icon icon="fluent:delete-24-regular"
+                        class="icon text-lg line-height-1"></iconify-icon>Delete
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="d-flex flex-column gap-12">
+
+            <a href="javascript:void(0)" class="quick-action-btn d-flex align-items-center justify-content-center gap-10 py-8 px-20 rounded-pill text-white fw-semibold text-md text-decoration-none">
+  <i class="ph ph-plus-circle text-xl"></i>
+  Add Product
+</a>
+
+<a href="javascript:void(0)" class="quick-action-btn d-flex align-items-center justify-content-center gap-10 py-8 px-20 rounded-pill text-white fw-semibold text-md text-decoration-none">
+  <i class="ph ph-tag text-xl"></i>
+  Create Discount
+</a>
+
+<a href="javascript:void(0)" class="quick-action-btn d-flex align-items-center justify-content-center gap-10 py-8 px-20 rounded-pill text-white fw-semibold text-md text-decoration-none">
+  <i class="ph ph-file-text text-xl"></i>
+  Generate Invoice
+</a>
+
+<a href="javascript:void(0)" class="quick-action-btn d-flex align-items-center justify-content-center gap-10 py-8 px-20 rounded-pill text-white fw-semibold text-md text-decoration-none">
+  <i class="ph ph-envelope-simple text-xl"></i>
+  Send Email
+</a>
+
+<a href="javascript:void(0)" class="quick-action-btn d-flex align-items-center justify-content-center gap-10 py-8 px-20 rounded-pill text-white fw-semibold text-md text-decoration-none">
+  <i class="ph ph-chart-bar text-xl"></i>
+  View Reports
+</a>
+
+          </div>
         </div>
       </div>
 

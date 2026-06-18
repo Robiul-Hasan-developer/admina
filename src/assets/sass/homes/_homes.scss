@@ -24,7 +24,17 @@
   display: none;
 }
 
-.timeline-wrap__content.pb-28 {
-//   padding-bottom: 28px;
+.quick-action-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.2s ease;
+}
+
+.quick-action-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.quick-action-btn i {
+  color: #ffffff;
 }
 /* Home One css end */

@@ -410,7 +410,7 @@ var customerGrowthChart = new ApexCharts(document.querySelector("#customerGrowth
       type: 'vertical',
       shadeIntensity: 0.3,
       gradientToColors: ['#ffffff'],
-      opacityFrom: 0.55,
+      opacityFrom: 0.95,
       opacityTo: 0.02,
       stops: [0, 100]
     },
