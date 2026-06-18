@@ -1731,7 +1731,7 @@
       </div>
 
       <!-- Stock Alerts Card -->
-      <div class="col-xl-6">
+      <!-- <div class="col-xl-6">
         <div class="bg-base p-24 radius-20 mb-24">
           <div
             class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
@@ -1786,10 +1786,10 @@
 
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Store Activity Timeline Card -->
-      <div class="col-xl-6">
+      <!-- <div class="col-xl-6">
         <div class="bg-base p-24 radius-20 mb-24">
           <div
             class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
@@ -1802,7 +1802,42 @@
               </div>
               <div>
                 <h6 class="fw-semibold mb-0 text-lg">Store Activity Timeline</h6>
-                <span class="text-secondary-light text-sm fw-normal">Monitor recent activity across your e-commerce store</span>
+                <span class="text-secondary-light text-sm fw-normal">Monitor recent activity across your e-commerce
+                  store</span>
+              </div>
+            </div>
+            <div>
+              <a href="javascript:void(0)"
+                class="d-flex align-items-center gap-2 text-primary-600 text-md text-hover-primary-800">
+                View All Activity
+                <span>
+                  <i class="ph-bold ph-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="">
+
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Stock Alerts Card -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20 mb-24">
+          <div
+            class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-danger-600 text-2xl line-height-1 d-flex">
+                  <i class="ph ph-warning"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Stock Alerts</h6>
+                <span class="text-secondary-light text-sm fw-normal">Monitor inventory shortages before products go
+                  out.</span>
               </div>
             </div>
             <div>
@@ -1815,31 +1850,254 @@
                     <button type="button"
                       class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
                       data-bs-toggle="modal" data-bs-target="#exampleModalView">
-                      <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>
-                      View
+                      <iconify-icon icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View
                     </button>
                   </li>
                   <li>
                     <button type="button"
                       class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"
                       data-bs-toggle="modal" data-bs-target="#exampleModalEdit">
-                      <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>
-                      Edit
+                      <iconify-icon icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit
                     </button>
                   </li>
                   <li>
                     <button type="button"
                       class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"
                       data-bs-toggle="modal" data-bs-target="#exampleModalDelete">
-                      <iconify-icon icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>
-                      Delete
+                      <iconify-icon icon="fluent:delete-24-regular"
+                        class="icon text-lg line-height-1"></iconify-icon>Delete
                     </button>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="">
+
+          <!-- Stock Alert Items -->
+          <div class="d-flex flex-column gap-12">
+
+            <div
+              class="d-flex align-items-center justify-content-between py-10 px-16 radius-12 bg-info-50 border border-info-100">
+              <div class="d-flex flex-column">
+                <p class="fw-medium text-primary-light mb-0 text-lg">Tempered Glass Screen Protector</p>
+                <span class="text-info-600 text-sm fw-medium">Only 5 left</span>
+              </div>
+              <a href="javascript:void(0)" class="text-info-600 fw-semibold text-md">Restock</a>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-between py-10 px-16 radius-12 bg-danger-50 border border-danger-100">
+              <div class="d-flex flex-column">
+                <p class="fw-medium text-primary-light mb-0 text-lg">Wireless Charging Pad</p>
+                <span class="text-danger-600 text-sm fw-medium">Only 5 left</span>
+              </div>
+              <a href="javascript:void(0)" class="text-danger-600 fw-semibold text-md">Restock</a>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-between py-10 px-16 radius-12 bg-primary-50 border border-primary-100">
+              <div class="d-flex flex-column">
+                <p class="fw-medium text-primary-light mb-0 text-lg">Noise Cancelling Earbuds</p>
+                <span class="text-primary-600 text-sm fw-medium">Only 5 left</span>
+              </div>
+              <a href="javascript:void(0)" class="text-primary-600 fw-semibold text-md">Restock</a>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-between py-10 px-16 radius-12 bg-success-50 border border-success-200">
+              <div class="d-flex flex-column">
+                <p class="fw-medium text-primary-light mb-0 text-lg">Wireless Mouse</p>
+                <span class="text-success-600 text-sm fw-medium">Only 5 left</span>
+              </div>
+              <a href="javascript:void(0)" class="text-success-600 fw-semibold text-md">Restock</a>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-between py-10 px-16 radius-12 bg-warning-50 border border-warning-200">
+              <div class="d-flex flex-column">
+                <p class="fw-medium text-primary-light mb-0 text-lg">Fitness Tracker Band</p>
+                <span class="text-warning-600 text-sm fw-medium">Only 5 left</span>
+              </div>
+              <a href="javascript:void(0)" class="text-warning-600 fw-semibold text-md">Restock</a>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-between py-10 px-16 radius-12 bg-cyan-50 border border-cyan-100">
+              <div class="d-flex flex-column">
+                <p class="fw-medium text-primary-light mb-0 text-lg">LED Desk Lamp</p>
+                <span class="text-cyan-600 text-sm fw-medium">Only 5 left</span>
+              </div>
+              <a href="javascript:void(0)" class="text-cyan-600 fw-semibold text-md">Restock</a>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-between py-10 px-16 radius-12 bg-danger-50 border border-danger-100">
+              <div class="d-flex flex-column">
+                <p class="fw-medium text-primary-light mb-0 text-lg">Bluetooth Speaker Mini</p>
+                <span class="text-danger-600 text-sm fw-medium">Only 5 left</span>
+              </div>
+              <a href="javascript:void(0)" class="text-danger-600 fw-semibold text-md">Restock</a>
+            </div>
+
+          </div>
+
+          <!-- View All Stock -->
+          <div class="mt-20 pt-16 border-top border-neutral-200">
+            <a href="javascript:void(0)"
+              class="d-flex align-items-center gap-4 text-primary-600 text-md fw-medium text-hover-primary-800">
+              View All Stock
+              <span><i class="ph-bold ph-arrow-right"></i></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Store Activity Timeline Card -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20 mb-24">
+
+          <!-- Header -->
+          <div
+            class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-info-50 border border-info-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-info-600 text-2xl line-height-1 d-flex">
+                  <i class="ph ph-storefront"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Store Activity Timeline</h6>
+                <span class="text-secondary-light text-sm fw-normal">Monitor recent activity across your e-commerce
+                  store</span>
+              </div>
+            </div>
+            <div class="flex-shrink-0">
+              <a href="javascript:void(0)"
+                class="d-flex align-items-center gap-4 text-primary-600 text-sm fw-semibold text-hover-primary-800">
+                View All Activity
+                <i class="ph-bold ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Timeline Body -->
+          <div class="timeline-wrap">
+
+            <!-- Item 1: New order placed -->
+            <div class="timeline-wrap__item d-flex gap-16">
+              <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
+                <div
+                  class="w-40-px h-40-px rounded-circle border border-success-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-shopping-bag text-success-600 text-lg"></i>
+                </div>
+                <div class="timeline-wrap__line"></div>
+              </div>
+              <div class="timeline-wrap__content pb-40 flex-grow-1">
+                <div class="d-flex align-items-start justify-content-between gap-8 mb-4">
+                  <h6 class="fw-semibold mb-0 text-lg text-primary-light">New order placed</h6>
+                  <span class="text-secondary-light text-sm fw-normal flex-shrink-0">2 minutes ago</span>
+                </div>
+                <p class="text-secondary-light text-sm mb-20">Order #ORD-2847 from Emma Wilson for $249.00</p>
+                <div class="d-flex align-items-center gap-8 flex-wrap">
+                  <span
+                    class="badge rounded-pill border border-primary-200 text-primary-600 bg-transparent px-12 py-4 fw-medium text-xs">Wireless
+                    Headphones</span>
+                  <span
+                    class="badge rounded-pill border border-success-200 text-success-600 bg-transparent px-12 py-4 fw-medium text-xs">Payment
+                    Received</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2: Refund requested -->
+            <div class="timeline-wrap__item d-flex gap-16">
+              <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
+                <div
+                  class="w-40-px h-40-px rounded-circle border border-danger-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-arrow-counter-clockwise text-danger-600 text-lg"></i>
+                </div>
+                <div class="timeline-wrap__line"></div>
+              </div>
+              <div class="timeline-wrap__content pb-40 flex-grow-1">
+                <div class="d-flex align-items-start justify-content-between gap-8 mb-4">
+                  <h6 class="fw-semibold mb-0 text-lg text-primary-light">Refund requested</h6>
+                  <span class="text-secondary-light text-sm fw-normal flex-shrink-0">1 hour ago</span>
+                </div>
+                <p class="text-secondary-light text-sm mb-20">Lisa Anderson requested refund for Order #ORD-2843</p>
+                <div class="d-flex align-items-center gap-8 flex-wrap">
+                  <button type="button"
+                    class="btn rounded-pill bg-primary-600 text-white px-20 py-4 fw-semibold text-sm border-0">Approve</button>
+                  <button type="button"
+                    class="btn rounded-pill border border-primary-600 text-primary-600 bg-base px-20 py-4 fw-semibold text-sm bg-hover-primary-100">Decline</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3: New review received -->
+            <div class="timeline-wrap__item d-flex gap-16">
+              <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
+                <div
+                  class="w-40-px h-40-px rounded-circle border border-warning-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-star text-warning-600 text-lg"></i>
+                </div>
+                <div class="timeline-wrap__line"></div>
+              </div>
+              <div class="timeline-wrap__content pb-40 flex-grow-1">
+                <div class="d-flex align-items-start justify-content-between gap-8 mb-4">
+                  <h6 class="fw-semibold mb-0 text-lg text-primary-light">New review received</h6>
+                  <span class="text-secondary-light text-sm fw-normal flex-shrink-0">3 hours ago</span>
+                </div>
+                <p class="text-secondary-light text-sm mb-20">Michael Chen left a 5-star review for Smart Watch Pro</p>
+                <div class="bg-info-50 border border-info-100 radius-8 px-16 py-10">
+                  <p class="text-info-600 text-sm mb-0 fst-italic">"Excellent product! Fast delivery and great quality.
+                    Highly recommend!"</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4: New customer registered -->
+            <div class="timeline-wrap__item d-flex gap-16">
+              <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
+                <div
+                  class="w-40-px h-40-px rounded-circle border border-neutral-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-user text-secondary-light text-lg"></i>
+                </div>
+                <div class="timeline-wrap__line"></div>
+              </div>
+              <div class="timeline-wrap__content pb-40 flex-grow-1">
+                <div class="d-flex align-items-start justify-content-between gap-8 mb-4">
+                  <h6 class="fw-semibold mb-0 text-lg text-primary-light">New customer registered</h6>
+                  <span class="text-secondary-light text-sm fw-normal flex-shrink-0">5 hours ago</span>
+                </div>
+                <p class="text-secondary-light text-sm mb-20">Jessica Taylor created a new account and subscribed to
+                  newsletter</p>
+                <div class="d-flex align-items-center gap-8 flex-wrap">
+                  <span
+                    class="badge rounded-pill border border-success-200 text-success-600 bg-transparent px-16 py-8 fw-medium text-xs">demo@gmail.com</span>
+                  <span
+                    class="badge rounded-pill border border-danger-200 text-danger-600 bg-transparent px-16 py-8 fw-medium text-xs">Newsletter
+                    Subscriber</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5: Order shipped — last item, no line -->
+            <div class="timeline-wrap__item d-flex gap-16">
+              <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
+                <div
+                  class="w-40-px h-40-px rounded-circle border border-info-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-truck text-info-600 text-lg"></i>
+                </div>
+              </div>
+              <div class="timeline-wrap__content flex-grow-1">
+                <div class="d-flex align-items-start justify-content-between gap-8 mb-4">
+                  <h6 class="fw-semibold mb-0 text-lg text-primary-light">Order shipped</h6>
+                  <span class="text-secondary-light text-sm fw-normal flex-shrink-0">8 hours ago</span>
+                </div>
+                <p class="text-secondary-light text-sm mb-20">Order #ORD-2846 has been shipped via FedEx Express</p>
+                <div class="d-flex align-items-center gap-8 flex-wrap">
+                  <span
+                    class="badge rounded-pill border border-neutral-200 text-secondary-light bg-transparent px-16 py-8 fw-medium text-xs bg-neutral-50">Tracking:
+                    FDX-8472-9283-4721</span>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>

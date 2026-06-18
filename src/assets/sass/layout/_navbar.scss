@@ -3,6 +3,9 @@
   background-color: transparent;
   padding: rem(16px) rem(24px);
   z-index: 2;
+  position: sticky;
+  top: 0;
+  background-color: #ddd;
 }
 
 .sidebar-toggle,

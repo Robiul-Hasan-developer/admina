@@ -1,6 +1,30 @@
+/* Home One css start */
 .map-border-left {
     @media (min-width: 1400px) {
         border-inline-start: 1px solid var(--neutral-100);
         padding-inline-start: 28px;
     }
 }
+
+/* ===== Store Activity Timeline ===== */
+.timeline-wrap__left {
+  position: relative;
+}
+
+.timeline-wrap__line {
+  width: 1px;
+  flex-grow: 1;
+  min-height: 20px;
+  background-color: #e5e7eb;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.timeline-wrap__item:last-child .timeline-wrap__line {
+  display: none;
+}
+
+.timeline-wrap__content.pb-28 {
+//   padding-bottom: 28px;
+}
+/* Home One css end */
