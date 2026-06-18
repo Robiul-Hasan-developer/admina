@@ -649,3 +649,21 @@ $(document).ready(function () {
     }
   });
 });
+
+// ================================ Dense Toggle ================================
+document.getElementById('denseToggle').addEventListener('change', function () {
+  var rows = document.querySelectorAll('#recentOrdersTable tbody tr');
+  rows.forEach(function (row) {
+    if (this.checked) {
+      row.querySelectorAll('td').forEach(function (td) {
+        td.classList.remove('py-16');
+        td.classList.add('py-8');
+      });
+    } else {
+      row.querySelectorAll('td').forEach(function (td) {
+        td.classList.remove('py-8');
+        td.classList.add('py-16');
+      });
+    }
+  }.bind(this));
+});
