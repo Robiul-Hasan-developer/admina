@@ -393,7 +393,7 @@ var customerGrowthChart = new ApexCharts(document.querySelector("#customerGrowth
   }],
   chart: {
     type: 'area',
-    height: 320,
+    height: 270,
     toolbar: { show: false },
     zoom: { enabled: false },
     fontFamily: 'inherit'
