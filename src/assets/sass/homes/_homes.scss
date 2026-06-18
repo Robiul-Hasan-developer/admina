@@ -37,4 +37,16 @@
 .quick-action-btn i {
   color: #ffffff;
 }
+.text-decoration-underline {
+    text-decoration: underline !important;
+}
+.ps-60-px {
+    padding-left: 60px;
+    @media (max-width: 1699px) {
+        padding-left: 40px;
+    }
+    @media (max-width: 1399px) {
+        padding-left: 20px;
+    }
+}
 /* Home One css end */

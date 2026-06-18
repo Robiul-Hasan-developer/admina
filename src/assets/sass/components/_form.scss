@@ -510,3 +510,16 @@ select option {
     opacity: 1
   }
 }
+
+
+.style-big .form-check-input::before {
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-600);
+    left: 5px;
+}
+
+.style-big .form-check-input:checked::before {
+    left: calc(100% - 28px);
+    background-color: #fff;
+}
