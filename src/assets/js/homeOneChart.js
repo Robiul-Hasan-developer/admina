@@ -380,7 +380,103 @@ var revenueByCategoryChart = new ApexCharts(
 );
 revenueByCategoryChart.render();
 
-// Update all charts primary color ✅ ONE merged function — replaces BOTH previous updateChartColors definitions
+
+// ================================ Customer Growth - Area Chart ================================
+var customerGrowthChart = new ApexCharts(document.querySelector("#customerGrowthChart"), {
+  series: [{
+    name: 'Customers',
+    data: [
+      18000, 20500, 19800, 20200, 23000, 24500, 24000,
+      21000, 21500, 20800, 21200, 26000, 27500, 27000,
+      29000, 28500, 27800, 28200, 29500, 30000, 30200
+    ]
+  }],
+  chart: {
+    type: 'area',
+    height: 320,
+    toolbar: { show: false },
+    zoom: { enabled: false },
+    fontFamily: 'inherit'
+  },
+  stroke: {
+    curve: 'straight',
+    width: 2,
+    colors: ['#6366f1']
+  },
+  fill: {
+    type: 'gradient',
+    gradient: {
+      shade: 'light',
+      type: 'vertical',
+      shadeIntensity: 0.3,
+      gradientToColors: ['#ffffff'],
+      opacityFrom: 0.55,
+      opacityTo: 0.02,
+      stops: [0, 100]
+    },
+    colors: ['#818cf8']
+  },
+  colors: ['#6366f1'],
+  dataLabels: { enabled: false },
+  markers: { size: 0 },
+  xaxis: {
+    categories: [
+      'Jan', 'Jan', 'Jan', 'Jan', 'Jan', 'Jan', 'Jan',
+      'Feb', 'Feb', 'Feb', 'Feb', 'Feb', 'Feb', 'Feb',
+      'Feb', 'Feb', 'Feb', 'Feb', 'Feb', 'Feb', 'Feb'
+    ],
+    labels: {
+      style: {
+        colors: '#94a3b8',
+        fontSize: '12px',
+        fontWeight: 400
+      }
+    },
+    axisBorder: { show: false },
+    axisTicks: { show: false },
+    tickAmount: 10,
+    tooltip: { enabled: false }
+  },
+  yaxis: {
+    min: 0,
+    max: 30000,
+    tickAmount: 6,
+    labels: {
+      formatter: function (val) {
+        if (val === 0) return '0';
+        return (val / 1000).toFixed(0) + '\nk';
+      },
+      style: {
+        colors: '#94a3b8',
+        fontSize: '12px',
+        fontWeight: 400
+      },
+      offsetX: -4
+    }
+  },
+  grid: {
+    borderColor: '#f1f5f9',
+    strokeDashArray: 0,
+    xaxis: { lines: { show: true } },
+    yaxis: { lines: { show: true } },
+    padding: { top: 0, right: 0, bottom: 0, left: 10 }
+  },
+  tooltip: {
+    theme: 'light',
+    y: {
+      formatter: function (val) {
+        return (val / 1000).toFixed(1) + 'k customers';
+      }
+    }
+  },
+  legend: { show: false }
+});
+customerGrowthChart.render();
+
+
+// ================================================================================================
+//  Update all charts primary color ✅ ONE merged function — replaces BOTH previous updateChartColors definitions
+// ================================================================================================
 function updateChartColors(newColor) {
   barChart.updateOptions({
     colors: [
