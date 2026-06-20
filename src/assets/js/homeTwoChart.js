@@ -19,7 +19,7 @@ function makeLineChart(selector, data, color) {
     markers: { size: 0 },
     colors: [color],
     dataLabels: { enabled: false },
-    tooltip: { enabled: false },
+    tooltip: { enabled: true },
     grid: { show: false },
   });
 }

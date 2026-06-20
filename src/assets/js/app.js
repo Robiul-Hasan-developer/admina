@@ -43,7 +43,6 @@
           .parent()
           .addClass("active-page");
       ;
-
     ) {
       // li
       if (!o.is("li")) break;
@@ -120,11 +119,11 @@
   function applyTheme(theme) {
     if (theme === "system") {
       const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
+        "(prefers-color-scheme: dark)",
       ).matches;
       document.documentElement.setAttribute(
         "data-theme",
-        prefersDark ? "dark" : "light"
+        prefersDark ? "dark" : "light",
       );
     } else {
       document.documentElement.setAttribute("data-theme", theme);
@@ -172,7 +171,7 @@
     function () {
       $(".theme-customization-sidebar").removeClass("active");
       $(".body-overlay").removeClass("show");
-    }
+    },
   );
   // =========================== Theme Customization Show Hide js End ================================
 
@@ -212,50 +211,93 @@
   });
   // =========================== RTL Mode js End ================================
 
-//   // =========================== Color Schema js Start ================================
-// const colorPickerButtons = document.querySelectorAll(".color-picker-btn");
-// const colors = {
-//   blue: "#2563eb",
-//   red: "#dc2626",
-//   green: "#16a34a",
-//   yellow: "#ff9f29",
-//   cyan: "#00b8f2",
-//   violet: "#7c3aed",
-// };
+  //   // =========================== Color Schema js Start ================================
+  // const colorPickerButtons = document.querySelectorAll(".color-picker-btn");
+  // const colors = {
+  //   blue: "#2563eb",
+  //   red: "#dc2626",
+  //   green: "#16a34a",
+  //   yellow: "#ff9f29",
+  //   cyan: "#00b8f2",
+  //   violet: "#7c3aed",
+  // };
 
-// function applyColor(color) {
-//   const newColor = colors[color];
-//   document.documentElement.style.setProperty("--primary-600", newColor);
-//   localStorage.setItem("templateColor", color);
+  // function applyColor(color) {
+  //   const newColor = colors[color];
+  //   document.documentElement.style.setProperty("--primary-600", newColor);
+  //   localStorage.setItem("templateColor", color);
 
-//   // Update charts instantly with the new color
-//   updateChartColors(newColor);
-// }
+  //   // Update charts instantly with the new color
+  //   updateChartColors(newColor);
+  // }
 
-// colorPickerButtons.forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     const color = btn.getAttribute("data-color");
-//     if (!color) return;
-//     applyColor(color);
-//     colorPickerButtons.forEach((b) => b.classList.remove("active"));
-//     btn.classList.add("active");
-//   });
-// });
+  // colorPickerButtons.forEach((btn) => {
+  //   btn.addEventListener("click", () => {
+  //     const color = btn.getAttribute("data-color");
+  //     if (!color) return;
+  //     applyColor(color);
+  //     colorPickerButtons.forEach((b) => b.classList.remove("active"));
+  //     btn.classList.add("active");
+  //   });
+  // });
 
-// // Load saved color on refresh
-// const savedColor = localStorage.getItem("templateColor");
-// if (savedColor && colors[savedColor]) {
-//   applyColor(savedColor);
-//   document
-//     .querySelector(`.color-picker-btn[data-color="${savedColor}"]`)
-//     .classList.add("active");
-// } else {
-//   document
-//     .querySelector(`.color-picker-btn[data-color="blue"]`)
-//     .classList.add("active");
-// }
-// // =========================== Color Schema js End ================================
-  
+  // // Load saved color on refresh
+  // const savedColor = localStorage.getItem("templateColor");
+  // if (savedColor && colors[savedColor]) {
+  //   applyColor(savedColor);
+  //   document
+  //     .querySelector(`.color-picker-btn[data-color="${savedColor}"]`)
+  //     .classList.add("active");
+  // } else {
+  //   document
+  //     .querySelector(`.color-picker-btn[data-color="blue"]`)
+  //     .classList.add("active");
+  // }
+
+  const colorPickerButtons = document.querySelectorAll(".color-picker-btn");
+  const colors = {
+    blue: "#2563eb",
+    red: "#dc2626",
+    green: "#16a34a",
+    yellow: "#ff9f29",
+    cyan: "#00b8f2",
+    violet: "#7c3aed",
+  };
+
+  function applyColor(color) {
+    const newColor = colors[color];
+    document.documentElement.style.setProperty("--primary-600", newColor);
+    localStorage.setItem("templateColor", color);
+
+    // Update charts instantly with the new color
+    updateChartColors(newColor);
+  }
+
+  colorPickerButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const color = btn.getAttribute("data-color");
+      if (!color) return;
+      applyColor(color);
+      colorPickerButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
+  // Load saved color on refresh
+  const savedColor = localStorage.getItem("templateColor");
+  if (savedColor && colors[savedColor]) {
+    applyColor(savedColor);
+    document
+      .querySelector(`.color-picker-btn[data-color="${savedColor}"]`)
+      .classList.add("active");
+  } else {
+    document
+      .querySelector(`.color-picker-btn[data-color="blue"]`)
+      .classList.add("active");
+  }
+  // =========================== Color Schema js End ================================
+
+
 
   // =========================== Table Header Checkbox checked all js Start ================================
   $("#selectAll").on("change", function () {
