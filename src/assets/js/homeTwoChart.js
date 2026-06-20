@@ -155,22 +155,6 @@ audienceOverviewChart.render();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ================================ Recent Orders - DataTable ================================
 $(document).ready(function () {
   const table = $("#recentOrdersTable").DataTable({

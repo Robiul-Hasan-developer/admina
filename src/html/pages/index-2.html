@@ -146,32 +146,80 @@
 
       <!-- Audience Overview Card -->
       <div class="col-xl-6">
-        <div class="bg-base p-24 radius-20">
-          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
-            <div class="d-flex align-items-center gap-12">
-              <div
-                class="w-48-px h-48-px bg-warning-50 border border-warning-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                <span class="icon text-warning-600 text-2xl line-height-1 d-flex">
-                  <i class="ph ph-users"></i>
-                </span>
+        <div class="d-flex flex-column gap-24">
+
+          <div class="bg-base p-24 radius-20">
+            <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-48-px h-48-px bg-warning-50 border border-warning-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                  <span class="icon text-warning-600 text-2xl line-height-1 d-flex">
+                    <i class="ph ph-users"></i>
+                  </span>
+                </div>
+                <div>
+                  <h6 class="fw-semibold mb-0 text-lg">Audience Overview</h6>
+                  <span class="text-secondary-light text-sm fw-normal">Explore user engagement trends & visitor
+                    retention
+                    over time.</span>
+                </div>
               </div>
               <div>
-                <h6 class="fw-semibold mb-0 text-lg">Audience Overview</h6>
-                <span class="text-secondary-light text-sm fw-normal">Explore user engagement trends & visitor retention
-                  over time.</span>
+                <select
+                  class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                  <option>This Week</option>
+                  <option>This Month</option>
+                  <option>This Year</option>
+                  <option>Today</option>
+                </select>
               </div>
             </div>
-            <div>
-              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
-                <option>This Week</option>
-                <option>This Month</option>
-                <option>This Year</option>
-                <option>Today</option>
-              </select>
+
+            <div id="audienceOverviewChart"></div>
+          </div>
+
+          <!-- Impressions & Clicks Card -->
+          <div class="bg-base p-24 radius-20">
+            <div class="d-flex gap-1 w-100">
+
+              <!-- Impressions -->
+              <div class="flex-grow-1">
+                <span class="text-secondary-light text-md fw-medium d-block mb-12">Impressions</span>
+                <h4 class="fw-bold mb-16">48.7%</h4>
+                <div class="h-12-px w-100 rounded-start-pill" style="background-color: #00B8D9;"></div>
+                <span class="text-secondary-light text-md fw-normal d-block mt-8">12,547</span>
+              </div>
+
+              <!-- Clicks -->
+              <div class="flex-grow-1">
+                <span class="text-secondary-light text-md fw-medium d-block mb-12">Clicks</span>
+                <h4 class="fw-bold mb-16">62.7%</h4>
+                <div class="h-12-px w-100 rounded-end-pill" style="background-color: #FDC70F;"></div>
+                <span class="text-secondary-light text-md fw-normal d-block mt-8">25,478</span>
+              </div>
+
             </div>
           </div>
 
-          <div id="audienceOverviewChart"></div>
+          <!-- <div class="bg-base p-24 radius-20">
+              <div class="row gy-20">
+
+                <div class="col-6">
+                  <span class="text-secondary-light text-md fw-normal d-block mb-8">Impressions</span>
+                  <h4 class="fw-bold mb-12">48.7%</h4>
+                  <div id="impressionsChart"></div>
+                  <span class="text-secondary-light text-sm fw-normal d-block mt-8">12,547</span>
+                </div>
+
+                <div class="col-6">
+                  <span class="text-secondary-light text-md fw-normal d-block mb-8">Clicks</span>
+                  <h4 class="fw-bold mb-12">62.7%</h4>
+                  <div id="clicksChart"></div>
+                  <span class="text-secondary-light text-sm fw-normal d-block mt-8">25,478</span>
+                </div>
+
+              </div>
+            </div> -->
         </div>
       </div>
 
