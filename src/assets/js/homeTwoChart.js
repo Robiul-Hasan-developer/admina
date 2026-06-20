@@ -56,6 +56,121 @@ var avgSessionChart = makeLineChart(
 );
 avgSessionChart.render();
 
+
+// ================================ Audience Overview - Combo Bar + Line Chart ================================
+var audienceOverviewChart = new ApexCharts(
+  document.querySelector("#audienceOverviewChart"),
+  {
+    series: [
+      {
+        name: "New Visitors",
+        type: "column",
+        data: [2, 5, 8, 25, 28, 70, 175]
+      },
+      {
+        name: "Previous Visitors",
+        type: "column",
+        data: [3, 6, 10, 22, 25, 80, 135]
+      },
+      {
+        name: "Unique Visitors",
+        type: "line",
+        data: [18, 20, 30, 45, 65, 102, 220]
+      }
+    ],
+    chart: {
+      height: 320,
+      toolbar: { show: false },
+      zoom: { enabled: false }
+    },
+    stroke: {
+      curve: "smooth",
+      width: [0, 0, 2]
+    },
+    colors: ["#6366f1", "#22c55e", "#ef4444"],
+    plotOptions: {
+      bar: {
+        columnWidth: "55%",
+        borderRadius: 0,
+        borderRadiusApplication: "end"
+      }
+    },
+    fill: {
+      opacity: [1, 1, 1]
+    },
+    markers: {
+      size: 0,
+      hover: { size: 5 }
+    },
+    xaxis: {
+      categories: ["Mo", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      labels: {
+        style: { fontSize: "12px", colors: "#9ca3af" }
+      },
+      axisBorder: { show: false },
+      axisTicks: { show: false }
+    },
+    yaxis: {
+      min: 0,
+      max: 250,
+      tickAmount: 5,
+      labels: {
+        style: { fontSize: "12px", colors: "#9ca3af" }
+      }
+    },
+    grid: {
+      borderColor: "#f3f4f6",
+      strokeDashArray: 0,
+      xaxis: { lines: { show: false } },
+      yaxis: { lines: { show: true } }
+    },
+    legend: {
+      show: true,
+      position: "bottom",
+      horizontalAlign: "center",
+      fontSize: "13px",
+      fontWeight: 500,
+      markers: {
+        width: 8,
+        height: 8,
+        radius: 12
+      },
+      itemMargin: {
+        horizontal: 12,
+        vertical: 8
+      },
+      labels: {
+        colors: "#6B7280"
+      }
+    },
+    tooltip: {
+      shared: true,
+      intersect: false
+    }
+  }
+);
+audienceOverviewChart.render();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ================================ Recent Orders - DataTable ================================
 $(document).ready(function () {
   const table = $("#recentOrdersTable").DataTable({

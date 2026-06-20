@@ -54,7 +54,7 @@
                   <i class="ph ph-users-three text-primary-600 text-2xl"></i>
                 </div>
                 <span
-                  class="badge rounded-pill border border-success-200 text-success-600 bg-success-50 px-12 py-4 fw-semibold text-sm d-flex align-items-center gap-4">
+                  class="badge rounded-pill border border-success-200 text-success-600 bg-success-50 px-12 py-4 fw-semibold text-sm d-flex align-items-center gap-1">
                   <i class="ph ph-arrows-down-up text-sm"></i>
                   60.2%
                 </span>
@@ -78,7 +78,7 @@
                   <i class="ph ph-eye text-success-600 text-2xl"></i>
                 </div>
                 <span
-                  class="badge rounded-pill border border-warning-200 text-warning-600 bg-warning-50 px-12 py-4 fw-semibold text-sm d-flex align-items-center gap-4">
+                  class="badge rounded-pill border border-warning-200 text-warning-600 bg-warning-50 px-12 py-4 fw-semibold text-sm d-flex align-items-center gap-1">
                   <i class="ph ph-arrows-down-up text-sm"></i>
                   60.2%
                 </span>
@@ -102,7 +102,7 @@
                   <i class="ph ph-chart-line-down text-warning-600 text-2xl"></i>
                 </div>
                 <span
-                  class="badge rounded-pill border border-danger-200 text-danger-600 bg-danger-50 px-12 py-4 fw-semibold text-sm d-flex align-items-center gap-4">
+                  class="badge rounded-pill border border-danger-200 text-danger-600 bg-danger-50 px-12 py-4 fw-semibold text-sm d-flex align-items-center gap-1">
                   <i class="ph ph-arrows-down-up text-sm"></i>
                   60.2%
                 </span>
@@ -126,7 +126,7 @@
                   <i class="ph ph-timer text-danger-600 text-2xl"></i>
                 </div>
                 <span
-                  class="badge rounded-pill border border-primary-200 text-primary-600 bg-primary-50 px-12 py-4 fw-semibold text-sm d-flex align-items-center gap-4">
+                  class="badge rounded-pill border border-primary-200 text-primary-600 bg-primary-50 px-12 py-4 fw-semibold text-sm d-flex align-items-center gap-1">
                   <i class="ph ph-arrows-down-up text-sm"></i>
                   60.2%
                 </span>
@@ -143,6 +143,43 @@
 
         </div>
       </div>
+
+      <!-- Audience Overview Card -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20">
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-warning-50 border border-warning-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-warning-600 text-2xl line-height-1 d-flex">
+                  <i class="ph ph-users"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Audience Overview</h6>
+                <span class="text-secondary-light text-sm fw-normal">Explore user engagement trends & visitor retention
+                  over time.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+                <option>Today</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="audienceOverviewChart"></div>
+        </div>
+      </div>
+
+
+
+
+
+
 
 
       <div class="col-12">
