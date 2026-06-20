@@ -147,7 +147,6 @@
       <!-- Audience Overview Card -->
       <div class="col-xl-6">
         <div class="d-flex flex-column gap-24">
-
           <div class="bg-base p-24 radius-20">
             <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
               <div class="d-flex align-items-center gap-12">
@@ -177,7 +176,6 @@
 
             <div id="audienceOverviewChart"></div>
           </div>
-
           <!-- Impressions & Clicks Card -->
           <div class="bg-base p-24 radius-20">
             <div class="d-flex gap-1 w-100">
@@ -200,26 +198,116 @@
 
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- <div class="bg-base p-24 radius-20">
-              <div class="row gy-20">
 
-                <div class="col-6">
-                  <span class="text-secondary-light text-md fw-normal d-block mb-8">Impressions</span>
-                  <h4 class="fw-bold mb-12">48.7%</h4>
-                  <div id="impressionsChart"></div>
-                  <span class="text-secondary-light text-sm fw-normal d-block mt-8">12,547</span>
-                </div>
+      <!-- Total Subscribers Card -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20">
 
-                <div class="col-6">
-                  <span class="text-secondary-light text-md fw-normal d-block mb-8">Clicks</span>
-                  <h4 class="fw-bold mb-12">62.7%</h4>
-                  <div id="clicksChart"></div>
-                  <span class="text-secondary-light text-sm fw-normal d-block mt-8">25,478</span>
-                </div>
-
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-primary-50 border border-primary-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-primary-600 text-2xl line-height-1 d-flex">
+                  <i class="ph ph-users-three"></i>
+                </span>
               </div>
-            </div> -->
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Total Subscribers</h6>
+                <span class="text-secondary-light text-sm fw-normal">Subscriber count summary from your top acquisition
+                  channels.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+                <option>Today</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <span class="mt--16 w-100">
+            <div id="subscribersChart" style="width:100%; min-height:160px;"></div>
+          </span>
+
+          <!-- Channel List -->
+          <ul class="mt-12 d-flex flex-column gap-0">
+            <li class="d-flex align-items-center justify-content-between py-12 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-12-px h-12-px rounded-circle" style="background:#e0e7ff;"></span>
+                <span class="text-secondary-light text-sm fw-normal">Email Marketing</span>
+              </div>
+              <div class="d-flex align-items-center gap-32">
+                <span class="text-primary-light text-sm fw-medium">20.4K</span>
+                <span class="text-primary-light text-sm fw-medium">42%</span>
+              </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between py-12 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-12-px h-12-px rounded-circle" style="background:#c7d2fe;"></span>
+                <span class="text-secondary-light text-sm fw-normal">Social Marketing</span>
+              </div>
+              <div class="d-flex align-items-center gap-32">
+                <span class="text-primary-light text-sm fw-medium">16.4K</span>
+                <span class="text-primary-light text-sm fw-medium">28%</span>
+              </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between py-12 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-12-px h-12-px rounded-circle" style="background:#a5b4fc;"></span>
+                <span class="text-secondary-light text-sm fw-normal">Direct</span>
+              </div>
+              <div class="d-flex align-items-center gap-32">
+                <span class="text-primary-light text-sm fw-medium">8.4K</span>
+                <span class="text-primary-light text-sm fw-medium">16%</span>
+              </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between py-12 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-12-px h-12-px rounded-circle" style="background:#6366f1;"></span>
+                <span class="text-secondary-light text-sm fw-normal">Referral</span>
+              </div>
+              <div class="d-flex align-items-center gap-32">
+                <span class="text-primary-light text-sm fw-medium">4.7K</span>
+                <span class="text-primary-light text-sm fw-medium">8%</span>
+              </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between py-12">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-12-px h-12-px rounded-circle" style="background:#4338ca;"></span>
+                <span class="text-secondary-light text-sm fw-normal">Organic Search</span>
+              </div>
+              <div class="d-flex align-items-center gap-32">
+                <span class="text-primary-light text-sm fw-medium">3.1K</span>
+                <span class="text-primary-light text-sm fw-medium">6%</span>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Milestone Banner -->
+          <div class="d-flex align-items-center justify-content-between gap-8 bg-primary-50 radius-16 p-16 mt-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-40-px h-40-px bg-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-sparkle text-primary-600 text-lg"></i>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-md">Congratulations !...</h6>
+                <span class="text-secondary-light text-sm fw-normal">You've reached a new subscriber milestone.</span>
+              </div>
+            </div>
+            <div class="text-end flex-shrink-0">
+              <h6 class="fw-bold mb-0 text-md">36.7K</h6>
+              <span class="text-secondary-light text-sm fw-normal">Subscribers</span>
+            </div>
+          </div>
+
         </div>
       </div>
 

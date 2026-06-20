@@ -56,7 +56,6 @@ var avgSessionChart = makeLineChart(
 );
 avgSessionChart.render();
 
-
 // ================================ Audience Overview - Combo Bar + Line Chart ================================
 var audienceOverviewChart = new ApexCharts(
   document.querySelector("#audienceOverviewChart"),
@@ -65,64 +64,64 @@ var audienceOverviewChart = new ApexCharts(
       {
         name: "New Visitors",
         type: "column",
-        data: [2, 5, 8, 25, 28, 70, 175]
+        data: [2, 5, 8, 25, 28, 70, 175],
       },
       {
         name: "Previous Visitors",
         type: "column",
-        data: [3, 6, 10, 22, 25, 80, 135]
+        data: [3, 6, 10, 22, 25, 80, 135],
       },
       {
         name: "Unique Visitors",
         type: "line",
-        data: [18, 20, 30, 45, 65, 102, 220]
-      }
+        data: [18, 20, 30, 45, 65, 102, 220],
+      },
     ],
     chart: {
       height: 320,
       toolbar: { show: false },
-      zoom: { enabled: false }
+      zoom: { enabled: false },
     },
     stroke: {
       curve: "smooth",
-      width: [0, 0, 2]
+      width: [0, 0, 2],
     },
     colors: ["#6366f1", "#22c55e", "#ef4444"],
     plotOptions: {
       bar: {
         columnWidth: "55%",
         borderRadius: 0,
-        borderRadiusApplication: "end"
-      }
+        borderRadiusApplication: "end",
+      },
     },
     fill: {
-      opacity: [1, 1, 1]
+      opacity: [1, 1, 1],
     },
     markers: {
       size: 0,
-      hover: { size: 5 }
+      hover: { size: 5 },
     },
     xaxis: {
       categories: ["Mo", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       labels: {
-        style: { fontSize: "12px", colors: "#9ca3af" }
+        style: { fontSize: "12px", colors: "#9ca3af" },
       },
       axisBorder: { show: false },
-      axisTicks: { show: false }
+      axisTicks: { show: false },
     },
     yaxis: {
       min: 0,
       max: 250,
       tickAmount: 5,
       labels: {
-        style: { fontSize: "12px", colors: "#9ca3af" }
-      }
+        style: { fontSize: "12px", colors: "#9ca3af" },
+      },
     },
     grid: {
       borderColor: "#f3f4f6",
       strokeDashArray: 0,
       xaxis: { lines: { show: false } },
-      yaxis: { lines: { show: true } }
+      yaxis: { lines: { show: true } },
     },
     legend: {
       show: true,
@@ -133,23 +132,67 @@ var audienceOverviewChart = new ApexCharts(
       markers: {
         width: 8,
         height: 8,
-        radius: 12
+        radius: 12,
       },
       itemMargin: {
         horizontal: 12,
-        vertical: 8
+        vertical: 8,
       },
       labels: {
-        colors: "#6B7280"
-      }
+        colors: "#6B7280",
+      },
     },
     tooltip: {
       shared: true,
-      intersect: false
-    }
-  }
+      intersect: false,
+    },
+  },
 );
 audienceOverviewChart.render();
+
+
+
+// ================================ Total Subscribers - Equal Height, Varying Width Bar Chart ================================
+var subscribersChart = new ApexCharts(document.querySelector("#subscribersChart"), {
+  series: [{
+    data: [
+      { x: 'Email Marketing', y: 100, columnWidth: '100%' },
+      { x: 'Social Marketing', y: 100, columnWidth: '85%' },
+      { x: 'Direct', y: 100, columnWidth: '70%' },
+      { x: 'Referral', y: 100, columnWidth: '50%' },
+      { x: 'Organic Search', y: 100, columnWidth: '25%' }
+    ]
+  }],
+  chart: {
+    type: 'bar',
+    height: 160,
+    width: '100%',
+    toolbar: { show: false },
+    sparkline: { enabled: true },
+    animations: { enabled: false }
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: '96%',
+      borderRadius: 6,
+      distributed: true
+    }
+  },
+  colors: ['#e0e7ff', '#c7d2fe', '#a5b4fc', '#6366f1', '#4338ca'],
+  dataLabels: { enabled: false },
+  legend: { show: false },
+  tooltip: { enabled: false },
+  states: {
+    hover: { filter: { type: 'none' } },
+    active: { filter: { type: 'none' } }
+  },
+  grid: { show: false }
+});
+subscribersChart.render();
+
+
+
+
 
 
 

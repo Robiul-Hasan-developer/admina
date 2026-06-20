@@ -58,4 +58,14 @@
   border-radius: 10px;
   overflow: hidden;
 }
+
+
+
+#subscribersChart {
+  width: 100%;
+}
+#subscribersChart .apexcharts-canvas,
+#subscribersChart svg {
+  width: 100% !important;
+}
 /* Home One css end */
