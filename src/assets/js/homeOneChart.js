@@ -59,7 +59,7 @@ var lineChartOptions = {
     },
   },
   colors: [primaryColor],
-  tooltip: { enabled: false },
+  tooltip: { enabled: true },
 };
 var lineChart = new ApexCharts(
   document.querySelector("#lineChart"),
@@ -230,7 +230,7 @@ var returningClientsChartOptions = {
   },
   colors: [primaryColor],
   dataLabels: { enabled: false },
-  tooltip: { enabled: false },
+  tooltip: { enabled: true },
 };
 var returningClientsChart = new ApexCharts(
   document.querySelector("#returningClientsChart"),
@@ -239,42 +239,126 @@ var returningClientsChart = new ApexCharts(
 returningClientsChart.render();
 
 // ================================ Sales Overview - Dual Line Chart ================================
+// ================================ Sales Overview - Dual Line Chart ================================
 var salesOverviewChart = new ApexCharts(
   document.querySelector("#salesOverviewChart"),
   {
     series: [
       {
         name: "This Year",
-        data: [75, 60, 55, 70, 65, 60, 55, 65, 60, 55, 60, 55],
+        data: [
+          75, 75, 68, 38, 36, 38, 70, 70, 60, 58, 58, 45, 42, 18, 18, 18, 50,
+        ],
       },
       {
         name: "Last Year",
-        data: [38, 55, 25, 60, 40, 55, 35, 50, 42, 55, 38, 78],
+        data: [
+          33, 33, 50, 62, 62, 60, 18, 18, 60, 60, 50, 50, 33, 33, 80, 80, 80,
+        ],
       },
     ],
-    chart: { type: "line", height: 160, toolbar: { show: false } },
-    stroke: { curve: "smooth", width: [2, 2], dashArray: [0, 5] },
+    chart: {
+      type: "line",
+      height: 290,
+      toolbar: { show: false },
+      zoom: { enabled: false },
+    },
+    stroke: {
+      curve: "smooth",
+      width: [2, 2],
+    },
     colors: [primaryColor, "#eab308"],
     xaxis: {
-      categories: ["02 Jan", "04 Jan", "06 Jan", "08 Jan", "10 Jan", "12 Jan"],
-      tickAmount: 5,
-      labels: { style: { fontSize: "10px", colors: "#9ca3af" } },
+      categories: [
+        "01 Jan",
+        "02 Jan",
+        "03 Jan",
+        "04 Jan",
+        "05 Jan",
+        "06 Jan",
+        "06 Jan",
+        "07 Jan",
+        "08 Jan",
+        "09 Jan",
+        "10 Jan",
+        "11 Jan",
+        "12 Jan",
+        "12 Jan",
+        "12 Jan",
+        "12 Jan",
+        "12 Jan",
+      ],
+      tickAmount: 6,
+      labels: {
+        style: { fontSize: "11px", colors: "#9ca3af" },
+        formatter: function (val) {
+          return val;
+        },
+      },
       axisBorder: { show: false },
       axisTicks: { show: false },
     },
     yaxis: {
-      labels: { style: { fontSize: "10px", colors: "#9ca3af" } },
+      labels: { style: { fontSize: "11px", colors: "#9ca3af" } },
       min: 0,
       max: 100,
-      tickAmount: 4,
+      tickAmount: 5,
     },
-    grid: { borderColor: "#f3f4f6", strokeDashArray: 3 },
+    grid: {
+      borderColor: "#f3f4f6",
+      strokeDashArray: 0,
+      xaxis: { lines: { show: false } },
+      yaxis: { lines: { show: true } },
+    },
     legend: { show: false },
     markers: {
-      size: 4,
+      size: 0,
       strokeWidth: 2,
-      strokeColors: ["#fff", "#fff"],
-      fillColors: [primaryColor, "#eab308"],
+      hover: { size: 5 },
+      discrete: [
+        {
+          seriesIndex: 0,
+          dataPointIndex: 6,
+          fillColor: primaryColor,
+          strokeColor: "#fff",
+          size: 5,
+        },
+        {
+          seriesIndex: 0,
+          dataPointIndex: 13,
+          fillColor: primaryColor,
+          strokeColor: "#fff",
+          size: 5,
+        },
+        {
+          seriesIndex: 0,
+          dataPointIndex: 16,
+          fillColor: primaryColor,
+          strokeColor: "#fff",
+          size: 5,
+        },
+        {
+          seriesIndex: 1,
+          dataPointIndex: 3,
+          fillColor: "#eab308",
+          strokeColor: "#fff",
+          size: 5,
+        },
+        {
+          seriesIndex: 1,
+          dataPointIndex: 9,
+          fillColor: "#eab308",
+          strokeColor: "#fff",
+          size: 5,
+        },
+        {
+          seriesIndex: 1,
+          dataPointIndex: 14,
+          fillColor: "#eab308",
+          strokeColor: "#fff",
+          size: 5,
+        },
+      ],
     },
     annotations: {
       xaxis: [
@@ -296,7 +380,7 @@ var orderSummaryChart = new ApexCharts(
   document.querySelector("#orderSummaryChart"),
   {
     series: [45, 30, 25],
-    chart: { type: "donut", height: 260 },
+    chart: { type: "donut", height: 280 },
     colors: [primaryColor, "#00b8f2", "#f87171"],
     labels: ["Completed", "New Order", "Pending"],
     plotOptions: {
@@ -334,7 +418,7 @@ var revenueByCategoryChart = new ApexCharts(
   document.querySelector("#revenueByCategoryChart"),
   {
     series: [30, 20, 15, 12, 13, 10],
-    chart: { type: "donut", height: 300 },
+    chart: { type: "donut", height: 320 },
     colors: [
       primaryColor,
       "#f87171",
@@ -380,99 +464,120 @@ var revenueByCategoryChart = new ApexCharts(
 );
 revenueByCategoryChart.render();
 
-
 // ================================ Customer Growth - Area Chart ================================
-var customerGrowthChart = new ApexCharts(document.querySelector("#customerGrowthChart"), {
-  series: [{
-    name: 'Customers',
-    data: [
-      18000, 20500, 19800, 20200, 23000, 24500, 24000,
-      21000, 21500, 20800, 21200, 26000, 27500, 27000,
-      29000, 28500, 27800, 28200, 29500, 30000, 30200
-    ]
-  }],
-  chart: {
-    type: 'area',
-    height: 270,
-    toolbar: { show: false },
-    zoom: { enabled: false },
-    fontFamily: 'inherit'
-  },
-  stroke: {
-    curve: 'straight',
-    width: 2,
-    colors: ['#6366f1']
-  },
-  fill: {
-    type: 'gradient',
-    gradient: {
-      shade: 'light',
-      type: 'vertical',
-      shadeIntensity: 0.3,
-      gradientToColors: ['#ffffff'],
-      opacityFrom: 0.95,
-      opacityTo: 0.02,
-      stops: [0, 100]
-    },
-    colors: ['#818cf8']
-  },
-  colors: ['#6366f1'],
-  dataLabels: { enabled: false },
-  markers: { size: 0 },
-  xaxis: {
-    categories: [
-      'Jan', 'Jan', 'Jan', 'Jan', 'Jan', 'Jan', 'Jan',
-      'Feb', 'Feb', 'Feb', 'Feb', 'Feb', 'Feb', 'Feb',
-      'Feb', 'Feb', 'Feb', 'Feb', 'Feb', 'Feb', 'Feb'
+var customerGrowthChart = new ApexCharts(
+  document.querySelector("#customerGrowthChart"),
+  {
+    series: [
+      {
+        name: "Customers",
+        data: [
+          18000, 20500, 19800, 20200, 23000, 24500, 24000, 21000, 21500, 20800,
+          21200, 26000, 27500, 27000, 29000, 28500, 27800, 28200, 29500, 30000,
+          30200,
+        ],
+      },
     ],
-    labels: {
-      style: {
-        colors: '#94a3b8',
-        fontSize: '12px',
-        fontWeight: 400
-      }
+    chart: {
+      type: "area",
+      height: 270,
+      toolbar: { show: false },
+      zoom: { enabled: false },
+      fontFamily: "inherit",
     },
-    axisBorder: { show: false },
-    axisTicks: { show: false },
-    tickAmount: 10,
-    tooltip: { enabled: false }
-  },
-  yaxis: {
-    min: 0,
-    max: 30000,
-    tickAmount: 6,
-    labels: {
-      formatter: function (val) {
-        if (val === 0) return '0';
-        return (val / 1000).toFixed(0) + '\nk';
+    stroke: {
+      curve: "straight",
+      width: 2,
+      colors: [primaryColor],
+    },
+    fill: {
+      type: "gradient",
+      gradient: {
+        shade: "light",
+        type: "vertical",
+        shadeIntensity: 0.3,
+        gradientToColors: ["#ffffff"],
+        opacityFrom: 0.95,
+        opacityTo: 0.02,
+        stops: [0, 100],
       },
-      style: {
-        colors: '#94a3b8',
-        fontSize: '12px',
-        fontWeight: 400
+      colors: [primaryColor],
+    },
+    colors: [primaryColor],
+    dataLabels: { enabled: false },
+    markers: { size: 0 },
+    xaxis: {
+      categories: [
+        "Jan",
+        "Jan",
+        "Jan",
+        "Jan",
+        "Jan",
+        "Jan",
+        "Jan",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+        "Feb",
+      ],
+      labels: {
+        style: {
+          colors: "#94a3b8",
+          fontSize: "12px",
+          fontWeight: 400,
+        },
       },
-      offsetX: -4
-    }
+      axisBorder: { show: false },
+      axisTicks: { show: false },
+      tickAmount: 10,
+      tooltip: { enabled: false },
+    },
+    yaxis: {
+      min: 0,
+      max: 30000,
+      tickAmount: 6,
+      labels: {
+        formatter: function (val) {
+          if (val === 0) return "0";
+          return (val / 1000).toFixed(0) + "\nk";
+        },
+        style: {
+          colors: "#94a3b8",
+          fontSize: "12px",
+          fontWeight: 400,
+        },
+        offsetX: -4,
+      },
+    },
+    grid: {
+      borderColor: "#f1f5f9",
+      strokeDashArray: 0,
+      xaxis: { lines: { show: true } },
+      yaxis: { lines: { show: true } },
+      padding: { top: 0, right: 0, bottom: 0, left: 10 },
+    },
+    tooltip: {
+      theme: "light",
+      y: {
+        formatter: function (val) {
+          return (val / 1000).toFixed(1) + "k customers";
+        },
+      },
+    },
+    legend: { show: false },
   },
-  grid: {
-    borderColor: '#f1f5f9',
-    strokeDashArray: 0,
-    xaxis: { lines: { show: true } },
-    yaxis: { lines: { show: true } },
-    padding: { top: 0, right: 0, bottom: 0, left: 10 }
-  },
-  tooltip: {
-    theme: 'light',
-    y: {
-      formatter: function (val) {
-        return (val / 1000).toFixed(1) + 'k customers';
-      }
-    }
-  },
-  legend: { show: false }
-});
+);
 customerGrowthChart.render();
-
 
 // ================================================================================================
 //  Update all charts primary color ✅ ONE merged function — replaces BOTH previous updateChartColors definitions
@@ -519,6 +624,16 @@ function updateChartColors(newColor) {
   orderSummaryChart.updateOptions({ colors: [newColor, "#00b8f2", "#f87171"] });
   revenueByCategoryChart.updateOptions({
     colors: [newColor, "#f87171", "#00b8f2", "#a855f7", "#22c55e", "#eab308"],
+  });
+
+  customerGrowthChart.updateOptions({
+    stroke: {
+      colors: [newColor],
+    },
+    fill: {
+      colors: [newColor],
+    },
+    colors: [newColor],
   });
 }
 
@@ -641,125 +756,110 @@ $("#world-map").vectorMap({
 });
 // ================================ J Vector Map End ================================
 
-
-
-
 // ================================ Payment Methods - Donut Chart ================================
-var paymentMethodsChart = new ApexCharts(document.querySelector("#paymentMethodsChart"), {
-  series: [30, 25, 15, 20, 10],
-  chart: {
-    type: 'polarArea',
-    height: 380,
-    toolbar: { show: false }
-  },
-  labels: ['Visa', 'Strips', 'Google Pay', 'PayPal', 'Apple Pay'],
-  colors: ['#4F46E5', '#FDC70F', '#F6776E', '#00B8D9', '#22C55E'],
-  fill: {
-    opacity: 1
-  },
-  stroke: {
-    width: 0,
-    colors: ['#fff']
-  },
-  plotOptions: {
-    polarArea: {
-      rings: {
-        strokeWidth: 0
+var paymentMethodsChart = new ApexCharts(
+  document.querySelector("#paymentMethodsChart"),
+  {
+    series: [30, 25, 15, 20, 10],
+    chart: {
+      type: "polarArea",
+      height: 380,
+      toolbar: { show: false },
+    },
+    labels: ["Visa", "Strips", "Google Pay", "PayPal", "Apple Pay"],
+    colors: ["#4F46E5", "#FDC70F", "#F6776E", "#00B8D9", "#22C55E"],
+    fill: {
+      opacity: 1,
+    },
+    stroke: {
+      width: 0,
+      colors: ["#fff"],
+    },
+    plotOptions: {
+      polarArea: {
+        rings: {
+          strokeWidth: 0,
+        },
+        spokes: {
+          strokeWidth: 0,
+        },
       },
-      spokes: {
-        strokeWidth: 0
-      }
-    }
-  },
-  dataLabels: {
-    enabled: true,
-    formatter: function (val, opts) {
-      return opts.w.globals.labels[opts.seriesIndex];
     },
-    style: {
-      fontSize: '16px',
+    dataLabels: {
+      enabled: true,
+      formatter: function (val, opts) {
+        return opts.w.globals.labels[opts.seriesIndex];
+      },
+      style: {
+        fontSize: "16px",
+        fontWeight: 500,
+        colors: ["#333"],
+      },
+      background: {
+        enabled: false,
+      },
+      dropShadow: {
+        enabled: false,
+      },
+    },
+    legend: {
+      show: true,
+      position: "bottom",
+      horizontalAlign: "center",
+      fontSize: "13px",
       fontWeight: 500,
-      colors: ['#333']
+      markers: {
+        width: 10,
+        height: 10,
+        radius: 50,
+      },
+      itemMargin: {
+        horizontal: 10,
+        vertical: 4,
+      },
+      labels: {
+        colors: "#6B7280",
+      },
     },
-    background: {
-      enabled: false
+    yaxis: {
+      show: false,
     },
-    dropShadow: {
-      enabled: false
+    xaxis: {
+      labels: { show: false },
+    },
+    grid: {
+      show: false,
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return val + "%";
+        },
+      },
+    },
+    theme: {
+      monochrome: { enabled: false },
     },
   },
-  legend: {
-    show: true,
-    position: 'bottom',
-    horizontalAlign: 'center',
-    fontSize: '13px',
-    fontWeight: 500,
-    markers: {
-      width: 10,
-      height: 10,
-      radius: 50
-    },
-    itemMargin: {
-      horizontal: 10,
-      vertical: 4
-    },
-    labels: {
-      colors: '#6B7280'
-    }
-  },
-  yaxis: {
-    show: false
-  },
-  xaxis: {
-    labels: { show: false }
-  },
-  grid: {
-    show: false
-  },
-  tooltip: {
-    y: {
-      formatter: function (val) { return val + '%'; }
-    }
-  },
-  theme: {
-    monochrome: { enabled: false }
-  }
-});
+);
 paymentMethodsChart.render();
-
 
 // ================================ Recent Orders - DataTable ================================
 $(document).ready(function () {
-  $('#recentOrdersTable').DataTable({
+  const table = $("#recentOrdersTable").DataTable({
     pageLength: 11,
     lengthMenu: [11, 25, 50, 100],
     ordering: true,
     info: false,
     searching: false,
-    dom: 'tp',
+    dom: "tp",
     language: {
       paginate: {
         previous: '<i class="ph ph-caret-left"></i>',
-        next: '<i class="ph ph-caret-right"></i>'
-      }
-    }
+        next: '<i class="ph ph-caret-right"></i>',
+      },
+    },
   });
-});
-
-// ================================ Dense Toggle ================================
-document.getElementById('denseToggle').addEventListener('change', function () {
-  var rows = document.querySelectorAll('#recentOrdersTable tbody tr');
-  rows.forEach(function (row) {
-    if (this.checked) {
-      row.querySelectorAll('td').forEach(function (td) {
-        td.classList.remove('py-16');
-        td.classList.add('py-8');
-      });
-    } else {
-      row.querySelectorAll('td').forEach(function (td) {
-        td.classList.remove('py-8');
-        td.classList.add('py-16');
-      });
-    }
-  }.bind(this));
+  // Hide pagination UI
+  $(table.table().container()).find(".dt-paging").hide();
 });

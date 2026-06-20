@@ -117,7 +117,9 @@
                   </div>
                 </div>
                 <div style="width:140px">
-                  <div id="lineChart"></div>
+                  <span class="remove-tooltip-title rounded-tooltip-value">
+                    <div id="lineChart"></div>
+                  </span>
                 </div>
               </div>
             </div>
@@ -432,7 +434,7 @@
             </div>
           </div>
 
-          <div class="border-top border-neutral-200 pt-0">
+          <div class="border-top border-neutral-200 pt-0 remove-tooltip-title rounded-tooltip-value">
             <div id="returningClientsChart" class="mt--16"></div>
           </div>
         </div>
@@ -440,7 +442,7 @@
 
       <!-- Card 1: Sales Overview -->
       <div class="col-xl-6">
-        <div class="bg-base p-24 radius-20">
+        <div class="bg-base p-24 radius-20 h-100">
           <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
             <div class="d-flex align-items-center gap-12">
               <div
@@ -451,32 +453,36 @@
               </div>
               <div>
                 <h6 class="fw-semibold mb-0 text-lg">Sales Overview</h6>
-                <span class="text-secondary-light text-sm fw-normal">Manage customer info and order updates while
-                  keeping sales records.</span>
+                <span class="text-secondary-light text-sm fw-normal">Easily manage customer information and order
+                  updates while keeping sales records.</span>
               </div>
             </div>
-            <div class="">
+            <div>
               <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
-                <option>This Yearly</option>
-                <option>This Monthly</option>
-                <option>This Weekly</option>
-                <option>This Today</option>
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+                <option>Today</option>
               </select>
             </div>
           </div>
           <div class="d-flex gap-16">
-            <div class="d-flex flex-column gap-12">
-              <div class="bg-primary-50 radius-12 p-12">
-                <h5 class="fw-bold text-primary-600 mb-0">5,458</h5>
-                <span class="text-primary-600 text-sm">Sales Amount</span>
+            <div class="d-flex flex-column gap-12 flex-shrink-0">
+              <div class="border border-primary-100 bg-primary-50 radius-12 p-16" style="min-width:140px;">
+                <div class="border-start-width-2-px border-primary-600 ps-16">
+                  <h5 class="fw-bold text-primary-light mb-0">5,458</h5>
+                  <span class="text-secondary-light text-sm">Sales Amount</span>
+                </div>
               </div>
-              <div class="bg-warning-50 radius-12 p-12">
-                <h5 class="fw-bold text-warning-600 mb-0">1,254</h5>
-                <span class="text-warning-600 text-sm">Active Orders</span>
+              <div class="border border-warning-200 bg-warning-100 radius-12 p-16" style="min-width:140px;">
+                <div class="border-start-width-2-px border-warning-600 ps-16">
+                  <h5 class="fw-bold text-primary-light mb-0">1,254</h5>
+                  <span class="text-secondary-light text-sm">Active Orders</span>
+                </div>
               </div>
             </div>
-            <div class="flex-grow-1">
-              <div id="salesOverviewChart"></div>
+            <div class="flex-grow-1 ">
+              <div id="salesOverviewChart" class="my--16"></div>
             </div>
           </div>
         </div>
@@ -484,7 +490,7 @@
 
       <!-- Card 2: Order Summary -->
       <div class="col-xl-3">
-        <div class="bg-base p-24 radius-20">
+        <div class="bg-base p-24 radius-20 h-100">
           <div class="d-flex align-items-center justify-content-between gap-8 pb-20">
             <div class="d-flex align-items-center gap-12">
               <div
@@ -528,7 +534,7 @@
 
       <!-- Card 3: Revenue by Category -->
       <div class="col-xl-3">
-        <div class="bg-base p-24 radius-20">
+        <div class="bg-base p-24 radius-20 h-100">
           <div class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20">
             <div class="d-flex align-items-center gap-12">
               <div
@@ -1325,7 +1331,6 @@
                   </td>
                 </tr>
 
-
                 <!-- Row 6: INV-1002 -->
                 <tr>
                   <td class="py-8 px-20 text-sm fw-semibold text-primary-light">INV-1002</td>
@@ -1521,45 +1526,6 @@
                   </td>
                 </tr>
 
-                <!-- Row 11: INV-1008 - Annette Black -->
-                <tr>
-                  <td class="py-8 px-20 text-sm fw-semibold text-primary-light">INV-1008</td>
-                  <td class="py-8 px-20">
-                    <div class="d-flex align-items-center gap-8">
-                      <img src="assets/images/homes/recent-order-img11.png" alt=""
-                        class="w-32-px h-32-px rounded-circle flex-shrink-0">
-                      <span class="text-sm fw-medium text-primary-light">Annette Black</span>
-                    </div>
-                  </td>
-                  <td class="py-8 px-20"><span class="text-sm text-secondary-light fw-medium">01 Jun, 24<br>02:02
-                      am</span></td>
-                  <td class="py-8 px-20 text-sm text-primary-light fw-medium">$ 802</td>
-                  <td class="py-8 px-20 text-sm text-primary-light fw-medium">$ 91.83</td>
-                  <td class="py-8 px-20"><span
-                      class="badge text-cyan-600 border border-cyan-200 px-20 py-8 radius-8 fw-medium text-sm rounded-pill">Shipped</span>
-                  </td>
-                  <td class="py-8 px-20">
-                    <div class="dropdown">
-                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <iconify-icon icon="entypo:dots-three-vertical"
-                          class="icon text-secondary-light"></iconify-icon>
-                      </button>
-                      <ul class="dropdown-menu p-12 border bg-base shadow">
-                        <li><button type="button"
-                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
-                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
-                        <li><button type="button"
-                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
-                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
-                        <li><button type="button"
-                            class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
-                              icon="fluent:delete-24-regular"
-                              class="icon text-lg line-height-1"></iconify-icon>Delete</button></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-
               </tbody>
             </table>
           </div>
@@ -1569,7 +1535,8 @@
             class="d-flex align-items-center justify-content-between gap-8 mt-20 pt-16 border-top border-neutral-200">
             <div class="d-flex align-items-center gap-8">
               <div class="form-switch switch-primary style-big d-flex align-items-center justify-content-center gap-12">
-                <input class="form-check-input w-60-px h-32-px bg-neutral-200 border border-neutral-300" type="checkbox" role="switch" id="switchCheckDefault">
+                <input class="form-check-input w-60-px h-32-px bg-neutral-200 border border-neutral-300" type="checkbox"
+                  role="switch" id="switchCheckDefault">
                 <label class="form-check-label" for="switchCheckDefault">Dense</label>
               </div>
             </div>
@@ -1887,7 +1854,7 @@
             <div class="timeline-wrap__item d-flex gap-16">
               <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
                 <div
-                  class="w-40-px h-40-px rounded-circle border border-success-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  class="w-40-px h-40-px rounded-circle border border-success-200 bg-success-50 d-flex align-items-center justify-content-center flex-shrink-0">
                   <i class="ph ph-shopping-bag text-success-600 text-lg"></i>
                 </div>
                 <div class="timeline-wrap__line"></div>
@@ -1913,7 +1880,7 @@
             <div class="timeline-wrap__item d-flex gap-16">
               <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
                 <div
-                  class="w-40-px h-40-px rounded-circle border border-danger-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  class="w-40-px h-40-px rounded-circle border border-danger-200 bg-danger-50 d-flex align-items-center justify-content-center flex-shrink-0">
                   <i class="ph ph-arrow-counter-clockwise text-danger-600 text-lg"></i>
                 </div>
                 <div class="timeline-wrap__line"></div>
@@ -1937,7 +1904,7 @@
             <div class="timeline-wrap__item d-flex gap-16">
               <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
                 <div
-                  class="w-40-px h-40-px rounded-circle border border-warning-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  class="w-40-px h-40-px rounded-circle border border-warning-200 bg-warning-50 d-flex align-items-center justify-content-center flex-shrink-0">
                   <i class="ph ph-star text-warning-600 text-lg"></i>
                 </div>
                 <div class="timeline-wrap__line"></div>
@@ -1959,7 +1926,7 @@
             <div class="timeline-wrap__item d-flex gap-16">
               <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
                 <div
-                  class="w-40-px h-40-px rounded-circle border border-neutral-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  class="w-40-px h-40-px rounded-circle border border-neutral-200 bg-neutral-50 d-flex align-items-center justify-content-center flex-shrink-0">
                   <i class="ph ph-user text-secondary-light text-lg"></i>
                 </div>
                 <div class="timeline-wrap__line"></div>
@@ -1985,7 +1952,7 @@
             <div class="timeline-wrap__item d-flex gap-16">
               <div class="timeline-wrap__left d-flex flex-column align-items-center flex-shrink-0">
                 <div
-                  class="w-40-px h-40-px rounded-circle border border-info-200 bg-white d-flex align-items-center justify-content-center flex-shrink-0">
+                  class="w-40-px h-40-px rounded-circle border border-info-200 bg-info-50 d-flex align-items-center justify-content-center flex-shrink-0">
                   <i class="ph ph-truck text-info-600 text-lg"></i>
                 </div>
               </div>
@@ -2128,10 +2095,6 @@
           </div>
         </div>
       </div>
-
-
-
-
 
 
     </div>

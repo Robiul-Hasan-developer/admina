@@ -58,7 +58,7 @@ avgSessionChart.render();
 
 // ================================ Recent Orders - DataTable ================================
 $(document).ready(function () {
-  $("#recentOrdersTable").DataTable({
+  const table = $("#recentOrdersTable").DataTable({
     pageLength: 11,
     lengthMenu: [11, 25, 50, 100],
     ordering: true,
@@ -72,4 +72,6 @@ $(document).ready(function () {
       },
     },
   });
+  // Hide pagination UI
+  $(table.table().container()).find(".dt-paging").hide();
 });
