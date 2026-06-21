@@ -42,7 +42,7 @@
         </div>
       </div>
 
-      <div class="col-xl-6">
+      <div class="col-xxl-6">
         <div class="row gy-4">
 
           <!-- Total Visitors -->
@@ -145,7 +145,7 @@
       </div>
 
       <!-- Audience Overview Card -->
-      <div class="col-xl-6">
+      <div class="col-xxl-6">
         <div class="d-flex flex-column gap-24">
           <div class="bg-base p-24 radius-20">
             <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
@@ -203,7 +203,7 @@
 
 
       <!-- Total Subscribers Card -->
-      <div class="col-xl-6">
+      <div class="col-xxl-6">
         <div class="bg-base p-24 radius-20 h-100">
 
           <!-- Header -->
@@ -446,7 +446,7 @@
       </div>
 
 
-      <div class="col-xl-4">
+      <div class="col-xxl-4">
         <!-- Support Tracker Card -->
         <div class="bg-base p-24 radius-20">
 
@@ -473,7 +473,15 @@
           </div>
 
           <!-- Donut Chart -->
-          <div id="supportTrackerChart"></div>
+           <div class="">
+             <div class="position-relative z-1">
+               <div id="supportTrackerChart"></div>
+                <div class="supportTrackerChartContent position-absolute top-50 start-50 translate-middle bg-neutral-50 rounded-circle">
+                  <h2 class="h5 text-primary-light mb-1 fw-semibold">5044</h2>
+                  <span class="text-neutral-500 fw-medium">Total Tickets</span>
+                </div>
+             </div>
+           </div>
 
           <!-- Stats Grid -->
           <div class="row g-0 mt-32 pt-32 border-top border-neutral-200">
@@ -524,7 +532,7 @@
       </div>
       
       <!-- Average Income Card -->
-      <div class="col-xl-4">
+      <div class="col-xxl-4">
         <div class="bg-base p-24 radius-20">
 
           <!-- Header -->
@@ -532,7 +540,7 @@
             <div class="d-flex align-items-center gap-12">
               <div class="w-48-px h-48-px bg-info-50 border border-info-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
                 <span class="icon text-info-600 text-2xl line-height-1 d-flex">
-                  <i class="ph ph-coins"></i>
+                  <i class="ph ph-piggy-bank"></i>
                 </span>
               </div>
               <div>
@@ -574,7 +582,7 @@
         </div>
       </div>
 
-      <div class="col-xl-4">
+      <div class="col-xxl-4">
         <div class="bg-base p-24 radius-20">
           <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
             <div class="d-flex align-items-center gap-12">
@@ -777,10 +785,10 @@
 
 
 
-      <div class="col-xl-6"></div>
+      <div class="col-xxl-6"></div>
 
       <!-- Top Traffic Sources Card -->
-      <div class="col-xl-6">
+      <div class="col-xxl-6">
         <div class="bg-base p-24 radius-20">
 
           <!-- Header -->
@@ -807,12 +815,13 @@
 
           <!-- Traffic Source Grid -->
           <div class="row g-12">
-
+            
+            
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:72.1%; --fill-color:#ede9fe;">
+              <div class="traffic-source-row mb-12" style="--fill:72.1%; --fill-color:#4F46E50D; background-color: #4F46E50D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
                     <img src="assets/images/homes/icons/traffic-source-img1.png" alt="Google" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Google</span>
                   </div>
@@ -822,12 +831,12 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:88.5%; --fill-color:#dcfce7;">
+              <div class="traffic-source-row mb-12" style="--fill:88.5%; --fill-color:#22C55E0D; background-color: #22C55E0D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
                   <div class="d-flex align-items-center gap-10">
                     <div class="w-24-px h-24-px bg-black rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                      <i class="ph ph-x-logo text-white" style="font-size:13px;"></i>
+                      <img src="assets/images/homes/icons/traffic-source-img2.png" alt="Instagram" class="w-24-px h-24-px">
                     </div>
                     <span class="text-primary-light fw-medium text-sm">Twitter X</span>
                   </div>
@@ -838,11 +847,11 @@
             
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:67.2%; --fill-color:#cffafe;">
+              <div class="traffic-source-row mb-12" style="--fill:67.2%; --fill-color:#00B8D90F; background-color: #00B8D90F;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img2.png" alt="Instagram" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img3.png" alt="Instagram" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Instagram</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">67.2%</span>
@@ -851,11 +860,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:49.4%; --fill-color:#fce7f3;">
+              <div class="traffic-source-row mb-12" style="--fill:49.4%; --fill-color:#F6776E0D; background-color: #F6776E0D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img3.png" alt="WhatsApp" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img4.png" alt="WhatsApp" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">WhatsApp</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">49.4%</span>
@@ -864,11 +873,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:49.4%; --fill-color:#fee2e2;">
+              <div class="traffic-source-row mb-12" style="--fill:49.4%; --fill-color:#F6776E0D; background-color: #F6776E0D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img4.png" alt="Linkedin" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img5.png" alt="Linkedin" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Linkedin</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">49.4%</span>
@@ -877,11 +886,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:67.2%; --fill-color:#fef9c3;">
+              <div class="traffic-source-row mb-12" style="--fill:67.2%; --fill-color:#00B8D90F; background-color: #00B8D90F;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img5.png" alt="Snapchat" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img6.png" alt="Snapchat" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Snapchat</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">67.2%</span>
@@ -890,11 +899,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:88.5%; --fill-color:#dcfce7;">
+              <div class="traffic-source-row mb-12" style="--fill:88.5%; --fill-color:#22C55E0D; background-color: #22C55E0D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img6.png" alt="Dribbble" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img7.png" alt="Dribbble" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Dribbble</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">88.5%</span>
@@ -903,11 +912,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:72.1%; --fill-color:#ede9fe;">
+              <div class="traffic-source-row mb-12" style="--fill:72.1%; --fill-color:#4F46E50D; background-color: #4F46E50D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img7.png" alt="TikTok" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img8.png" alt="TikTok" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">TikTok</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">72.1%</span>
@@ -916,11 +925,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:57.8%; --fill-color:#fef9c3;">
+              <div class="traffic-source-row mb-12" style="--fill:57.8%; --fill-color:#FDC70F14; background-color: #FDC70F14;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img8.png" alt="Messenger" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img9.png" alt="Messenger" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Messenger</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">57.8%</span>
@@ -929,11 +938,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:69.9%; --fill-color:#cffafe;">
+              <div class="traffic-source-row mb-12" style="--fill:69.9%; --fill-color:#00B8D90D; background-color: #00B8D90D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img9.png" alt="Slack" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img10.png" alt="Slack" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Slack</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">69.9%</span>
@@ -942,11 +951,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:37.6%; --fill-color:#ede9fe;">
+              <div class="traffic-source-row mb-12" style="--fill:37.6%; --fill-color:#4F46E50D; background-color: #4F46E50D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img10.png" alt="Meta" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img11.png" alt="Meta" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Meta</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">37.6%</span>
@@ -955,11 +964,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:37.6%; --fill-color:#e0e7ff;">
+              <div class="traffic-source-row mb-12" style="--fill:37.6%; --fill-color:#4F46E50D; background-color: #4F46E50D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img11.png" alt="Behance" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img12.png" alt="Behance" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Behance</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">37.6%</span>
@@ -968,11 +977,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:69.9%; --fill-color:#cffafe;">
+              <div class="traffic-source-row mb-12" style="--fill:69.9%; --fill-color:#00B8D90D; background-color: #00B8D90D;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img12.png" alt="Telegram" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img13.png" alt="Telegram" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Telegram</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">69.9%</span>
@@ -981,11 +990,11 @@
             </div>
 
             <div class="col-6">
-              <div class="traffic-source-row mb-12" style="--fill:57.8%; --fill-color:#fef9c3;">
+              <div class="traffic-source-row mb-12" style="--fill:57.8%; --fill-color:#FDC70F14; background-color: #FDC70F14;">
                 <div class="traffic-source-row__bar"></div>
                 <div class="traffic-source-row__content">
-                  <div class="d-flex align-items-center gap-10">
-                    <img src="assets/images/homes/icons/traffic-source-img13.png" alt="Discord" class="w-24-px h-24-px">
+                  <div class="d-flex align-items-center gap-10 flex-shrink-0">
+                    <img src="assets/images/homes/icons/traffic-source-img14.png" alt="Discord" class="w-24-px h-24-px">
                     <span class="text-primary-light fw-medium text-sm">Discord</span>
                   </div>
                   <span class="text-primary-light fw-semibold text-sm">57.8%</span>
@@ -1008,7 +1017,7 @@
 
 
 
-       <div class="col-xl-6">
+       <div class="col-xxl-6">
         <div class="bg-base p-24 radius-20 h-100">
           <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
             <div class="d-flex align-items-center gap-12">

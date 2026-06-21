@@ -289,38 +289,6 @@ var supportTrackerChart = new ApexCharts(document.querySelector("#supportTracker
   stroke: {
     width: 0
   },
-  plotOptions: {
-    pie: {
-      donut: {
-        size: '72%',
-        labels: {
-          show: true,
-          name: { show: false },
-          value: {
-            show: true,
-            fontSize: '28px',
-            fontWeight: 700,
-            color: '#1e293b',
-            offsetY: -4,
-            formatter: function () {
-              return '5044';
-            }
-          },
-          total: {
-            show: true,
-            showAlways: true,
-            label: 'Total Tickets',
-            fontSize: '13px',
-            fontWeight: 400,
-            color: '#94a3b8',
-            formatter: function () {
-              return '5044';
-            }
-          }
-        }
-      }
-    }
-  },
   dataLabels: { enabled: false },
   legend: { show: false },
   tooltip: {
@@ -402,6 +370,82 @@ var averageIncomeChart = new ApexCharts(document.querySelector("#averageIncomeCh
 });
 averageIncomeChart.render();
 
+
+
+// ================================ J Vector Map Start ================================
+$("#world-map").vectorMap({
+  map: "world_mill_en",
+  backgroundColor: "transparent",
+  borderColor: "#fff",
+  borderOpacity: 0.25,
+  borderWidth: 0,
+  color: "#000000",
+  regionStyle: {
+    initial: {
+      fill: "#D1D5DB",
+    },
+  },
+  markerStyle: {
+    initial: {
+      r: 5,
+      fill: "#fff",
+      "fill-opacity": 1,
+      stroke: "#000",
+      "stroke-width": 1,
+      "stroke-opacity": 0.4,
+    },
+  },
+  markers: [
+    {
+      latLng: [35.8617, 104.1954],
+      name: "China : 250",
+    },
+
+    {
+      latLng: [25.2744, 133.7751],
+      name: "AustrCalia : 250",
+    },
+
+    {
+      latLng: [36.77, -119.41],
+      name: "USA : 82%",
+    },
+
+    {
+      latLng: [55.37, -3.41],
+      name: "UK   : 250",
+    },
+
+    {
+      latLng: [25.2, 55.27],
+      name: "UAE : 250",
+    },
+  ],
+
+  series: {
+    regions: [
+      {
+        values: {
+          US: "#487FFF ",
+          SA: "#FF9F29",
+          AU: "#45B369",
+          CN: "#F86624",
+          GB: "#487FFF",
+        },
+        attribute: "fill",
+      },
+    ],
+  },
+  hoverOpacity: null,
+  normalizeFunction: "linear",
+  zoomOnScroll: false,
+  scaleColors: ["#000000", "#000000"],
+  selectedColor: "#000000",
+  selectedRegions: [],
+  enableZoom: false,
+  hoverColor: "#fff",
+});
+// ================================ J Vector Map End ================================
 
 
 // ================================ Recent Orders - DataTable ================================

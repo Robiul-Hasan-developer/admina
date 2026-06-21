@@ -81,6 +81,15 @@
   font-weight: 700 !important;
 }
 
+.supportTrackerChartContent {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 #averageIncomeChart {
@@ -97,7 +106,6 @@
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  background: var(--color-background-secondary, #f8fafc);
   height: 48px;
 }
 
