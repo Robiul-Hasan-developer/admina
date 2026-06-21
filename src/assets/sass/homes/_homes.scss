@@ -68,4 +68,56 @@
 #subscribersChart svg {
   width: 100% !important;
 }
+
+
+#supportTrackerChart {
+  width: 100%;
+}
+#supportTrackerChart .apexcharts-canvas,
+#supportTrackerChart svg {
+  width: 100% !important;
+}
+#supportTrackerChart .apexcharts-datalabel-value {
+  font-weight: 700 !important;
+}
+
+
+
+#averageIncomeChart {
+  width: 100%;
+}
+#averageIncomeChart .apexcharts-canvas,
+#averageIncomeChart svg {
+  width: 100% !important;
+}
+
+
+/* Traffic source progress-fill row */
+.traffic-source-row {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--color-background-secondary, #f8fafc);
+  height: 48px;
+}
+
+.traffic-source-row__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--fill);
+  background: var(--fill-color);
+  z-index: 1;
+}
+
+.traffic-source-row__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 14px;
+}
 /* Home One css end */

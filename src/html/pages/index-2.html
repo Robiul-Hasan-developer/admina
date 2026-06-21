@@ -294,8 +294,8 @@
           <div class="d-flex align-items-center justify-content-between gap-8 bg-primary-50 radius-16 p-16 mt-20">
             <div class="d-flex align-items-center gap-12">
               <div
-                class="w-40-px h-40-px bg-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                <i class="ph ph-sparkle text-primary-600 text-lg"></i>
+                class="w-50-px h-50-px bg-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-sparkle text-primary-600 text-2xl"></i>
               </div>
               <div>
                 <h6 class="fw-semibold mb-0 text-md">Congratulations !...</h6>
@@ -311,11 +311,849 @@
         </div>
       </div>
 
+      <!-- Sessions Overview Card -->
+      <div class="col-12">
+        <div class="bg-base p-24 radius-20">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-16 pb-20 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-info-50 border border-info-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-info-600 text-2xl line-height-1 d-flex">
+                  <i class="ph ph-clock"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Sessions Overview <span
+                    class="text-secondary-light fw-normal text-md">(609.5k Sessions)</span></h6>
+                <span class="text-secondary-light text-sm fw-normal">Analyze session performance to improve retention
+                  and growth.</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-12 flex-shrink-0">
+              <button type="button"
+                class="d-flex align-items-center gap-8 px-16 py-8 rounded-pill border border-primary-100 bg-primary-05 text-secondary-light fw-medium text-sm">
+                <i class="ph ph-export"></i>
+                Export
+              </button>
+              <button type="button"
+                class="d-flex align-items-center gap-8 px-16 py-8 rounded-pill border border-danger-100 bg-danger-50 text-secondary-light fw-medium text-sm">
+                <i class="ph ph-download-simple"></i>
+                Import
+              </button>
+            </div>
+          </div>
+
+          <!-- Stat Widgets -->
+          <div class="row g-0 bg-neutral-50 radius-12 mb-24 overflow-hidden">
+
+            <div class="col-6 col-md-3 p-20 border-end border-neutral-200">
+              <div class="d-flex align-items-center gap-10 mb-10">
+                <div
+                  class="w-50-px h-50-px bg-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-users text-primary-600 text-2xl"></i>
+                </div>
+                <div>
+                  <span class="text-secondary-light text-sm fw-normal mb-1">Users</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <h6 class="fw-bold mb-0 text-lg">56,47k</h6>
+                    <span
+                      class="badge rounded-pill bg-white text-success-600 px-8 py-2 fw-medium text-xs d-flex align-items-center gap-2">
+                      <i class="ph ph-arrows-down-up text-xs"></i>55.6%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 p-20 border-end border-neutral-200">
+              <div class="d-flex align-items-center gap-10 mb-10">
+                <div
+                  class="w-50-px h-50-px bg-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-eye text-success-600 text-2xl"></i>
+                </div>
+                <div>
+                  <span class="text-secondary-light text-sm fw-normal mb-1">Sessions</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <h6 class="fw-bold mb-0 text-lg">75.74k</h6>
+                    <span
+                      class="badge rounded-pill bg-white text-danger-600 px-8 py-2 fw-medium text-xs d-flex align-items-center gap-2">
+                      <i class="ph ph-arrow-down text-xs"></i>8.2%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 p-20 border-end border-neutral-200">
+              <div class="d-flex align-items-center gap-10 mb-10">
+                <div
+                  class="w-50-px h-50-px bg-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-trend-up text-warning-600 text-2xl"></i>
+                </div>
+                <div>
+                  <span class="text-secondary-light text-sm fw-normal mb-1">Bounce Rate</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <h6 class="fw-bold mb-0 text-lg">21,54%</h6>
+                    <span
+                      class="badge rounded-pill bg-white text-primary-600 px-8 py-2 fw-medium text-xs d-flex align-items-center gap-2">
+                      <i class="ph ph-arrow-up text-xs"></i>87.3%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 p-20">
+              <div class="d-flex align-items-center gap-10 mb-10">
+                <div
+                  class="w-50-px h-50-px bg-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-hourglass text-danger-600 text-2xl"></i>
+                </div>
+                <div>
+                  <span class="text-secondary-light text-sm fw-normal mb-1">Session Duration</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <h6 class="fw-bold mb-0 text-lg">5m 12s</h6>
+                    <span
+                      class="badge rounded-pill bg-white text-warning-600 px-8 py-2 fw-medium text-xs d-flex align-items-center gap-2">
+                      <i class="ph ph-arrow-down text-xs"></i>32.4%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Chart -->
+          <div id="sessionsOverviewChart"></div>
+
+          <!-- Legend -->
+          <div
+            class="d-flex align-items-center justify-content-center gap-24 mt-12 pt-16 border-top border-neutral-200">
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-8-px h-8-px radius-circle" style="background:#6366f1;"></span>
+              <span class="text-secondary-light text-sm">Total Visitors</span>
+            </div>
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-8-px h-8-px radius-circle" style="background:#22c55e;"></span>
+              <span class="text-secondary-light text-sm">Page Views</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-xl-4">
+        <!-- Support Tracker Card -->
+        <div class="bg-base p-24 radius-20">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-danger-600 text-2xl line-height-1 d-flex">
+                  <i class="ph ph-ticket"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Support Tracker</h6>
+                <span class="text-secondary-light text-sm fw-normal">Monitor ticket status and progress</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Donut Chart -->
+          <div id="supportTrackerChart"></div>
+
+          <!-- Stats Grid -->
+          <div class="row g-0 mt-32 pt-32 border-top border-neutral-200">
+
+            <div class="col-6 d-flex align-items-center gap-12 pe-12 pb-40 border-end border-neutral-200">
+              <div class="w-50-px h-50-px bg-primary-50 border-primary-100 border rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-ticket text-primary-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">1245</h6>
+                <span class="text-secondary-light text-sm fw-normal">New Tickets</span>
+              </div>
+            </div>
+
+            <div class="col-6 d-flex align-items-center gap-12 ps-12 pb-40">
+              <div class="w-50-px h-50-px bg-success-50 border-success-200 border rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-shield-check text-success-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">2252</h6>
+                <span class="text-secondary-light text-sm fw-normal">Resolved Tickets</span>
+              </div>
+            </div>
+
+            <div class="col-6 d-flex align-items-center gap-12 pe-12 border-end border-neutral-200">
+              <div class="w-50-px h-50-px bg-info-50 border-success-200 border rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-folder-open text-info-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">1547</h6>
+                <span class="text-secondary-light text-sm fw-normal">Open Tickets</span>
+              </div>
+            </div>
+
+            <div class="col-6 d-flex align-items-center gap-12 ps-12">
+              <div class="w-50-px h-50-px bg-warning-100 border-warning-200 border rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-timer text-warning-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">5m 12s</h6>
+                <span class="text-secondary-light text-sm fw-normal">Response Time</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- Average Income Card -->
+      <div class="col-xl-4">
+        <div class="bg-base p-24 radius-20">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div class="w-48-px h-48-px bg-info-50 border border-info-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-info-600 text-2xl line-height-1 d-flex">
+                  <i class="ph ph-coins"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Average Income</h6>
+                <span class="text-secondary-light text-sm fw-normal">See income performance at a glance</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div id="averageIncomeChart" class="mt--26"></div>
+
+          <!-- Total Income Footer -->
+          <div class="d-flex align-items-center justify-content-between gap-8 bg-primary-50 radius-16 p-16 mt-20">
+            <div class="d-flex align-items-center gap-12">
+              <div class="w-50-px h-50-px bg-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-wallet text-primary-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-md">Total Income</h6>
+                <span class="text-secondary-light text-sm fw-normal">Overall earnings from all sources</span>
+              </div>
+            </div>
+            <div class="text-end flex-shrink-0">
+              <h6 class="fw-bold mb-0 text-md">$845,245</h6>
+              <span class="text-success-600 text-sm fw-medium d-flex align-items-center gap-2 justify-content-end">
+                <i class="ph ph-arrow-up text-xs"></i>92.4% Avg
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-xl-4">
+        <div class="bg-base p-24 radius-20">
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-warning-50 border border-warning-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-warmomg-600 text-2xl">
+                  <i class="ph ph-chart-line-up"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Transactions</h6>
+                <span class="text-secondary-light text-sm fw-normal">Latest transaction activity overview.</span>
+              </div>
+            </div>
+            <div class="">
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Yearly</option>
+                <option>Monthly</option>
+                <option>Today</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between gap-3 px-3 py-8 bg-hover-primary-05 rounded-4">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-40-px h-40-px rounded-pill text-xl text-primary-600 flex-shrink-0 bg-primary-50 border-primary-100 border d-flex justify-content-center align-items-center">
+                  <i class="ph ph-lightbulb-filament"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-sm mb-0 fw-semibold">Bill Payment</h6>
+                  <span class="text-xs text-secondary-light fw-normal">Utility</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-neutral-900 fw-medium text-sm d-block mb-1">
+                  $84.50
+                </span>
+                <span class="fw-normal text-xs text-neutral-500">
+                  Electricity Bill
+                </span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between gap-3 px-3 py-8 bg-hover-primary-05 rounded-4">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-40-px h-40-px rounded-pill text-xl text-success-600 flex-shrink-0 bg-success-50 border-success-100 border d-flex justify-content-center align-items-center">
+                  <i class="ph ph-amazon-logo"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-sm mb-0 fw-semibold">Card Payment</h6>
+                  <span class="text-xs text-secondary-light fw-normal">Visa Card</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-neutral-900 fw-medium text-sm d-block mb-1">
+                  $129.99
+                </span>
+                <span class="fw-normal text-xs text-neutral-500">
+                  Amazon Purchase
+                </span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between gap-3 px-3 py-8 bg-hover-primary-05 rounded-4">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-40-px h-40-px rounded-pill text-xl text-success-600 flex-shrink-0 bg-success-50 border-success-100 border d-flex justify-content-center align-items-center">
+                  <i class="ph ph-credit-card"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-sm mb-0 fw-semibold">Bank Transfer</h6>
+                  <span class="text-xs text-secondary-light fw-normal">Bank</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-neutral-900 fw-medium text-sm d-block mb-1">
+                  $2,450.00
+                </span>
+                <span class="fw-normal text-xs text-neutral-500">
+                  Salary Deposit
+                </span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between gap-3 px-3 py-8 bg-hover-primary-05 rounded-4">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-40-px h-40-px rounded-pill text-xl text-primary-600 flex-shrink-0 bg-primary-50 border-primary-100 border d-flex justify-content-center align-items-center">
+                  <i class="ph ph-sim-card"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-sm mb-0 fw-semibold">Mobile Recharge</h6>
+                  <span class="text-xs text-secondary-light fw-normal">Mobile Wallet</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-neutral-900 fw-medium text-sm d-block mb-1">
+                  $15.00
+                </span>
+                <span class="fw-normal text-xs text-neutral-500">
+                  Prepaid Top-up
+                </span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between gap-3 px-3 py-8 bg-hover-primary-05 rounded-4">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-40-px h-40-px rounded-pill text-xl text-danger-600 flex-shrink-0 bg-danger-50 border-danger-100 border d-flex justify-content-center align-items-center">
+                  <i class="ph ph-film-slate"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-sm mb-0 fw-semibold">Online Payment</h6>
+                  <span class="text-xs text-secondary-light fw-normal">Subscription</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-neutral-900 fw-medium text-sm d-block mb-1">
+                  $12.99
+                </span>
+                <span class="fw-normal text-xs text-neutral-500">
+                  Netflix Subscription
+                </span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between gap-3 px-3 py-8 bg-hover-primary-05 rounded-4">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-40-px h-40-px rounded-pill text-xl text-success-600 flex-shrink-0 bg-success-50 border-success-100 border d-flex justify-content-center align-items-center">
+                  <i class="ph ph-user"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-sm mb-0 fw-semibold">Money Transfer</h6>
+                  <span class="text-xs text-secondary-light fw-normal">Bank Transfer</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-neutral-900 fw-medium text-sm d-block mb-1">
+                  $220.00
+                </span>
+                <span class="fw-normal text-xs text-neutral-500">
+                  Sent to John Carter
+                </span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between gap-3 px-3 py-8 bg-hover-primary-05 rounded-4">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-40-px h-40-px rounded-pill text-xl text-warning-600 flex-shrink-0 bg-warning-50 border-warning-100 border d-flex justify-content-center align-items-center">
+                  <i class="ph ph-coffee"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-sm mb-0 fw-semibold">QR Payment</h6>
+                  <span class="text-xs text-secondary-light fw-normal">QR Scan</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-neutral-900 fw-medium text-sm d-block mb-1">
+                  $6.75
+                </span>
+                <span class="fw-normal text-xs text-neutral-500">
+                  Coffee Shop
+                </span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between gap-3 px-3 py-8 bg-hover-primary-05 rounded-4">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-40-px h-40-px rounded-pill text-xl text-danger-600 flex-shrink-0 bg-danger-50 border-danger-100 border d-flex justify-content-center align-items-center">
+                <i class="ph ph-hand-coins"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="text-sm mb-0 fw-semibold">Investment Deposit</h6>
+                  <span class="text-xs text-secondary-light fw-normal">Banking</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-neutral-900 fw-medium text-sm d-block mb-1">
+                  $300.00
+                </span>
+                <span class="fw-normal text-xs text-neutral-500">
+                  Mutual Fund Top-up
+                </span>
+              </div>
+            </div>
+
+            <a href="javascript:void(0)"
+              class="d-flex align-items-center gap-2 text-primary-600 text-md text-hover-primary-800 mt-3">
+              See All Transactions
+              <span>
+                <i class="ph-bold ph-arrow-right"></i>
+              </span>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="col-xl-6"></div>
+
+      <!-- Top Traffic Sources Card -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div class="w-48-px h-48-px bg-success-50 border border-success-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-success-600 text-2xl line-height-1 d-flex">
+                  <i class="ph ph-chart-line-up"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Top Traffic Sources</h6>
+                <span class="text-secondary-light text-sm fw-normal">Traffic overview by source type and performance</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Traffic Source Grid -->
+          <div class="row g-12">
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:72.1%; --fill-color:#ede9fe;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img1.png" alt="Google" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Google</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">72.1%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:88.5%; --fill-color:#dcfce7;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <div class="w-24-px h-24-px bg-black rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                      <i class="ph ph-x-logo text-white" style="font-size:13px;"></i>
+                    </div>
+                    <span class="text-primary-light fw-medium text-sm">Twitter X</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">88.5%</span>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:67.2%; --fill-color:#cffafe;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img2.png" alt="Instagram" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Instagram</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">67.2%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:49.4%; --fill-color:#fce7f3;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img3.png" alt="WhatsApp" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">WhatsApp</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">49.4%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:49.4%; --fill-color:#fee2e2;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img4.png" alt="Linkedin" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Linkedin</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">49.4%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:67.2%; --fill-color:#fef9c3;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img5.png" alt="Snapchat" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Snapchat</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">67.2%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:88.5%; --fill-color:#dcfce7;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img6.png" alt="Dribbble" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Dribbble</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">88.5%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:72.1%; --fill-color:#ede9fe;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img7.png" alt="TikTok" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">TikTok</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">72.1%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:57.8%; --fill-color:#fef9c3;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img8.png" alt="Messenger" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Messenger</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">57.8%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:69.9%; --fill-color:#cffafe;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img9.png" alt="Slack" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Slack</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">69.9%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:37.6%; --fill-color:#ede9fe;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img10.png" alt="Meta" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Meta</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">37.6%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:37.6%; --fill-color:#e0e7ff;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img11.png" alt="Behance" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Behance</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">37.6%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:69.9%; --fill-color:#cffafe;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img12.png" alt="Telegram" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Telegram</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">69.9%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="traffic-source-row mb-12" style="--fill:57.8%; --fill-color:#fef9c3;">
+                <div class="traffic-source-row__bar"></div>
+                <div class="traffic-source-row__content">
+                  <div class="d-flex align-items-center gap-10">
+                    <img src="assets/images/homes/icons/traffic-source-img13.png" alt="Discord" class="w-24-px h-24-px">
+                    <span class="text-primary-light fw-medium text-sm">Discord</span>
+                  </div>
+                  <span class="text-primary-light fw-semibold text-sm">57.8%</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- See All Sources -->
+          <div class="mt-20">
+            <a href="javascript:void(0)" class="d-flex align-items-center gap-4 text-primary-600 text-sm fw-medium text-hover-primary-800" style="width:fit-content;">
+              See All Sources
+              <i class="ph-bold ph-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div> 
+
+
+
+       <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20 h-100">
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-danger-600 text-xl">
+                  <i class="ph ph-globe-hemisphere-west"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Visits By Country</h6>
+                <span class="text-secondary-light text-sm fw-normal">See visitor distribution across different countries</span>
+              </div>
+            </div>
+            <div class="">
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Yearly</option>
+                <option>Monthly</option>
+                <option>Today</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row gy-5">
+            <div class="col-md-6">
+              <div id="world-map" class="bg-transparent h-100"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="map-border-left">
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img13.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      United States
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    85%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img14.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      China
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    67%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img15.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      Australia
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    74%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img16.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      Germany
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    63%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img17.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      Canada
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    81%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-3 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3 ">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img18.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      France
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    75%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+                <div class="d-flex align-items-center gap-2 justify-content-between flex-wrap py-2 px-4">
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="d-flex align-items-center justify-content-center">
+                      <img src="assets/images/homes/dashboard-img19.png" alt="img" class="w-100 h-100">
+                    </span>
+                    <span class="fw-normal text-md text-neutral-700">
+                      Turkey
+                    </span>
+                  </div>
+                  <span class="fw-semibold text-md text-neutral-700">
+                    55%
+                  </span>
+                </div>
+                <span class="w-100 border-neutral-200 border-top "></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
 
 
 
 
+
+      <div class="py-60"></div>
+      <div class="py-60"></div>
+      <div class="py-60"></div>
+      <div class="py-60"></div>
 
 
       <div class="col-12">

@@ -56,6 +56,8 @@ var avgSessionChart = makeLineChart(
 );
 avgSessionChart.render();
 
+
+
 // ================================ Audience Overview - Combo Bar + Line Chart ================================
 var audienceOverviewChart = new ApexCharts(
   document.querySelector("#audienceOverviewChart"),
@@ -191,6 +193,214 @@ var subscribersChart = new ApexCharts(document.querySelector("#subscribersChart"
 subscribersChart.render();
 
 
+
+// ================================ Sessions Overview - Dual Area Chart ================================
+var sessionsOverviewChart = new ApexCharts(document.querySelector("#sessionsOverviewChart"), {
+  series: [
+    {
+      name: 'Total Visitors',
+      data: [18000, 19500, 18500, 17000, 17500, 14500, 16000, 17500, 18000, 17000, 19000, 19500, 18500, 19500, 21000, 20000, 21500, 19000, 20000, 23500, 23000, 20500, 20000, 19500, 20000, 21000, 19500, 20500, 21500, 22000]
+    },
+    {
+      name: 'Page Views',
+      data: [22000, 23500, 22500, 21000, 21500, 19000, 21500, 21000, 21500, 21500, 22000, 22500, 21500, 22500, 24000, 23000, 24500, 22000, 22500, 26500, 25500, 23000, 22500, 22000, 22500, 23000, 22000, 22500, 23500, 24000]
+    }
+  ],
+  chart: {
+    type: 'area',
+    height: 320,
+    toolbar: { show: false },
+    zoom: { enabled: false }
+  },
+  stroke: {
+    curve: 'smooth',
+    width: [2, 2]
+  },
+  colors: ['#6366f1', '#22c55e'],
+  fill: {
+    type: 'gradient',
+    gradient: {
+      shade: 'light',
+      type: 'vertical',
+      shadeIntensity: 0.3,
+      gradientToColors: ['#ffffff', '#ffffff'],
+      opacityFrom: 0.5,
+      opacityTo: 0.02,
+      stops: [0, 100]
+    }
+  },
+  markers: { size: 0 },
+  dataLabels: { enabled: false },
+  xaxis: {
+    categories: Array.from({ length: 30 }, function (_, i) { return i + 1; }),
+    labels: {
+      style: { fontSize: '11px', colors: '#9ca3af' }
+    },
+    axisBorder: { show: false },
+    axisTicks: { show: false }
+  },
+  yaxis: {
+    min: 0,
+    max: 30000,
+    tickAmount: 3,
+    labels: {
+      formatter: function (val) {
+        return (val / 1000) + 'k';
+      },
+      style: { fontSize: '11px', colors: '#9ca3af' }
+    }
+  },
+  grid: {
+    borderColor: '#f1f5f9',
+    strokeDashArray: 4,
+    xaxis: { lines: { show: false } },
+    yaxis: { lines: { show: true } }
+  },
+  annotations: {
+    xaxis: [
+      {
+        x: 6,
+        borderColor: '#ef4444',
+        strokeDashArray: 4,
+        borderWidth: 1
+      }
+    ]
+  },
+  legend: { show: false },
+  tooltip: {
+    shared: true,
+    intersect: false
+  }
+});
+sessionsOverviewChart.render();
+
+
+
+
+// ================================ Support Tracker - Donut Chart ================================
+var supportTrackerChart = new ApexCharts(document.querySelector("#supportTrackerChart"), {
+  series: [25, 30, 20, 25],
+  chart: {
+    type: 'donut',
+    height: 380
+  },
+  labels: ['New Tickets', 'Resolved Tickets', 'Open Tickets', 'Response Time'],
+  colors: ['#06b6d4', '#6366f1', '#22c55e', '#facc15'],
+  stroke: {
+    width: 0
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '72%',
+        labels: {
+          show: true,
+          name: { show: false },
+          value: {
+            show: true,
+            fontSize: '28px',
+            fontWeight: 700,
+            color: '#1e293b',
+            offsetY: -4,
+            formatter: function () {
+              return '5044';
+            }
+          },
+          total: {
+            show: true,
+            showAlways: true,
+            label: 'Total Tickets',
+            fontSize: '13px',
+            fontWeight: 400,
+            color: '#94a3b8',
+            formatter: function () {
+              return '5044';
+            }
+          }
+        }
+      }
+    }
+  },
+  dataLabels: { enabled: false },
+  legend: { show: false },
+  tooltip: {
+    y: {
+      formatter: function (val) { return val + '%'; }
+    }
+  }
+});
+supportTrackerChart.render();
+
+
+
+
+// ================================ Average Income - Horizontal Dual Bar Chart ================================
+var averageIncomeChart = new ApexCharts(document.querySelector("#averageIncomeChart"), {
+  series: [
+    {
+      name: 'This Year',
+      data: [625000, 180000, 150000, 60000, 35000, 25000]
+    },
+    {
+      name: 'Last Year',
+      data: [680000, 175000, 195000, 55000, 30000, 20000]
+    }
+  ],
+  chart: {
+    type: 'bar',
+    height: 490,
+    toolbar: { show: false },
+    zoom: { enabled: false }
+  },
+  plotOptions: {
+    bar: {
+      horizontal: true,
+      barHeight: '80%',
+      borderRadius: 0,
+      borderRadiusApplication: 'end'
+    }
+  },
+  colors: ['#6366f1', '#22d3ee'],
+  dataLabels: { enabled: false },
+  stroke: {
+    show: true,
+    width: 0
+  },
+  xaxis: {
+    categories: ['World', 'China', 'India', 'USA', 'Italy', 'Brazil'],
+    labels: {
+      formatter: function (val) {
+        return new Intl.NumberFormat('en-US').format(val);
+      },
+      style: { fontSize: '10px', colors: '#9ca3af' }
+    },
+    axisBorder: { show: false },
+    axisTicks: { show: false },
+    max: 700000,
+    tickAmount: 7
+  },
+  yaxis: {
+    labels: {
+      style: { fontSize: '11px', colors: '#64748b', fontWeight: 500 }
+    }
+  },
+  grid: {
+    borderColor: '#f1f5f9',
+    strokeDashArray: 0,
+    xaxis: { lines: { show: true } },
+    yaxis: { lines: { show: false } }
+  },
+  legend: { show: false },
+  tooltip: {
+    shared: false,
+    y: {
+      formatter: function (val) {
+        return '$' + new Intl.NumberFormat('en-US').format(val);
+      }
+    }
+  }
+});
+averageIncomeChart.render();
 
 
 
