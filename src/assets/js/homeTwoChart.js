@@ -577,6 +577,7 @@ var userByDeviceChart = new ApexCharts(document.querySelector("#userByDeviceChar
     },
     {
       name: 'Mobile',
+
       data: [60, 30, 40, 75, 95, 55, 50]
     },
     {
@@ -647,14 +648,14 @@ document.addEventListener('DOMContentLoaded', function () {
     ],
     chart: {
       type: 'bar',
-      height: 220,
+      height: 380,
       toolbar: { show: false },
       zoom: { enabled: false }
     },
     plotOptions: {
       bar: {
-        columnWidth: '55%',
-        borderRadius: 3,
+        columnWidth: '30%',
+        borderRadius: 6,
         borderRadiusApplication: 'end'
       }
     },
