@@ -285,7 +285,7 @@ var supportTrackerChart = new ApexCharts(document.querySelector("#supportTracker
     height: 380
   },
   labels: ['New Tickets', 'Resolved Tickets', 'Open Tickets', 'Response Time'],
-  colors: ['#06b6d4', '#6366f1', '#22c55e', '#facc15'],
+  colors: ['#06b6d4', primaryColor, '#22c55e', '#facc15'],
   stroke: {
     width: 0
   },
@@ -328,7 +328,7 @@ var averageIncomeChart = new ApexCharts(document.querySelector("#averageIncomeCh
       borderRadiusApplication: 'end'
     }
   },
-  colors: ['#6366f1', '#22d3ee'],
+  colors: [primaryColor, '#22d3ee'],
   dataLabels: { enabled: false },
   stroke: {
     show: true,
@@ -369,83 +369,6 @@ var averageIncomeChart = new ApexCharts(document.querySelector("#averageIncomeCh
   }
 });
 averageIncomeChart.render();
-
-
-
-// ================================ J Vector Map Start ================================
-$("#world-map").vectorMap({
-  map: "world_mill_en",
-  backgroundColor: "transparent",
-  borderColor: "#fff",
-  borderOpacity: 0.25,
-  borderWidth: 0,
-  color: "#000000",
-  regionStyle: {
-    initial: {
-      fill: "#D1D5DB",
-    },
-  },
-  markerStyle: {
-    initial: {
-      r: 5,
-      fill: "#fff",
-      "fill-opacity": 1,
-      stroke: "#000",
-      "stroke-width": 1,
-      "stroke-opacity": 0.4,
-    },
-  },
-  markers: [
-    {
-      latLng: [35.8617, 104.1954],
-      name: "China : 250",
-    },
-
-    {
-      latLng: [25.2744, 133.7751],
-      name: "AustrCalia : 250",
-    },
-
-    {
-      latLng: [36.77, -119.41],
-      name: "USA : 82%",
-    },
-
-    {
-      latLng: [55.37, -3.41],
-      name: "UK   : 250",
-    },
-
-    {
-      latLng: [25.2, 55.27],
-      name: "UAE : 250",
-    },
-  ],
-
-  series: {
-    regions: [
-      {
-        values: {
-          US: "#487FFF ",
-          SA: "#FF9F29",
-          AU: "#45B369",
-          CN: "#F86624",
-          GB: "#487FFF",
-        },
-        attribute: "fill",
-      },
-    ],
-  },
-  hoverOpacity: null,
-  normalizeFunction: "linear",
-  zoomOnScroll: false,
-  scaleColors: ["#000000", "#000000"],
-  selectedColor: "#000000",
-  selectedRegions: [],
-  enableZoom: false,
-  hoverColor: "#fff",
-});
-// ================================ J Vector Map End ================================
 
 
 // ================================ Performance Overview - Bubble Chart ================================
@@ -532,7 +455,6 @@ var performanceOverviewChart = new ApexCharts(document.querySelector("#performan
 performanceOverviewChart.render();
 
 
-
 // ================================ Top Browsing Pages - Column Chart ================================
 var topBrowsingPagesChart = new ApexCharts(document.querySelector("#topBrowsingPagesChart"), {
   series: [{
@@ -547,11 +469,11 @@ var topBrowsingPagesChart = new ApexCharts(document.querySelector("#topBrowsingP
   plotOptions: {
     bar: {
       columnWidth: '45%',
-      borderRadius: 4,
+      borderRadius: 0,
       borderRadiusApplication: 'end'
     }
   },
-  colors: ['#6366f1'],
+  colors: [primaryColor],
   dataLabels: {
     enabled: true,
     offsetY: -18,
@@ -566,10 +488,6 @@ var topBrowsingPagesChart = new ApexCharts(document.querySelector("#topBrowsingP
   grid: { show: false }
 });
 topBrowsingPagesChart.render();
-
-
-
-
 
 // ================================ Total Orders - Dual Bar Chart with Broken Y-axis ================================
 var totalOrdersChart = new ApexCharts(document.querySelector("#totalOrdersChart"), {
@@ -630,14 +548,14 @@ var totalOrdersChart = new ApexCharts(document.querySelector("#totalOrdersChart"
     yaxis: { lines: { show: true } }
   },
   legend: { show: false },
-  tooltip: {
-    shared: true,
-    y: {
-      formatter: function (val) {
-        return '$' + new Intl.NumberFormat('en-US').format(val);
-      }
-    }
-  },
+  // tooltip: {
+  //   shared: true,
+  //   y: {
+  //     formatter: function (val) {
+  //       return '$' + new Intl.NumberFormat('en-US').format(val);
+  //     }
+  //   }
+  // },
   annotations: {
     yaxis: [
       {
@@ -651,9 +569,6 @@ var totalOrdersChart = new ApexCharts(document.querySelector("#totalOrdersChart"
   }
 });
 totalOrdersChart.render();
-
-
-
 
 
 // ================================ User By Device - Radar Chart ================================
@@ -727,10 +642,6 @@ var userByDeviceChart = new ApexCharts(document.querySelector("#userByDeviceChar
 userByDeviceChart.render();
 
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
   var dailyVisitInsightsChart = new ApexCharts(document.querySelector("#dailyVisitInsightsChart"), {
     series: [
@@ -776,15 +687,110 @@ document.addEventListener('DOMContentLoaded', function () {
       padding: { top: 0, right: 0, bottom: 0, left: 0 }
     },
     legend: { show: false },
-    tooltip: { shared: true }
+    // tooltip: { shared: true }
   });
   dailyVisitInsightsChart.render();
 });
 
 
+// ================================================================================================
+//  Update all charts primary color ✅ ONE merged function — replaces BOTH previous updateChartColors definitions
+// ================================================================================================
+function updateChartColors(newColor) {
+  topBrowsingPagesChart.updateOptions({
+    colors: [newColor],
+  });
+  averageIncomeChart.updateOptions({
+    colors: [newColor, '#22d3ee'],
+  });
+  supportTrackerChart.updateOptions({
+    colors: ['#06b6d4', newColor, '#22c55e', '#facc15'],
+  });
+
+  
+
+}
 
 
 
+
+
+
+
+// ================================ J Vector Map Start ================================
+$("#world-map").vectorMap({
+  map: "world_mill_en",
+  backgroundColor: "transparent",
+  borderColor: "#fff",
+  borderOpacity: 0.25,
+  borderWidth: 0,
+  color: "#000000",
+  regionStyle: {
+    initial: {
+      fill: "#D1D5DB",
+    },
+  },
+  markerStyle: {
+    initial: {
+      r: 5,
+      fill: "#fff",
+      "fill-opacity": 1,
+      stroke: "#000",
+      "stroke-width": 1,
+      "stroke-opacity": 0.4,
+    },
+  },
+  markers: [
+    {
+      latLng: [35.8617, 104.1954],
+      name: "China : 250",
+    },
+
+    {
+      latLng: [25.2744, 133.7751],
+      name: "AustrCalia : 250",
+    },
+
+    {
+      latLng: [36.77, -119.41],
+      name: "USA : 82%",
+    },
+
+    {
+      latLng: [55.37, -3.41],
+      name: "UK   : 250",
+    },
+
+    {
+      latLng: [25.2, 55.27],
+      name: "UAE : 250",
+    },
+  ],
+
+  series: {
+    regions: [
+      {
+        values: {
+          US: "#487FFF ",
+          SA: "#FF9F29",
+          AU: "#45B369",
+          CN: "#F86624",
+          GB: "#487FFF",
+        },
+        attribute: "fill",
+      },
+    ],
+  },
+  hoverOpacity: null,
+  normalizeFunction: "linear",
+  zoomOnScroll: false,
+  scaleColors: ["#000000", "#000000"],
+  selectedColor: "#000000",
+  selectedRegions: [],
+  enableZoom: false,
+  hoverColor: "#fff",
+});
+// ================================ J Vector Map End ================================
 
 
 // ================================ Recent Orders - DataTable ================================
