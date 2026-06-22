@@ -216,7 +216,7 @@ var sessionsOverviewChart = new ApexCharts(document.querySelector("#sessionsOver
     curve: 'smooth',
     width: [2, 2]
   },
-  colors: ['#6366f1', '#22c55e'],
+  colors: [primaryColor, '#22c55e'],
   fill: {
     type: 'gradient',
     gradient: {
@@ -282,7 +282,7 @@ var supportTrackerChart = new ApexCharts(document.querySelector("#supportTracker
   series: [25, 30, 20, 25],
   chart: {
     type: 'donut',
-    height: 380
+    height: 420
   },
   labels: ['New Tickets', 'Resolved Tickets', 'Open Tickets', 'Response Time'],
   colors: ['#06b6d4', primaryColor, '#22c55e', '#facc15'],
@@ -316,7 +316,7 @@ var averageIncomeChart = new ApexCharts(document.querySelector("#averageIncomeCh
   ],
   chart: {
     type: 'bar',
-    height: 490,
+    height: 520,
     toolbar: { show: false },
     zoom: { enabled: false }
   },
@@ -494,6 +494,7 @@ var topBrowsingPagesChart = new ApexCharts(document.querySelector("#topBrowsingP
 });
 topBrowsingPagesChart.render();
 
+
 // ================================ Total Orders - Dual Bar Chart with Broken Y-axis ================================
 var totalOrdersChart = new ApexCharts(document.querySelector("#totalOrdersChart"), {
   series: [
@@ -640,55 +641,53 @@ var userByDeviceChart = new ApexCharts(document.querySelector("#userByDeviceChar
 userByDeviceChart.render();
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  var dailyVisitInsightsChart = new ApexCharts(document.querySelector("#dailyVisitInsightsChart"), {
-    series: [
-      { name: 'Male', data: [20, 95, 25, 25, 55, 80, 45] },
-      { name: 'Female', data: [25, 60, 70, 50, 65, 55, 25] }
-    ],
-    chart: {
-      type: 'bar',
-      height: 380,
-      toolbar: { show: false },
-      zoom: { enabled: false }
-    },
-    plotOptions: {
-      bar: {
-        columnWidth: '30%',
-        borderRadius: 6,
-        borderRadiusApplication: 'end'
-      }
-    },
-    colors: ['#6366f1', '#facc15'],
-    dataLabels: { enabled: false },
-    stroke: {
-      show: true,
-      width: 2,
-      colors: ['transparent']
-    },
-    xaxis: {
-      categories: ['Sun', 'Mo', 'Tue', 'Wed', 'Thu', 'Fri', 'Sa'],
-      labels: { style: { fontSize: '12px', colors: '#9ca3af' } },
-      axisBorder: { show: false },
-      axisTicks: { show: false }
-    },
-    yaxis: {
-      show: false,
-      min: 0,
-      max: 100
-    },
-    grid: {
-      borderColor: '#f1f5f9',
-      strokeDashArray: 0,
-      xaxis: { lines: { show: true } },
-      yaxis: { lines: { show: false } },
-      padding: { top: 0, right: 0, bottom: 0, left: 0 }
-    },
-    legend: { show: false },
-    // tooltip: { shared: true }
-  });
-  dailyVisitInsightsChart.render();
+var dailyVisitInsightsChart = new ApexCharts(document.querySelector("#dailyVisitInsightsChart"), {
+  series: [
+    { name: 'Male', data: [20, 95, 25, 25, 55, 80, 45] },
+    { name: 'Female', data: [25, 60, 70, 50, 65, 55, 25] }
+  ],
+  chart: {
+    type: 'bar',
+    height: 380,
+    toolbar: { show: false },
+    zoom: { enabled: false }
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: '30%',
+      borderRadius: 6,
+      borderRadiusApplication: 'end'
+    }
+  },
+  colors: [primaryColor, '#facc15'],
+  dataLabels: { enabled: false },
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+  },
+  xaxis: {
+    categories: ['Sun', 'Mo', 'Tue', 'Wed', 'Thu', 'Fri', 'Sa'],
+    labels: { style: { fontSize: '12px', colors: '#9ca3af' } },
+    axisBorder: { show: false },
+    axisTicks: { show: false }
+  },
+  yaxis: {
+    show: false,
+    min: 0,
+    max: 100
+  },
+  grid: {
+    borderColor: '#a1a1a133',
+    strokeDashArray: 0,
+    xaxis: { lines: { show: true } },
+    yaxis: { lines: { show: false } },
+    padding: { top: 0, right: 0, bottom: 0, left: 0 }
+  },
+  legend: { show: false },
+  // tooltip: { shared: true }
 });
+dailyVisitInsightsChart.render();
 
 
 // ================================================================================================
@@ -711,6 +710,14 @@ function updateChartColors(newColor) {
     colors: ['#06b6d4', newColor, '#22c55e', '#facc15'],
   });
 
+  sessionsOverviewChart.updateOptions({
+    colors: [newColor, '#22c55e'],
+  });
+
+  dailyVisitInsightsChart.updateOptions({
+    colors: [newColor, '#facc15'],
+  });
+  
   userByDeviceChart.updateOptions({
     colors: [newColor, '#22c55e', '#f87171'],
     stroke: {
@@ -720,13 +727,6 @@ function updateChartColors(newColor) {
       colors: [newColor, '#22c55e', '#f87171'],
     },
   });
-
-  
-
-
-  
-
-  
 
 }
 
@@ -830,4 +830,20 @@ $(document).ready(function () {
   });
   // Hide pagination UI
   $(table.table().container()).find(".dt-paging").hide();
+});
+
+
+// ================================ Browser Used - DataTable ================================
+$(document).ready(function () {
+  $("#browserUsedTable").DataTable({
+    ordering: true,
+    info: false,
+    searching: false,
+    paging: false,
+    dom: "t",
+    order: [], // keep the original row order on load
+    columnDefs: [
+      { orderable: false, targets: 4 } // Action column not sortable
+    ],
+  });
 });
