@@ -383,7 +383,7 @@ var performanceOverviewChart = new ApexCharts(document.querySelector("#performan
   ],
   chart: {
     type: 'bubble',
-    height: 320,
+    height: 410,
     toolbar: { show: false },
     zoom: { enabled: false }
   },
@@ -395,10 +395,15 @@ var performanceOverviewChart = new ApexCharts(document.querySelector("#performan
   dataLabels: { enabled: false },
   stroke: { width: 0 },
   xaxis: {
+    type: 'numeric',
     min: 0,
     max: 1000,
     tickAmount: 5,
     labels: {
+      formatter: function (val) {
+        var n = Math.round(Number(val));
+        return (n === 0 || n === 1000) ? String(n) : '';
+      },
       style: { fontSize: '11px', colors: '#9ca3af' }
     },
     axisBorder: { show: false },
@@ -475,7 +480,7 @@ var topBrowsingPagesChart = new ApexCharts(document.querySelector("#topBrowsingP
   },
   colors: [primaryColor],
   dataLabels: {
-    enabled: true,
+    enabled: false,
     offsetY: -18,
     style: {
       fontSize: '12px',
@@ -484,7 +489,7 @@ var topBrowsingPagesChart = new ApexCharts(document.querySelector("#topBrowsingP
     },
     background: { enabled: false }
   },
-  tooltip: { enabled: false },
+  tooltip: { enabled: true },
   grid: { show: false }
 });
 topBrowsingPagesChart.render();
@@ -498,12 +503,12 @@ var totalOrdersChart = new ApexCharts(document.querySelector("#totalOrdersChart"
     },
     {
       name: 'Refunds',
-      data: [105000, 75000, 100000, 95000, 110000, 90000, 105000]
+      data: [1553000, 925000, 950000, 1200000, 1475000, 1025000, 1650000]
     }
   ],
   chart: {
     type: 'bar',
-    height: 220,
+    height: 390,
     toolbar: { show: false },
     zoom: { enabled: false },
     stacked: false
@@ -511,11 +516,11 @@ var totalOrdersChart = new ApexCharts(document.querySelector("#totalOrdersChart"
   plotOptions: {
     bar: {
       columnWidth: '55%',
-      borderRadius: 3,
+      borderRadius: 0,
       borderRadiusApplication: 'end'
     }
   },
-  colors: ['#6366f1', '#22c55e'],
+  colors: [primaryColor, '#22c55e'],
   dataLabels: { enabled: false },
   stroke: {
     show: true,
@@ -548,14 +553,6 @@ var totalOrdersChart = new ApexCharts(document.querySelector("#totalOrdersChart"
     yaxis: { lines: { show: true } }
   },
   legend: { show: false },
-  // tooltip: {
-  //   shared: true,
-  //   y: {
-  //     formatter: function (val) {
-  //       return '$' + new Intl.NumberFormat('en-US').format(val);
-  //     }
-  //   }
-  // },
   annotations: {
     yaxis: [
       {
@@ -589,7 +586,7 @@ var userByDeviceChart = new ApexCharts(document.querySelector("#userByDeviceChar
   ],
   chart: {
     type: 'radar',
-    height: 320,
+    height: 460,
     toolbar: { show: false }
   },
   xaxis: {
@@ -606,17 +603,17 @@ var userByDeviceChart = new ApexCharts(document.querySelector("#userByDeviceChar
     min: 0,
     max: 100
   },
-  colors: ['#6366f1', '#22c55e', '#f87171'],
+  colors: [primaryColor, '#22c55e', '#f87171'],
   fill: {
     opacity: 0.15
   },
   stroke: {
     width: 1.5,
-    colors: ['#6366f1', '#22c55e', '#f87171']
+    colors: [primaryColor, '#22c55e', '#f87171']
   },
   markers: {
     size: 4,
-    colors: ['#6366f1', '#22c55e', '#f87171'],
+    colors: [primaryColor, '#22c55e', '#f87171'],
     strokeWidth: 0
   },
   plotOptions: {
@@ -700,12 +697,33 @@ function updateChartColors(newColor) {
   topBrowsingPagesChart.updateOptions({
     colors: [newColor],
   });
+
   averageIncomeChart.updateOptions({
     colors: [newColor, '#22d3ee'],
   });
+
+  totalOrdersChart.updateOptions({
+    colors: [newColor, '#22c55e'],
+  });
+
   supportTrackerChart.updateOptions({
     colors: ['#06b6d4', newColor, '#22c55e', '#facc15'],
   });
+
+  userByDeviceChart.updateOptions({
+    colors: [newColor, '#22c55e', '#f87171'],
+    stroke: {
+      colors: [newColor, '#22c55e', '#f87171']
+    },
+    markers: {
+      colors: [newColor, '#22c55e', '#f87171'],
+    },
+  });
+
+  
+
+
+  
 
   
 
