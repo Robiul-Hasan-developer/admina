@@ -448,6 +448,345 @@ $("#world-map").vectorMap({
 // ================================ J Vector Map End ================================
 
 
+// ================================ Performance Overview - Bubble Chart ================================
+var performanceOverviewChart = new ApexCharts(document.querySelector("#performanceOverviewChart"), {
+  series: [
+    { name: 'Email', data: [{ x: 380, y: 80000, z: 38 }] },
+    { name: 'Organic Search', data: [{ x: 130, y: 21000, z: 26 }] },
+    { name: 'Direct Browser', data: [{ x: 300, y: 50000, z: 34 }] },
+    { name: 'Paid Search', data: [{ x: 820, y: 60000, z: 32 }] },
+    { name: 'Social', data: [{ x: 600, y: 42000, z: 24 }] },
+    { name: 'Referral', data: [{ x: 850, y: 21000, z: 26 }] }
+  ],
+  chart: {
+    type: 'bubble',
+    height: 320,
+    toolbar: { show: false },
+    zoom: { enabled: false }
+  },
+  colors: ['#6366f1', '#facc15', '#4ade80', '#f87171', '#22d3ee', '#e879f9'],
+  fill: {
+    type: 'solid',
+    opacity: 0.85
+  },
+  dataLabels: { enabled: false },
+  stroke: { width: 0 },
+  xaxis: {
+    min: 0,
+    max: 1000,
+    tickAmount: 5,
+    labels: {
+      style: { fontSize: '11px', colors: '#9ca3af' }
+    },
+    axisBorder: { show: false },
+    axisTicks: { show: false }
+  },
+  yaxis: {
+    min: 0,
+    max: 100000,
+    tickAmount: 5,
+    labels: {
+      formatter: function (val) {
+        return '$' + (val / 1000) + 'K';
+      },
+      style: { fontSize: '11px', colors: '#9ca3af' }
+    }
+  },
+  grid: {
+    borderColor: '#f1f5f9',
+    strokeDashArray: 0,
+    xaxis: { lines: { show: false } },
+    yaxis: { lines: { show: true } }
+  },
+  legend: {
+    show: true,
+    position: 'bottom',
+    horizontalAlign: 'center',
+    fontSize: '13px',
+    fontWeight: 500,
+    markers: {
+      width: 8,
+      height: 8,
+      radius: 12
+    },
+    itemMargin: {
+      horizontal: 10,
+      vertical: 8
+    },
+    labels: {
+      colors: '#6B7280'
+    }
+  },
+  tooltip: {
+    custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+      var name = w.config.series[seriesIndex].name;
+      var data = w.config.series[seriesIndex].data[dataPointIndex];
+      return '<div style="padding:8px 12px; font-size:12px;">' +
+        '<strong>' + name + '</strong><br>' +
+        'Visitors: ' + data.x + '<br>' +
+        'Revenue: $' + (data.y / 1000) + 'K' +
+        '</div>';
+    }
+  }
+});
+performanceOverviewChart.render();
+
+
+
+// ================================ Top Browsing Pages - Column Chart ================================
+var topBrowsingPagesChart = new ApexCharts(document.querySelector("#topBrowsingPagesChart"), {
+  series: [{
+    data: [18, 30, 42, 18, 37, 26, 11, 34, 15, 22]
+  }],
+  chart: {
+    type: 'bar',
+    height: 160,
+    toolbar: { show: false },
+    sparkline: { enabled: true }
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: '45%',
+      borderRadius: 4,
+      borderRadiusApplication: 'end'
+    }
+  },
+  colors: ['#6366f1'],
+  dataLabels: {
+    enabled: true,
+    offsetY: -18,
+    style: {
+      fontSize: '12px',
+      fontWeight: 600,
+      colors: ['#1e293b']
+    },
+    background: { enabled: false }
+  },
+  tooltip: { enabled: false },
+  grid: { show: false }
+});
+topBrowsingPagesChart.render();
+
+
+
+
+
+// ================================ Total Orders - Dual Bar Chart with Broken Y-axis ================================
+var totalOrdersChart = new ApexCharts(document.querySelector("#totalOrdersChart"), {
+  series: [
+    {
+      name: 'Orders',
+      data: [3106000, 1850000, 1900000, 2400000, 2950000, 2050000, 3300000]
+    },
+    {
+      name: 'Refunds',
+      data: [105000, 75000, 100000, 95000, 110000, 90000, 105000]
+    }
+  ],
+  chart: {
+    type: 'bar',
+    height: 220,
+    toolbar: { show: false },
+    zoom: { enabled: false },
+    stacked: false
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: '55%',
+      borderRadius: 3,
+      borderRadiusApplication: 'end'
+    }
+  },
+  colors: ['#6366f1', '#22c55e'],
+  dataLabels: { enabled: false },
+  stroke: {
+    show: true,
+    width: 1,
+    colors: ['transparent']
+  },
+  xaxis: {
+    categories: ['Mo', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    labels: {
+      style: { fontSize: '11px', colors: '#9ca3af' }
+    },
+    axisBorder: { show: false },
+    axisTicks: { show: false }
+  },
+  yaxis: {
+    min: 0,
+    max: 3500000,
+    tickAmount: 4,
+    labels: {
+      formatter: function (val) {
+        return new Intl.NumberFormat('en-US').format(Math.round(val));
+      },
+      style: { fontSize: '10px', colors: '#9ca3af' }
+    }
+  },
+  grid: {
+    borderColor: '#f1f5f9',
+    strokeDashArray: 3,
+    xaxis: { lines: { show: false } },
+    yaxis: { lines: { show: true } }
+  },
+  legend: { show: false },
+  tooltip: {
+    shared: true,
+    y: {
+      formatter: function (val) {
+        return '$' + new Intl.NumberFormat('en-US').format(val);
+      }
+    }
+  },
+  annotations: {
+    yaxis: [
+      {
+        y: 700000,
+        y2: 750000,
+        borderColor: 'transparent',
+        fillColor: 'transparent',
+        label: { text: '' }
+      }
+    ]
+  }
+});
+totalOrdersChart.render();
+
+
+
+
+
+// ================================ User By Device - Radar Chart ================================
+var userByDeviceChart = new ApexCharts(document.querySelector("#userByDeviceChart"), {
+  series: [
+    {
+      name: 'Desktop',
+      data: [55, 70, 35, 50, 40, 45, 90]
+    },
+    {
+      name: 'Mobile',
+      data: [60, 30, 40, 75, 95, 55, 50]
+    },
+    {
+      name: 'Others',
+      data: [40, 45, 55, 95, 30, 35, 60]
+    }
+  ],
+  chart: {
+    type: 'radar',
+    height: 320,
+    toolbar: { show: false }
+  },
+  xaxis: {
+    categories: ['Jul', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    labels: {
+      style: {
+        fontSize: '12px',
+        colors: ['#9ca3af', '#9ca3af', '#9ca3af', '#9ca3af', '#9ca3af', '#9ca3af', '#9ca3af']
+      }
+    }
+  },
+  yaxis: {
+    show: false,
+    min: 0,
+    max: 100
+  },
+  colors: ['#6366f1', '#22c55e', '#f87171'],
+  fill: {
+    opacity: 0.15
+  },
+  stroke: {
+    width: 1.5,
+    colors: ['#6366f1', '#22c55e', '#f87171']
+  },
+  markers: {
+    size: 4,
+    colors: ['#6366f1', '#22c55e', '#f87171'],
+    strokeWidth: 0
+  },
+  plotOptions: {
+    radar: {
+      polygons: {
+        strokeColors: '#e5e7eb',
+        strokeWidth: 1,
+        connectorColors: '#e5e7eb',
+        fill: {
+          colors: ['transparent', 'transparent']
+        }
+      }
+    }
+  },
+  dataLabels: { enabled: false },
+  legend: { show: false },
+  tooltip: {
+    y: {
+      formatter: function (val) { return val + '%'; }
+    }
+  }
+});
+userByDeviceChart.render();
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var dailyVisitInsightsChart = new ApexCharts(document.querySelector("#dailyVisitInsightsChart"), {
+    series: [
+      { name: 'Male', data: [20, 95, 25, 25, 55, 80, 45] },
+      { name: 'Female', data: [25, 60, 70, 50, 65, 55, 25] }
+    ],
+    chart: {
+      type: 'bar',
+      height: 220,
+      toolbar: { show: false },
+      zoom: { enabled: false }
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: '55%',
+        borderRadius: 3,
+        borderRadiusApplication: 'end'
+      }
+    },
+    colors: ['#6366f1', '#facc15'],
+    dataLabels: { enabled: false },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ['transparent']
+    },
+    xaxis: {
+      categories: ['Sun', 'Mo', 'Tue', 'Wed', 'Thu', 'Fri', 'Sa'],
+      labels: { style: { fontSize: '12px', colors: '#9ca3af' } },
+      axisBorder: { show: false },
+      axisTicks: { show: false }
+    },
+    yaxis: {
+      show: false,
+      min: 0,
+      max: 100
+    },
+    grid: {
+      borderColor: '#f1f5f9',
+      strokeDashArray: 0,
+      xaxis: { lines: { show: true } },
+      yaxis: { lines: { show: false } },
+      padding: { top: 0, right: 0, bottom: 0, left: 0 }
+    },
+    legend: { show: false },
+    tooltip: { shared: true }
+  });
+  dailyVisitInsightsChart.render();
+});
+
+
+
+
+
+
+
 // ================================ Recent Orders - DataTable ================================
 $(document).ready(function () {
   const table = $("#recentOrdersTable").DataTable({

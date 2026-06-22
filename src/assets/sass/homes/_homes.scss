@@ -128,4 +128,79 @@
   height: 100%;
   padding: 0 14px;
 }
+
+#performanceOverviewChart {
+  width: 100%;
+}
+#performanceOverviewChart .apexcharts-canvas,
+#performanceOverviewChart svg {
+  width: 100% !important;
+}
+
+
+.radius-start-8 { border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
+.radius-end-8 { border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
+
+#topBrowsingPagesChart {
+  width: 100%;
+}
+#topBrowsingPagesChart .apexcharts-canvas,
+#topBrowsingPagesChart svg {
+  width: 100% !important;
+}
+
+
+
+
+#totalOrdersChart {
+  width: 100%;
+  position: relative;
+}
+#totalOrdersChart .apexcharts-canvas,
+#totalOrdersChart svg {
+  width: 100% !important;
+}
+
+/* Zigzag scale-break overlay */
+.totalOrders-zigzag {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background-image: repeating-linear-gradient(
+    -55deg,
+    var(--color-background-primary, #fff) 0,
+    var(--color-background-primary, #fff) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+#userByDeviceChart {
+  width: 100%;
+}
+#userByDeviceChart .apexcharts-canvas,
+#userByDeviceChart svg {
+  width: 100% !important;
+}
+
+
+
+
+
+#dailyVisitInsightsChart {
+  width: 100%;
+}
+#dailyVisitInsightsChart .apexcharts-canvas,
+#dailyVisitInsightsChart svg {
+  width: 100% !important;
+}
+
+
+
+
+
+
 /* Home One css end */
