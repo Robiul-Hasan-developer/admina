@@ -104,6 +104,30 @@
 /* Button Tab Css End */
 
 
+/* Segment Pill Tab Css Start */
+.segment-pill-tab {
+    .nav-link {
+        padding: 9px 24px;
+        border-radius: 50rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        color: var(--text-secondary-light);
+        background-color: var(--white);
+        box-shadow: var(--shadow-4);
+        transition: .2s linear;
+        &:hover {
+            color: var(--primary-600);
+        }
+        &.active {
+            background-color: var(--primary-600);
+            color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(79, 70, 229, 0.24);
+        }
+    }
+}
+/* Segment Pill Tab Css End */
+
+
 /* Active Text Css Start */
 .active-text-tab.nav-pills{
     .nav-link {
