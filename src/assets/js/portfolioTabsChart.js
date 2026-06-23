@@ -156,3 +156,78 @@
     });
   };
 })();
+
+
+// ================================================================================
+//  Active Trading Bots — mini bar sparklines (index-3 only)
+// ================================================================================
+(function () {
+  if (!document.querySelector("#btcSignalBotChart")) return; // page guard
+
+  function makeBotBars(selector, data, colors) {
+    var el = document.querySelector(selector);
+    if (!el) return;
+    new ApexCharts(el, {
+      series: [{ data: data }],
+      chart: {
+        type: "bar",
+        height: 56,
+        width: 130,
+        sparkline: { enabled: true },
+        toolbar: { show: false },
+        animations: { enabled: false },
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: "60%",
+          borderRadius: 2,
+          borderRadiusApplication: "end",
+          distributed: true,
+        },
+      },
+      colors: colors,
+      dataLabels: { enabled: false },
+      legend: { show: false },
+      tooltip: { enabled: false },
+      states: {
+        hover: { filter: { type: "none" } },
+        active: { filter: { type: "none" } },
+      },
+      grid: { show: false },
+    }).render();
+  }
+
+  var cyan = "#22d3ee";
+  var indigo = "#6366f1";
+  var amber = "#facc15";
+  var green = "#22c55e";
+  var coral = "#f87171";
+
+  // Card 1 — BTC Signal Bot: teal bars with an indigo spike cluster
+  makeBotBars(
+    "#btcSignalBotChart",
+    [9, 11, 8, 13, 10, 15, 12, 20, 34, 46, 40, 26, 14, 10, 8, 7],
+    [cyan, cyan, cyan, cyan, cyan, cyan, cyan, indigo, indigo, indigo, indigo, indigo, cyan, cyan, cyan, cyan]
+  );
+
+  // Card 2 — ETH DCA Bot: alternating amber / green
+  makeBotBars(
+    "#ethDcaBotChart",
+    [18, 12, 22, 15, 25, 14, 20, 17, 23, 13, 19, 16, 24, 12, 21, 15],
+    [amber, green, amber, green, amber, green, amber, green, amber, green, amber, green, amber, green, amber, green]
+  );
+
+  // Card 3 — Arbitrage Bot: rising green bars ending in tall indigo bars
+  makeBotBars(
+    "#arbitrageBotChart",
+    [7, 9, 8, 11, 10, 13, 12, 15, 14, 17, 19, 30, 42],
+    [green, green, green, green, green, green, green, green, green, green, green, indigo, indigo]
+  );
+
+  // Card 4 — Pump Screener: coral bars
+  makeBotBars(
+    "#pumpScreenerChart",
+    [16, 22, 14, 24, 18, 26, 15, 23, 17, 25, 19, 21, 16, 24, 20],
+    [coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral]
+  );
+})();

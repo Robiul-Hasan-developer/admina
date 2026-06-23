@@ -19,6 +19,11 @@
   }
 }
 
+.border-hover-neutral-100 {
+  &:hover {
+    border-color: var(--neutral-100) !important;
+  }
+}
 
 .br-success {
   border-color: var(--success-border) !important;
