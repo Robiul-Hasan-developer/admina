@@ -313,4 +313,13 @@
 }
 
 
+/* Portfolio Holdings - Dense mode (compact rows) */
+#portfolioHoldingsTable.table-dense {
+  tbody td {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+}
+
+
 /* Home One css end */

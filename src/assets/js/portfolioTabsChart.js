@@ -344,3 +344,43 @@
     }
   };
 })();
+
+
+// ================================================================================
+//  Portfolio Holdings — DataTable (index-3, Portfolio tab)
+// ================================================================================
+(function () {
+  var tableEl = document.querySelector("#portfolioHoldingsTable");
+  if (!tableEl || typeof $ === "undefined" || !$.fn || !$.fn.DataTable) return;
+
+  var dt = $(tableEl).DataTable({
+    pageLength: 8,
+    lengthChange: false,
+    ordering: true,
+    info: false,
+    searching: false,
+    paging: false,
+    dom: "t",
+    order: [], // keep original order on load
+    columnDefs: [
+      { orderable: false, targets: 7 }, // Action column not sortable
+    ],
+  });
+
+  // The Portfolio pane is hidden on load — DataTables computes column widths from
+  // the visible viewport, so re-align them the first time the tab is revealed.
+  var tabBtn = document.querySelector("#portfolio-pane-tab");
+  if (tabBtn) {
+    tabBtn.addEventListener("shown.bs.tab", function () {
+      dt.columns.adjust();
+    });
+  }
+
+  // Dense toggle — compact row padding
+  var denseSwitch = document.getElementById("portfolioDenseSwitch");
+  if (denseSwitch) {
+    denseSwitch.addEventListener("change", function () {
+      tableEl.classList.toggle("table-dense", denseSwitch.checked);
+    });
+  }
+})();
