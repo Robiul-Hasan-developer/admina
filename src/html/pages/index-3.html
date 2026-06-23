@@ -173,7 +173,8 @@
     <div class="mt-24">
       <!-- Tab bar : tabs on the left, Filter + Refresh on the right -->
       <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-24">
-        <ul class="nav segment-pill-tab nav-pills flex-wrap gap-2 mb-0 border border-neutral-300 p-4 rounded-pill" id="portfolio-tab" role="tablist">
+        <ul class="nav segment-pill-tab nav-pills flex-wrap gap-2 mb-0 border border-neutral-300 p-4 rounded-pill"
+          id="portfolio-tab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="overview-tab" data-bs-toggle="pill" data-bs-target="#overview-pane"
               type="button" role="tab" aria-controls="overview-pane" aria-selected="true">Overview</button>
@@ -355,6 +356,501 @@
             </div>
 
           </div>
+
+
+          <!-- ===== Active Trading Bots ===== -->
+          <div class="mt-24 p-24 border border-neutral-200 radius-16">
+
+            <!-- Section header -->
+            <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap mb-24">
+              <div class="d-flex align-items-center gap-12">
+                <span
+                  class="w-44-px h-44-px bg-white d-flex align-items-center justify-content-center rounded-circle text-xl text-neutral-700 shadow-4 flex-shrink-0">
+                  <i class="ph ph-chart-pie-slice"></i>
+                </span>
+                <div>
+                  <h6 class="fw-bold text-neutral-700 mb-1 text-lg">Active Trading Bots</h6>
+                  <span class="fw-normal text-sm text-neutral-500">Real-time algorithmic trading performance</span>
+                </div>
+              </div>
+              <a href="javascript:void(0)"
+                class="text-white py-12 px-24 d-inline-flex align-items-center gap-1 bg-primary-600 rounded-pill flex-shrink-0">
+                <span class="fw-medium text-sm">View All Bot</span>
+              </a>
+            </div>
+
+            <!-- Bot cards -->
+            <div class="row gy-4">
+
+              <!-- Card 1 : BTC Signal Bot -->
+              <div class="col-xl-3 col-lg-6 col-sm-6">
+                <div class="bot-card bg-base radius-16 p-20 h-100">
+                  <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-48-px h-48-px bg-cyan-50 border border-cyan-200 text-cyan-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                        <i class="ph ph-chart-bar"></i>
+                      </span>
+                      <div>
+                        <h6 class="fw-bold mb-0 text-lg">BTC Signal Bot</h6>
+                        <span class="text-secondary-light text-sm fw-normal">BTC/USDT</span>
+                      </div>
+                    </div>
+                    <span class="live-dot w-10-px h-10-px bg-success-600 rounded-circle flex-shrink-0 mt-2"></span>
+                  </div>
+
+                  <div class="d-flex flex-column gap-12">
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Today's PnL</span>
+                      <span class="text-primary-600 text-sm fw-bold">+$45,456.52</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Win Rate</span>
+                      <span class="text-primary-light text-sm fw-bold">72.4%</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Trades</span>
+                      <span class="text-primary-light text-sm fw-bold">48</span>
+                    </div>
+                  </div>
+
+                  <span class="w-100 h-2-px bg-neutral-100 my-16 d-block"></span>
+
+                  <div class="d-flex align-items-end justify-content-between gap-8">
+                    <div>
+                      <span class="text-secondary-light text-sm fw-normal d-block mb-1">Uptime</span>
+                      <h6 class="fw-bold mb-0 text-lg">14d 8h 32m</h6>
+                    </div>
+                    <div id="btcSignalBotChart" class="bot-spark flex-shrink-0"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 : ETH DCA Bot -->
+              <div class="col-xl-3 col-lg-6 col-sm-6">
+                <div class="bot-card bg-base radius-16 p-20 h-100">
+                  <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-48-px h-48-px bg-warning-50 border border-warning-200 text-warning-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                        <i class="ph ph-arrows-left-right"></i>
+                      </span>
+                      <div>
+                        <h6 class="fw-bold mb-0 text-lg">ETH DCA Bot</h6>
+                        <span class="text-secondary-light text-sm fw-normal">ETH/USDT</span>
+                      </div>
+                    </div>
+                    <span class="live-dot w-10-px h-10-px bg-success-600 rounded-circle flex-shrink-0 mt-2"></span>
+                  </div>
+
+                  <div class="d-flex flex-column gap-12">
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Today's PnL</span>
+                      <span class="text-success-600 text-sm fw-bold">+$45,456.52</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Avg Entry</span>
+                      <span class="text-primary-light text-sm fw-bold">$5,745.74</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Orders</span>
+                      <span class="text-primary-light text-sm fw-bold">12</span>
+                    </div>
+                  </div>
+
+                  <span class="w-100 h-2-px bg-neutral-100 my-16 d-block"></span>
+
+                  <div class="d-flex align-items-end justify-content-between gap-8">
+                    <div>
+                      <span class="text-secondary-light text-sm fw-normal d-block mb-1">Uptime</span>
+                      <h6 class="fw-bold mb-0 text-lg">14d 8h 32m</h6>
+                    </div>
+                    <div id="ethDcaBotChart" class="bot-spark flex-shrink-0"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 : Arbitrage Bot -->
+              <div class="col-xl-3 col-lg-6 col-sm-6">
+                <div class="bot-card bg-base radius-16 p-20 h-100">
+                  <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-48-px h-48-px bg-lilac-50 border border-lilac-200 text-lilac-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                        <i class="ph ph-share-network"></i>
+                      </span>
+                      <div>
+                        <h6 class="fw-bold mb-0 text-lg">Arbitrage Bot</h6>
+                        <span class="text-secondary-light text-sm fw-normal">Multi-Exchange</span>
+                      </div>
+                    </div>
+                    <span class="live-dot w-10-px h-10-px bg-success-600 rounded-circle flex-shrink-0 mt-2"></span>
+                  </div>
+
+                  <div class="d-flex flex-column gap-12">
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Today's PnL</span>
+                      <span class="text-danger-600 text-sm fw-bold">+$45,456.52</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Opportunities</span>
+                      <span class="text-primary-light text-sm fw-bold">115</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Executed</span>
+                      <span class="text-primary-light text-sm fw-bold">96</span>
+                    </div>
+                  </div>
+
+                  <span class="w-100 h-2-px bg-neutral-100 my-16 d-block"></span>
+
+                  <div class="d-flex align-items-end justify-content-between gap-8">
+                    <div>
+                      <span class="text-secondary-light text-sm fw-normal d-block mb-1">Uptime</span>
+                      <h6 class="fw-bold mb-0 text-lg">14d 8h 32m</h6>
+                    </div>
+                    <div id="arbitrageBotChart" class="bot-spark flex-shrink-0"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 : Pump Screener -->
+              <div class="col-xl-3 col-lg-6 col-sm-6">
+                <div class="bot-card bg-base radius-16 p-20 h-100">
+                  <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-48-px h-48-px bg-success-50 border border-success-200 text-success-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                        <i class="ph ph-rocket-launch"></i>
+                      </span>
+                      <div>
+                        <h6 class="fw-bold mb-0 text-lg">Pump Screener</h6>
+                        <span class="text-secondary-light text-sm fw-normal">Altcoins</span>
+                      </div>
+                    </div>
+                    <span class="live-dot w-10-px h-10-px bg-success-600 rounded-circle flex-shrink-0 mt-2"></span>
+                  </div>
+
+                  <div class="d-flex flex-column gap-12">
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Today's PnL</span>
+                      <span class="text-primary-600 text-sm fw-bold">+$45,456.52</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Alerts</span>
+                      <span class="text-primary-light text-sm fw-bold">74</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                      <span class="text-secondary-light text-sm fw-normal">Sniped</span>
+                      <span class="text-primary-light text-sm fw-bold">16</span>
+                    </div>
+                  </div>
+
+                  <span class="w-100 h-2-px bg-neutral-100 my-16 d-block"></span>
+
+                  <div class="d-flex align-items-end justify-content-between gap-8">
+                    <div>
+                      <span class="text-secondary-light text-sm fw-normal d-block mb-1">Uptime</span>
+                      <h6 class="fw-bold mb-0 text-lg">14d 8h 32m</h6>
+                    </div>
+                    <div id="pumpScreenerChart" class="bot-spark flex-shrink-0"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ===== Top Performing Assets + Recent Activity ===== -->
+          <div class="row gy-4 mt-1">
+
+            <!-- Top Performing Assets -->
+            <div class="col-xxl-6">
+              <div class="bg-base radius-20 p-24 h-100">
+
+                <!-- Header -->
+                <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
+                  <div class="d-flex align-items-center gap-12">
+                    <div
+                      class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                      <i class="ph ph-coins text-danger-600 text-2xl"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-0 text-lg">Top Performing Assets</h6>
+                      <span class="text-secondary-light text-sm fw-normal">Overall best customer growth</span>
+                    </div>
+                  </div>
+                  <div class="dropdown flex-shrink-0">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                      <li><button type="button"
+                          class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                            icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                      <li><button type="button"
+                          class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                            icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      <li><button type="button"
+                          class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
+                            icon="fluent:delete-24-regular"
+                            class="icon text-lg line-height-1"></iconify-icon>Delete</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Asset list -->
+                <div class="d-flex flex-column">
+
+                  <div
+                    class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <div class="d-flex align-items-center gap-12">
+                      <iconify-icon icon="cryptocurrency-color:btc" width="40" height="40"
+                        class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-md fw-bold mb-0 text-primary-light">Bitcoin</h6>
+                        <span class="text-secondary-light text-sm fw-normal">2.45 BTC</span>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 839</h6>
+                      <span class="text-success-600 text-sm fw-semibold">+8.42%</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <div class="d-flex align-items-center gap-12">
+                      <iconify-icon icon="cryptocurrency-color:eth" width="40" height="40"
+                        class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-md fw-bold mb-0 text-primary-light">Ethereum</h6>
+                        <span class="text-secondary-light text-sm fw-normal">18.2 ETH</span>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 837.92</h6>
+                      <span class="text-success-600 text-sm fw-semibold">+8.42%</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <div class="d-flex align-items-center gap-12">
+                      <iconify-icon icon="cryptocurrency-color:avax" width="40" height="40"
+                        class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-md fw-bold mb-0 text-primary-light">Avalanche</h6>
+                        <span class="text-secondary-light text-sm fw-normal">156 AVAX</span>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 92.93</h6>
+                      <span class="text-danger-600 text-sm fw-semibold">-2.15%</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-40-px h-40-px rounded-circle bg-neutral-900 text-white d-flex align-items-center justify-content-center flex-shrink-0">
+                        <iconify-icon icon="token:sol" width="22" height="22"></iconify-icon>
+                      </span>
+                      <div>
+                        <h6 class="text-md fw-bold mb-0 text-primary-light">Solana</h6>
+                        <span class="text-secondary-light text-sm fw-normal">142 SOL</span>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 45.99</h6>
+                      <span class="text-danger-600 text-sm fw-semibold">-2.15%</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <div class="d-flex align-items-center gap-12">
+                      <iconify-icon icon="cryptocurrency-color:link" width="40" height="40"
+                        class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-md fw-bold mb-0 text-primary-light">Chainlink</h6>
+                        <span class="text-secondary-light text-sm fw-normal">485 LINK</span>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 783.83</h6>
+                      <span class="text-success-600 text-sm fw-semibold">+8.42%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- See All Assets -->
+                <div class="mt-20">
+                  <a href="javascript:void(0)"
+                    class="d-flex align-items-center gap-4 text-primary-600 text-sm fw-medium text-hover-primary-800"
+                    style="width:fit-content;">
+                    See All Assets
+                    <i class="ph-bold ph-arrow-right"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="col-xxl-6">
+              <div class="bg-base radius-20 p-24 h-100">
+
+                <!-- Header -->
+                <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
+                  <div class="d-flex align-items-center gap-12">
+                    <div
+                      class="w-48-px h-48-px bg-info-50 border border-info-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                      <i class="ph ph-arrow-up-right text-info-600 text-2xl"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-0 text-lg">Recent Activity</h6>
+                      <span class="text-secondary-light text-sm fw-normal">Track your latest trading activity</span>
+                    </div>
+                  </div>
+                  <div class="dropdown flex-shrink-0">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                      <li><button type="button"
+                          class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                            icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                      <li><button type="button"
+                          class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                            icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      <li><button type="button"
+                          class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
+                            icon="fluent:delete-24-regular"
+                            class="icon text-lg line-height-1"></iconify-icon>Delete</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Activity list -->
+                <div class="d-flex flex-column">
+
+                  <div class="activity-row bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <span
+                      class="activity-row__icon w-40-px h-40-px rounded-circle bg-warning-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                      <i class="ph ph-arrow-down-right"></i>
+                    </span>
+                    <div class="min-w-0">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">BTC Sold</h6>
+                      <span class="text-secondary-light text-sm fw-normal">0.025 BTC @ $98,000</span>
+                    </div>
+                    <div class="activity-row__mid">
+                      <h6 class="text-md fw-medium mb-0 text-primary-light">Signal Bot</h6>
+                      <span class="text-secondary-light text-sm fw-normal">2 minutes ago</span>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 839</h6>
+                      <span class="text-success-600 text-sm fw-semibold">+4.42%</span>
+                    </div>
+                  </div>
+
+                  <div class="activity-row bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <span
+                      class="activity-row__icon w-40-px h-40-px rounded-circle bg-success-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                      <i class="ph ph-arrow-down-left"></i>
+                    </span>
+                    <div class="min-w-0">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">ETH Bought</h6>
+                      <span class="text-secondary-light text-sm fw-normal">0.62 ETH @ $2,984</span>
+                    </div>
+                    <div class="activity-row__mid">
+                      <h6 class="text-md fw-medium mb-0 text-primary-light">DCA Bot</h6>
+                      <span class="text-secondary-light text-sm fw-normal">15 minutes ago</span>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 91.83</h6>
+                      <span class="text-success-600 text-sm fw-semibold">+3.41%</span>
+                    </div>
+                  </div>
+
+                  <div class="activity-row bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <span
+                      class="activity-row__icon w-40-px h-40-px rounded-circle bg-lilac-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                      <i class="ph ph-stack"></i>
+                    </span>
+                    <div class="min-w-0">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">Staking Reward</h6>
+                      <span class="text-secondary-light text-sm fw-normal">ETH Staking Pool</span>
+                    </div>
+                    <div class="activity-row__mid">
+                      <h6 class="text-md fw-medium mb-0 text-primary-light">Auto-compound</h6>
+                      <span class="text-secondary-light text-sm fw-normal">1 hour ago</span>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 73.02</h6>
+                      <span class="text-danger-600 text-sm fw-semibold">-2.15%</span>
+                    </div>
+                  </div>
+
+                  <div class="activity-row bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <span
+                      class="activity-row__icon w-40-px h-40-px rounded-circle bg-cyan-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                      <i class="ph ph-arrows-left-right"></i>
+                    </span>
+                    <div class="min-w-0">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">Arbitrage Executed</h6>
+                      <span class="text-secondary-light text-sm fw-normal">BTC Binance → Coinbase</span>
+                    </div>
+                    <div class="activity-row__mid">
+                      <h6 class="text-md fw-medium mb-0 text-primary-light">Arbitrage Bot</h6>
+                      <span class="text-secondary-light text-sm fw-normal">2 hours ago</span>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 45.99</h6>
+                      <span class="text-danger-600 text-sm fw-semibold">-7.74%</span>
+                    </div>
+                  </div>
+
+                  <div class="activity-row bg-hover-neutral-100 border border-transparent border-hover-neutral-200">
+                    <span
+                      class="activity-row__icon w-40-px h-40-px rounded-circle bg-danger-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                      <i class="ph ph-warning"></i>
+                    </span>
+                    <div class="min-w-0">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">Stop Loss Triggered</h6>
+                      <span class="text-secondary-light text-sm fw-normal">LINK/USDT Position Closed</span>
+                    </div>
+                    <div class="activity-row__mid">
+                      <h6 class="text-md fw-medium mb-0 text-primary-light">Signal Bot</h6>
+                      <span class="text-secondary-light text-sm fw-normal">3 hours ago</span>
+                    </div>
+                    <div class="text-end">
+                      <h6 class="text-md fw-bold mb-0 text-primary-light">$ 832</h6>
+                      <span class="text-success-600 text-sm fw-semibold">+10.72%</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- See All Activity -->
+                <div class="mt-20">
+                  <a href="javascript:void(0)"
+                    class="d-flex align-items-center gap-4 text-primary-600 text-sm fw-medium text-hover-primary-800"
+                    style="width:fit-content;">
+                    See All Activity
+                    <i class="ph-bold ph-arrow-right"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
         <!-- Bot Performance pane (placeholder) -->
@@ -420,491 +916,6 @@
       </div>
     </div>
 
-    <!-- ===== Active Trading Bots ===== -->
-    <div class="active-bots-section mt-24 p-24">
-
-      <!-- Section header -->
-      <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap mb-24">
-        <div class="d-flex align-items-center gap-12">
-          <span
-            class="w-44-px h-44-px bg-white d-flex align-items-center justify-content-center rounded-circle text-xl text-neutral-700 shadow-4 flex-shrink-0">
-            <i class="ph ph-chart-pie-slice"></i>
-          </span>
-          <div>
-            <h6 class="fw-bold text-neutral-700 mb-1 text-lg">Active Trading Bots</h6>
-            <span class="fw-normal text-sm text-neutral-500">Real-time algorithmic trading performance</span>
-          </div>
-        </div>
-        <a href="javascript:void(0)"
-          class="text-white py-12 px-24 d-inline-flex align-items-center gap-1 bg-primary-600 rounded-pill flex-shrink-0">
-          <span class="fw-medium text-sm">View All Bot</span>
-        </a>
-      </div>
-
-      <!-- Bot cards -->
-      <div class="row gy-4">
-
-        <!-- Card 1 : BTC Signal Bot -->
-        <div class="col-xl-3 col-lg-6 col-sm-6">
-          <div class="bot-card bg-base radius-16 p-20 h-100">
-            <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
-              <div class="d-flex align-items-center gap-12">
-                <span
-                  class="w-48-px h-48-px bg-cyan-50 border border-cyan-200 text-cyan-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
-                  <i class="ph ph-chart-bar"></i>
-                </span>
-                <div>
-                  <h6 class="fw-bold mb-0 text-lg">BTC Signal Bot</h6>
-                  <span class="text-secondary-light text-sm fw-normal">BTC/USDT</span>
-                </div>
-              </div>
-              <span class="live-dot w-10-px h-10-px bg-success-600 rounded-circle flex-shrink-0 mt-2"></span>
-            </div>
-
-            <div class="d-flex flex-column gap-12">
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Today's PnL</span>
-                <span class="text-primary-600 text-sm fw-bold">+$45,456.52</span>
-              </div>
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Win Rate</span>
-                <span class="text-primary-light text-sm fw-bold">72.4%</span>
-              </div>
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Trades</span>
-                <span class="text-primary-light text-sm fw-bold">48</span>
-              </div>
-            </div>
-
-            <span class="w-100 h-2-px bg-neutral-100 my-16 d-block"></span>
-
-            <div class="d-flex align-items-end justify-content-between gap-8">
-              <div>
-                <span class="text-secondary-light text-sm fw-normal d-block mb-1">Uptime</span>
-                <h6 class="fw-bold mb-0 text-lg">14d 8h 32m</h6>
-              </div>
-              <div id="btcSignalBotChart" class="bot-spark flex-shrink-0"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 : ETH DCA Bot -->
-        <div class="col-xl-3 col-lg-6 col-sm-6">
-          <div class="bot-card bg-base radius-16 p-20 h-100">
-            <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
-              <div class="d-flex align-items-center gap-12">
-                <span
-                  class="w-48-px h-48-px bg-warning-50 border border-warning-200 text-warning-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
-                  <i class="ph ph-arrows-left-right"></i>
-                </span>
-                <div>
-                  <h6 class="fw-bold mb-0 text-lg">ETH DCA Bot</h6>
-                  <span class="text-secondary-light text-sm fw-normal">ETH/USDT</span>
-                </div>
-              </div>
-              <span class="live-dot w-10-px h-10-px bg-success-600 rounded-circle flex-shrink-0 mt-2"></span>
-            </div>
-
-            <div class="d-flex flex-column gap-12">
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Today's PnL</span>
-                <span class="text-success-600 text-sm fw-bold">+$45,456.52</span>
-              </div>
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Avg Entry</span>
-                <span class="text-primary-light text-sm fw-bold">$5,745.74</span>
-              </div>
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Orders</span>
-                <span class="text-primary-light text-sm fw-bold">12</span>
-              </div>
-            </div>
-
-            <span class="w-100 h-2-px bg-neutral-100 my-16 d-block"></span>
-
-            <div class="d-flex align-items-end justify-content-between gap-8">
-              <div>
-                <span class="text-secondary-light text-sm fw-normal d-block mb-1">Uptime</span>
-                <h6 class="fw-bold mb-0 text-lg">14d 8h 32m</h6>
-              </div>
-              <div id="ethDcaBotChart" class="bot-spark flex-shrink-0"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 : Arbitrage Bot -->
-        <div class="col-xl-3 col-lg-6 col-sm-6">
-          <div class="bot-card bg-base radius-16 p-20 h-100">
-            <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
-              <div class="d-flex align-items-center gap-12">
-                <span
-                  class="w-48-px h-48-px bg-lilac-50 border border-lilac-200 text-lilac-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
-                  <i class="ph ph-share-network"></i>
-                </span>
-                <div>
-                  <h6 class="fw-bold mb-0 text-lg">Arbitrage Bot</h6>
-                  <span class="text-secondary-light text-sm fw-normal">Multi-Exchange</span>
-                </div>
-              </div>
-              <span class="live-dot w-10-px h-10-px bg-success-600 rounded-circle flex-shrink-0 mt-2"></span>
-            </div>
-
-            <div class="d-flex flex-column gap-12">
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Today's PnL</span>
-                <span class="text-danger-600 text-sm fw-bold">+$45,456.52</span>
-              </div>
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Opportunities</span>
-                <span class="text-primary-light text-sm fw-bold">115</span>
-              </div>
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Executed</span>
-                <span class="text-primary-light text-sm fw-bold">96</span>
-              </div>
-            </div>
-
-            <span class="w-100 h-2-px bg-neutral-100 my-16 d-block"></span>
-
-            <div class="d-flex align-items-end justify-content-between gap-8">
-              <div>
-                <span class="text-secondary-light text-sm fw-normal d-block mb-1">Uptime</span>
-                <h6 class="fw-bold mb-0 text-lg">14d 8h 32m</h6>
-              </div>
-              <div id="arbitrageBotChart" class="bot-spark flex-shrink-0"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 : Pump Screener -->
-        <div class="col-xl-3 col-lg-6 col-sm-6">
-          <div class="bot-card bg-base radius-16 p-20 h-100">
-            <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
-              <div class="d-flex align-items-center gap-12">
-                <span
-                  class="w-48-px h-48-px bg-success-50 border border-success-200 text-success-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
-                  <i class="ph ph-rocket-launch"></i>
-                </span>
-                <div>
-                  <h6 class="fw-bold mb-0 text-lg">Pump Screener</h6>
-                  <span class="text-secondary-light text-sm fw-normal">Altcoins</span>
-                </div>
-              </div>
-              <span class="live-dot w-10-px h-10-px bg-success-600 rounded-circle flex-shrink-0 mt-2"></span>
-            </div>
-
-            <div class="d-flex flex-column gap-12">
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Today's PnL</span>
-                <span class="text-primary-600 text-sm fw-bold">+$45,456.52</span>
-              </div>
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Alerts</span>
-                <span class="text-primary-light text-sm fw-bold">74</span>
-              </div>
-              <div class="d-flex align-items-center justify-content-between gap-2">
-                <span class="text-secondary-light text-sm fw-normal">Sniped</span>
-                <span class="text-primary-light text-sm fw-bold">16</span>
-              </div>
-            </div>
-
-            <span class="w-100 h-2-px bg-neutral-100 my-16 d-block"></span>
-
-            <div class="d-flex align-items-end justify-content-between gap-8">
-              <div>
-                <span class="text-secondary-light text-sm fw-normal d-block mb-1">Uptime</span>
-                <h6 class="fw-bold mb-0 text-lg">14d 8h 32m</h6>
-              </div>
-              <div id="pumpScreenerChart" class="bot-spark flex-shrink-0"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ===== Top Performing Assets + Recent Activity ===== -->
-    <div class="row gy-4 mt-1">
-
-      <!-- Top Performing Assets -->
-      <div class="col-xxl-6">
-        <div class="bg-base radius-20 p-24 h-100">
-
-          <!-- Header -->
-          <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
-            <div class="d-flex align-items-center gap-12">
-              <div
-                class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                <i class="ph ph-coins text-danger-600 text-2xl"></i>
-              </div>
-              <div>
-                <h6 class="fw-bold mb-0 text-lg">Top Performing Assets</h6>
-                <span class="text-secondary-light text-sm fw-normal">Overall best customer growth</span>
-              </div>
-            </div>
-            <div class="dropdown flex-shrink-0">
-              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
-                <li><button type="button"
-                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
-                      icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
-                <li><button type="button"
-                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
-                      icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
-                <li><button type="button"
-                    class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
-                      icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>Delete</button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Asset list -->
-          <div class="d-flex flex-column">
-
-            <div class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100">
-              <div class="d-flex align-items-center gap-12">
-                <iconify-icon icon="cryptocurrency-color:btc" width="40" height="40"
-                  class="flex-shrink-0"></iconify-icon>
-                <div>
-                  <h6 class="text-md fw-bold mb-0 text-primary-light">Bitcoin</h6>
-                  <span class="text-secondary-light text-sm fw-normal">2.45 BTC</span>
-                </div>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 839</h6>
-                <span class="text-success-600 text-sm fw-semibold">+8.42%</span>
-              </div>
-            </div>
-
-            <div class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100">
-              <div class="d-flex align-items-center gap-12">
-                <iconify-icon icon="cryptocurrency-color:eth" width="40" height="40"
-                  class="flex-shrink-0"></iconify-icon>
-                <div>
-                  <h6 class="text-md fw-bold mb-0 text-primary-light">Ethereum</h6>
-                  <span class="text-secondary-light text-sm fw-normal">18.2 ETH</span>
-                </div>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 837.92</h6>
-                <span class="text-success-600 text-sm fw-semibold">+8.42%</span>
-              </div>
-            </div>
-
-            <div class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100">
-              <div class="d-flex align-items-center gap-12">
-                <iconify-icon icon="cryptocurrency-color:avax" width="40" height="40"
-                  class="flex-shrink-0"></iconify-icon>
-                <div>
-                  <h6 class="text-md fw-bold mb-0 text-primary-light">Avalanche</h6>
-                  <span class="text-secondary-light text-sm fw-normal">156 AVAX</span>
-                </div>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 92.93</h6>
-                <span class="text-danger-600 text-sm fw-semibold">-2.15%</span>
-              </div>
-            </div>
-
-            <div class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100">
-              <div class="d-flex align-items-center gap-12">
-                <span
-                  class="w-40-px h-40-px rounded-circle bg-neutral-900 text-white d-flex align-items-center justify-content-center flex-shrink-0">
-                  <iconify-icon icon="token:sol" width="22" height="22"></iconify-icon>
-                </span>
-                <div>
-                  <h6 class="text-md fw-bold mb-0 text-primary-light">Solana</h6>
-                  <span class="text-secondary-light text-sm fw-normal">142 SOL</span>
-                </div>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 45.99</h6>
-                <span class="text-danger-600 text-sm fw-semibold">-2.15%</span>
-              </div>
-            </div>
-
-            <div class="asset-row d-flex align-items-center justify-content-between gap-12 bg-hover-neutral-100">
-              <div class="d-flex align-items-center gap-12">
-                <iconify-icon icon="cryptocurrency-color:link" width="40" height="40"
-                  class="flex-shrink-0"></iconify-icon>
-                <div>
-                  <h6 class="text-md fw-bold mb-0 text-primary-light">Chainlink</h6>
-                  <span class="text-secondary-light text-sm fw-normal">485 LINK</span>
-                </div>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 783.83</h6>
-                <span class="text-success-600 text-sm fw-semibold">+8.42%</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- See All Assets -->
-          <div class="mt-20">
-            <a href="javascript:void(0)"
-              class="d-flex align-items-center gap-4 text-primary-600 text-sm fw-medium text-hover-primary-800"
-              style="width:fit-content;">
-              See All Assets
-              <i class="ph-bold ph-arrow-right"></i>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Recent Activity -->
-      <div class="col-xxl-6">
-        <div class="bg-base radius-20 p-24 h-100">
-
-          <!-- Header -->
-          <div class="d-flex align-items-start justify-content-between gap-8 mb-20">
-            <div class="d-flex align-items-center gap-12">
-              <div
-                class="w-48-px h-48-px bg-info-50 border border-info-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                <i class="ph ph-arrow-up-right text-info-600 text-2xl"></i>
-              </div>
-              <div>
-                <h6 class="fw-bold mb-0 text-lg">Recent Activity</h6>
-                <span class="text-secondary-light text-sm fw-normal">Track your latest trading activity</span>
-              </div>
-            </div>
-            <div class="dropdown flex-shrink-0">
-              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
-                <li><button type="button"
-                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
-                      icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
-                <li><button type="button"
-                    class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
-                      icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
-                <li><button type="button"
-                    class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
-                      icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>Delete</button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Activity list -->
-          <div class="d-flex flex-column">
-
-            <div class="activity-row bg-hover-neutral-100">
-              <span
-                class="activity-row__icon w-40-px h-40-px rounded-circle bg-warning-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
-                <i class="ph ph-arrow-down-right"></i>
-              </span>
-              <div class="min-w-0">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">BTC Sold</h6>
-                <span class="text-secondary-light text-sm fw-normal">0.025 BTC @ $98,000</span>
-              </div>
-              <div class="activity-row__mid">
-                <h6 class="text-md fw-medium mb-0 text-primary-light">Signal Bot</h6>
-                <span class="text-secondary-light text-sm fw-normal">2 minutes ago</span>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 839</h6>
-                <span class="text-success-600 text-sm fw-semibold">+4.42%</span>
-              </div>
-            </div>
-
-            <div class="activity-row bg-hover-neutral-100">
-              <span
-                class="activity-row__icon w-40-px h-40-px rounded-circle bg-success-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
-                <i class="ph ph-arrow-down-left"></i>
-              </span>
-              <div class="min-w-0">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">ETH Bought</h6>
-                <span class="text-secondary-light text-sm fw-normal">0.62 ETH @ $2,984</span>
-              </div>
-              <div class="activity-row__mid">
-                <h6 class="text-md fw-medium mb-0 text-primary-light">DCA Bot</h6>
-                <span class="text-secondary-light text-sm fw-normal">15 minutes ago</span>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 91.83</h6>
-                <span class="text-success-600 text-sm fw-semibold">+3.41%</span>
-              </div>
-            </div>
-
-            <div class="activity-row bg-hover-neutral-100">
-              <span
-                class="activity-row__icon w-40-px h-40-px rounded-circle bg-lilac-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
-                <i class="ph ph-stack"></i>
-              </span>
-              <div class="min-w-0">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">Staking Reward</h6>
-                <span class="text-secondary-light text-sm fw-normal">ETH Staking Pool</span>
-              </div>
-              <div class="activity-row__mid">
-                <h6 class="text-md fw-medium mb-0 text-primary-light">Auto-compound</h6>
-                <span class="text-secondary-light text-sm fw-normal">1 hour ago</span>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 73.02</h6>
-                <span class="text-danger-600 text-sm fw-semibold">-2.15%</span>
-              </div>
-            </div>
-
-            <div class="activity-row bg-hover-neutral-100">
-              <span
-                class="activity-row__icon w-40-px h-40-px rounded-circle bg-cyan-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
-                <i class="ph ph-arrows-left-right"></i>
-              </span>
-              <div class="min-w-0">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">Arbitrage Executed</h6>
-                <span class="text-secondary-light text-sm fw-normal">BTC Binance → Coinbase</span>
-              </div>
-              <div class="activity-row__mid">
-                <h6 class="text-md fw-medium mb-0 text-primary-light">Arbitrage Bot</h6>
-                <span class="text-secondary-light text-sm fw-normal">2 hours ago</span>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 45.99</h6>
-                <span class="text-danger-600 text-sm fw-semibold">-7.74%</span>
-              </div>
-            </div>
-
-            <div class="activity-row bg-hover-neutral-100">
-              <span
-                class="activity-row__icon w-40-px h-40-px rounded-circle bg-danger-600 text-white d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
-                <i class="ph ph-warning"></i>
-              </span>
-              <div class="min-w-0">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">Stop Loss Triggered</h6>
-                <span class="text-secondary-light text-sm fw-normal">LINK/USDT Position Closed</span>
-              </div>
-              <div class="activity-row__mid">
-                <h6 class="text-md fw-medium mb-0 text-primary-light">Signal Bot</h6>
-                <span class="text-secondary-light text-sm fw-normal">3 hours ago</span>
-              </div>
-              <div class="text-end">
-                <h6 class="text-md fw-bold mb-0 text-primary-light">$ 832</h6>
-                <span class="text-success-600 text-sm fw-semibold">+10.72%</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- See All Activity -->
-          <div class="mt-20">
-            <a href="javascript:void(0)"
-              class="d-flex align-items-center gap-4 text-primary-600 text-sm fw-medium text-hover-primary-800"
-              style="width:fit-content;">
-              See All Activity
-              <i class="ph-bold ph-arrow-right"></i>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
 
   </div>
 

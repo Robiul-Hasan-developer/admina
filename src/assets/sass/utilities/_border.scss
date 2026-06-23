@@ -19,9 +19,13 @@
   }
 }
 
-.border-hover-neutral-100 {
+.border-transparent {
+    border-color: transparent !important;
+}
+
+.border-hover-neutral-200 {
   &:hover {
-    border-color: var(--neutral-100) !important;
+    border-color: var(--neutral-200) !important;
   }
 }
 
