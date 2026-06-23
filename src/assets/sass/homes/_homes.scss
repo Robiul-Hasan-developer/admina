@@ -313,8 +313,9 @@
 }
 
 
-/* Portfolio Holdings - Dense mode (compact rows) */
-#portfolioHoldingsTable.table-dense {
+/* Dense mode (compact rows) — Portfolio Holdings & Trade History tables */
+#portfolioHoldingsTable.table-dense,
+#tradeHistoryTable.table-dense {
   tbody td {
     padding-top: 6px !important;
     padding-bottom: 6px !important;

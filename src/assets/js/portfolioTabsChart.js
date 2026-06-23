@@ -469,3 +469,47 @@
     // DeFi yield line keeps its teal accent; nothing brand-tied here.
   };
 })();
+
+
+// ================================================================================
+//  Trade History — DataTable (index-3, Recent Trades tab)
+// ================================================================================
+(function () {
+  var tableEl = document.querySelector("#tradeHistoryTable");
+  if (!tableEl || typeof $ === "undefined" || !$.fn || !$.fn.DataTable) return;
+
+  var dt = $(tableEl).DataTable({
+    pageLength: 5,
+    lengthChange: false,
+    ordering: true,
+    info: false,
+    searching: true, // enabled, but driven by the custom search box below
+    paging: false,
+    dom: "t",
+    order: [],
+  });
+
+  // Custom search input in the card header
+  var searchInput = document.getElementById("tradeHistorySearch");
+  if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
+      dt.search(this.value).draw();
+    });
+  }
+
+  // The Recent Trades pane is hidden on load — re-align column widths on reveal.
+  var tabBtn = document.querySelector("#recent-trades-tab");
+  if (tabBtn) {
+    tabBtn.addEventListener("shown.bs.tab", function () {
+      dt.columns.adjust();
+    });
+  }
+
+  // Dense toggle — compact row padding
+  var denseSwitch = document.getElementById("tradeDenseSwitch");
+  if (denseSwitch) {
+    denseSwitch.addEventListener("change", function () {
+      tableEl.classList.toggle("table-dense", denseSwitch.checked);
+    });
+  }
+})();

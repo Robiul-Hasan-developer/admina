@@ -15,7 +15,7 @@
       <div class="d-flex align-items-center justify-content-between gap-4 flex-wrap">
         <div class="d-flex align-items-center gap-12">
           <span
-            class="w-44-px h-44-px bg-white d-flex align-items-center justify-content-center rounded-circle text-xl text-neutral-700 shadow-4">
+            class="w-44-px h-44-px bg-base d-flex align-items-center justify-content-center rounded-circle text-xl text-neutral-700 shadow-4">
             <i class="ph ph-chart-line"></i>
           </span>
           <div>
@@ -249,7 +249,7 @@
                   <div class="d-flex align-items-start flex-wrap gap-3 justify-content-between">
                     <div class="d-flex align-items-center gap-12">
                       <span
-                        class="w-44-px h-44-px radius-8 d-inline-flex justify-content-center align-items-center text-xl bg-primary-100 text-primary-600 flex-shrink-0">
+                        class="w-44-px h-44-px radius-8 d-inline-flex justify-content-center align-items-center text-xl bg-primary-50 text-primary-600 flex-shrink-0">
                         <i class="ri-line-chart-line"></i>
                       </span>
                       <div>
@@ -1419,18 +1419,192 @@
           </div>
         </div>
 
-        <!-- Recent Trades pane (placeholder) -->
+        <!-- Recent Trades pane -->
         <div class="tab-pane fade" id="recent-trades-pane" role="tabpanel" aria-labelledby="recent-trades-tab"
           tabindex="0">
-          <div class="card radius-20 border-0">
-            <div class="card-body p-24 text-center py-80">
-              <span
-                class="w-64-px h-64-px radius-20 d-inline-flex justify-content-center align-items-center text-2xxl bg-primary-100 text-primary-600 mb-16">
-                <i class="ri-exchange-line"></i>
-              </span>
-              <h6 class="text-lg mb-8">Recent Trades</h6>
-              <p class="text-secondary-light mb-0">Recent trades content goes here.</p>
+          <div class="bg-base p-24 radius-20">
+
+            <!-- Header -->
+            <div class="d-flex align-items-start justify-content-between gap-16 flex-wrap pb-20 mb-20">
+              <div class="d-flex align-items-center gap-12">
+                <div
+                  class="w-48-px h-48-px bg-lilac-50 border border-lilac-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                  <i class="ph ph-chart-line-up text-lilac-600 text-2xl"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-0 text-lg">Trade History</h6>
+                  <span class="text-secondary-light text-sm fw-normal">Analyze past trades to improve future strategy
+                    decisions</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-12 flex-wrap">
+                <div class="position-relative">
+                  <input type="text" id="tradeHistorySearch"
+                    class="form-control bg-neutral-50 border border-neutral-200 rounded-pill ps-20 pe-48 py-10 text-sm"
+                    placeholder="Search" style="min-width: 240px;">
+                  <button type="button"
+                    class="w-32-px h-32-px bg-primary-600 text-white rounded-circle d-flex align-items-center justify-content-center position-absolute top-50 end-0 translate-middle-y me-2">
+                    <i class="ph ph-magnifying-glass"></i>
+                  </button>
+                </div>
+                <button type="button"
+                  class="btn bg-base border shadow-4 text-secondary-light rounded-pill px-20 py-10 d-inline-flex align-items-center gap-8 text-sm fw-medium flex-shrink-0">
+                  <i class="ph ph-download-simple text-primary-600 text-lg line-height-1"></i>
+                  Import
+                </button>
+              </div>
             </div>
+
+            <!-- Table -->
+            <div class="table-responsive">
+              <table class="table table-hover table-style w-100" id="tradeHistoryTable">
+                <thead>
+                  <tr>
+                    <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Time <i
+                        class="ph ph-arrows-down-up ms-1"></i></th>
+                    <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Pair <i
+                        class="ph ph-arrows-down-up ms-1"></i></th>
+                    <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Type <i
+                        class="ph ph-arrows-down-up ms-1"></i></th>
+                    <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Side <i
+                        class="ph ph-arrows-down-up ms-1"></i></th>
+                    <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Price <i
+                        class="ph ph-arrows-down-up ms-1"></i></th>
+                    <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Amount <i
+                        class="ph ph-arrows-down-up ms-1"></i></th>
+                    <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Total <i
+                        class="ph ph-arrows-down-up ms-1"></i></th>
+                    <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">PnL <i
+                        class="ph ph-arrows-down-up ms-1"></i></th>
+                    <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Bot <i
+                        class="ph ph-arrows-down-up ms-1"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <!-- Row 1 -->
+                  <tr>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light">12:45:23</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-primary-light">BTC/USDT</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border border-neutral-300 text-secondary-light bg-base px-16 py-6 fw-medium text-sm">Stop</span>
+                    </td>
+                    <td class="py-16 px-20"><span class="text-success-600 fw-bold text-sm">BUY</span></td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="839">$ 839</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="0.001161">0.001161</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="74.03">$ 74.03</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-success-600" data-order="1000">$1,000</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border border-cyan-200 text-cyan-600 bg-base px-16 py-6 fw-medium text-sm">Signal</span>
+                    </td>
+                  </tr>
+
+                  <!-- Row 2 -->
+                  <tr>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light">12:32:15</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-primary-light">ETH/USDT</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border border-neutral-300 text-secondary-light bg-base px-16 py-6 fw-medium text-sm">Limit</span>
+                    </td>
+                    <td class="py-16 px-20"><span class="text-danger-600 fw-bold text-sm">SELL</span></td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="832">$ 832</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="5.016">5.016000</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="92.93">$ 92.93</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-danger-600" data-order="-15000">-$15,000</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border border-primary-200 text-primary-600 bg-base px-16 py-6 fw-medium text-sm">DCA</span>
+                    </td>
+                  </tr>
+
+                  <!-- Row 3 -->
+                  <tr>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light">12:18:42</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-primary-light">SOL/USDT</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border border-neutral-300 text-secondary-light bg-base px-16 py-6 fw-medium text-sm">Stop</span>
+                    </td>
+                    <td class="py-16 px-20"><span class="text-success-600 fw-bold text-sm">BUY</span></td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="783.83">$ 783.83</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="2.357228">2.357228</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="802">$ 802</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-success-600" data-order="13000">$13,000</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border bg-base px-16 py-6 fw-medium text-sm"
+                        style="border-color:#f0abfc; color:#c026d3;">Pump</span>
+                    </td>
+                  </tr>
+
+                  <!-- Row 4 -->
+                  <tr>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light">11:55:08</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-primary-light">LINK/USDT</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border border-warning-200 text-warning-600 bg-base px-16 py-6 fw-medium text-sm">Market</span>
+                    </td>
+                    <td class="py-16 px-20"><span class="text-danger-600 fw-bold text-sm">SELL</span></td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="830.92">$ 830.92</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="0.1444">0.144400</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="837.92">$ 837.92</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-danger-600" data-order="-30000">-$30,000</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border border-cyan-200 text-cyan-600 bg-base px-16 py-6 fw-medium text-sm">Signal</span>
+                    </td>
+                  </tr>
+
+                  <!-- Row 5 -->
+                  <tr>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light">11:42:33</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-primary-light">AVAX/USDT</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border border-neutral-300 text-secondary-light bg-base px-16 py-6 fw-medium text-sm">Limit</span>
+                    </td>
+                    <td class="py-16 px-20"><span class="text-success-600 fw-bold text-sm">BUY</span></td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="73.02">$ 73.02</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="1.001161">1.001161</td>
+                    <td class="py-16 px-20 text-sm fw-medium text-primary-light" data-order="45.99">$ 45.99</td>
+                    <td class="py-16 px-20 text-sm fw-semibold text-success-600" data-order="12000">$12,000</td>
+                    <td class="py-16 px-20"><span
+                        class="badge rounded-pill border border-primary-200 text-primary-600 bg-base px-16 py-6 fw-medium text-sm">DCA</span>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Footer : Dense toggle + pagination -->
+            <div class="d-flex align-items-center justify-content-between gap-8 mt-20 pt-16 border-top border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <div class="form-switch switch-primary style-big d-flex align-items-center justify-content-center gap-12">
+                  <input class="form-check-input w-60-px h-32-px bg-neutral-200 border border-neutral-300" type="checkbox"
+                    role="switch" id="tradeDenseSwitch">
+                  <label class="form-check-label" for="tradeDenseSwitch">Dense</label>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-16">
+                <div class="d-flex align-items-center gap-8">
+                  <span class="text-secondary-light text-sm">Rows per page:</span>
+                  <select class="form-select form-select-sm w-auto border text-secondary-light rounded bg-base"
+                    style="width: 60px !important;">
+                    <option>05</option>
+                    <option>25</option>
+                    <option>50</option>
+                  </select>
+                </div>
+                <span class="text-secondary-light text-sm">1–05 of 1000</span>
+                <div class="d-flex align-items-center gap-4">
+                  <button
+                    class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light">
+                    <i class="ph ph-caret-left text-lg"></i>
+                  </button>
+                  <button
+                    class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light">
+                    <i class="ph ph-caret-right text-lg"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
