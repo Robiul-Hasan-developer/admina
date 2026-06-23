@@ -89,33 +89,6 @@
     stroke: { width: 0 },
     dataLabels: { enabled: false },
     legend: { show: false },
-    // plotOptions: {
-    //   pie: {
-    //     donut: {
-    //       size: "72%",
-    //       labels: {
-    //         show: true,
-    //         value: {
-    //           show: true,
-    //           fontSize: "28px",
-    //           fontWeight: 700,
-    //           color: textPrimary,
-    //           offsetY: -6,
-    //           formatter: function () { return "4576"; },
-    //         },
-    //         total: {
-    //           show: true,
-    //           showAlways: true,
-    //           label: "Total Crypto",
-    //           fontSize: "13px",
-    //           fontWeight: 500,
-    //           color: textSecondary,
-    //           formatter: function () { return "4576"; },
-    //         },
-    //       },
-    //     },
-    //   },
-    // },
     tooltip: { y: { formatter: function (val) { return val + "%"; } } },
   });
   assetAllocationChart.render();
@@ -153,6 +126,9 @@
     });
     assetAllocationChart.updateOptions({
       colors: [newColor, greenColor, solColor, othersColor],
+    });
+    defiYieldChart.updateOptions({
+      colors: [newColor]
     });
   };
 })();
@@ -383,4 +359,113 @@
       tableEl.classList.toggle("table-dense", denseSwitch.checked);
     });
   }
+})();
+
+
+// ================================================================================
+//  DeFi Yield Performance — area chart (index-3, DeFi Analytics tab)
+// ================================================================================
+(function () {
+  var el = document.querySelector("#defiYieldChart");
+  if (!el) return; // page guard
+
+  // ~7 points per week across 11 weeks: flat start, dip at W3, volatility, rally from W9.
+  var yields = [
+    32.5, 32.8, 32.3, 33.0, 32.6, 32.9, 32.4, // W1
+    32.7, 33.1, 32.5, 32.0, 31.6, 32.2, 31.8, // W2
+    31.2, 30.6, 30.1, 30.5, 30.0, 30.8, 31.3, // W3
+    31.8, 32.4, 33.0, 32.6, 33.2, 32.8, 33.4, // W4
+    33.0, 32.5, 33.1, 32.7, 32.2, 32.8, 32.4, // W5
+    32.0, 31.5, 32.1, 31.7, 32.3, 32.9, 33.3, // W6
+    33.6, 34.0, 33.5, 34.1, 33.7, 33.2, 33.8, // W7
+    33.4, 32.9, 33.5, 33.0, 33.6, 34.0, 34.4, // W8
+    34.8, 35.4, 36.0, 36.6, 37.0, 37.5, 38.0, // W9
+    38.3, 38.8, 38.4, 39.0, 38.6, 39.2, 38.9, // W10
+    39.3, 39.6, 39.2, 39.8, 39.4, 39.9, 40.1, // W11
+  ];
+  // Spread the points evenly across the 1..11 week axis.
+  var data = yields.map(function (y, i) {
+    return { x: 1 + (i * 10) / (yields.length - 1), y: y };
+  });
+
+  var defiYieldChart = new ApexCharts(el, {
+    series: [{ name: "Yield", data: data }],
+    chart: {
+      type: "area",
+      height: 360,
+      toolbar: { show: false },
+      zoom: { enabled: false },
+    },
+    colors: [primaryColor],
+    stroke: { curve: "straight", width: 2 },
+    fill: {
+      type: "gradient",
+      gradient: {
+        shadeIntensity: 1,
+        opacityFrom: 0.4,
+        opacityTo: 0.02,
+        stops: [0, 100],
+      },
+    },
+    dataLabels: { enabled: false },
+    markers: { size: 0, hover: { size: 4 } },
+    xaxis: {
+      type: "numeric",
+      min: 1,
+      max: 11,
+      tickAmount: 10,
+      labels: {
+        formatter: function (val) {
+          return "W" + Math.round(val);
+        },
+        style: { fontSize: "12px", colors: "#9ca3af" },
+      },
+      axisBorder: { show: false },
+      axisTicks: { show: false },
+    },
+    yaxis: {
+      min: 27,
+      max: 42,
+      tickAmount: 5,
+      labels: {
+        formatter: function (val) {
+          return val.toFixed(2);
+        },
+        style: { fontSize: "12px", colors: "#9ca3af" },
+      },
+    },
+    grid: {
+      borderColor: "#f1f5f9",
+      strokeDashArray: 0,
+      xaxis: { lines: { show: false } },
+      yaxis: { lines: { show: true } },
+    },
+    legend: { show: false },
+    tooltip: {
+      x: { formatter: function (val) { return "Week " + Math.round(val); } },
+      y: { formatter: function (val) { return val.toFixed(2); } },
+    },
+  });
+
+  // The DeFi Analytics pane is hidden on load — render lazily on first reveal so
+  // the chart picks up the real container width.
+  var rendered = false;
+  function renderOnce() {
+    if (rendered) return;
+    rendered = true;
+    defiYieldChart.render();
+  }
+
+  var tabBtn = document.querySelector("#defi-analytics-tab");
+  if (tabBtn) tabBtn.addEventListener("shown.bs.tab", renderOnce);
+
+  var pane = document.querySelector("#defi-analytics-pane");
+  if (pane && pane.classList.contains("active")) renderOnce();
+
+  // -------------------------------------------------------------- Color-picker integration
+  var prevUpdate = (typeof updateChartColors === "function") ? updateChartColors : null;
+  updateChartColors = function (newColor) {
+    if (prevUpdate) prevUpdate(newColor);
+    // DeFi yield line keeps its teal accent; nothing brand-tied here.
+  };
 })();

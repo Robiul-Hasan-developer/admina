@@ -1303,18 +1303,119 @@
           </div>
         </div>
 
-        <!-- DeFi Analytics pane (placeholder) -->
+        <!-- DeFi Analytics pane -->
         <div class="tab-pane fade" id="defi-analytics-pane" role="tabpanel" aria-labelledby="defi-analytics-tab"
           tabindex="0">
-          <div class="card radius-20 border-0">
-            <div class="card-body p-24 text-center py-80">
-              <span
-                class="w-64-px h-64-px radius-20 d-inline-flex justify-content-center align-items-center text-2xxl bg-primary-100 text-primary-600 mb-16">
-                <i class="ri-bar-chart-box-line"></i>
-              </span>
-              <h6 class="text-lg mb-8">DeFi Analytics</h6>
-              <p class="text-secondary-light mb-0">DeFi analytics content goes here.</p>
+          <div class="row gy-4">
+
+            <!-- Stat 1 : Total Staked -->
+            <div class="col-xl-4 col-md-6">
+              <div class="bg-base p-24 radius-20 h-100 border border-neutral-200">
+                <div class="d-flex align-items-center gap-12 mb-16">
+                  <span
+                    class="w-48-px h-48-px bg-primary-50 border border-primary-200 text-primary-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                    <i class="ph ph-stack"></i>
+                  </span>
+                  <div>
+                    <span class="text-secondary-light text-sm fw-normal d-block mb-1">Total Staked</span>
+                    <h5 class="fw-bold mb-0">$64,124.78</h5>
+                  </div>
+                </div>
+                <div class="defi-progress mb-12">
+                  <div class="defi-progress__bar bg-primary-600" style="width:72%;"></div>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                  <span class="text-primary-600 fw-semibold text-sm d-flex align-items-center gap-1">
+                    <i class="ph-bold ph-arrow-up"></i>72%
+                  </span>
+                  <span class="text-secondary-light text-sm fw-normal">of portfolio staked</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Stat 2 : Yield Earned (30d) -->
+            <div class="col-xl-4 col-md-6">
+              <div class="bg-base p-24 radius-20 h-100 border border-neutral-200">
+                <div class="d-flex align-items-center gap-12 mb-16">
+                  <span
+                    class="w-48-px h-48-px bg-warning-50 border border-warning-200 text-warning-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                    <i class="ph ph-leaf"></i>
+                  </span>
+                  <div>
+                    <span class="text-secondary-light text-sm fw-normal d-block mb-1">Yield Earned (30d)</span>
+                    <h5 class="fw-bold mb-0">+$2,745.12</h5>
+                  </div>
+                </div>
+                <div class="defi-progress mb-12">
+                  <div class="defi-progress__bar" style="width:82%; background:#f59e0b;"></div>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                  <span class="text-success-600 fw-semibold text-sm d-flex align-items-center gap-1">
+                    <i class="ph-bold ph-arrow-up"></i>82%
+                  </span>
+                  <span class="text-secondary-light text-sm fw-normal">above target</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 3 : Liquidity Provided -->
+            <div class="col-xl-4 col-md-6">
+              <div class="bg-base p-24 radius-20 h-100 border border-neutral-200">
+                <div class="d-flex align-items-center gap-12 mb-16">
+                  <span
+                    class="w-48-px h-48-px bg-success-50 border border-success-200 text-success-600 radius-12 d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                    <i class="ph ph-drop"></i>
+                  </span>
+                  <div>
+                    <span class="text-secondary-light text-sm fw-normal d-block mb-1">Liquidity Provided</span>
+                    <h5 class="fw-bold mb-0">$14,745.21</h5>
+                  </div>
+                </div>
+                <div class="defi-progress mb-12">
+                  <div class="defi-progress__bar" style="width:45%; background:#22c55e;"></div>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                  <span class="text-danger-600 fw-semibold text-sm d-flex align-items-center gap-1">
+                    <i class="ph-bold ph-arrow-down"></i>4
+                  </span>
+                  <span class="text-secondary-light text-sm fw-normal">Across pools</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- DeFi Yield Performance chart -->
+            <div class="col-12">
+              <div class="bg-base p-24 radius-20">
+
+                <!-- Header -->
+                <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20">
+                  <div class="d-flex align-items-center gap-12">
+                    <div
+                      class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                      <i class="ph ph-flower-lotus text-danger-600 text-2xl"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-0 text-lg">DeFi Yield Performance</h6>
+                      <span class="text-secondary-light text-sm fw-normal">Compare DeFi staking performance across various
+                        blockchain networks</span>
+                    </div>
+                  </div>
+                  <div>
+                    <select
+                      class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                      <option>This Week</option>
+                      <option>This Month</option>
+                      <option>This Year</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Chart -->
+                <div id="defiYieldChart"></div>
+
+              </div>
+            </div>
+
           </div>
         </div>
 

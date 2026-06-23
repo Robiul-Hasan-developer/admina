@@ -322,4 +322,26 @@
 }
 
 
+/* ===== DeFi Analytics (index-3) ===== */
+.defi-progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background-color: var(--neutral-200);
+  overflow: hidden;
+}
+.defi-progress__bar {
+  height: 100%;
+  border-radius: 999px;
+}
+#defiYieldChart {
+  width: 100%;
+
+  .apexcharts-canvas,
+  svg {
+    width: 100% !important;
+  }
+}
+
+
 /* Home One css end */
