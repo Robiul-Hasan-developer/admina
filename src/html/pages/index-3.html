@@ -853,17 +853,36 @@
 
         </div>
 
-        <!-- Bot Performance pane (placeholder) -->
+        <!-- Bot Performance pane -->
         <div class="tab-pane fade" id="bot-performance-pane" role="tabpanel" aria-labelledby="bot-performance-tab"
           tabindex="0">
-          <div class="card radius-20 border-0">
-            <div class="card-body p-24 text-center py-80">
-              <span
-                class="w-64-px h-64-px radius-20 d-inline-flex justify-content-center align-items-center text-2xxl bg-primary-100 text-primary-600 mb-16">
-                <i class="ri-robot-2-line"></i>
-              </span>
-              <h6 class="text-lg mb-8">Bot Performance</h6>
-              <p class="text-secondary-light mb-0">Bot performance content goes here.</p>
+          <div class="card h-100 radius-20 border-0">
+            <div class="card-header bg-base py-16 px-24 border border-end-0 border-start-0 border-top-0">
+              <div class="d-flex align-items-start flex-wrap gap-3 justify-content-between">
+                <div class="d-flex align-items-center gap-12">
+                  <span
+                    class="w-44-px h-44-px rounded-circle d-inline-flex justify-content-center align-items-center text-xl bg-primary-50 border border-primary-100 text-primary-600 flex-shrink-0">
+                    <i class="ph ph-robot"></i>
+                  </span>
+                  <div>
+                    <h6 class="mb-1 fw-bold text-lg">Bot Performance Comparison</h6>
+                    <p class="text-secondary-light mb-0 text-sm">Analyze performance metrics to identify your most
+                      profitable trading bots</p>
+                  </div>
+                </div>
+                <div class="flex-shrink-0">
+                  <select
+                    class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                    <option>This Week</option>
+                    <option>This Month</option>
+                    <option>This Year</option>
+                    <option>Today</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-24">
+              <div id="botPerformanceChart"></div>
             </div>
           </div>
         </div>

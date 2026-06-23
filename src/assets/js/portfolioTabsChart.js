@@ -231,3 +231,116 @@
     [coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral, coral]
   );
 })();
+
+
+// ================================================================================
+//  Bot Performance Comparison — floating (range) bar chart (index-3, Bot Performance tab)
+// ================================================================================
+(function () {
+  var el = document.querySelector("#botPerformanceChart");
+  if (!el) return; // page guard
+
+  var brand = (typeof primaryColor !== "undefined" && primaryColor) ? primaryColor : "#6366f1";
+  // Total Bot uses the brand color; the rest are fixed accent colors.
+  var botColors = [brand, "#06b6d4", "#facc15", "#f87171", "#22c55e", "#d946ef"];
+
+  var botPerformanceChart = new ApexCharts(el, {
+    series: [
+      {
+        name: "Performance",
+        data: [
+          { x: "Total Bot", y: [0, 2880] },
+          { x: "Signal Bot", y: [1680, 2880] },
+          { x: "DCA Bot", y: [1480, 1660] },
+          { x: "Arbitrage Bot", y: [1210, 1420] },
+          { x: "Grid Bot", y: [280, 1180] },
+          { x: "Pump Screener", y: [40, 280] },
+        ],
+      },
+    ],
+    chart: {
+      type: "rangeBar",
+      height: 380,
+      toolbar: { show: false },
+      zoom: { enabled: false },
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "55%",
+        borderRadius: 0,
+        borderRadiusApplication: "around",
+        distributed: true,
+      },
+    },
+    colors: botColors,
+    dataLabels: { enabled: false },
+    legend: { show: false },
+    xaxis: {
+      type: "category",
+      labels: { style: { fontSize: "12px", colors: "#9ca3af" } },
+      axisBorder: { show: false },
+      axisTicks: { show: false },
+    },
+    yaxis: {
+      min: 0,
+      max: 3000,
+      tickAmount: 6,
+      labels: {
+        formatter: function (val) {
+          return new Intl.NumberFormat("en-US").format(Math.round(val));
+        },
+        style: { fontSize: "12px", colors: "#9ca3af" },
+      },
+    },
+    grid: {
+      borderColor: "#f1f5f9",
+      strokeDashArray: 0,
+      xaxis: { lines: { show: false } },
+      yaxis: { lines: { show: true } },
+    },
+    states: {
+      hover: { filter: { type: "none" } },
+      active: { filter: { type: "none" } },
+    },
+    tooltip: {
+      custom: function (opts) {
+        var pt = opts.w.config.series[0].data[opts.dataPointIndex];
+        var value = pt.y[1] - pt.y[0];
+        return (
+          '<div style="padding:8px 12px; font-size:12px;">' +
+          "<strong>" + pt.x + "</strong><br>" +
+          "Value: " + new Intl.NumberFormat("en-US").format(value) +
+          "</div>"
+        );
+      },
+    },
+  });
+
+  // The Bot Performance pane is hidden on load — rendering an ApexChart inside a
+  // display:none container yields a 0-width chart. Render lazily on first reveal.
+  var rendered = false;
+  function renderOnce() {
+    if (rendered) return;
+    rendered = true;
+    botPerformanceChart.render();
+    botPerformanceChart.updateOptions({ colors: botColors.slice() }, false, false);
+  }
+
+  var tabBtn = document.querySelector("#bot-performance-tab");
+  if (tabBtn) tabBtn.addEventListener("shown.bs.tab", renderOnce);
+
+  // If the pane happens to be active on load, render right away.
+  var pane = document.querySelector("#bot-performance-pane");
+  if (pane && pane.classList.contains("active")) renderOnce();
+
+  // -------------------------------------------------------------- Color-picker integration
+  var prevUpdate = (typeof updateChartColors === "function") ? updateChartColors : null;
+  updateChartColors = function (newColor) {
+    if (prevUpdate) prevUpdate(newColor);
+    botColors[0] = newColor;
+    if (rendered) {
+      botPerformanceChart.updateOptions({ colors: botColors.slice() });
+    }
+  };
+})();
