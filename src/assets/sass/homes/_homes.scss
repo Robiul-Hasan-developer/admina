@@ -367,4 +367,44 @@
 }
 
 
+/* ===== Client Payment Status + Campaigns (index-4) ===== */
+.radius-4 {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.payment-status-bar {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+
+  span {
+    display: block;
+    height: 100%;
+  }
+}
+#campaignsChart {
+  width: 100%;
+
+  .apexcharts-canvas {
+    margin: 0 auto;
+  }
+}
+.campaigns-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+/* jVectorMap container */
+#sessionWorldMap {
+  width: 100%;
+
+  svg {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+
 /* Home One css end */

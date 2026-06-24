@@ -152,3 +152,52 @@ avgSessionChart.render();
 })();
 
 
+// ================================ Campaigns - Donut Chart ================================
+(function () {
+  var el = document.querySelector("#campaignsChart");
+  if (!el) return;
+
+  new ApexCharts(el, {
+    // Clockwise from top: Others (cyan), Email (indigo), Website (green), Facebook (yellow)
+    series: [15, 48, 12, 25],
+    labels: ["Others", "Email", "Website", "Facebook"],
+    chart: { type: "donut", height: 280 },
+    colors: ["#06b6d4", "#6366f1", "#22c55e", "#facc15"],
+    stroke: { width: 0 },
+    dataLabels: { enabled: false },
+    legend: { show: false },
+    plotOptions: { pie: { donut: { size: "76%" } } },
+    tooltip: { y: { formatter: function (val) { return val + "%"; } } },
+  }).render();
+})();
+
+
+// ================================ Location By Session - World Map ================================
+(function () {
+  var el = document.querySelector("#sessionWorldMap");
+  if (!el || typeof $ === "undefined" || !$.fn || !$.fn.vectorMap) return;
+
+  $(el).vectorMap({
+    map: "world_mill_en",
+    backgroundColor: "transparent",
+    zoomOnScroll: false,
+    zoomButtons: false,
+    regionStyle: {
+      initial: { fill: "#c7d2fe", "fill-opacity": 1, stroke: "none" },
+      hover: { fill: "#a5b4fc" },
+    },
+    markerStyle: {
+      initial: { r: 6, fill: "#6366f1", stroke: "#fff", "stroke-width": 2, "fill-opacity": 1 },
+      hover: { stroke: "#fff", "fill-opacity": 1 },
+    },
+    markers: [
+      { latLng: [37.09, -95.71], name: "USA" },
+      { latLng: [35.86, 104.19], name: "China" },
+      { latLng: [-25.27, 133.77], name: "Australia" },
+      { latLng: [51.16, 10.45], name: "Germany" },
+      { latLng: [55.75, 37.61], name: "Russia" },
+    ],
+  });
+})();
+
+

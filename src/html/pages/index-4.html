@@ -383,6 +383,263 @@
 
     </div>
 
+    <!-- ===== Client Payment Status + Location By Session + Campaigns ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- Client Payment Status -->
+      <div class="col-xl-4 col-lg-6">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-24 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-lilac-50 border border-lilac-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-credit-card text-lilac-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Client Payment Status</h6>
+                <span class="text-secondary-light text-sm fw-normal">Payment status update this week</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Segmented bar -->
+          <div class="d-flex mb-2">
+            <span class="text-sm fw-semibold text-primary-light" style="width:25%;">25%</span>
+            <span class="text-sm fw-semibold text-primary-light" style="width:45%;">45%</span>
+            <span class="text-sm fw-semibold text-primary-light" style="width:15%;">15%</span>
+            <span class="text-sm fw-semibold text-primary-light" style="width:15%;">15%</span>
+          </div>
+          <div class="payment-status-bar d-flex">
+            <span style="width:25%; background:#06b6d4;"></span>
+            <span style="width:45%; background:#22c55e;"></span>
+            <span style="width:15%; background:#facc15;"></span>
+            <span style="width:15%; background:#f87171;"></span>
+          </div>
+
+          <!-- Legend list -->
+          <div class="mt-20">
+            <div class="d-flex align-items-center justify-content-between py-16 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#06b6d4;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Paid Payment</span>
+              </div>
+              <span class="text-primary-light text-sm fw-bold">$2,546</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-16 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#22c55e;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Overdue Payment</span>
+              </div>
+              <span class="text-primary-light text-sm fw-bold">$574,562</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-16 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#facc15;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Pending Payment</span>
+              </div>
+              <span class="text-primary-light text-sm fw-bold">$1,454</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-16">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#f87171;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Cancel Payment</span>
+              </div>
+              <span class="text-primary-light text-sm fw-bold">$1,454</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Location By Session -->
+      <div class="col-xl-4 col-lg-6">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-24 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-globe-hemisphere-west text-danger-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Location By Session</h6>
+                <span class="text-secondary-light text-sm fw-normal">See visitor distribution across countries</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="bg-neutral-50 radius-12 p-12 mb-16">
+            <div id="sessionWorldMap" style="height: 170px;"></div>
+          </div>
+
+          <!-- Country tables -->
+          <div class="row g-12">
+            <div class="col-6">
+              <div class="border border-neutral-200 radius-12 h-100 overflow-hidden ">
+                <div class="d-flex align-items-center justify-content-between py-12 px-16 border-bottom border-neutral-200 bg-warning-50">
+                  <span class="text-xs text-secondary-light fw-medium">Country | Sessions</span>
+                  <span class="text-xs text-secondary-light fw-medium">Perc. | Users</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between py-12 px-16 border-bottom border-neutral-200">
+                  <div class="d-flex align-items-center gap-8">
+                    <iconify-icon icon="flagpack:us" width="32" height="32" class="radius-4 flex-shrink-0"></iconify-icon>
+                    <div>
+                      <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">USA</span>
+                      <span class="text-xs text-secondary-light">187,232</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">85%</span>
+                    <span class="text-xs text-secondary-light">196,584</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between py-12 px-16">
+                  <div class="d-flex align-items-center gap-8">
+                    <iconify-icon icon="flagpack:cn" width="32" height="32" class="radius-4 flex-shrink-0"></iconify-icon>
+                    <div>
+                      <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">China</span>
+                      <span class="text-xs text-secondary-light">187,232</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">67%</span>
+                    <span class="text-xs text-secondary-light">196,584</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="border border-neutral-200 radius-12 h-100 overflow-hidden ">
+                <div class="d-flex align-items-center justify-content-between py-12 px-16 border-bottom border-neutral-200 bg-warning-50">
+                  <span class="text-xs text-secondary-light fw-medium">Country | Sessions</span>
+                  <span class="text-xs text-secondary-light fw-medium">Perc. | Users</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between py-12 px-16 border-bottom border-neutral-200">
+                  <div class="d-flex align-items-center gap-8">
+                    <iconify-icon icon="flagpack:au" width="32" height="32" class="radius-4 flex-shrink-0"></iconify-icon>
+                    <div>
+                      <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">Australia</span>
+                      <span class="text-xs text-secondary-light">187,232</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">74%</span>
+                    <span class="text-xs text-secondary-light">196,584</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between py-12 px-16">
+                  <div class="d-flex align-items-center gap-8">
+                    <iconify-icon icon="flagpack:de" width="32" height="32" class="radius-4 flex-shrink-0"></iconify-icon>
+                    <div>
+                      <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">Germany</span>
+                      <span class="text-xs text-secondary-light">187,232</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">63%</span>
+                    <span class="text-xs text-secondary-light">196,584</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Campaigns -->
+      <div class="col-xl-4 col-lg-6">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-24 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-cyan-50 border border-cyan-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-chart-pie-slice text-cyan-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Campaigns</h6>
+                <span class="text-secondary-light text-sm fw-normal">Monitor campaigns to improve results.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Donut -->
+          <div class="campaigns-donut position-relative d-flex justify-content-center">
+            <div id="campaignsChart"></div>
+            <div class="campaigns-center text-center">
+              <h4 class="fw-bold mb-0">9546</h4>
+              <span class="text-secondary-light text-sm fw-normal">Total Campaigns</span>
+            </div>
+          </div>
+
+          <!-- Legend -->
+          <div class="row gy-3 mt-3">
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#6366f1;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Email</span>
+                <span class="flex-grow-1 rounded-pill" style="height:6px; background:linear-gradient(90deg,#6366f1,#6366f100);"></span>
+                <span class="text-primary-light text-sm fw-bold">48%</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#facc15;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Facebook</span>
+                <span class="flex-grow-1 rounded-pill" style="height:6px; background:linear-gradient(90deg,#facc15,#facc1500);"></span>
+                <span class="text-primary-light text-sm fw-bold">25%</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#22c55e;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Website</span>
+                <span class="flex-grow-1 rounded-pill" style="height:6px; background:linear-gradient(90deg,#22c55e,#22c55e00);"></span>
+                <span class="text-primary-light text-sm fw-bold">12%</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#06b6d4;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Others</span>
+                <span class="flex-grow-1 rounded-pill" style="height:6px; background:linear-gradient(90deg,#06b6d4,#06b6d400);"></span>
+                <span class="text-primary-light text-sm fw-bold">15%</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   @@include('../layouts/_footer.html')
