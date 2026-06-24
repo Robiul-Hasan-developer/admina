@@ -157,6 +157,232 @@
       </div>
     </div>
 
+    <!-- ===== Sales Overview + Lead Source ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- Sales Overview -->
+      <div class="col-xl-8">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-success-50 border border-success-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-tag text-success-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Sales Overview</h6>
+                <span class="text-secondary-light text-sm fw-normal">Easily manage customer information and order updates
+                  while keeping sales records.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+
+            <!-- Left : stat tiles + alert -->
+            <div class="col-lg-6">
+              <div class="row g-2">
+
+                <!-- Revenue -->
+                <div class="col-6">
+                  <div class="bg-lilac-50 border border-lilac-100 radius-12 p-20 h-100">
+                    <div class="d-flex align-items-center justify-content-start gap-16 mb-1">
+                      <span
+                        class="w-50-px h-50-px bg-base rounded-circle d-flex align-items-center justify-content-center text-lilac-600 text-2xl flex-shrink-0">
+                        <i class="ph ph-wallet"></i>
+                      </span>
+                      <div class="">
+                        <span class="text-secondary-light text-sm fw-medium">Revenue</span>
+                        <h2 class="h6 fw-bold mb-1">$84.42k</h2>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-start gap-1 text-xs flex-nowrap">
+                      <span class="text-danger-600 fw-semibold d-flex align-items-center gap-1">
+                        <i class="ph ph-trend-down"></i>+45.4%
+                      </span>
+                      <span class="text-secondary-light">by this week!</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Orders -->
+                <div class="col-6">
+                  <div class="bg-success-50 border border-success-100 radius-12 p-20 h-100">
+                    <div class="d-flex align-items-center justify-content-start gap-16 mb-1">
+                      <span
+                        class="w-50-px h-50-px bg-base rounded-circle d-flex align-items-center justify-content-center text-success-600 text-2xl flex-shrink-0">
+                        <i class="ph ph-truck"></i>
+                      </span>
+                      <div class="">
+                        <span class="text-secondary-light text-sm fw-medium">Orders</span>
+                        <h2 class="h6 fw-bold mb-1">7,245</h2>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-start gap-1 text-xs flex-nowrap">
+                      <span class="text-success-600 fw-semibold d-flex align-items-center gap-1">
+                        <i class="ph ph-trend-up"></i>92.9%
+                      </span>
+                      <span class="text-secondary-light">by this week!</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- New Users -->
+                <div class="col-6">
+                  <div class="bg-info-50 border border-info-100 radius-12 p-20 h-100">
+                    <div class="d-flex align-items-center justify-content-start gap-16 mb-1">
+                      <span
+                        class="w-50-px h-50-px bg-base rounded-circle d-flex align-items-center justify-content-center text-info-600 text-2xl flex-shrink-0">
+                        <i class="ph ph-users-three"></i>
+                      </span>
+                      <div class="">
+                        <span class="text-secondary-light text-sm fw-medium">New Users</span>
+                        <h2 class="h6 fw-bold mb-1">74.25k</h2>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-start gap-1 text-xs flex-nowrap">
+                      <span class="text-danger-600 fw-semibold d-flex align-items-center gap-1">
+                        <i class="ph ph-trend-down"></i>-2,8%
+                      </span>
+                      <span class="text-secondary-light">by this week!</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- New Contract -->
+                <div class="col-6">
+                  <div class="bg-danger-50 border border-danger-100 radius-12 p-20 h-100">
+                    <div class="d-flex align-items-center justify-content-start gap-16 mb-1">
+                      <span
+                        class="w-50-px h-50-px bg-base rounded-circle d-flex align-items-center justify-content-center text-danger-600 text-2xl flex-shrink-0">
+                        <i class="ph ph-handshake"></i>
+                      </span>
+                      <div class="">
+                        <span class="text-secondary-light text-sm fw-medium">New Contract</span>
+                        <h2 class="h6 fw-bold mb-1">851</h2>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-start gap-1 text-xs flex-nowrap">
+                      <span class="text-success-600 fw-semibold d-flex align-items-center gap-1">
+                        <i class="ph ph-trend-up"></i>+66.1%
+                      </span>
+                      <span class="text-secondary-light">by this week!</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Server-down alert -->
+              <div class="d-flex align-items-center gap-12 bg-warning-50 border border-warning-200 radius-12 p-16 mt-8">
+                <span class="text-warning-800 text-2xl line-height-1 d-flex flex-shrink-0">
+                  <i class="ph ph-database"></i>
+                </span>
+                <p class="mb-0 text-sm fw-medium text-warning-700">We regret to inform you that our server is down.
+                  <a href="javascript:void(0)" class="fw-bold text-warning-800 text-decoration-underline">Refresh</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Right : combo chart -->
+            <div class="col-lg-6">
+              <div id="salesOverviewChart"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Lead Source -->
+      <div class="col-xl-4">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 pb-20 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-warning-50 border border-warning-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-link text-warning-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Lead Source</h6>
+                <span class="text-secondary-light text-sm fw-normal">Analyze lead sources for revenue.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Gauge -->
+          <div class="lead-source-gauge position-relative">
+            <div id="leadSourceChart"></div>
+            <div class="lead-source-center text-center">
+              <span class="text-secondary-light text-sm fw-normal d-block mb-1">Total Products</span>
+              <h4 class="fw-bold mb-0">25.59K</h4>
+            </div>
+          </div>
+
+          <!-- Legend -->
+           <div class="py-24 border-top border-bottom">
+             <div class="row g-3">
+               <div class="col-4">
+                 <div class="d-flex align-items-center gap-8">
+                   <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#6366f1;"></span>
+                   <span class="text-secondary-light text-sm fw-medium">Newsletter</span>
+                 </div>
+               </div>
+               <div class="col-4">
+                 <div class="d-flex align-items-center gap-8">
+                   <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#ef4444;"></span>
+                   <span class="text-secondary-light text-sm fw-medium">Website</span>
+                 </div>
+               </div>
+               <div class="col-4">
+                 <div class="d-flex align-items-center gap-8">
+                   <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#06b6d4;"></span>
+                   <span class="text-secondary-light text-sm fw-medium">LinkedIn</span>
+                 </div>
+               </div>
+               <div class="col-4">
+                 <div class="d-flex align-items-center gap-8">
+                   <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#d946ef;"></span>
+                   <span class="text-secondary-light text-sm fw-medium">Instagram</span>
+                 </div>
+               </div>
+               <div class="col-4">
+                 <div class="d-flex align-items-center gap-8">
+                   <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#22c55e;"></span>
+                   <span class="text-secondary-light text-sm fw-medium">WhatsApp</span>
+                 </div>
+               </div>
+               <div class="col-4">
+                 <div class="d-flex align-items-center gap-8">
+                   <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#facc15;"></span>
+                   <span class="text-secondary-light text-sm fw-medium">Telegram</span>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   @@include('../layouts/_footer.html')

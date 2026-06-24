@@ -345,4 +345,26 @@
 }
 
 
+/* ===== Sales Overview + Lead Source (index-4) ===== */
+#salesOverviewChart,
+#leadSourceChart {
+  width: 100%;
+
+  .apexcharts-canvas,
+  svg {
+    width: 100% !important;
+  }
+}
+
+/* Lead Source semi-donut center label */
+.lead-source-center {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  width: 100%;
+}
+
+
 /* Home One css end */
