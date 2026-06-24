@@ -201,3 +201,42 @@ avgSessionChart.render();
 })();
 
 
+
+
+// ================================ Top Performing + Transactions - DataTables ================================
+$(document).ready(function () {
+  if (typeof $.fn === "undefined" || !$.fn.DataTable) return;
+
+  // Top Performing
+  var topPerfEl = document.querySelector("#topPerformingTable");
+  if (topPerfEl) {
+    var topPerfTable = $(topPerfEl).DataTable({
+      ordering: true,
+      info: false,
+      searching: true,
+      paging: false,
+      dom: "t",
+      order: [],
+      columnDefs: [{ orderable: false, targets: 3 }], // Action column
+    });
+    var topPerfSearch = document.getElementById("topPerformingSearch");
+    if (topPerfSearch) {
+      topPerfSearch.addEventListener("keyup", function () {
+        topPerfTable.search(this.value).draw();
+      });
+    }
+  }
+
+  // Transactions
+  var txnEl = document.querySelector("#transactionsTable");
+  if (txnEl) {
+    $(txnEl).DataTable({
+      ordering: true,
+      info: false,
+      searching: false,
+      paging: false,
+      dom: "t",
+      order: [],
+    });
+  }
+});

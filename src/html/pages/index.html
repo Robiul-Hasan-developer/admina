@@ -284,7 +284,79 @@
       </div>
       <!-- Delivery Status Card -->
       <div class="col-xxl-3">
-        <div class="bg-base p-24 radius-20">
+          <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-24 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-primary-50 border border-primary-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-cube text-primary-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Delivery Status</h6>
+                <span class="text-secondary-light text-sm fw-normal">Delivery performance</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Segmented bar -->
+          <div class="d-flex mb-2">
+            <span class="text-sm fw-semibold text-primary-light" style="width:25%;">25%</span>
+            <span class="text-sm fw-semibold text-primary-light" style="width:45%;">45%</span>
+            <span class="text-sm fw-semibold text-primary-light" style="width:15%;">15%</span>
+            <span class="text-sm fw-semibold text-primary-light" style="width:15%;">15%</span>
+          </div>
+          <div class="payment-status-bar d-flex">
+            <span style="width:25%; background:#06b6d4;"></span>
+            <span style="width:45%; background:#22c55e;"></span>
+            <span style="width:15%; background:#facc15;"></span>
+            <span style="width:15%; background:#f87171;"></span>
+          </div>
+
+          <!-- Legend list -->
+          <div class="mt-20">
+            <div class="d-flex align-items-center justify-content-between py-16 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#06b6d4;"></span>
+                <span class="text-secondary-light text-sm fw-medium">On-Time Delivery</span>
+              </div>
+              <span class="text-primary-light text-sm fw-bold">1253</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-16 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#22c55e;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Delivered</span>
+              </div>
+              <span class="text-primary-light text-sm fw-bold">859</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-16 border-bottom border-neutral-200">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#facc15;"></span>
+                <span class="text-secondary-light text-sm fw-medium">In Transit</span>
+              </div>
+              <span class="text-primary-light text-sm fw-bold">320</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between py-16">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#f87171;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Delayed</span>
+              </div>
+              <span class="text-primary-light text-sm fw-bold">320</span>
+            </div>
+          </div>
+
+        </div>
+        
+        
+        <!-- <div class="bg-base p-24 radius-20">
           <div class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20">
             <div class="d-flex align-items-center gap-12">
               <div
@@ -330,12 +402,10 @@
             </div>
           </div>
 
-          <!-- Progress Bar -->
           <div class="deliveryBarChart">
             <div id="deliveryBarChart"></div>
           </div>
 
-          <!-- Legend List -->
           <ul class="d-flex flex-column gap-0">
             <li
               class="d-flex align-items-center justify-content-between py-13 border-bottom border-top border-neutral-200">
@@ -367,7 +437,9 @@
               <span class="text-primary-light fw-semibold text-sm">320</span>
             </li>
           </ul>
-        </div>
+        </div> -->
+
+
       </div>
 
       <!-- Returning Clients Card -->

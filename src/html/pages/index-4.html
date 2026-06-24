@@ -426,29 +426,29 @@
           </div>
 
           <!-- Legend list -->
-          <div class="mt-20">
-            <div class="d-flex align-items-center justify-content-between py-16 border-bottom border-neutral-200">
+          <div class="mt-28">
+            <div class="d-flex align-items-center justify-content-between py-28 border-bottom border-neutral-200 border-top">
               <div class="d-flex align-items-center gap-8">
                 <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#06b6d4;"></span>
                 <span class="text-secondary-light text-sm fw-medium">Paid Payment</span>
               </div>
               <span class="text-primary-light text-sm fw-bold">$2,546</span>
             </div>
-            <div class="d-flex align-items-center justify-content-between py-16 border-bottom border-neutral-200">
+            <div class="d-flex align-items-center justify-content-between py-28 border-bottom border-neutral-200">
               <div class="d-flex align-items-center gap-8">
                 <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#22c55e;"></span>
                 <span class="text-secondary-light text-sm fw-medium">Overdue Payment</span>
               </div>
               <span class="text-primary-light text-sm fw-bold">$574,562</span>
             </div>
-            <div class="d-flex align-items-center justify-content-between py-16 border-bottom border-neutral-200">
+            <div class="d-flex align-items-center justify-content-between py-28 border-bottom border-neutral-200">
               <div class="d-flex align-items-center gap-8">
                 <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#facc15;"></span>
                 <span class="text-secondary-light text-sm fw-medium">Pending Payment</span>
               </div>
               <span class="text-primary-light text-sm fw-bold">$1,454</span>
             </div>
-            <div class="d-flex align-items-center justify-content-between py-16">
+            <div class="d-flex align-items-center justify-content-between py-28">
               <div class="d-flex align-items-center gap-8">
                 <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#f87171;"></span>
                 <span class="text-secondary-light text-sm fw-medium">Cancel Payment</span>
@@ -633,6 +633,418 @@
                 <span class="text-primary-light text-sm fw-bold">15%</span>
               </div>
             </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== Top Performing + Transactions ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- Top Performing -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-16 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-success-50 border border-success-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-rocket text-success-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Top Performing</h6>
+                <span class="text-secondary-light text-sm fw-normal">Identify top-performing items based on
+                  engagement.</span>
+              </div>
+            </div>
+            <div class="position-relative">
+              <input type="text" id="topPerformingSearch"
+                class="form-control bg-neutral-50 border border-neutral-200 rounded-pill ps-20 pe-48 py-10 text-sm"
+                placeholder="Search" style="min-width: 220px;">
+              <button type="button"
+                class="w-32-px h-32-px bg-base text-primary-600 rounded-circle d-flex align-items-center justify-content-center position-absolute top-50 end-0 translate-middle-y me-6">
+                <i class="ph ph-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-hover table-style" id="topPerformingTable">
+              <thead>
+                <tr>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">User | Designation <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Leads | Deals <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Tasks <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20 text-end">Action <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- Row 1 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <img src="assets/images/users/user1.png" alt=""
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Fülöp Kata</h6>
+                        <span class="text-xs text-secondary-light">Project Manager</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20" data-order="703">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">703</span>
+                    <span class="text-xs text-secondary-light">453</span>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">250</td>
+                  <td class="py-16 px-20 text-end">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                        <li><button type="button"
+                            class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
+                              icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>Delete</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <img src="assets/images/users/user2.png" alt=""
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Molnár Fruzsina</h6>
+                        <span class="text-xs text-secondary-light">Software Tester</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20" data-order="738">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">738</span>
+                    <span class="text-xs text-secondary-light">447</span>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">291</td>
+                  <td class="py-16 px-20 text-end">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                        <li><button type="button"
+                            class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
+                              icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>Delete</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <img src="assets/images/users/user3.png" alt=""
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Nagy Tímea</h6>
+                        <span class="text-xs text-secondary-light">Ethical Hacker</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20" data-order="561">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">561</span>
+                    <span class="text-xs text-secondary-light">177</span>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">384</td>
+                  <td class="py-16 px-20 text-end">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                        <li><button type="button"
+                            class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
+                              icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>Delete</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <img src="assets/images/users/user4.png" alt=""
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Dudás Nikolett</h6>
+                        <span class="text-xs text-secondary-light">President of Sales</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20" data-order="600">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">600</span>
+                    <span class="text-xs text-secondary-light">154</span>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">446</td>
+                  <td class="py-16 px-20 text-end">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                        <li><button type="button"
+                            class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
+                              icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>Delete</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <img src="assets/images/users/user5.png" alt=""
+                        class="w-40-px h-40-px rounded-circle flex-shrink-0">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Kiss Laura</h6>
+                        <span class="text-xs text-secondary-light">UI/UX Designer</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20" data-order="994">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">994</span>
+                    <span class="text-xs text-secondary-light">196</span>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">798</td>
+                  <td class="py-16 px-20 text-end">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                        <li><button type="button"
+                            class="delete-item dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-danger-100 text-hover-danger-600 d-flex align-items-center gap-10"><iconify-icon
+                              icon="fluent:delete-24-regular" class="icon text-lg line-height-1"></iconify-icon>Delete</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- See All Performing -->
+          <div class="mt-20">
+            <a href="javascript:void(0)"
+              class="d-flex align-items-center gap-4 text-primary-600 text-sm fw-medium text-hover-primary-800"
+              style="width:fit-content;">
+              See All Performing
+              <i class="ph-bold ph-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Transactions -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-16 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-warning-50 border border-warning-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-chart-line-up text-warning-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Transactions</h6>
+                <span class="text-secondary-light text-sm fw-normal">Latest transaction activity overview.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-hover table-style" id="transactionsTable">
+              <thead>
+                <tr>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">User | Designation <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20 text-end">Action <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- Row 1 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-40-px h-40-px bg-lilac-50 text-lilac-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                        <i class="ph ph-lightbulb"></i>
+                      </span>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Bill Payment</h6>
+                        <span class="text-xs text-secondary-light">Utility</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-end" data-order="84.50">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">$84.50</span>
+                    <span class="text-xs text-secondary-light">Electricity Bill</span>
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-40-px h-40-px bg-warning-50 text-warning-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                        <i class="ph ph-qr-code"></i>
+                      </span>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">QR Payment</h6>
+                        <span class="text-xs text-secondary-light">QR Scan</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-end" data-order="6.75">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">$6.75</span>
+                    <span class="text-xs text-secondary-light">Coffee Shop</span>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-40-px h-40-px bg-success-50 text-success-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                        <i class="ph ph-bank"></i>
+                      </span>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Bank Transfer</h6>
+                        <span class="text-xs text-secondary-light">Bank</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-end" data-order="2450">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">$2,450.00</span>
+                    <span class="text-xs text-secondary-light">Salary Deposit</span>
+                  </td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-40-px h-40-px bg-primary-50 text-primary-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                        <i class="ph ph-device-mobile"></i>
+                      </span>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Mobile Recharge</h6>
+                        <span class="text-xs text-secondary-light">Mobile Wallet</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-end" data-order="15">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">$15.00</span>
+                    <span class="text-xs text-secondary-light">Prepaid Top-up</span>
+                  </td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-12">
+                      <span
+                        class="w-40-px h-40-px bg-danger-50 text-danger-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                        <i class="ph ph-credit-card"></i>
+                      </span>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Online Payment</h6>
+                        <span class="text-xs text-secondary-light">Subscription</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-end" data-order="12.99">
+                    <span class="d-block text-sm fw-bold text-primary-light line-height-1 mb-1">$12.99</span>
+                    <span class="text-xs text-secondary-light">Netflix Subscription</span>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- See All Transactions -->
+          <div class="mt-20">
+            <a href="javascript:void(0)"
+              class="d-flex align-items-center gap-4 text-primary-600 text-sm fw-medium text-hover-primary-800"
+              style="width:fit-content;">
+              See All Transactions
+              <i class="ph-bold ph-arrow-right"></i>
+            </a>
           </div>
 
         </div>
