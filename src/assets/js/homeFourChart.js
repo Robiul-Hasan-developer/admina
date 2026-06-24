@@ -24,7 +24,7 @@ function makeLineChart(selector, data, color) {
   });
 }
 
-// Total Visitors — purple uptrend line
+// Leads Generated — blue uptrend line
 var totalVisitorsChart = makeLineChart(
   "#totalVisitorsChart",
   [18, 22, 19, 24, 21, 27, 25, 30, 28, 34],
@@ -32,7 +32,7 @@ var totalVisitorsChart = makeLineChart(
 );
 totalVisitorsChart.render();
 
-// Page Views — green uptrend line
+// Qualified Leads — green uptrend line
 var pageViewsChart = makeLineChart(
   "#pageViewsChart",
   [15, 18, 16, 20, 19, 24, 22, 27, 25, 30],
@@ -40,18 +40,18 @@ var pageViewsChart = makeLineChart(
 );
 pageViewsChart.render();
 
-// Bounce Rate — yellow/amber downtrend line
+// Deals Closed — yellow/amber uptrend (jagged) line
 var bounceRateChart = makeLineChart(
   "#bounceRateChart",
-  [34, 30, 32, 27, 29, 24, 26, 20, 23, 18],
+  [18, 24, 20, 26, 22, 28, 25, 31, 28, 34],
   "#d97706",
 );
 bounceRateChart.render();
 
-// Avg. Session — red/coral uptrend line
+// Revenue Generated — red/coral downtrend line
 var avgSessionChart = makeLineChart(
   "#avgSessionChart",
-  [16, 14, 18, 15, 20, 17, 22, 19, 25, 28],
+  [26, 32, 28, 34, 27, 25, 28, 22, 24, 18],
   "#ef4444",
 );
 avgSessionChart.render();
