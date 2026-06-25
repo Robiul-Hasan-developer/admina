@@ -245,7 +245,7 @@ var ticketsSolvedCreatedChart = new ApexCharts(ticketsSolvedCreatedChartEl, {
   ],
   chart: {
     type: "area",
-    height: 320,
+    height: 400,
     toolbar: { show: false },
     zoom: { enabled: false },
   },
@@ -255,7 +255,7 @@ var ticketsSolvedCreatedChart = new ApexCharts(ticketsSolvedCreatedChartEl, {
     type: "gradient",
     gradient: {
       shadeIntensity: 1,
-      opacityFrom: 0.35,
+      opacityFrom: 0.65,
       opacityTo: 0.02,
       stops: [0, 100],
     },
@@ -349,7 +349,7 @@ var ticketsByChannelChartEl = document.querySelector("#ticketsByChannelChart");
 var ticketsByChannelChart = new ApexCharts(ticketsByChannelChartEl, {
   series: [80, 55, 60, 65, 70],
   labels: ["Email", "App", "Web", "Chat", "Tab"],
-  chart: { type: "polarArea", height: 280 },
+  chart: { type: "polarArea", height: 380 },
   colors: [primaryColor, "#22c55e", "#f87171", "#06b6d4", "#facc15"],
   stroke: { colors: ["#fff"], width: 2 },
   fill: { opacity: 0.9 },
@@ -383,7 +383,7 @@ var ticketsByTypeChart = new ApexCharts(ticketsByTypeChartEl, {
     "Billing Inquiry",
     "Technical Issue",
   ],
-  chart: { type: "donut", height: 280 },
+  chart: { type: "donut", height: 370 },
   colors: ["#f87171", "#06b6d4", "#facc15", primaryColor],
   stroke: { width: 3, colors: ["#fff"] },
   dataLabels: { enabled: false },

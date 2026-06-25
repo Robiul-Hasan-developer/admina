@@ -431,4 +431,44 @@
 }
 
 
+/* ===== Total Balance / Wallet section (index-5) ===== */
+.premium-card {
+  min-height: 168px;
+  background-color: #0b1220;
+  background-image:
+    radial-gradient(70% 130% at 85% 25%, rgba(99, 102, 241, 0.22), transparent 60%),
+    radial-gradient(60% 120% at 65% 90%, rgba(56, 189, 248, 0.12), transparent 70%);
+}
+.premium-card__brand {
+  letter-spacing: 0.5px;
+  font-size: 15px;
+}
+.quick-transfer-field {
+  padding: 4px 10px;
+
+  .form-select {
+    width: auto;
+    min-width: 64px;
+    padding-block: 8px;
+  }
+
+  .form-control {
+    padding-block: 10px;
+  }
+
+  .form-select:focus,
+  .form-control:focus {
+    box-shadow: none;
+  }
+}
+.stat-wave {
+  width: 100%;
+
+  .apexcharts-canvas,
+  svg {
+    width: 100% !important;
+  }
+}
+
+
 /* Home One css end */
