@@ -315,7 +315,8 @@
 
 /* Dense mode (compact rows) — Portfolio Holdings & Trade History tables */
 #portfolioHoldingsTable.table-dense,
-#tradeHistoryTable.table-dense {
+#tradeHistoryTable.table-dense,
+#agentsPerformanceTable.table-dense {
   tbody td {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
@@ -403,6 +404,29 @@
   svg {
     width: 100% !important;
     height: 100% !important;
+  }
+}
+
+
+/* ===== Ticket Stat Cards (index-5) ===== */
+.ticket-spark {
+  min-width: 0;
+  max-width: 170px;
+
+  .apexcharts-canvas,
+  svg {
+    width: 100% !important;
+  }
+
+  /* dashed vertical line at the right end of the chart */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    right: 2px;
+    border-right: 1px dashed #cbd5e1;
+    pointer-events: none;
   }
 }
 

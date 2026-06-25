@@ -1,606 +1,341 @@
-    // ================================ Bars Up Down (Earning Statistics) chart Start ================================ 
-    var options = {
-      series: [
-          {
-              name: "Income",
-              data: [44, 42, 57, 86, 58, 55, 70, 44, 42, 57, 86, 58, 55, 70],
-          },
-          {
-              name: "Expenses",
-              data: [-34, -22, -37, -56, -21, -35, -60, -34, -22, -37, -56, -21, -35, -60],
-          },
-      ],
-      chart: {
-          stacked: true,
-          type: "bar",
-          height: 263,
-          fontFamily: "Poppins, sans-serif",
-          toolbar: { 
-              show: false,
-          },
-      }, 
-      colors: ["#487FFF", "#EF4A00"],
-      plotOptions: {
-          bar: {
-              columnWidth: "8",
-              borderRadius: [2],
-              borderRadiusWhenStacked: "all",
-          },
-      },
-      stroke: {
-          width: [5, 5]
-      },
-      dataLabels: {
-          enabled: false,
-      },
-      legend: {
-          show: true,
-          position: "top",
-      },
-      yaxis: {
-          show: false,
-          title: {
-              text: undefined,
-          },
-          labels: {
-              formatter: function (y)
-              {
-                  return y.toFixed(0) + "";
-              },
-          },
-      },
-      xaxis: {
-          show: false,
-          categories: [
-              "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", 
-              "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"
-          ],
-          axisBorder: {
-              show: false,
-          },
-          axisTicks: {
-              show: false,
-          },
-          labels: {
-              show: true,
-              style: {
-                  colors: "#d4d7d9",
-                  fontSize: "10px",
-                  fontWeight: 500,
-              },
-          },
-      },
-      tooltip: {
-          enabled: true,
-          shared: true,
-          intersect: false,
-          theme: "dark",
-          x: {
-              show: false,
-          },
-      },
-  };
-  var chart = new ApexCharts(document.querySelector("#upDownBarchart"), options);
-  chart.render();
-    // ================================ Bars Up Down (Earning Statistics) chart End ================================ 
-    
-    // ================================ Semi Circle Gauge (Daily Conversion) chart Start ================================ 
-    var options = {
-        series: [75],
-        chart: {
-            width: 200,
-            type: 'radialBar',
-            sparkline: {
-                enabled: true // Remove whitespace
-            },
-            toolbar: {
-                show: false
-            },
-        },
-        plotOptions: {
-            radialBar: {
-                offsetY: -24,
-                offsetX: -14,
-                startAngle: -90,
-                endAngle: 90,
-                track: {
-                    background: "#E3E6E9",
-                    // strokeWidth: 32,
-                    dropShadow: {
-                        enabled: false,
-                        top: 2,
-                        left: 0,
-                        color: '#999',
-                        opacity: 1,
-                        blur: 2
-                    }
-                },
-                dataLabels: {
-                    show: false,
-                    name: {
-                        show: false
-                    },
-                    value: {
-                        offsetY: -2,
-                        fontSize: '22px'
-                    }
-                }
-            }
-        },
-        fill: {
-            type: 'gradient',
-            colors: ['#9DBAFF'], 
-            gradient: {
-                shade: 'dark',
-                type: 'horizontal',
-                shadeIntensity: 0.5,
-                gradientToColors: ['#487FFF'],
-                inverseColors: true,
-                opacityFrom: 1,
-                opacityTo: 1,
-                stops: [0, 100]
-            }
-        },
-        stroke: {
-            lineCap: 'round',
-        },
-        labels: ['Percent'],
-    };
+// ================================ Ticket Stat Cards - Area Sparklines ================================
+function makeTicketChart(selector, data, color, markerIndex) {
+  var el = document.querySelector(selector);
+  if (!el) return;
 
-    var chart = new ApexCharts(document.querySelector("#semiCircleGauge"), options);
-    chart.render();
-    // ================================ Semi Circle Gauge (Daily Conversion) chart End ================================ 
-
-    // ================================ Area chart Start ================================ 
-    function createChart(chartId, chartColor) {
-
-        let currentYear = new Date().getFullYear();
-
-        var options = {
-        series: [
-            {
-                name: 'series1',
-                data: [0, 10, 8, 25, 15, 26, 13, 35, 15, 39, 16, 46, 42],
-            },
-        ],
-        chart: {
-            type: 'area',
-            width: 164,
-            height: 72,
-
-            sparkline: {
-                enabled: true // Remove whitespace
-            },
-
-            toolbar: {
-                show: false
-            },
-            padding: {
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0
-            }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            curve: 'smooth',
-            width: 2,
-            colors: [chartColor],
-            lineCap: 'round'
-        },
-        grid: {
-            show: true,
-            borderColor: 'transparent',
-            strokeDashArray: 0,
-            position: 'back',
-            xaxis: {
-                lines: {
-                    show: false
-                }
-            },   
-            yaxis: {
-                lines: {
-                    show: false
-                }
-            },  
-            row: {
-                colors: undefined,
-                opacity: 0.5
-            },  
-            column: {
-                colors: undefined,
-                opacity: 0.5
-            },  
-            padding: {
-                top: -3,
-                right: 0,
-                bottom: 0,
-                left: 0
-            },  
-        },
-        colors: [chartColor], // Set color for series
-        fill: {
-            type: 'gradient',
-            colors: [chartColor], // Set the starting color (top color) here
-            gradient: {
-                shade: 'light', // Gradient shading type
-                type: 'vertical',  // Gradient direction (vertical)
-                shadeIntensity: 0.5, // Intensity of the gradient shading
-                gradientToColors: [`${chartColor}00`], // Bottom gradient color (with transparency)
-                inverseColors: false, // Do not invert colors
-                opacityFrom: .8, // Starting opacity
-                opacityTo: 0.3,  // Ending opacity
-                stops: [0, 100],
-            },
-        },
-        // Customize the circle marker color on hover
-        markers: {
-            colors: [chartColor],
-            strokeWidth: 2,
-            size: 0,
-            hover: {
-            size: 8
-            }
-        },
-        xaxis: {
-            labels: {
-                show: false
-            },
-            categories: [`Jan ${currentYear}`, `Feb ${currentYear}`, `Mar ${currentYear}`, `Apr ${currentYear}`, `May ${currentYear}`, `Jun ${currentYear}`, `Jul ${currentYear}`, `Aug ${currentYear}`, `Sep ${currentYear}`, `Oct ${currentYear}`, `Nov ${currentYear}`, `Dec ${currentYear}`],
-            tooltip: {
-                enabled: false,
-            },
-        },
-        yaxis: {
-            labels: {
-                show: false
-            }
-        },
-        tooltip: {
-            x: {
-                format: 'dd/MM/yy HH:mm'
-            },
-        },
-        };
-
-        var chart = new ApexCharts(document.querySelector(`#${chartId}`), options);
-        chart.render();
-        }
-
-    // Call the function for each chart with the desired ID and color
-    createChart('areaChart', '#FF9F29');
-    // ================================ Area chart End ================================ 
-
-    // ================================ Bar chart (Today Income0 Start ================================ 
-    var options = {
-      series: [{
-          name: "Sales",
-          data: [{
-              x: 'Mon',
-              y: 20,
-          }, {
-              x: 'Tue',
-              y: 40,
-          }, {
-              x: 'Wed',
-              y: 20,
-          }, {
-              x: 'Thur',
-              y: 30,
-          }, {
-              x: 'Fri',
-              y: 40,
-          }, {
-              x: 'Sat',
-              y: 35,
-          }]
-      }],
-      chart: {
-          type: 'bar',
-          width: 164,
-          height: 80,
-          sparkline: {
-            enabled: true // Remove whitespace
-          },
-          toolbar: {
-              show: false
-          }
-      },
-      plotOptions: {
-          bar: {
-              borderRadius: 6,
-              horizontal: false,
-              columnWidth: 14,
-          }
-      },
-      dataLabels: {
-          enabled: false
-      },
-    states: {
-        hover: {
-        filter: {
-            type: 'none'
-            }
-        }
-    },
-      fill: {
-          type: 'gradient',
-          colors: ['#E3E6E9'], // Set the starting color (top color) here
-          gradient: {
-              shade: 'light', // Gradient shading type
-              type: 'vertical',  // Gradient direction (vertical)
-              shadeIntensity: 0.5, // Intensity of the gradient shading
-              gradientToColors: ['#E3E6E9'], // Bottom gradient color (with transparency)
-              inverseColors: false, // Do not invert colors
-              opacityFrom: 1, // Starting opacity
-              opacityTo: 1,  // Ending opacity
-              stops: [0, 100],
-          },
-      },
-      grid: {
-          show: false,
-          borderColor: '#D1D5DB',
-          strokeDashArray: 1, // Use a number for dashed style
-          position: 'back',
-      },
-      xaxis: {
-            labels: {
-                show: false // Hide y-axis labels
-            },
-            type: 'category',
-            categories: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat']
-      },
-      yaxis: {
-          labels: {
-            show: false,
-              formatter: function (value) {
-                  return (value / 1000).toFixed(0) + 'k';
-              }
-          }
-      },
-      tooltip: {
-          y: {
-              formatter: function (value) {
-                  return value / 1000 + 'k';
-              }
-          }
-      }
-    };
-
-    var chart = new ApexCharts(document.querySelector("#dailyIconBarChart"), options);
-    chart.render();
-    // ================================ Bar chart (Today Income0 End ================================ 
-
-  // ================================ My Portfolio Donut chart Start ================================ 
-    var options = { 
-      series: [70, 30],
-      colors: ['#FF9F29', '#487FFF'],
-      labels: ['Female', 'Male'] ,
-      legend: {
-          show: false 
-      },
-      chart: {
-        type: 'donut',    
-        height: 230,
-        sparkline: {
-          enabled: true // Remove whitespace
-        },
-        margin: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0
-        },
-        padding: {
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0
-        }
-      },
-      stroke: {
-        width: 0,
-      },
-      dataLabels: {
-        enabled: false
-      },
-      responsive: [{
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: 200
-          },
-          legend: {
-            position: 'bottom'
-          }
-        }
-      }],
-    };
-
-    var chart = new ApexCharts(document.querySelector("#statisticsDonutChart"), options);
-    chart.render();
-  // ================================ My Portfolio Donut chart End ================================ 
-
-  // ================================ J Vector Map Start ================================ 
-  $('#world-map').vectorMap(
-    {
-      map: 'world_mill_en',
-      backgroundColor: 'transparent',
-      borderColor: '#fff',
-      borderOpacity: 0.25,
-      borderWidth: 0,
-      color: '#000000',
-      regionStyle : {
-          initial : {
-          fill : '#D1D5DB'
-        }
-      },
-      markerStyle: {
-      initial: {
-            r: 5,
-            'fill': '#fff',
-            'fill-opacity':1,
-            'stroke': '#000',
-            'stroke-width' : 1,
-            'stroke-opacity': 0.4
-        },
-    },
-      markers : [{
-          latLng : [35.8617, 104.1954],
-          name : 'China : 250'
-        },
-
-        {
-          latLng : [25.2744, 133.7751],
-          name : 'AustrCalia : 250'
-        },
-
-        {
-          latLng : [36.77, -119.41],
-          name : 'USA : 82%'
-        },
-
-        {
-          latLng : [55.37, -3.41],
-          name : 'UK   : 250'
-        },
-
-        {
-          latLng : [25.20, 55.27],
-          name : 'UAE : 250'
-      }],
-
-      series: {
-          regions: [{
-              values: {
-                  "US": '#487FFF ',
-                  "SA": '#487FFF',
-                  "AU": '#487FFF',
-                  "CN": '#487FFF',
-                  "GB": '#487FFF',
-              },
-              attribute: 'fill'
-          }]
-      },
-      hoverOpacity: null,
-      normalizeFunction: 'linear',
-      zoomOnScroll: false,
-      scaleColors: ['#000000', '#000000'],
-      selectedColor: '#000000',
-      selectedRegions: [],
-      enableZoom: false,
-      hoverColor: '#fff',
-    }); 
-  // ================================ J Vector Map End ================================ 
-
-  // ================================ Total Transaction line chart Start ================================ 
-  var options = {
-    series: [{
-      name: "This month",
-      data: [4, 16, 12, 28, 22, 38, 23]
-    }],
+  new ApexCharts(el, {
+    series: [{ name: "Tickets", data: data }],
     chart: {
-      height: 290,
-      type: 'line',
-      toolbar: {
-        show: false
-      },
-      zoom: {
-        enabled: false
-      },
-      dropShadow: {
-        enabled: true,
-        top: 6,
-        left: 0,
-        blur: 4,
-        color: "#000",
-        opacity: 0.1,
+      type: "area",
+      height: 90,
+      width: "100%",
+      sparkline: { enabled: true },
+      toolbar: { show: false },
+      zoom: { enabled: false },
+    },
+    colors: [color],
+    stroke: { curve: "straight", width: 2, colors: [color] },
+    fill: {
+      type: "gradient",
+      gradient: {
+        shadeIntensity: 1,
+        opacityFrom: 0.9,
+        opacityTo: 0.02,
+        stops: [0, 100],
       },
     },
-    dataLabels: {
-      enabled: false
+    markers:
+      markerIndex != null
+        ? {
+            size: 0,
+            colors: ["#fff"],
+            strokeColors: color,
+            strokeWidth: 2,
+            discrete: [
+              {
+                seriesIndex: 0,
+                dataPointIndex: markerIndex,
+                fillColor: color,
+                strokeColor: "#fff",
+                size: 5,
+              },
+            ],
+          }
+        : { size: 0 },
+    dataLabels: { enabled: false },
+    tooltip: { enabled: true },
+    grid: { show: false },
+  }).render();
+}
+
+// Ticket Open — indigo, rising zigzag
+makeTicketChart("#ticketOpenChart", [20, 36, 24, 46, 30, 50, 34, 40, 30, 52], "#6366f1");
+
+// Tickets In Progress — cyan, choppy / slightly declining
+makeTicketChart("#ticketProgressChart", [46, 30, 50, 34, 48, 32, 44, 30, 42, 34], "#06b6d4");
+
+// Tickets Resolved — amber, peak (marker) then declining zigzag
+makeTicketChart("#ticketResolvedChart", [30, 38, 32, 55, 40, 34, 46, 32, 44, 34], "#eab308", 3);
+
+// Tickets Closed — red, dips then sharp rise at the end
+makeTicketChart("#ticketClosedChart", [34, 26, 31, 23, 29, 25, 33, 28, 46, 56], "#ef4444");
+
+
+// ================================ New Tickets Created - Grouped Column Chart ================================
+(function () {
+  var el = document.querySelector("#newTicketsChart");
+  if (!el) return;
+
+  new ApexCharts(el, {
+    series: [
+      { name: "Low", data: [320, 330, 300, 330, 390, 300, 280] },
+      { name: "Medium", data: [220, 180, 190, 230, 290, 200, 180] },
+      { name: "High", data: [160, 230, 200, 160, 190, 150, 120] },
+      { name: "Urgent", data: [100, 80, 100, 160, 45, 90, 65] },
+    ],
+    chart: {
+      type: "bar",
+      height: 340,
+      toolbar: { show: false },
+      zoom: { enabled: false },
     },
-    stroke: {
-      curve: 'smooth',
-      width: 3
-    },
-    markers: {
-      size: 0,
-      strokeWidth: 3,
-      hover: {
-        size: 8
-      }
-    },
-    tooltip: {
-      enabled: true,
-      x: {
-        show: true,
+    colors: ["#6366f1", "#22c55e", "#facc15", "#f87171"],
+    plotOptions: {
+      bar: {
+        columnWidth: "70%",
+        borderRadius: 4,
+        borderRadiusApplication: "end",
       },
-      y: {
-        show: false,
-      },
-      z: {
-        show: false,
-      }
     },
-    grid: {
-      row: {
-        colors: ['transparent', 'transparent'], // takes an array which will be repeated on columns
-        opacity: 0.5
-      },
-      borderColor: '#D1D5DB',
-      strokeDashArray: 3,
+    dataLabels: { enabled: false },
+    stroke: { show: true, width: 2, colors: ["transparent"] },
+    xaxis: {
+      categories: ["Mon", "Tue", "We", "Th", "Fr", "Sat", "Su"],
+      labels: { style: { fontSize: "12px", colors: "#9ca3af" } },
+      axisBorder: { show: false },
+      axisTicks: { show: false },
     },
     yaxis: {
+      min: 0,
+      max: 400,
+      tickAmount: 4,
+      labels: { style: { fontSize: "12px", colors: "#9ca3af" } },
+    },
+    grid: {
+      borderColor: "#f1f5f9",
+      strokeDashArray: 4,
+      xaxis: { lines: { show: false } },
+      yaxis: { lines: { show: true } },
+    },
+    legend: { show: false },
+    tooltip: { shared: true, intersect: false },
+  }).render();
+})();
+
+
+// ================================ Response Time - Dual Area Chart ================================
+(function () {
+  var el = document.querySelector("#responseTimeChart");
+  if (!el) return;
+
+  new ApexCharts(el, {
+    series: [
+      { name: "Ave Resolution Time", data: [4.5, 6.5, 8, 6, 4.5, 7, 8.2, 6, 4.5, 6.5, 8, 6.5, 5] },
+      { name: "First Response Time", data: [2, 3, 4, 3, 2, 3.5, 4.2, 3, 2, 3, 4, 3, 2.5] },
+    ],
+    chart: {
+      type: "area",
+      height: 230,
+      toolbar: { show: false },
+      zoom: { enabled: false },
+    },
+    colors: ["#06b6d4", "#6366f1"],
+    stroke: { curve: "smooth", width: 2 },
+    fill: {
+      type: "gradient",
+      gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05, stops: [0, 100] },
+    },
+    dataLabels: { enabled: false },
+    markers: { size: 0 },
+    xaxis: {
+      labels: { show: false },
+      axisBorder: { show: false },
+      axisTicks: { show: false },
+    },
+    yaxis: {
+      min: 0,
+      max: 10,
+      tickAmount: 10,
       labels: {
-        formatter: function (value) {
-          return "$" + value + "k";
+        formatter: function (val) {
+          var n = Math.round(val);
+          return (n === 0 || n === 2 || n === 5 || n === 10) ? n + "H" : "";
         },
-        style: {
-          fontSize: "14px"
-        }
+        style: { fontSize: "11px", colors: "#9ca3af" },
       },
     },
-    xaxis: {
-      categories: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
-      tooltip: {
-        enabled: false
-      },
-      labels: {
-        formatter: function (value) {
-          return value;
-        },
-        style: {
-          fontSize: "14px"
-        }
-      },
-      axisBorder: {
-        show: false
-      },
-      crosshairs: {
-        show: true, 
-        width: 20,
-        stroke: {
-          width: 0
-        },
-        fill: {
-          type: 'solid',
-          color: '#B1B9C4',
-          gradient: {
-              colorFrom: '#D8E3F0',
-              colorTo: '#BED1E6',
-              stops: [0, 100],
-              opacityFrom: 0.4,
-              opacityTo: 0.5,
-          },
-        }
-      }
-    }
-  };
+    grid: {
+      borderColor: "#f1f5f9",
+      strokeDashArray: 0,
+      xaxis: { lines: { show: false } },
+      yaxis: { lines: { show: true } },
+      padding: { left: 0, right: 0 },
+    },
+    legend: { show: false },
+    tooltip: { shared: true, intersect: false, y: { formatter: function (val) { return val + "H"; } } },
+  }).render();
+})();
 
-  var chart = new ApexCharts(document.querySelector("#transactionLineChart"), options);
-  chart.render();
-  // ================================ Total Transaction line chart End ================================ 
+
+// ================================ Clients Satisfaction - Pie Chart ================================
+(function () {
+  var el = document.querySelector("#clientsSatisfactionChart");
+  if (!el) return;
+
+  new ApexCharts(el, {
+    series: [40, 30, 30],
+    labels: ["Highly Satisfied", "Unsatisfied", "Satisfied"],
+    chart: { type: "pie", height: 260 },
+    colors: ["#6366f1", "#06b6d4", "#facc15"],
+    stroke: { width: 3, colors: ["#fff"] },
+    dataLabels: { enabled: false },
+    legend: { show: false },
+    tooltip: { y: { formatter: function (val) { return val + "%"; } } },
+  }).render();
+})();
+
+
+// ================================ Tickets Solved and Created - Dual Area Chart ================================
+(function () {
+  var el = document.querySelector("#ticketsSolvedCreatedChart");
+  if (!el) return;
+
+  new ApexCharts(el, {
+    series: [
+      { name: "Tickets Created", data: [10, 105, 45, 140, 55, 205, 50, 235, 65, 215, 80, 225] },
+      { name: "Tickets Solved", data: [5, 58, 25, 75, 35, 110, 30, 120, 38, 110, 45, 118] },
+    ],
+    chart: {
+      type: "area",
+      height: 320,
+      toolbar: { show: false },
+      zoom: { enabled: false },
+    },
+    colors: ["#facc15", "#6366f1"],
+    stroke: { curve: "smooth", width: 2, dashArray: [6, 0] },
+    fill: {
+      type: "gradient",
+      gradient: { shadeIntensity: 1, opacityFrom: 0.35, opacityTo: 0.02, stops: [0, 100] },
+    },
+    dataLabels: { enabled: false },
+    markers: { size: 0, hover: { size: 4 } },
+    xaxis: {
+      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      labels: { style: { fontSize: "12px", colors: "#9ca3af" } },
+      axisBorder: { show: false },
+      axisTicks: { show: false },
+    },
+    yaxis: {
+      min: 0,
+      max: 300,
+      tickAmount: 5,
+      labels: { style: { fontSize: "12px", colors: "#9ca3af" } },
+    },
+    grid: {
+      borderColor: "#f1f5f9",
+      strokeDashArray: 4,
+      xaxis: { lines: { show: false } },
+      yaxis: { lines: { show: true } },
+    },
+    annotations: {
+      xaxis: [{ x: "Jul", borderColor: "#cbd5e1", strokeDashArray: 4, borderWidth: 1 }],
+    },
+    legend: { show: false },
+    tooltip: { shared: true, intersect: false },
+  }).render();
+})();
+
+
+// ================================ SLA Monitoring - DataTable ================================
+$(document).ready(function () {
+  if (typeof $.fn === "undefined" || !$.fn.DataTable) return;
+  var el = document.querySelector("#slaMonitoringTable");
+  if (!el) return;
+  $(el).DataTable({
+    ordering: true,
+    info: false,
+    searching: false,
+    paging: false,
+    dom: "t",
+    order: [],
+    columnDefs: [{ orderable: false, targets: 3 }], // Action column
+  });
+});
+
+
+// ================================ Performance of Agents - DataTable ================================
+$(document).ready(function () {
+  if (typeof $.fn === "undefined" || !$.fn.DataTable) return;
+  var el = document.querySelector("#agentsPerformanceTable");
+  if (!el) return;
+
+  $(el).DataTable({
+    ordering: true,
+    info: false,
+    searching: false,
+    paging: false,
+    dom: "t",
+    order: [],
+    columnDefs: [{ orderable: false, targets: 7 }], // Action column
+  });
+
+  var denseSwitch = document.getElementById("agentsDenseSwitch");
+  if (denseSwitch) {
+    denseSwitch.addEventListener("change", function () {
+      el.classList.toggle("table-dense", denseSwitch.checked);
+    });
+  }
+});
+
+
+// ================================ Tickets by Channel - Polar Area Chart ================================
+(function () {
+  var el = document.querySelector("#ticketsByChannelChart");
+  if (!el) return;
+
+  new ApexCharts(el, {
+    series: [80, 55, 60, 65, 70],
+    labels: ["Email", "App", "Web", "Chat", "Tab"],
+    chart: { type: "polarArea", height: 280 },
+    colors: ["#6366f1", "#22c55e", "#f87171", "#06b6d4", "#facc15"],
+    stroke: { colors: ["#fff"], width: 2 },
+    fill: { opacity: 0.9 },
+    dataLabels: { enabled: false },
+    legend: { show: false },
+    yaxis: { show: false },
+    plotOptions: {
+      polarArea: {
+        rings: { strokeColor: "#e5e7eb" },
+        spokes: { strokeColor: "#e5e7eb" },
+      },
+    },
+    tooltip: { y: { formatter: function (val) { return val + " tickets"; } } },
+  }).render();
+})();
+
+
+// ================================ Tickets by Type - Donut Chart ================================
+(function () {
+  var el = document.querySelector("#ticketsByTypeChart");
+  if (!el) return;
+
+  new ApexCharts(el, {
+    // Clockwise from top: Product (red), General (cyan), Billing (yellow), Technical (indigo)
+    series: [12, 35, 23, 30],
+    labels: ["Product Support", "General Inquiry", "Billing Inquiry", "Technical Issue"],
+    chart: { type: "donut", height: 280 },
+    colors: ["#f87171", "#06b6d4", "#facc15", "#6366f1"],
+    stroke: { width: 3, colors: ["#fff"] },
+    dataLabels: { enabled: false },
+    legend: { show: false },
+    plotOptions: { pie: { donut: { size: "68%" } } },
+    tooltip: { y: { formatter: function (val) { return val + "%"; } } },
+  }).render();
+})();
+
+
+// ================================ Recent Customer Rating - DataTable ================================
+$(document).ready(function () {
+  if (typeof $.fn === "undefined" || !$.fn.DataTable) return;
+  var el = document.querySelector("#customerRatingTable");
+  if (!el) return;
+  $(el).DataTable({
+    ordering: true,
+    info: false,
+    searching: false,
+    paging: false,
+    dom: "t",
+    order: [],
+    columnDefs: [{ orderable: false, targets: 4 }], // Action column
+  });
+});
