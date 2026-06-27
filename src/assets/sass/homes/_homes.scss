@@ -316,7 +316,9 @@
 /* Dense mode (compact rows) — Portfolio Holdings & Trade History tables */
 #portfolioHoldingsTable.table-dense,
 #tradeHistoryTable.table-dense,
-#agentsPerformanceTable.table-dense {
+#agentsPerformanceTable.table-dense,
+#latestTransactionTable.table-dense,
+#auditReportTable.table-dense {
   tbody td {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
@@ -468,6 +470,73 @@
   svg {
     width: 100% !important;
   }
+}
+
+
+/* ===== Marketing Expenses nested donut (index-6) ===== */
+.marketing-donut {
+  width: 200px;
+
+  #marketingInnerChart {
+    width: 110px;
+  }
+
+  .apexcharts-canvas {
+    margin: 0 auto;
+  }
+}
+
+
+/* ===== Earning Categories pills (index-6) ===== */
+.earning-categories {
+  .traffic-source-row {
+    height: 44px;
+  }
+
+  .traffic-source-row__content {
+    padding: 0 10px;
+  }
+}
+
+
+/* ===== Investment donut with leader-line labels (index-6) ===== */
+.investment-donut {
+  width: 360px;
+  max-width: 100%;
+  height: 280px;
+
+  #investmentChart {
+    height: 100%;
+    align-items: center;
+  }
+}
+.investment-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+.investment-pct {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary-light);
+  z-index: 3;
+}
+.investment-pct--right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.investment-pct--tl {
+  left: 4px;
+  top: 56px;
+}
+.investment-pct--bl {
+  left: 4px;
+  bottom: 56px;
 }
 
 
