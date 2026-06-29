@@ -216,6 +216,165 @@
 
     </div>
 
+    <div class="row gy-4 mt-1">
+      <!-- Sessions Overview Card -->
+      <div class="col-xl-8">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-16 pb-20 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-info-50 border border-info-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <span class="icon text-info-600 text-2xl line-height-1 d-flex">
+                  <i class="ph ph-clock"></i>
+                </span>
+              </div>
+              <div>
+                <h6 class="fw-semibold mb-0 text-lg">Sessions Overview <span
+                    class="text-secondary-light fw-normal text-md">(609.5k Sessions)</span></h6>
+                <span class="text-secondary-light text-sm fw-normal">Analyze session performance to improve retention
+                  and growth.</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-12 flex-shrink-0">
+              <button type="button"
+                class="d-flex align-items-center gap-8 px-16 py-8 rounded-pill border border-primary-100 bg-primary-05 text-secondary-light fw-medium text-sm">
+                <i class="ph ph-export"></i>
+                Export
+              </button>
+              <button type="button"
+                class="d-flex align-items-center gap-8 px-16 py-8 rounded-pill border border-danger-100 bg-danger-50 text-secondary-light fw-medium text-sm">
+                <i class="ph ph-download-simple"></i>
+                Import
+              </button>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div id="sessionsOverviewChart"></div>
+
+          <!-- Legend -->
+          <div
+            class="d-flex align-items-center justify-content-center gap-24 mt-12 pt-16 border-top border-neutral-200">
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-8-px h-8-px rounded-circle" style="background:#6366f1;"></span>
+              <span class="text-secondary-light text-sm">Total Visitors</span>
+            </div>
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-8-px h-8-px rounded-circle" style="background:#22c55e;"></span>
+              <span class="text-secondary-light text-sm">Page Views</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Location By Session -->
+      <div class="col-xl-4 col-lg-6">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-24 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-globe-hemisphere-west text-danger-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Location By Session</h6>
+                <span class="text-secondary-light text-sm fw-normal">See visitor distribution across countries</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Weekly</option>
+                <option>Monthly</option>
+                <option>Yearly</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="bg-neutral-50 radius-12 p-12 mb-16">
+            <div id="sessionWorldMap" style="height: 170px;"></div>
+          </div>
+
+          <!-- Country tables -->
+          <div class="row g-12">
+            <div class="col-6">
+              <div class="border border-neutral-200 radius-12 h-100 overflow-hidden ">
+                <div class="d-flex align-items-center justify-content-between py-12 px-16 border-bottom border-neutral-200 bg-warning-50">
+                  <span class="text-xs text-secondary-light fw-medium">Country | Sessions</span>
+                  <span class="text-xs text-secondary-light fw-medium">Perc. | Users</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between py-12 px-16 border-bottom border-neutral-200">
+                  <div class="d-flex align-items-center gap-8">
+                    <iconify-icon icon="flagpack:us" width="32" height="32" class="radius-4 flex-shrink-0"></iconify-icon>
+                    <div>
+                      <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">USA</span>
+                      <span class="text-xs text-secondary-light">187,232</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">85%</span>
+                    <span class="text-xs text-secondary-light">196,584</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between py-12 px-16">
+                  <div class="d-flex align-items-center gap-8">
+                    <iconify-icon icon="flagpack:cn" width="32" height="32" class="radius-4 flex-shrink-0"></iconify-icon>
+                    <div>
+                      <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">China</span>
+                      <span class="text-xs text-secondary-light">187,232</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">67%</span>
+                    <span class="text-xs text-secondary-light">196,584</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="border border-neutral-200 radius-12 h-100 overflow-hidden ">
+                <div class="d-flex align-items-center justify-content-between py-12 px-16 border-bottom border-neutral-200 bg-warning-50">
+                  <span class="text-xs text-secondary-light fw-medium">Country | Sessions</span>
+                  <span class="text-xs text-secondary-light fw-medium">Perc. | Users</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between py-12 px-16 border-bottom border-neutral-200">
+                  <div class="d-flex align-items-center gap-8">
+                    <iconify-icon icon="flagpack:au" width="32" height="32" class="radius-4 flex-shrink-0"></iconify-icon>
+                    <div>
+                      <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">Australia</span>
+                      <span class="text-xs text-secondary-light">187,232</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">74%</span>
+                    <span class="text-xs text-secondary-light">196,584</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between py-12 px-16">
+                  <div class="d-flex align-items-center gap-8">
+                    <iconify-icon icon="flagpack:de" width="32" height="32" class="radius-4 flex-shrink-0"></iconify-icon>
+                    <div>
+                      <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">Germany</span>
+                      <span class="text-xs text-secondary-light">187,232</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">63%</span>
+                    <span class="text-xs text-secondary-light">196,584</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
     <!-- ===== Latest Investment ===== -->
     <div class="row gy-4 mt-1">
       <div class="col-12">

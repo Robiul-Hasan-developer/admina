@@ -319,7 +319,8 @@
 #agentsPerformanceTable.table-dense,
 #latestTransactionTable.table-dense,
 #auditReportTable.table-dense,
-#latestInvestmentTable.table-dense {
+#latestInvestmentTable.table-dense,
+#allProjectsTable.table-dense {
   tbody td {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
@@ -538,6 +539,108 @@
 .investment-pct--bl {
   left: 4px;
   bottom: 56px;
+}
+
+
+/* ===== Working Schedule + Team Members + Chat (index-8) ===== */
+.schedule-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+
+  .cal-head {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary-light);
+    padding: 6px 0;
+  }
+  .cal-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary-light);
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--neutral-100);
+    }
+    &.is-muted {
+      color: #cbd5e1;
+    }
+    &.is-active {
+      background-color: var(--primary-600);
+      color: #fff;
+    }
+  }
+}
+.schedule-event {
+  border-left: 3px solid var(--evt, #8b5cf6);
+  padding-left: 14px;
+}
+
+/* Team Members list */
+.team-list {
+  max-height: 430px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.team-row {
+  padding: 8px 8px;
+  border-radius: 10px;
+
+  & + .team-row {
+    border-top: 1px solid var(--neutral-100);
+    border-radius: 0;
+  }
+  &.team-row--active {
+    background-color: #f4f3fd;
+    border-radius: 10px;
+    border-top-color: transparent;
+  }
+}
+.team-ring {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Chat */
+.chat-body {
+  max-height: 470px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.chat-msg {
+  display: flex;
+  gap: 10px;
+
+  &--out {
+    justify-content: flex-end;
+  }
+  & > div {
+    max-width: 80%;
+  }
+}
+.chat-bubble {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-primary-light);
+
+  &--yellow {
+    background-color: #fef9e7;
+    border-top-left-radius: 0;
+  }
+  &--grey {
+    background-color: var(--neutral-100);
+    border-top-right-radius: 0;
+  }
 }
 
 

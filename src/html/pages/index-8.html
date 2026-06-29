@@ -7,903 +7,969 @@
 
   <div class="dashboard-main-body">
 
-    @@include('../layouts/_breadcrumb.html',{
-      pageTitle: "Dashboard",
-      activePage: "Medical"
-    })
-    
     <div class="row gy-4">
-      <div class="col-xxxl-9">
+
+      <!-- Project stat cards (2x2) -->
+      <div class="col-xl-6">
         <div class="row gy-4">
-            <div class="col-xxl-3 col-xl-4 col-sm-6">
-            <div class="card p-3 shadow-2 radius-8 h-100 bg-gradient-end-6">
-                <div class="card-body p-0">
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-8">
-                    
-                    <div class="d-flex align-items-center gap-2">
-                        <span class="mb-0 w-48-px h-48-px bg-cyan-100 text-cyan-600 flex-shrink-0 text-white d-flex justify-content-center align-items-center rounded-circle h6 mb-0">
-                        <i class="ri-group-fill"></i> 
-                        </span>
-                        <div>
-                            <h6 class="fw-semibold mb-2">650</h6>
-                            <span class="fw-medium text-secondary-light text-sm">Doctors</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-sm mb-0"> <span class="text-cyan-600">4</span> Doctors joined this week</p>
-                </div>
-            </div>
-            </div>
-            <div class="col-xxl-3 col-xl-4 col-sm-6">
-            <div class="card p-3 shadow-2 radius-8 h-100 bg-gradient-end-4">
-                <div class="card-body p-0">
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-8">
-                    
-                    <div class="d-flex align-items-center gap-2">
-                        <span class="mb-0 w-48-px h-48-px bg-lilac-100 text-lilac-600 flex-shrink-0 text-white d-flex justify-content-center align-items-center rounded-circle h6 mb-0">
-                        <i class="ri-award-fill"></i>
-                        </span>
-                        <div>
-                            <h6 class="fw-semibold mb-2">570</h6>
-                            <span class="fw-medium text-secondary-light text-sm">Staffs</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-sm mb-0"> <span class="text-lilac-600">8</span> Staffs on vacation</p>
-                </div>
-            </div>
-            </div>
-            <div class="col-xxl-3 col-xl-4 col-sm-6">
-            <div class="card p-3 shadow-2 radius-8 h-100 bg-gradient-end-1">
-                <div class="card-body p-0">
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-8">
-                    
-                    <div class="d-flex align-items-center gap-2">
-                        <span class="mb-0 w-48-px h-48-px bg-primary-100 text-primary-600 flex-shrink-0 text-white d-flex justify-content-center align-items-center rounded-circle h6 mb-0">
-                        <i class="ri-group-fill"></i> 
-                        </span>
-                        <div>
-                            <h6 class="fw-semibold mb-2">15,750</h6>
-                            <span class="fw-medium text-secondary-light text-sm">Patients</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-sm mb-0"> <span class="text-primary-600">170</span>New patients admitted</p>
-                </div>
-            </div>
-            </div>
-            <div class="col-xxl-3 col-xl-4 col-sm-6">
-            <div class="card p-3 shadow-2 radius-8 h-100 bg-gradient-end-1">
-                <div class="card-body p-0">
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-8">
-                    
-                    <div class="d-flex align-items-center gap-2">
-                        <span class="mb-0 w-48-px h-48-px bg-success-100 text-success-600 flex-shrink-0 text-white d-flex justify-content-center align-items-center rounded-circle h6 mb-0">
-                        <i class="ri-wallet-3-fill"></i>
-                        </span>
-                        <div>
-                            <h6 class="fw-semibold mb-2">$42,400</h6>
-                            <span class="fw-medium text-secondary-light text-sm">Pharmacies </span>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-sm mb-0"> <span class="text-success-600">60,000 </span> Medicine on reserve</p>
-                </div>
-            </div>
-            </div>
 
-            
-            <!-- Earning Statistic -->
-            <div class="col-xxl-12">
-                <div class="card h-100">
-                    <div class="card-header">
-                        <div class="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                            <h6 class="mb-2 fw-bold text-lg mb-0">Earning Statistic</h6>
-                            <select class="form-select form-select-sm w-auto bg-base border-0 text-secondary-light">
-                                <option>This Month</option>
-                                <option>This Week</option>
-                                <option>This Year</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="card-body p-24">
-                        <ul class="d-flex flex-wrap align-items-center justify-content-center my-3 gap-3">
-                            <li class="d-flex align-items-center gap-2">
-                                <span class="w-12-px h-8-px rounded-pill bg-primary-600"></span>
-                                <span class="text-secondary-light text-sm fw-semibold">New Patient: 
-                                    <span class="text-primary-light fw-bold">50</span>
-                                </span>
-                            </li>
-                            <li class="d-flex align-items-center gap-2">
-                                <span class="w-12-px h-8-px rounded-pill bg-warning-600"></span>
-                                <span class="text-secondary-light text-sm fw-semibold">Old Patient:
-                                    <span class="text-primary-light fw-bold">  500</span>
-                                </span>
-                            </li>
-                        </ul>
-                        <div id="enrollmentChart" class="apexcharts-tooltip-style-1"></div>
-                    </div>
+          <!-- Total Projects -->
+          <div class="col-sm-6">
+            <div class="bg-base p-24 radius-20 h-100">
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-16">
+                <h6 class="text-secondary-light fw-medium text-md mb-0">Total Projects</h6>
+                <div class="dropdown">
+                  <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ph ph-dots-three text-secondary-light text-xl"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                    <li><button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">View</button>
+                    </li>
+                    <li><button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">Edit</button>
+                    </li>
+                  </ul>
                 </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-12">
+                <h3 class="fw-bold mb-0">845</h3>
+                <span
+                  class="w-48-px h-48-px bg-primary-50 text-primary-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                  <i class="ph ph-file-text"></i>
+                </span>
+              </div>
+              <div class="d-flex align-items-center gap-1 text-sm">
+                <span class="text-primary-600 fw-semibold d-flex align-items-center gap-1">
+                  <i class="ph ph-trend-up"></i>92.4% Avg
+                </span>
+                <span class="text-secondary-light fw-normal">Since last month</span>
+              </div>
             </div>
-            <!-- Earning Statistic -->
-            
-            <!-- Patient Visited by Depertment -->
-            <div class="col-xxl-6">
-                <div class="card h-100">
-                    <div class="card-header">
-                        <div class="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                            <h6 class="mb-2 fw-bold text-lg mb-0">Patient Visited by Depertment</h6>
-                        </div>
-                    </div>
-                    <div class="card-body p-24 d-flex align-items-center gap-16">
-                        <div id="radialMultipleBar"></div>
-                        <ul class="d-flex flex-column gap-12">
-                            <li>
-                                <span class="text-lg">Cardiology: <span class="text-primary-600 fw-semibold">80%</span> </span>
-                            </li>
-                            <li>
-                                <span class="text-lg">Psychiatry:  <span class="text-warning-600 fw-semibold">40%</span> </span>
-                            </li>
-                            <li>
-                                <span class="text-lg">Pediatrics: <span class="text-success-600 fw-semibold">10%</span> </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Patient Visited by Depertment -->
+          </div>
 
-            <!-- Patient Visit By Gender -->
-            <div class="col-xxl-6">
-                <div class="card h-100">
-                    <div class="card-header">
-                        <div class="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                            <h6 class="mb-2 fw-bold text-lg mb-0">Patient Visit By Gender</h6>
-                            <select class="form-select form-select-sm w-auto bg-base border-0 text-secondary-light">
-                                <option>This Month</option>
-                                <option>This Week</option>
-                                <option>This Year</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="card-body p-24">
-                        <ul class="d-flex flex-wrap align-items-center justify-content-center my-3 gap-3">
-                            <li class="d-flex align-items-center gap-2">
-                                <span class="w-12-px h-8-px rounded-pill bg-warning-600"></span>
-                                <span class="text-secondary-light text-sm fw-semibold">Male: 
-                                    <span class="text-primary-light fw-bold">200</span>
-                                </span>
-                            </li>
-                            <li class="d-flex align-items-center gap-2">
-                                <span class="w-12-px h-8-px rounded-pill bg-success-600"></span>
-                                <span class="text-secondary-light text-sm fw-semibold">Female: 
-                                    <span class="text-primary-light fw-bold"> 450</span>
-                                </span>
-                            </li>
-                        </ul>
-                        <div id="paymentStatusChart" class="margin-16-minus y-value-left"></div>
-                    </div>
+          <!-- Active Projects -->
+          <div class="col-sm-6">
+            <div class="bg-base p-24 radius-20 h-100">
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-16">
+                <h6 class="text-secondary-light fw-medium text-md mb-0">Active Projects</h6>
+                <div class="dropdown">
+                  <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ph ph-dots-three text-secondary-light text-xl"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                    <li><button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">View</button>
+                    </li>
+                    <li><button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">Edit</button>
+                    </li>
+                  </ul>
                 </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-12">
+                <h3 class="fw-bold mb-0">125</h3>
+                <span
+                  class="w-48-px h-48-px bg-success-50 text-success-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                  <i class="ph ph-device-mobile-speaker"></i>
+                </span>
+              </div>
+              <div class="d-flex align-items-center gap-1 text-sm">
+                <span class="text-warning-600 fw-semibold d-flex align-items-center gap-1">
+                  <i class="ph ph-arrows-down-up"></i>60.2% Avg
+                </span>
+                <span class="text-secondary-light fw-normal">Since last month</span>
+              </div>
             </div>
-            <!-- Patient Visit By Gender -->
-            
-            <!-- Top performance Start -->
-            <div class="col-xxl-4">
-                <div class="card">
-                    <div class="card-header border-bottom">
-                        <div class="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                            <h6 class="mb-2 fw-bold text-lg mb-0">Doctors List</h6>
-                            <a href="javascript:void(0)" class="text-primary-600 hover-text-primary d-flex align-items-center gap-1">
-                                View All
-                                <iconify-icon icon="solar:alt-arrow-right-linear" class="icon"></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex flex-column gap-24">
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center">
-                                <img src="assets/images/home-eight/doctor-img1.png" alt="Image" class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0">Dr. Davis</h6>
-                                    <span class="text-sm text-secondary-light fw-medium">Cardiology</span>
-                                </div>
-                                </div>
-                                <span class="bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm">Available</span>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center">
-                                <img src="assets/images/home-eight/doctor-img2.png" alt="Image" class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0">Dr. Riead</h6>
-                                    <span class="text-sm text-secondary-light fw-medium">Orthopedics</span>
-                                </div>
-                                </div>
-                                <span class="bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm">Available</span>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center">
-                                <img src="assets/images/home-eight/doctor-img3.png" alt="Image" class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0">Albert Flores</h6>
-                                    <span class="text-sm text-secondary-light fw-medium">Ophthalmology</span>
-                                </div>
-                                </div>
-                                <span class="bg-danger-focus text-danger-main px-10 py-4 radius-8 fw-medium text-sm">Not Available</span>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center">
-                                <img src="assets/images/home-eight/doctor-img4.png" alt="Image" class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0">Dr. Smith</h6>
-                                    <span class="text-sm text-secondary-light fw-medium">Cardiology</span>
-                                </div>
-                                </div>
-                                <span class="bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm">Available</span>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center">
-                                <img src="assets/images/home-eight/doctor-img6.png" alt="Image" class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0">Dr. Johnson</h6>
-                                    <span class="text-sm text-secondary-light fw-medium">Cardiology</span>
-                                </div>
-                                </div>
-                                <span class="bg-danger-focus text-danger-main px-10 py-4 radius-8 fw-medium text-sm">Not Available</span>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center">
-                                <img src="assets/images/home-eight/doctor-img5.png" alt="Image" class="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden">
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0">Dr. Martinez</h6>
-                                    <span class="text-sm text-secondary-light fw-medium">Cardiology</span>
-                                </div>
-                                </div>
-                                <span class="bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm">Available</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Top performance End -->
+          </div>
 
-            <div class="col-xxl-8">
-                <div class="card h-100">
-                <div class="card-header border-bottom bg-base py-16 px-24 d-flex align-items-center justify-content-between">
-                    <h6 class="text-lg fw-semibold mb-0">Latest Appointments</h6>
-                    <a href="javascript:void(0)" class="text-primary-600 hover-text-primary d-flex align-items-center gap-1">
-                    View All
-                    <iconify-icon icon="solar:alt-arrow-right-linear" class="icon"></iconify-icon>
-                    </a>
+          <!-- Completed Projects -->
+          <div class="col-sm-6">
+            <div class="bg-base p-24 radius-20 h-100">
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-16">
+                <h6 class="text-secondary-light fw-medium text-md mb-0">Completed Projects</h6>
+                <div class="dropdown">
+                  <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ph ph-dots-three text-secondary-light text-xl"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                    <li><button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">View</button>
+                    </li>
+                    <li><button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">Edit</button>
+                    </li>
+                  </ul>
                 </div>
-                <div class="card-body p-0">
-                    <div class="table-responsive scroll-sm">
-                    <table class="table bordered-table mb-0 rounded-0 border-0">
-                        <thead>
-                            <tr>
-                                <th scope="col" class="bg-transparent rounded-0">Name</th>
-                                <th scope="col" class="bg-transparent rounded-0">ID</th>
-                                <th scope="col" class="bg-transparent rounded-0">Date</th>
-                                <th scope="col" class="bg-transparent rounded-0">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>General Checkup</td>
-                                <td>#63254</td>
-                                <td>27 Mar 2024</td>
-                                <td> <span class="bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm">Completed</span> </td>
-                            </tr>
-                            <tr>
-                                <td>Blood test results </td>
-                                <td>3.053 ETH</td>
-                                <td>2h 5m 40s</td>
-                                <td> <span class="bg-danger-focus text-danger-main px-10 py-4 radius-8 fw-medium text-sm">Canceled</span> </td>
-                            </tr>
-                            <tr>
-                                <td>Heart Checkup</td>
-                                <td>3.053 ETH</td>
-                                <td>2h 5m 40s</td>
-                                <td> <span class="bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm">Completed</span> </td>
-                            </tr>
-                            <tr>
-                                <td>Vaccination</td>
-                                <td>3.053 ETH</td>
-                                <td>2h 5m 40s</td>
-                                <td> <span class="bg-danger-focus text-danger-main px-10 py-4 radius-8 fw-medium text-sm">Canceled</span> </td>
-                            </tr>
-                            <tr>
-                                <td>Dental Cleanup</td>
-                                <td>3.053 ETH</td>
-                                <td>2h 5m 40s</td>
-                                <td> <span class="bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm">Completed</span> </td>
-                            </tr>
-                            <tr>
-                                <td>Follow up Appointment </td>
-                                <td>3.053 ETH</td>
-                                <td>2h 5m 40s</td>
-                                <td> <span class="bg-danger-focus text-danger-main px-10 py-4 radius-8 fw-medium text-sm">Canceled</span> </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </div>
-                </div>
-                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-12">
+                <h3 class="fw-bold mb-0">240</h3>
+                <span
+                  class="w-48-px h-48-px bg-warning-50 text-warning-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                  <i class="ph ph-bank"></i>
+                </span>
+              </div>
+              <div class="d-flex align-items-center gap-1 text-sm">
+                <span class="text-danger-600 fw-semibold d-flex align-items-center gap-1">
+                  <i class="ph ph-trend-down"></i>09.4% Avg
+                </span>
+                <span class="text-secondary-light fw-normal">Since last month</span>
+              </div>
             </div>
-            <!-- Latest Performance End -->
+          </div>
+
+          <!-- Total Members -->
+          <div class="col-sm-6">
+            <div class="bg-base p-24 radius-20 h-100">
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-16">
+                <h6 class="text-secondary-light fw-medium text-md mb-0">Total Members</h6>
+                <div class="dropdown">
+                  <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ph ph-dots-three text-secondary-light text-xl"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                    <li><button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">View</button>
+                    </li>
+                    <li><button type="button"
+                        class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">Edit</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-12">
+                <h3 class="fw-bold mb-0">72</h3>
+                <span
+                  class="w-48-px h-48-px bg-danger-50 text-danger-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-2xl">
+                  <i class="ph ph-users-three"></i>
+                </span>
+              </div>
+              <div class="d-flex align-items-center gap-1 text-sm">
+                <span class="text-success-600 fw-semibold d-flex align-items-center gap-1">
+                  <i class="ph ph-trend-down"></i>44.7% Avg
+                </span>
+                <span class="text-secondary-light fw-normal">Since last month</span>
+              </div>
+            </div>
+          </div>
+
         </div>
-    </div>
+      </div>
 
-    <div class="col-xxxl-3">
-        <div class="row gy-4">
-            <div class="col-xxl-12 col-xl-6">
-                <div class="card h-100 radius-8 border-0">
-                    <div class="card-header border-bottom d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                        <h6 class="mb-2 fw-bold text-lg">Total Income</h6>
-                        <div class="">
-                        <select class="form-select form-select-sm w-auto bg-base border-0 text-secondary-light">
-                            <option>This Month</option>
-                            <option>This Week</option>
-                            <option>This Year</option>
-                        </select>
-                        </div>
-                    </div>
-                    <div class="card-body p-24">
-    
-                        <div class="position-relative">
-                            <div id="statisticsDonutChart" class="mt-36 flex-grow-1 apexcharts-tooltip-z-none title-style circle-none"></div>
-                            <div class="text-center position-absolute top-50 start-50 translate-middle">
-                                <span class="text-secondary-light">Income</span>
-                                <h6 class="">$28,500</h6>
-                            </div>
-                        </div>
-                        
-                        <ul class="row gy-4 mt-3">
-                            <li class="col-6 d-flex flex-column align-items-center">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="w-12-px h-8-px rounded-pill bg-warning-600"></span>
-                                    <span class="text-secondary-light text-sm fw-normal">Net Income</span>
-                                </div>
-                                <h6 class="text-primary-light fw-bold mb-0">$50,000</h6>
-                            </li>
-                            <li class="col-6 d-flex flex-column align-items-center">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="w-12-px h-8-px rounded-pill bg-success-600"></span>
-                                    <span class="text-secondary-light text-sm fw-normal">Commission </span>
-                                </div>
-                                <h6 class="text-primary-light fw-bold mb-0">$20,000</h6>
-                            </li>
-                        </ul>
-                   
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-12 col-xl-6">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                            <h6 class="mb-2 fw-bold text-lg mb-0">Available Treatments</h6>
-                            <a href="javascript:void(0)" class="text-primary-600 hover-text-primary d-flex align-items-center gap-1">
-                            View All
-                            <iconify-icon icon="solar:alt-arrow-right-linear" class="icon"></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between gap-3 mb-24">
-                            <div class="d-flex align-items-center gap-12">
-                                <div class="w-40-px h-40-px rounded-circle flex-shrink-0 bg-info-50 d-flex justify-content-center align-items-center">
-                                    <img src="assets/images/home-eight/treatment-icon1.png" alt="Image" class="">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0 fw-normal">Psychiatry</h6>
-                                    <span class="text-sm text-secondary-light fw-normal">57 Doctors</span>
-                                </div>
-                            </div>
-                            <span class="text-secondary-light">08:45 AM</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between gap-3 mb-24">
-                            <div class="d-flex align-items-center gap-12">
-                                <div class="w-40-px h-40-px rounded-circle flex-shrink-0 bg-success-50 d-flex justify-content-center align-items-center">
-                                    <img src="assets/images/home-eight/treatment-icon2.png" alt="Image" class="">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0 fw-normal">Orthopedic</h6>
-                                    <span class="text-sm text-secondary-light fw-normal">85 Doctors</span>
-                                </div>
-                            </div>
-                            <span class="text-secondary-light">08:45 AM</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between gap-3 mb-24">
-                            <div class="d-flex align-items-center gap-12">
-                                <div class="w-40-px h-40-px rounded-circle flex-shrink-0 bg-lilac-50 d-flex justify-content-center align-items-center">
-                                    <img src="assets/images/home-eight/treatment-icon3.png" alt="Image" class="">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0 fw-normal">Cardiology</h6>
-                                    <span class="text-sm text-secondary-light fw-normal">60 Doctors</span>
-                                </div>
-                            </div>
-                            <span class="text-secondary-light">08:45 AM</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between gap-3 mb-24">
-                            <div class="d-flex align-items-center gap-12">
-                                <div class="w-40-px h-40-px rounded-circle flex-shrink-0 bg-warning-50 d-flex justify-content-center align-items-center">
-                                    <img src="assets/images/home-eight/treatment-icon4.png" alt="Image" class="">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0 fw-normal">Pediatrics</h6>
-                                    <span class="text-sm text-secondary-light fw-normal">120 Doctors</span>
-                                </div>
-                            </div>
-                            <span class="text-secondary-light">08:45 AM</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between gap-3 mb-24">
-                            <div class="d-flex align-items-center gap-12">
-                                <div class="w-40-px h-40-px rounded-circle flex-shrink-0 bg-danger-50 d-flex justify-content-center align-items-center">
-                                    <img src="assets/images/home-eight/treatment-icon5.png" alt="Image" class="">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0 fw-normal">Neurology </h6>
-                                    <span class="text-sm text-secondary-light fw-normal">25 Doctors</span>
-                                </div>
-                            </div>
-                            <span class="text-secondary-light">08:45 AM</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between gap-3 mb-0">
-                            <div class="d-flex align-items-center gap-12">
-                                <div class="w-40-px h-40-px rounded-circle flex-shrink-0 bg-primary-50 d-flex justify-content-center align-items-center">
-                                    <img src="assets/images/home-eight/treatment-icon6.png" alt="Image" class="">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="text-md mb-0 fw-normal">Gastroenterology</h6>
-                                    <span class="text-sm text-secondary-light fw-normal">95 Doctors</span>
-                                </div>
-                            </div>
-                            <span class="text-secondary-light">08:45 AM</span>
-                        </div>
+      <!-- Projects Roadmap -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20 h-100">
 
-                    </div>
-                </div>
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-info-50 border border-info-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-target text-info-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Projects Roadmap</h6>
+                <span class="text-secondary-light text-sm fw-normal">A comprehensive overview of our upcoming projects
+                  and their timelines.</span>
+              </div>
             </div>
-            <div class="col-xxl-12 col-xl-6">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                            <h6 class="mb-2 fw-bold text-lg mb-0">Health Reports Document</h6>
-                            <a href="javascript:void(0)" class="text-primary-600 hover-text-primary d-flex align-items-center gap-1">
-                            View All
-                            <iconify-icon icon="solar:alt-arrow-right-linear" class="icon"></iconify-icon>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex flex-column gap-24">
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center gap-12">
-                                    <div class="flex-shrink-0">
-                                        <img src="assets/images/home-eight/icon-pdf.png" alt="Image" class="">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="text-md mb-0 fw-normal">Checkup Result.pdf</h6>
-                                        <span class="text-xs text-secondary-light fw-normal">2.5mb</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align gap-12">
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-delete-bin-5-line"></i>
-                                    </button>
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-success-100 text-success-600 bg-hover-success-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-download-2-fill"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center gap-12">
-                                    <div class="flex-shrink-0">
-                                        <img src="assets/images/home-eight/icon-text.png" alt="Image" class="">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="text-md mb-0 fw-normal">Checkup Result.doc</h6>
-                                        <span class="text-xs text-secondary-light fw-normal">2mb</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align gap-12">
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-delete-bin-5-line"></i>
-                                    </button>
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-success-100 text-success-600 bg-hover-success-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-download-2-fill"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center gap-12">
-                                    <div class="flex-shrink-0">
-                                        <img src="assets/images/home-eight/icon-pdf.png" alt="Image" class="">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="text-md mb-0 fw-normal">Prescription.pdf</h6>
-                                        <span class="text-xs text-secondary-light fw-normal">3mb</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align gap-12">
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-delete-bin-5-line"></i>
-                                    </button>
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-success-100 text-success-600 bg-hover-success-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-download-2-fill"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center gap-12">
-                                    <div class="flex-shrink-0">
-                                        <img src="assets/images/home-eight/icon-text.png" alt="Image" class="">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="text-md mb-0 fw-normal">Xray Result.doc</h6>
-                                        <span class="text-xs text-secondary-light fw-normal">3mb</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align gap-12">
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-delete-bin-5-line"></i>
-                                    </button>
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-success-100 text-success-600 bg-hover-success-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-download-2-fill"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center gap-12">
-                                    <div class="flex-shrink-0">
-                                        <img src="assets/images/home-eight/icon-pdf.png" alt="Image" class="">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="text-md mb-0 fw-normal">Glucose Level Report.pdf</h6>
-                                        <span class="text-xs text-secondary-light fw-normal">3mb</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align gap-12">
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-delete-bin-5-line"></i>
-                                    </button>
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-success-100 text-success-600 bg-hover-success-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-download-2-fill"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                <div class="d-flex align-items-center gap-12">
-                                    <div class="flex-shrink-0">
-                                        <img src="assets/images/home-eight/icon-text.png" alt="Image" class="">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="text-md mb-0 fw-normal">Checkup Result.doc</h6>
-                                        <span class="text-xs text-secondary-light fw-normal">2mb</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align gap-12">
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-delete-bin-5-line"></i>
-                                    </button>
-                                    <button type="button" class="w-32-px h-32-px d-inline-flex justify-content-center align-items-center bg-success-100 text-success-600 bg-hover-success-600 text-hover-white text-md rounded-circle">
-                                        <i class="ri-download-2-fill"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div>
+          </div>
 
-                    </div>
-                </div>
-            </div>
+          <!-- Chart -->
+          <div id="projectsRoadmapChart"></div>
+
         </div>
+      </div>
+
     </div>
+
+    <!-- ===== All Projects + Projects Progress ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- All Projects -->
+      <div class="col-xl-8">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-chart-pie-slice text-danger-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">All Projects</h6>
+                <span class="text-secondary-light text-sm fw-normal">Manage and collaborate on all your projects from
+                  start to finish in one place.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-hover table-style" id="allProjectsTable">
+              <thead>
+                <tr>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">ID <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Project Name | Client
+                    <i class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Start Date <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">End Date <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Budget <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Status <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Action <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- Row 1 -->
+                <tr>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#546</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Product development</h6>
+                    <span class="text-xs text-secondary-light">Vandhana Enterprises</span>
+                  </td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">25 May 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">05 Dec 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light" data-order="830.92">$ 830.92</td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-danger-200 text-danger-600 bg-base px-16 py-6 fw-medium text-sm">Cancelled</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#435</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Python upgrade</h6>
+                    <span class="text-xs text-secondary-light">XYZ Enterprises</span>
+                  </td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">25 May 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">05 Dec 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light" data-order="783.83">$ 783.83</td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-success-200 text-success-600 bg-base px-16 py-6 fw-medium text-sm">Completed</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#324</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Project alpho</h6>
+                    <span class="text-xs text-secondary-light">Shell Enterprises</span>
+                  </td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">25 May 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">05 Dec 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light" data-order="832">$ 832</td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-danger-200 text-danger-600 bg-base px-16 py-6 fw-medium text-sm">Cancelled</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#456</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Hotel management system</h6>
+                    <span class="text-xs text-secondary-light">AR Traders</span>
+                  </td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">25 May 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">05 Dec 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light" data-order="45.99">$ 45.99</td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-warning-200 text-warning-600 bg-base px-16 py-6 fw-medium text-sm">In Progress</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#213</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Product development</h6>
+                    <span class="text-xs text-secondary-light">Honda Enterprises</span>
+                  </td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">25 May 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">05 Dec 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light" data-order="837.92">$ 837.92</td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-primary-200 text-primary-600 bg-base px-16 py-6 fw-medium text-sm">Pending</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 6 -->
+                <tr>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#890</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Project monitoring</h6>
+                    <span class="text-xs text-secondary-light">Sri Sai Krishna Stores</span>
+                  </td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">25 May 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">05 Dec 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light" data-order="92.93">$ 92.93</td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-warning-200 text-warning-600 bg-base px-16 py-6 fw-medium text-sm">In Progress</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 7 -->
+                <tr>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#768</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Hotel management system</h6>
+                    <span class="text-xs text-secondary-light">Shell Enterprises</span>
+                  </td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">25 May 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">05 Dec 2026</td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light" data-order="73.02">$ 73.02</td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-success-200 text-success-600 bg-base px-16 py-6 fw-medium text-sm">Completed</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Footer : Dense toggle + pagination -->
+          <div class="d-flex align-items-center justify-content-between gap-8 mt-20 pt-16 border-top border-neutral-200">
+            <div class="d-flex align-items-center gap-8">
+              <div class="form-switch switch-primary style-big d-flex align-items-center justify-content-center gap-12">
+                <input class="form-check-input w-60-px h-32-px bg-neutral-200 border border-neutral-300" type="checkbox"
+                  role="switch" id="allProjectsDenseSwitch">
+                <label class="form-check-label" for="allProjectsDenseSwitch">Dense</label>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-16">
+              <div class="d-flex align-items-center gap-8">
+                <span class="text-secondary-light text-sm">Rows per page:</span>
+                <select class="form-select form-select-sm w-auto border text-secondary-light rounded bg-base"
+                  style="width: 60px !important;">
+                  <option>7</option>
+                  <option>25</option>
+                  <option>50</option>
+                </select>
+              </div>
+              <span class="text-secondary-light text-sm">1–7 of 1000</span>
+              <div class="d-flex align-items-center gap-4">
+                <button
+                  class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light">
+                  <i class="ph ph-caret-left text-lg"></i>
+                </button>
+                <button
+                  class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light">
+                  <i class="ph ph-caret-right text-lg"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Projects Progress -->
+      <div class="col-xl-4">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-lilac-50 border border-lilac-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-chart-bar text-lilac-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Projects Progress</h6>
+                <span class="text-secondary-light text-sm fw-normal">Monitoring project status.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Donut -->
+          <div class="position-relative d-flex justify-content-center my-12">
+            <div id="projectsProgressChart"></div>
+            <div
+              class="position-absolute top-50 start-50 translate-middle text-center rounded-circle bg-neutral-50 d-flex flex-column align-items-center justify-content-center"
+              style="width:130px; height:130px;">
+              <h3 class="fw-bold mb-0">4576</h3>
+              <span class="text-secondary-light text-sm">Total Projects</span>
+            </div>
+          </div>
+
+          <!-- Legend -->
+          <div class="d-flex flex-column gap-16 mt-16">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#facc15;"></span>
+                <span class="text-secondary-light text-sm fw-medium">In Progress</span>
+              </div>
+              <span class="text-primary-light text-sm fw-semibold">48%</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#06b6d4;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Pending</span>
+              </div>
+              <span class="text-primary-light text-sm fw-semibold">12%</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#22c55e;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Completed</span>
+              </div>
+              <span class="text-primary-light text-sm fw-semibold">25%</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-8">
+                <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#f87171;"></span>
+                <span class="text-secondary-light text-sm fw-medium">Cancelled</span>
+              </div>
+              <span class="text-primary-light text-sm fw-semibold">15%</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
+
+    <!-- ===== Working Schedule + Team Members + Chat ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- Working Schedule -->
+      <div class="col-xl-4 col-lg-6">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-center justify-content-between gap-8 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <span
+                class="w-44-px h-44-px bg-lilac-50 text-lilac-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                <i class="ph ph-clock"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-md">Working Schedule</h6>
+                <span class="text-secondary-light text-xs fw-normal">Project status updates.</span>
+              </div>
+            </div>
+            <a href="javascript:void(0)"
+              class="btn bg-base border border-primary-600 text-primary-600 rounded-pill px-16 py-8 text-sm fw-medium">
+              Add New Event
+            </a>
+          </div>
+
+          <!-- Calendar -->
+          <div class="d-flex align-items-center justify-content-between gap-8 mb-12">
+            <span id="scheduleMonthLabel"
+              class="d-inline-flex align-items-center gap-1 fw-semibold text-primary-light text-md"></span>
+            <div class="d-flex align-items-center gap-8">
+              <button type="button" id="schedulePrevMonth"
+                class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light"
+                aria-label="Previous month">
+                <i class="ph ph-caret-left"></i>
+              </button>
+              <button type="button" id="scheduleNextMonth"
+                class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light"
+                aria-label="Next month">
+                <i class="ph ph-caret-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="schedule-calendar mb-20" id="scheduleCalendar">
+            <span class="cal-head">Su</span><span class="cal-head">Mo</span><span class="cal-head">Tu</span><span
+              class="cal-head">We</span><span class="cal-head">Th</span><span class="cal-head">Fr</span><span
+              class="cal-head">Sa</span>
+          </div>
+
+          <!-- Events -->
+          <div class="schedule-event mb-16" style="--evt:#8b5cf6;">
+            <div class="d-flex align-items-center justify-content-between gap-8 mb-1">
+              <span class="text-primary-light fw-bold text-sm">08:30-10:30</span>
+              <a href="javascript:void(0)" class="text-primary-600 text-xs fw-medium">View Details <i
+                  class="ph-bold ph-arrow-right"></i></a>
+            </div>
+            <h6 class="text-sm fw-semibold mb-1 text-primary-light">UI/UX Design SaaS Software Project Meeting</h6>
+            <span class="text-xs text-secondary-light">Lead By <span class="text-primary-600 fw-medium">Darrell
+                Steward</span></span>
+          </div>
+          <div class="schedule-event mb-16" style="--evt:#facc15;">
+            <div class="d-flex align-items-center justify-content-between gap-8 mb-1">
+              <span class="text-primary-light fw-bold text-sm">08:30-10:30</span>
+              <a href="javascript:void(0)" class="text-primary-600 text-xs fw-medium">View Details <i
+                  class="ph-bold ph-arrow-right"></i></a>
+            </div>
+            <h6 class="text-sm fw-semibold mb-1 text-primary-light">UI/UX Design SaaS Software Project Meeting</h6>
+            <span class="text-xs text-secondary-light">Lead By <span class="text-primary-600 fw-medium">Darrell
+                Steward</span></span>
+          </div>
+          <div class="schedule-event mb-16" style="--evt:#22c55e;">
+            <div class="d-flex align-items-center justify-content-between gap-8 mb-1">
+              <span class="text-primary-light fw-bold text-sm">08:30-10:30</span>
+              <a href="javascript:void(0)" class="text-primary-600 text-xs fw-medium">View Details <i
+                  class="ph-bold ph-arrow-right"></i></a>
+            </div>
+            <h6 class="text-sm fw-semibold mb-1 text-primary-light">UI/UX Design SaaS Software Project Meeting</h6>
+            <span class="text-xs text-secondary-light">Lead By <span class="text-primary-600 fw-medium">Darrell
+                Steward</span></span>
+          </div>
+          <div class="schedule-event" style="--evt:#f87171;">
+            <div class="d-flex align-items-center justify-content-between gap-8 mb-1">
+              <span class="text-primary-light fw-bold text-sm">08:30-10:30</span>
+              <a href="javascript:void(0)" class="text-primary-600 text-xs fw-medium">View Details <i
+                  class="ph-bold ph-arrow-right"></i></a>
+            </div>
+            <h6 class="text-sm fw-semibold mb-1 text-primary-light">UI/UX Design SaaS Software Project Meeting</h6>
+            <span class="text-xs text-secondary-light">Lead By <span class="text-primary-600 fw-medium">Darrell
+                Steward</span></span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Team Members -->
+      <div class="col-xl-4 col-lg-6">
+        <div class="bg-base p-24 radius-20 h-100 d-flex flex-column">
+
+          <!-- Header -->
+          <div class="d-flex align-items-center justify-content-between gap-8 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <span
+                class="w-44-px h-44-px bg-info-50 text-info-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                <i class="ph ph-users-three"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-md">Team Members</h6>
+                <span class="text-secondary-light text-xs fw-normal">Team member's task progress</span>
+              </div>
+            </div>
+            <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+              <option>This Week</option>
+              <option>This Month</option>
+            </select>
+          </div>
+
+          <!-- Column header -->
+          <div class="d-flex align-items-center gap-12 bg-neutral-50 radius-8 px-16 py-12 mb-8">
+            <span class="text-secondary-light text-xs fw-semibold flex-grow-1">Client</span>
+            <span class="text-secondary-light text-xs fw-semibold" style="width:70px;">Hours</span>
+            <span class="text-secondary-light text-xs fw-semibold" style="width:52px;">Status</span>
+          </div>
+
+          <!-- List -->
+          <div class="team-list flex-grow-1">
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img1.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Fülöp Kata</h6>
+                  <span class="text-xs text-secondary-light">Project Manager</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">120 hrs</span>
+              <div id="teamProgress1" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img2.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Molnár Fruzsina</h6>
+                  <span class="text-xs text-secondary-light">Scrum Master</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">85 hrs</span>
+              <div id="teamProgress2" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img3.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Molnár Fruzsina</h6>
+                  <span class="text-xs text-secondary-light">Team Leader</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">85 hrs</span>
+              <div id="teamProgress3" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img4.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Molnár Fruzsina</h6>
+                  <span class="text-xs text-secondary-light">Software Developer</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">85 hrs</span>
+              <div id="teamProgress4" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img5.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Molnár Fruzsina</h6>
+                  <span class="text-xs text-secondary-light">Software Tester</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">85 hrs</span>
+              <div id="teamProgress5" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row team-row--active d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img6.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Nagy Timea</h6>
+                  <span class="text-xs text-secondary-light">UI/UX Designer</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">96 hrs</span>
+              <div id="teamProgress6" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img7.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Dudás Nikolett</h6>
+                  <span class="text-xs text-secondary-light">Software Tester</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">45 hrs</span>
+              <div id="teamProgress7" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img8.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Dudás Nikolett</h6>
+                  <span class="text-xs text-secondary-light">Software Development</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">74 hrs</span>
+              <div id="teamProgress8" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img9.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Dudás Nikolett</h6>
+                  <span class="text-xs text-secondary-light">Software Developer</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">85 hrs</span>
+              <div id="teamProgress9" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img10.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Dudás Nikolett</h6>
+                  <span class="text-xs text-secondary-light">Software Tester</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">45 hrs</span>
+              <div id="teamProgress10" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img11.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Dudás Nikolett</h6>
+                  <span class="text-xs text-secondary-light">Ethical Hacker</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">15 hrs</span>
+              <div id="teamProgress11" class="team-ring" style="width:48px;"></div>
+            </div>
+
+            <div class="team-row d-flex align-items-center gap-12">
+              <div class="d-flex align-items-center gap-10 flex-grow-1 min-w-0">
+                <img src="assets/images/homes/recent-order-img1.png" alt="" class="w-36-px h-36-px rounded-circle flex-shrink-0">
+                <div class="min-w-0">
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light text-truncate">Kiss Laura</h6>
+                  <span class="text-xs text-secondary-light">Ethical Hacker</span>
+                </div>
+              </div>
+              <span class="text-sm fw-medium text-primary-light" style="width:70px;">97 hrs</span>
+              <div id="teamProgress12" class="team-ring" style="width:48px;"></div>
+            </div>
+
+          </div>
+
+          <!-- See All -->
+          <div class="mt-16">
+            <a href="javascript:void(0)"
+              class="d-flex align-items-center gap-4 text-primary-600 text-sm fw-medium text-hover-primary-800"
+              style="width:fit-content;">
+              See All Members <i class="ph-bold ph-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Chat Projects User -->
+      <div class="col-xl-4 col-lg-12">
+        <div class="bg-base p-24 radius-20 h-100 d-flex flex-column">
+
+          <!-- Header -->
+          <div class="d-flex align-items-center justify-content-between gap-8 pb-16 mb-16 border-bottom border-neutral-200 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <span
+                class="w-44-px h-44-px bg-success-50 text-success-600 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                <i class="ph ph-chat-circle-dots"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-md">Chat Projects User</h6>
+                <span class="text-secondary-light text-xs fw-normal">2025-11-10 09:15 AM</span>
+              </div>
+            </div>
+            <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+              <option>Jenny Wilson</option>
+              <option>Darrell Steward</option>
+            </select>
+          </div>
+
+          <!-- Chat body -->
+          <div class="chat-body flex-grow-1">
+
+            <!-- received -->
+            <div class="chat-msg chat-msg--in mb-16">
+              <img src="assets/images/users/user1.png" alt="" class="w-32-px h-32-px rounded-circle flex-shrink-0">
+              <div>
+                <span class="text-xs text-secondary-light d-block mb-1">Eleanor, 9 hours ago</span>
+                <div class="chat-bubble chat-bubble--yellow">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</div>
+                <div class="d-flex align-items-center gap-12 mt-1 text-secondary-light text-sm">
+                  <i class="ph ph-smiley"></i><i class="ph ph-trash"></i><i class="ph ph-share-fat"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- sent -->
+            <div class="chat-msg chat-msg--out mb-16">
+              <div>
+                <span class="text-xs text-secondary-light d-block mb-1 text-end">8 hours ago</span>
+                <div class="chat-bubble chat-bubble--grey">Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s.</div>
+                <div class="d-flex align-items-center justify-content-end gap-12 mt-1 text-secondary-light text-sm">
+                  <i class="ph ph-smiley"></i><i class="ph ph-trash"></i><i class="ph ph-share-fat"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- received -->
+            <div class="chat-msg chat-msg--in mb-16">
+              <img src="assets/images/users/user2.png" alt="" class="w-32-px h-32-px rounded-circle flex-shrink-0">
+              <div>
+                <span class="text-xs text-secondary-light d-block mb-1">Eleanor, 6 hours ago</span>
+                <div class="chat-bubble chat-bubble--yellow">When an unknown printer took a galley of type and scrambled
+                  it to make a type specimen book. It is a long established fact that a reader will be distracted by the
+                  readable content of a page when looking at its layout.</div>
+                <div class="d-flex align-items-center gap-12 mt-1 text-secondary-light text-sm">
+                  <i class="ph ph-smiley"></i><i class="ph ph-trash"></i><i class="ph ph-share-fat"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- sent -->
+            <div class="chat-msg chat-msg--out mb-16">
+              <div>
+                <span class="text-xs text-secondary-light d-block mb-1 text-end">8 hours ago</span>
+                <div class="chat-bubble chat-bubble--grey">Lorem Ipsum has been the industry's standard dummy</div>
+                <div class="d-flex align-items-center justify-content-end gap-12 mt-1 text-secondary-light text-sm">
+                  <i class="ph ph-smiley"></i><i class="ph ph-trash"></i><i class="ph ph-share-fat"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- received -->
+            <div class="chat-msg chat-msg--in mb-16">
+              <img src="assets/images/users/user1.png" alt="" class="w-32-px h-32-px rounded-circle flex-shrink-0">
+              <div>
+                <span class="text-xs text-secondary-light d-block mb-1">Eleanor, 8 hours ago</span>
+                <div class="chat-bubble chat-bubble--yellow">It is a long established fact that a reader will be
+                  distracted by the readable content of a page when looking at its layout.</div>
+              </div>
+            </div>
+
+            <!-- sent -->
+            <div class="chat-msg chat-msg--out">
+              <div>
+                <span class="text-xs text-secondary-light d-block mb-1 text-end">1 hours ago</span>
+                <div class="chat-bubble chat-bubble--grey"><span class="fw-semibold d-block mb-1">Thanks a lot...</span>It
+                  is a long established fact that a reader will be distracted by the readable content of a page when
+                  looking at its layout.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Input -->
+          <div class="d-flex align-items-center gap-8 mt-16">
+            <input type="text" class="form-control bg-neutral-50 border border-neutral-200 rounded-pill px-20 py-12 text-sm"
+              placeholder="Say Something...">
+            <button type="button"
+              class="btn bg-primary-600 text-white rounded-pill px-20 py-12 d-inline-flex align-items-center gap-8 text-sm fw-medium flex-shrink-0">
+              Send <i class="ph ph-paper-plane-right"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
   </div>
+
   @@include('../layouts/_footer.html')
 </main>
+
 @@include('../partial-html/_template-bottom.html')
 
-<script>
-     // ===================== Average Enrollment Rate Start =============================== 
-     function createChartTwo(chartId, color1, color2) {
-        var options = {
-            series: [{
-                name: 'New Patient',
-                data: [48, 35, 55, 32, 48, 30, 55, 50, 57]
-            }, {
-                name: 'Old Patient',
-                data: [12, 20, 15, 26, 22, 60, 40, 48, 25]
-            }],
-            legend: {
-                show: false 
-            },
-            chart: {
-                type: 'area',
-                width: '100%',
-                height: 270,
-                toolbar: {
-                    show: false
-                },
-                padding: {
-                    left: 0,
-                    right: 0,
-                    top: 0,
-                    bottom: 0
-                }
-            },
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                curve: 'smooth',
-                width: 3,
-                colors: [color1, color2], // Use two colors for the lines
-                lineCap: 'round'
-            },
-            grid: {
-                show: true,
-                borderColor: '#D1D5DB',
-                strokeDashArray: 1,
-                position: 'back',
-                xaxis: {
-                    lines: {
-                        show: false
-                    }
-                },
-                yaxis: {
-                    lines: {
-                        show: true
-                    }
-                },
-                row: {
-                    colors: undefined,
-                    opacity: 0.5
-                },
-                column: {
-                    colors: undefined,
-                    opacity: 0.5
-                },
-                padding: {
-                    top: -20,
-                    right: 0,
-                    bottom: -10,
-                    left: 0
-                },
-            },
-            colors: [color1, color2], // Set color for series
-            fill: {
-                type: 'gradient',
-                colors: [color1, color2], // Use two colors for the gradient
-                // gradient: {
-                //     shade: 'light',
-                //     type: 'vertical',
-                //     shadeIntensity: 0.5,
-                //     gradientToColors: [`${color1}`, `${color2}00`], // Bottom gradient colors with transparency
-                //     inverseColors: false,
-                //     opacityFrom: .6,
-                //     opacityTo: 0.3,
-                //     stops: [0, 100],
-                // },
-                gradient: {
-                    shade: 'light',
-                    type: 'vertical',
-                    shadeIntensity: 0.5,
-                    gradientToColors: [undefined, `${color2}00`], // Apply transparency to both colors
-                    inverseColors: false,
-                    opacityFrom: [0.4, 0.6], // Starting opacity for both colors
-                    opacityTo: [0.3, 0.3], // Ending opacity for both colors
-                    stops: [0, 100],
-                },
-            },
-            markers: {
-                colors: [color1, color2], // Use two colors for the markers
-                strokeWidth: 3,
-                size: 0,
-                hover: {
-                    size: 10
-                }
-            },
-            xaxis: {
-                labels: {
-                    show: false
-                },
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                tooltip: {
-                    enabled: false
-                },
-                labels: {
-                    formatter: function (value) {
-                        return value;
-                    },
-                    style: {
-                        fontSize: "14px"
-                    }
-                }
-            },
-            yaxis: {
-                labels: {
-                    formatter: function (value) {
-                    return "$" + value + "k";
-                    },
-                    style: {
-                    fontSize: "14px"
-                    }
-                },
-            },
-            tooltip: {
-                x: {
-                    format: 'dd/MM/yy HH:mm'
-                }
-            }
-        };
-
-        var chart = new ApexCharts(document.querySelector(`#${chartId}`), options);
-        chart.render();
-    }
-
-    createChartTwo('enrollmentChart', '#487FFF', '#FF9F29');
-    // ===================== Average Enrollment Rate End =============================== 
-    
-    
-  // ================================ User Activities Donut chart End ================================ 
-  var options = { 
-      series: [30, 25],
-      colors: ['#FF9F29', '#45B369'],
-      labels: ['Female', 'Male'] ,
-      legend: {
-          show: false 
-      },
-      chart: {
-        type: 'donut',    
-        height: 260,
-        sparkline: {
-          enabled: true // Remove whitespace
-        },
-        margin: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0
-        },
-        padding: {
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0
-        }
-      },
-      stroke: {
-        width: 0,
-      },
-      dataLabels: {
-        enabled: false
-      },
-      responsive: [{
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: 200
-          },
-          legend: {
-            position: 'bottom'
-          }
-        }
-      }],
-    };
-
-    var chart = new ApexCharts(document.querySelector("#statisticsDonutChart"), options);
-    chart.render();
-  // ================================ User Activities Donut chart End ================================ 
-
-  
-    // ================================ Client Payment Status chart End ================================ 
-    var options = {
-      series: [{
-        name: 'Net Profit',
-        data: [44, 100, 40, 56, 30, 58, 50]
-      }, {
-        name: 'Free Cash',
-        data: [60, 120, 60, 90, 50, 95, 90]
-      }],
-      colors: ['#45B369', '#FF9F29'],
-      labels: ['Active', 'New', 'Total'] ,
-      
-      legend: {
-          show: false 
-      },
-      chart: {
-        type: 'bar',
-        height: 260,
-        toolbar: {
-          show: false
-        },
-      },
-      grid: {
-          show: true,
-          borderColor: '#D1D5DB',
-          strokeDashArray: 4, // Use a number for dashed style
-          position: 'back',
-      },
-      plotOptions: {
-        bar: {
-          borderRadius: 4,
-          columnWidth: 8,
-        },
-      },
-      dataLabels: {
-        enabled: false
-      },
-      states: {
-        hover: {
-        filter: {
-            type: 'none'
-            }
-        }
-    },
-      stroke: {
-        show: true,
-        width: 0,
-        colors: ['transparent']
-      },
-      xaxis: {
-        categories: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
-      },
-      fill: {
-        opacity: 1,
-        width: 18,
-      },
-    };
-
-    var chart = new ApexCharts(document.querySelector("#paymentStatusChart"), options);
-    chart.render();
-  // ================================ Client Payment Status chart End ================================ 
-
-    // ================================= Multiple Radial Bar Chart Start =============================
-    var options = {
-        series: [80, 40, 10],
-        chart: {
-            height: 300,
-            type: 'radialBar',
-        },
-        colors: ['#3D7FF9', '#ff9f29', '#16a34a'], 
-        stroke: {
-            lineCap: 'round',
-        },
-        plotOptions: {
-            radialBar: {
-                hollow: {
-                    size: '10%',  // Adjust this value to control the bar width
-                },
-                dataLabels: {
-                    name: {
-                        fontSize: '16px',
-                    },
-                    value: {
-                        fontSize: '16px',
-                    },
-                    // total: {
-                    //     show: true,
-                    //     formatter: function (w) {
-                    //         return '82%'
-                    //     }
-                    // }
-                },
-                track: {
-                    margin: 20, // Space between the bars
-                }
-            }
-        },
-        labels: ['Cardiology', 'Psychiatry', 'Pediatrics'],
-    };
-
-    var chart = new ApexCharts(document.querySelector("#radialMultipleBar"), options);
-    chart.render();
-    // ================================= Multiple Radial Bar Chart End =============================
-
-</script>
+<script src="assets/js/homeEightChart.js"></script>
 
 </body>
+
 </html>
