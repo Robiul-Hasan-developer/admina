@@ -961,6 +961,544 @@
 
     </div>
 
+    <!-- ===== Projects Analysis + To Do List ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- Projects Analysis -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-lilac-50 border border-lilac-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-chart-line text-lilac-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Projects Analysis</h6>
+                <span class="text-secondary-light text-sm fw-normal">Summary of project results for informed
+                  decisions.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div id="projectsAnalysisChart"></div>
+
+          <!-- Legend -->
+          <div class="d-flex align-items-center justify-content-center flex-wrap gap-20 mt-12">
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-10-px h-10-px rounded-circle flex-shrink-0 bg-primary-600"></span>
+              <span class="text-secondary-light text-sm fw-medium">Projects</span>
+            </div>
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#22c55e;"></span>
+              <span class="text-secondary-light text-sm fw-medium">Progress</span>
+            </div>
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#facc15;"></span>
+              <span class="text-secondary-light text-sm fw-medium">Tasks</span>
+            </div>
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#f87171;"></span>
+              <span class="text-secondary-light text-sm fw-medium">Revenue</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- To Do List -->
+      <div class="col-xl-6">
+        <div class="bg-base p-24 radius-20 h-100">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-danger-50 border border-danger-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-list-checks text-danger-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">To Do List</h6>
+                <span class="text-secondary-light text-sm fw-normal">Organize tasks efficiently with this handy to-do
+                  list.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-hover table-style" id="toDoListTable">
+              <thead>
+                <tr>
+                  <th class="border-bottom-0 py-16 px-20" style="width:20px;">
+                    <input class="form-check-input mt-0" type="checkbox" id="toDoCheckAll">
+                  </th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Task ID <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Task Description |
+                    Assigned To <i class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Priority | Due Date <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Status <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Action <i
+                      class="ph ph-arrows-down-up ms-1"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- Row 1 -->
+                <tr>
+                  <td class="py-12 px-20"><input class="form-check-input mt-0" type="checkbox"></td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#546</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Hotel management system</h6>
+                    <span class="text-xs text-secondary-light">Devon Lane</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">High</span>
+                    <span class="text-xs text-secondary-light">12/08/26</span>
+                  </td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-danger-200 text-danger-600 bg-base px-16 py-6 fw-medium text-sm">Cancelled</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                  <td class="py-12 px-20"><input class="form-check-input mt-0" type="checkbox"></td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#435</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Python upgrade</h6>
+                    <span class="text-xs text-secondary-light">Kristin Watson</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">Medium</span>
+                    <span class="text-xs text-secondary-light">12/08/26</span>
+                  </td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-success-200 text-success-600 bg-base px-16 py-6 fw-medium text-sm">Completed</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr>
+                  <td class="py-12 px-20"><input class="form-check-input mt-0" type="checkbox"></td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#324</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Schedule meeting with Fila</h6>
+                    <span class="text-xs text-secondary-light">Dianne Russell</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">Low</span>
+                    <span class="text-xs text-secondary-light">12/08/26</span>
+                  </td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-danger-200 text-danger-600 bg-base px-16 py-6 fw-medium text-sm">Cancelled</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr>
+                  <td class="py-12 px-20"><input class="form-check-input mt-0" type="checkbox"></td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#456</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Next JS upgrade</h6>
+                    <span class="text-xs text-secondary-light">Robert Fox</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">High</span>
+                    <span class="text-xs text-secondary-light">12/08/26</span>
+                  </td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-warning-200 text-warning-600 bg-base px-16 py-6 fw-medium text-sm">In Progress</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr>
+                  <td class="py-12 px-20"><input class="form-check-input mt-0" type="checkbox"></td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#213</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Send proposal to APR Ltd</h6>
+                    <span class="text-xs text-secondary-light">Jerome Bell</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">Medium</span>
+                    <span class="text-xs text-secondary-light">12/08/26</span>
+                  </td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-info-200 text-info-600 bg-base px-16 py-6 fw-medium text-sm">Pending</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 6 -->
+                <tr>
+                  <td class="py-12 px-20"><input class="form-check-input mt-0" type="checkbox"></td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#890</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Hotel management system</h6>
+                    <span class="text-xs text-secondary-light">Cameron Williamson</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">High</span>
+                    <span class="text-xs text-secondary-light">12/08/26</span>
+                  </td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-warning-200 text-warning-600 bg-base px-16 py-6 fw-medium text-sm">In Progress</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 7 -->
+                <tr>
+                  <td class="py-12 px-20"><input class="form-check-input mt-0" type="checkbox"></td>
+                  <td class="py-12 px-20 text-sm fw-medium text-primary-light">#768</td>
+                  <td class="py-12 px-20">
+                    <h6 class="text-sm fw-bold mb-0 text-primary-light">Engineering lite touch</h6>
+                    <span class="text-xs text-secondary-light">Ralph Edwards</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <span class="d-block text-sm fw-semibold text-primary-light line-height-1 mb-1">Low</span>
+                    <span class="text-xs text-secondary-light">12/08/26</span>
+                  </td>
+                  <td class="py-12 px-20"><span
+                      class="badge rounded-pill border border-success-200 text-success-600 bg-base px-16 py-6 fw-medium text-sm">Completed</span>
+                  </td>
+                  <td class="py-12 px-20">
+                    <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="hugeicons:view" class="icon text-lg line-height-1"></iconify-icon>View</button></li>
+                        <li><button type="button"
+                            class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-10"><iconify-icon
+                              icon="lucide:edit" class="icon text-lg line-height-1"></iconify-icon>Edit</button></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Footer : Dense toggle + pagination -->
+          <div class="d-flex align-items-center justify-content-between gap-8 mt-20 pt-16 border-top border-neutral-200">
+            <div class="d-flex align-items-center gap-8">
+              <div class="form-switch switch-primary style-big d-flex align-items-center justify-content-center gap-12">
+                <input class="form-check-input w-60-px h-32-px bg-neutral-200 border border-neutral-300" type="checkbox"
+                  role="switch" id="toDoListDenseSwitch">
+                <label class="form-check-label" for="toDoListDenseSwitch">Dense</label>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-16">
+              <div class="d-flex align-items-center gap-8">
+                <span class="text-secondary-light text-sm">Rows per page:</span>
+                <select class="form-select form-select-sm w-auto border text-secondary-light rounded bg-base"
+                  style="width: 60px !important;">
+                  <option>7</option>
+                  <option>25</option>
+                  <option>50</option>
+                </select>
+              </div>
+              <span class="text-secondary-light text-sm">1–7 of 1000</span>
+              <div class="d-flex align-items-center gap-4">
+                <button
+                  class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light">
+                  <i class="ph ph-caret-left text-lg"></i>
+                </button>
+                <button
+                  class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light">
+                  <i class="ph ph-caret-right text-lg"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== Active Project ===== -->
+    <div class="row gy-4 mt-1">
+      <div class="col-12">
+        <div class="bg-base p-24 radius-20">
+
+          <!-- Header -->
+          <div class="d-flex align-items-start justify-content-between gap-8 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <div
+                class="w-48-px h-48-px bg-info-50 border border-info-200 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                <i class="ph ph-file-text text-info-600 text-2xl"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Active Project</h6>
+                <span class="text-secondary-light text-sm fw-normal">This project is currently in progress, focusing on
+                  innovative solutions and collaboration to achieve our goals efficiently.</span>
+              </div>
+            </div>
+            <div>
+              <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+                <option>Project 01</option>
+                <option>Project 02</option>
+                <option>Project 03</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Info boxes -->
+          <div class="row g-16 mb-20">
+            <div class="col-lg-6">
+              <div class="bg-success-50 radius-16 p-20 h-100">
+                <div class="d-flex align-items-start justify-content-between gap-8">
+                  <div class="d-flex align-items-center gap-12">
+                    <span
+                      class="w-44-px h-44-px bg-neutral-900 text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                      <i class="ph ph-sparkle"></i>
+                    </span>
+                    <div>
+                      <span class="text-secondary-light text-sm fw-normal d-block">Project Alpho</span>
+                      <h5 class="fw-bold mb-0 text-secondary-light">Client: <span class="text-primary-light">Shawn
+                          Kennedy</span></h5>
+                    </div>
+                  </div>
+                  <div class="dropdown flex-shrink-0">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                      <li><button type="button"
+                          class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">View</button>
+                      </li>
+                      <li><button type="button"
+                          class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">Edit</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-8 mt-12">
+                  <i class="ph ph-clock text-primary-600"></i>
+                  <span class="text-primary-600 fw-semibold text-sm">10:30 AM</span>
+                  <span class="text-secondary-light text-sm">In 15 Feb, 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="bg-danger-50 radius-16 p-20 h-100">
+                <div class="d-flex align-items-start justify-content-between gap-8">
+                  <div class="d-flex align-items-center gap-12">
+                    <span
+                      class="w-44-px h-44-px bg-neutral-900 text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-xl">
+                      <i class="ph ph-flower-lotus"></i>
+                    </span>
+                    <div>
+                      <span class="text-secondary-light text-sm fw-normal d-block">Assigned To</span>
+                      <h5 class="fw-bold mb-0 text-primary-light">Vaxo Corporation</h5>
+                    </div>
+                  </div>
+                  <div class="dropdown flex-shrink-0">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <iconify-icon icon="entypo:dots-three-vertical" class="icon text-secondary-light"></iconify-icon>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end p-12 border bg-base shadow">
+                      <li><button type="button"
+                          class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">View</button>
+                      </li>
+                      <li><button type="button"
+                          class="dropdown-item px-16 py-8 rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900">Edit</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-8 mt-12">
+                  <i class="ph ph-clock text-primary-600"></i>
+                  <span class="text-primary-600 fw-semibold text-sm">05:17 PM</span>
+                  <span class="text-secondary-light text-sm">In 21 Mar, 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="bg-primary-50 radius-16 p-24">
+            <div class="project-timeline">
+              <div class="tl-line">
+                <div class="tl-line__fill" style="width:25%;"></div>
+              </div>
+              <div class="timeline-grid">
+
+                <div class="tl-col">
+                  <div class="tl-step text-center">
+                    <span class="tl-step__badge">1st Step</span>
+                    <h6 class="tl-step__name">Planning</h6>
+                  </div>
+                  <span class="tl-dot"></span>
+                  <span class="tl-circle" style="background:#0d9488;">0%</span>
+                </div>
+
+                <div class="tl-col">
+                  <span class="tl-circle" style="background:#ca8a04;">25%</span>
+                  <span class="tl-dot"></span>
+                  <div class="tl-step text-center">
+                    <span class="tl-step__badge">2nd Step</span>
+                    <h6 class="tl-step__name">Design</h6>
+                  </div>
+                </div>
+
+                <div class="tl-col">
+                  <div class="tl-step text-center">
+                    <span class="tl-step__badge">3rd Step</span>
+                    <h6 class="tl-step__name">Development</h6>
+                  </div>
+                  <span class="tl-dot"></span>
+                  <span class="tl-circle" style="background:#16a34a;">50%</span>
+                </div>
+
+                <div class="tl-col">
+                  <span class="tl-circle" style="background:#b45454;">75%</span>
+                  <span class="tl-dot"></span>
+                  <div class="tl-step text-center">
+                    <span class="tl-step__badge">4th Step</span>
+                    <h6 class="tl-step__name">Testing</h6>
+                  </div>
+                </div>
+
+                <div class="tl-col">
+                  <div class="tl-step text-center">
+                    <span class="tl-step__badge">5th Step</span>
+                    <h6 class="tl-step__name">Launch</h6>
+                  </div>
+                  <span class="tl-dot"></span>
+                  <span class="tl-circle" style="background:#6366f1;">100%</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="d-flex align-items-center justify-content-between gap-8 mt-20 flex-wrap">
+            <span class="text-secondary-light text-sm fw-medium">Project Total Hours : <span
+                class="text-primary-600 fw-bold">384 hrs</span></span>
+            <span class="text-secondary-light text-sm fw-medium">Project Hours Left : <span
+                class="text-primary-600 fw-bold">144 hrs</span></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 
   @@include('../layouts/_footer.html')
