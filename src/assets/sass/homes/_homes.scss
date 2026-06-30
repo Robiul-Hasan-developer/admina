@@ -321,7 +321,8 @@
 #auditReportTable.table-dense,
 #latestInvestmentTable.table-dense,
 #allProjectsTable.table-dense,
-#toDoListTable.table-dense {
+#toDoListTable.table-dense,
+#marketOverviewTable.table-dense {
   tbody td {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
@@ -731,6 +732,41 @@
     grid-auto-flow: column;
     justify-content: start;
     gap: 16px;
+  }
+}
+
+
+/* ===== Crypto Overview sparklines (index-9) ===== */
+.crypto-spark {
+  width: 100px;
+
+  .apexcharts-canvas,
+  svg {
+    width: 100% !important;
+  }
+}
+
+
+/* ===== Daily Average Overview + Market Cap (index-9) ===== */
+.avg-ring {
+  width: 84px;
+  flex-shrink: 0;
+}
+.market-graph {
+  width: 100px;
+}
+.market-row {
+  padding: 12px 8px;
+  border-radius: 12px;
+
+  & + .market-row {
+    border-top: 1px solid var(--neutral-100);
+    border-radius: 0;
+  }
+  &.market-row--active {
+    background-color: #f4f3fd;
+    border-radius: 12px;
+    border-top-color: transparent;
   }
 }
 
