@@ -227,7 +227,6 @@
 
 /* ===== Active Trading Bots (index-3) ===== */
 .bot-card {
-  border: 1px solid #EEF0F4;
   box-shadow: 0 6px 18px rgba(17, 24, 39, 0.04);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 
@@ -767,6 +766,18 @@
     background-color: #f4f3fd;
     border-radius: 12px;
     border-top-color: transparent;
+  }
+}
+
+
+/* ===== Visitors By Device + Sales Revenue (index-10) ===== */
+#visitorsDeviceGauge,
+#salesRevenueChart {
+  width: 100%;
+
+  .apexcharts-canvas,
+  svg {
+    width: 100% !important;
   }
 }
 

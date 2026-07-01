@@ -1,0 +1,16 @@
+
+[data-theme=dark] {
+    .table>:not(caption)>*>* {
+        color: #fff;
+        background-color: #273142;
+    }
+    .table-style thead tr th, table tbody tr td, .table-style thead tr th:first-child, .table-style thead tr th:last-child, .table-style tbody tr:hover td:last-child, .table-style tbody tr:hover td:first-child {
+        border-color: var(--neutral-200) !important;
+    }
+}
+
+
+
+.bg-warning-100 {
+    background-color: #fef9c31f !important;
+}
