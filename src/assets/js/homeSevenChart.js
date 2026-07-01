@@ -99,7 +99,7 @@ var portfolioChart;
       labels: { style: { fontSize: "12px", colors: "#9ca3af" } },
     },
     grid: {
-      borderColor: "#eef1f6",
+      borderColor: "#ffffff00",
       strokeDashArray: 0,
       xaxis: { lines: { show: true } },
       yaxis: { lines: { show: true } },
@@ -169,7 +169,7 @@ var sessionsOverviewChart = new ApexCharts(document.querySelector("#sessionsOver
     }
   },
   grid: {
-    borderColor: '#f1f5f9',
+    borderColor: '#ffffff00',
     strokeDashArray: 4,
     xaxis: { lines: { show: false } },
     yaxis: { lines: { show: true } }

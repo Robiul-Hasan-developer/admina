@@ -321,7 +321,8 @@
 #latestInvestmentTable.table-dense,
 #allProjectsTable.table-dense,
 #toDoListTable.table-dense,
-#marketOverviewTable.table-dense {
+#marketOverviewTable.table-dense,
+#recentOrdersTable.table-dense {
   tbody td {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
@@ -757,14 +758,20 @@
 .market-row {
   padding: 12px 8px;
   border-radius: 12px;
+  transition: background-color 0.2s ease;
 
   & + .market-row {
     border-top: 1px solid var(--neutral-100);
     border-radius: 0;
   }
+  &:hover,
   &.market-row--active {
-    background-color: #f4f3fd;
+    background-color: #f5f4fd;
     border-radius: 12px;
+    border-top-color: transparent;
+  }
+  &:hover + .market-row,
+  &.market-row--active + .market-row {
     border-top-color: transparent;
   }
 }
@@ -778,6 +785,194 @@
   .apexcharts-canvas,
   svg {
     width: 100% !important;
+  }
+}
+
+
+/* ===== Browser Activity table (index-10) ===== */
+.browser-activity-table {
+  border-collapse: separate;
+  border-spacing: 0;
+
+  thead th {
+    background-color: #faf7f8;
+    border: 0;
+    padding: 12px 16px;
+    white-space: nowrap;
+    color: var(--neutral-500);
+  }
+  thead th:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  thead th:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  tbody td {
+    padding: 14px 16px;
+    border: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  tbody tr:not(:last-child) td {
+    border-bottom: 1px solid var(--neutral-100);
+  }
+
+  tbody tr:hover td {
+    background-color: #f5f4fd;
+    border-bottom-color: transparent;
+  }
+  tbody tr:hover td:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: inset 1px 0 0 #e7e4fb, inset 0 1px 0 #e7e4fb, inset 0 -1px 0 #e7e4fb;
+  }
+  tbody tr:hover td:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: inset -1px 0 0 #e7e4fb, inset 0 1px 0 #e7e4fb, inset 0 -1px 0 #e7e4fb;
+  }
+  tbody tr:hover td:not(:first-child):not(:last-child) {
+    box-shadow: inset 0 1px 0 #e7e4fb, inset 0 -1px 0 #e7e4fb;
+  }
+}
+
+/* ===== Top Revenue Channels (index-10) ===== */
+.channel-row {
+  padding: 15px 0;
+
+  & + .channel-row {
+    border-top: 1px solid var(--neutral-100);
+  }
+}
+.channel-progress {
+  height: 5px;
+  border-radius: 999px;
+  background-color: var(--neutral-200);
+  overflow: hidden;
+
+  span {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+  }
+}
+
+
+/* ===== Upcoming Sales - vertical timeline (index-10) ===== */
+.sales-timeline {
+  &__item {
+    display: grid;
+    grid-template-columns: 60px 22px 1fr;
+    gap: 12px;
+    padding-bottom: 26px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__ring {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 4px solid currentColor;
+    background-color: var(--white, #fff);
+    margin-top: 4px;
+    z-index: 1;
+  }
+
+  &__item:not(:last-child) &__marker::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: var(--neutral-200);
+  }
+}
+
+/* ===== Top Categories - radialBar gauge (index-10) ===== */
+.category-gauge {
+  width: 96px;
+  height: 96px;
+
+  .apexcharts-canvas {
+    margin: 0 auto;
+  }
+}
+
+/* ===== Top Audience Locations (index-10) ===== */
+.audience-flag {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.audience-change {
+  width: 96px;
+}
+.audience-value {
+  width: 96px;
+}
+.audience-row {
+  padding: 14px 12px;
+  border-radius: 12px;
+  transition: background-color 0.2s ease;
+
+  & + .audience-row {
+    border-top: 1px solid var(--neutral-100);
+  }
+
+  &:hover {
+    background-color: #f5f4fd;
+    border-top-color: transparent;
+  }
+  &:hover + .audience-row {
+    border-top-color: transparent;
+  }
+}
+
+
+/* ===== Recent Orders table (index-10) ===== */
+.recent-orders-table {
+  border-collapse: separate;
+  border-spacing: 0;
+
+  tbody tr td {
+    border-bottom: 1px solid var(--neutral-200);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  tbody tr:hover td {
+    background-color: #f5f4fd;
+    border-bottom-color: transparent;
+  }
+  tbody tr:hover td:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: inset 1px 0 0 #e7e4fb, inset 0 1px 0 #e7e4fb, inset 0 -1px 0 #e7e4fb;
+  }
+  tbody tr:hover td:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: inset -1px 0 0 #e7e4fb, inset 0 1px 0 #e7e4fb, inset 0 -1px 0 #e7e4fb;
+  }
+  tbody tr:hover td:not(:first-child):not(:last-child) {
+    box-shadow: inset 0 1px 0 #e7e4fb, inset 0 -1px 0 #e7e4fb;
   }
 }
 

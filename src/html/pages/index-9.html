@@ -1163,6 +1163,393 @@
       </div>
     </div>
 
+    <!-- ===== Browser Activity + Recent Transactions + Top Revenue Channels ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- Browser Activity -->
+      <div class="col-xl-4 col-lg-6">
+        <div class="bg-base p-24 radius-16 h-100 d-flex flex-column">
+          <div class="d-flex align-items-center justify-content-between gap-8 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <span class="w-44-px h-44-px bg-lilac-100 d-flex align-items-center justify-content-center rounded-circle text-xl text-lilac-600 flex-shrink-0">
+                <i class="ph ph-globe-hemisphere-west"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Browser Activity</h6>
+                <span class="text-secondary-light text-sm fw-normal">Identify popular browsers</span>
+              </div>
+            </div>
+            <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+              <option>Weekly</option>
+              <option>Monthly</option>
+              <option>Yearly</option>
+            </select>
+          </div>
+
+          <div class="table-responsive flex-grow-1">
+            <table id="browserActivityTable" class="table browser-activity-table mb-0">
+              <thead>
+                <tr>
+                  <th class="text-sm fw-semibold text-secondary-light">Browser</th>
+                  <th class="text-sm fw-semibold text-secondary-light">Sessions</th>
+                  <th class="text-sm fw-semibold text-secondary-light">Bounce Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="logos:firefox" width="32" height="32" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Mozilla Firefox</h6>
+                        <span class="text-xs text-secondary-light">Mozilla,Inc</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-sm fw-semibold text-primary-light">4500</td>
+                  <td class="text-sm fw-semibold text-primary-light">4500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="logos:microsoft-edge" width="32" height="32" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Microsoft Edge</h6>
+                        <span class="text-xs text-secondary-light">Microsoft,Inc</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-sm fw-semibold text-primary-light">7837</td>
+                  <td class="text-sm fw-semibold text-primary-light">7837</td>
+                </tr>
+                <tr class="browser-activity-table__active">
+                  <td>
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="logos:safari" width="32" height="32" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Safari</h6>
+                        <span class="text-xs text-secondary-light">Assignee</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-sm fw-semibold text-primary-light">8371</td>
+                  <td class="text-sm fw-semibold text-primary-light">8371</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="logos:chrome" width="32" height="32" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Google Chrome</h6>
+                        <span class="text-xs text-secondary-light">Google,Inc</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-sm fw-semibold text-primary-light">7403</td>
+                  <td class="text-sm fw-semibold text-primary-light">7403</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="logos:opera" width="32" height="32" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Opera Mini</h6>
+                        <span class="text-xs text-secondary-light">Opera,Inc</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-sm fw-semibold text-primary-light">9183</td>
+                  <td class="text-sm fw-semibold text-primary-light">9183</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="logos:safari" width="32" height="32" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Safari</h6>
+                        <span class="text-xs text-secondary-light">Apple Corp,Inc</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-sm fw-semibold text-primary-light">9183</td>
+                  <td class="text-sm fw-semibold text-primary-light">9183</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="flat-color-icons:globe" width="32" height="32" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Others</h6>
+                        <span class="text-xs text-secondary-light">Others,Inc</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-sm fw-semibold text-primary-light">8397</td>
+                  <td class="text-sm fw-semibold text-primary-light">8397</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-16 pt-16">
+            <a href="javascript:void(0)" class="text-primary-600 fw-semibold text-sm d-inline-flex align-items-center gap-2">
+              See All Activity <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Transactions -->
+      <div class="col-xl-4 col-lg-6">
+        <div class="bg-base p-24 radius-16 h-100 d-flex flex-column">
+          <div class="d-flex align-items-center justify-content-between gap-8 mb-16">
+            <div class="d-flex align-items-center gap-12">
+              <span class="w-44-px h-44-px bg-warning-100 d-flex align-items-center justify-content-center rounded-circle text-xl text-warning-600 flex-shrink-0">
+                <i class="ph ph-swap"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Recent Transactions</h6>
+                <span class="text-secondary-light text-sm fw-normal">Latest transaction activity.</span>
+              </div>
+            </div>
+            <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+              <option>Weekly</option>
+              <option>Monthly</option>
+              <option>Yearly</option>
+            </select>
+          </div>
+
+          <div class="flex-grow-1">
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <span class="w-44-px h-44-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-xl" style="background:#dcfce7; color:#22c55e;"><i class="ph ph-qr-code"></i></span>
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">UPI Payment</h6>
+                  <span class="text-xs text-secondary-light">Online Transaction</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$84.50</h6>
+                <span class="text-xs text-secondary-light">12 Jun, 2026</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <span class="w-44-px h-44-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-xl" style="background:#fee2e2; color:#f87171;"><i class="ph ph-wallet"></i></span>
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Digital Wallet</h6>
+                  <span class="text-xs text-secondary-light">Card Payment</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$456.75</h6>
+                <span class="text-xs text-secondary-light">12 Jun, 2026</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <span class="w-44-px h-44-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-xl" style="background:#dbeafe; color:#3b82f6;"><i class="ph ph-credit-card"></i></span>
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Mastro Card ****7893</h6>
+                  <span class="text-xs text-secondary-light">Online Transaction</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$2,450.00</h6>
+                <span class="text-xs text-secondary-light">12 Jun, 2026</span>
+              </div>
+            </div>
+            <div class="market-row market-row--active d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <span class="w-44-px h-44-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-xl" style="background:#fef9c3; color:#eab308;"><i class="ph ph-money"></i></span>
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Cash On Delivery</h6>
+                  <span class="text-xs text-secondary-light">Pay On Delivery</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$415.00</h6>
+                <span class="text-xs text-secondary-light">12 Jun, 2026</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <span class="w-44-px h-44-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-xl" style="background:#dcfce7; color:#22c55e;"><i class="ph ph-money"></i></span>
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Cash On Delivery</h6>
+                  <span class="text-xs text-secondary-light">Pay On Delivery</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$812.99</h6>
+                <span class="text-xs text-secondary-light">12 Jun, 2026</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <span class="w-44-px h-44-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-xl" style="background:#fef9c3; color:#eab308;"><i class="ph ph-credit-card"></i></span>
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Visa Card ****2563</h6>
+                  <span class="text-xs text-secondary-light">Card Payment</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$712.99</h6>
+                <span class="text-xs text-secondary-light">12 Jun, 2026</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <span class="w-44-px h-44-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-xl" style="background:#fee2e2; color:#f87171;"><i class="ph ph-wallet"></i></span>
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Digital Wallet</h6>
+                  <span class="text-xs text-secondary-light">Online Transaction</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$312.99</h6>
+                <span class="text-xs text-secondary-light">12 Jun, 2026</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <span class="w-44-px h-44-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-xl" style="background:#cffafe; color:#06b6d4;"><i class="ph ph-qr-code"></i></span>
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">UPI Payment</h6>
+                  <span class="text-xs text-secondary-light">Online Transaction</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$112.99</h6>
+                <span class="text-xs text-secondary-light">12 Jun, 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16 pt-16">
+            <a href="javascript:void(0)" class="text-primary-600 fw-semibold text-sm d-inline-flex align-items-center gap-2">
+              See All Transactions <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Revenue Channels -->
+      <div class="col-xl-4 col-lg-12">
+        <div class="bg-base p-24 radius-16 h-100">
+          <div class="d-flex align-items-center justify-content-between gap-8 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <span class="w-44-px h-44-px bg-lilac-100 d-flex align-items-center justify-content-center rounded-circle text-xl text-lilac-600 flex-shrink-0">
+                <i class="ph ph-package"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Top Revenue Channels</h6>
+                <span class="text-secondary-light text-sm fw-normal">Primary Sources of Revenue</span>
+              </div>
+            </div>
+            <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+              <option>Weekly</option>
+              <option>Monthly</option>
+              <option>Yearly</option>
+            </select>
+          </div>
+
+          <!-- Segmented bar -->
+          <div class="d-flex mb-2">
+            <span class="text-sm fw-semibold text-primary-light" style="width:25%;">25%</span>
+            <span class="text-sm fw-semibold text-primary-light" style="width:45%;">45%</span>
+            <span class="text-sm fw-semibold text-primary-light" style="width:15%;">15%</span>
+            <span class="text-sm fw-semibold text-primary-light" style="width:5%;">5%</span>
+            <span class="text-sm fw-semibold text-primary-light text-end" style="width:15%;">15%</span>
+          </div>
+          <div class="payment-status-bar d-flex">
+            <span style="width:25%; background:#06b6d4;"></span>
+            <span style="width:45%; background:#22c55e;"></span>
+            <span style="width:15%; background:#facc15;"></span>
+            <span style="width:5%; background:#6366f1;"></span>
+            <span style="width:15%; background:#f87171;"></span>
+          </div>
+
+          <!-- Overall Adds -->
+          <div class="d-flex align-items-center justify-content-between gap-8 mt-16 pb-16 mb-8 border-bottom border-neutral-200">
+            <span class="text-secondary-light text-sm fw-medium">Overall Adds</span>
+            <div class="d-flex align-items-center gap-8">
+              <span class="text-success-600 text-xs fw-semibold d-inline-flex align-items-center gap-1"><i class="ph ph-arrows-down-up text-xs"></i>3.5%</span>
+              <h6 class="mb-0 fw-bold text-md text-primary-light">2,25,957</h6>
+            </div>
+          </div>
+
+          <!-- Channel list -->
+          <div class="channel-row d-flex align-items-center gap-12">
+            <span class="w-40-px h-40-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-lg" style="background:#dcfce7; color:#22c55e;"><i class="ph ph-google-logo"></i></span>
+            <div class="flex-grow-1 min-w-0">
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-8">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">Google Ads</h6>
+                <div class="d-flex align-items-center gap-8">
+                  <span class="text-sm fw-bold text-primary-light">$ 73.02</span>
+                  <span class="badge rounded-pill bg-success-50 text-success-600 px-8 py-2 fw-semibold text-xs d-inline-flex align-items-center gap-1"><i class="ph ph-arrows-down-up text-xs"></i>3.5%</span>
+                </div>
+              </div>
+              <div class="channel-progress"><span style="width:62%; background:#22c55e;"></span></div>
+            </div>
+          </div>
+          <div class="channel-row d-flex align-items-center gap-12">
+            <span class="w-40-px h-40-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-lg" style="background:#dbeafe; color:#2563eb;"><i class="ph ph-facebook-logo"></i></span>
+            <div class="flex-grow-1 min-w-0">
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-8">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">Facebook Ads</h6>
+                <div class="d-flex align-items-center gap-8">
+                  <span class="text-sm fw-bold text-primary-light">$ 92.93</span>
+                  <span class="badge rounded-pill bg-info-50 text-info-600 px-8 py-2 fw-semibold text-xs d-inline-flex align-items-center gap-1"><i class="ph ph-arrows-down-up text-xs"></i>4.2%</span>
+                </div>
+              </div>
+              <div class="channel-progress"><span style="width:55%; background:#06b6d4;"></span></div>
+            </div>
+          </div>
+          <div class="channel-row d-flex align-items-center gap-12">
+            <span class="w-40-px h-40-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-lg" style="background:#ede9fe; color:#8b5cf6;"><i class="ph ph-envelope-simple"></i></span>
+            <div class="flex-grow-1 min-w-0">
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-8">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">Email Marketing</h6>
+                <div class="d-flex align-items-center gap-8">
+                  <span class="text-sm fw-bold text-primary-light">$ 4500</span>
+                  <span class="badge rounded-pill bg-primary-50 text-primary-600 px-8 py-2 fw-semibold text-xs d-inline-flex align-items-center gap-1"><i class="ph ph-arrows-down-up text-xs"></i>4.5%</span>
+                </div>
+              </div>
+              <div class="channel-progress"><span style="width:70%; background:#6366f1;"></span></div>
+            </div>
+          </div>
+          <div class="channel-row d-flex align-items-center gap-12">
+            <span class="w-40-px h-40-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-lg" style="background:#fef9c3; color:#eab308;"><i class="ph ph-share-network"></i></span>
+            <div class="flex-grow-1 min-w-0">
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-8">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">Referral Traffic</h6>
+                <div class="d-flex align-items-center gap-8">
+                  <span class="text-sm fw-bold text-primary-light">$ 837.92</span>
+                  <span class="badge rounded-pill bg-warning-50 text-warning-600 px-8 py-2 fw-semibold text-xs d-inline-flex align-items-center gap-1"><i class="ph ph-arrows-down-up text-xs"></i>7.5%</span>
+                </div>
+              </div>
+              <div class="channel-progress"><span style="width:50%; background:#facc15;"></span></div>
+            </div>
+          </div>
+          <div class="channel-row d-flex align-items-center gap-12">
+            <span class="w-40-px h-40-px d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 text-lg" style="background:#fee2e2; color:#f87171;"><i class="ph ph-arrow-bend-up-right"></i></span>
+            <div class="flex-grow-1 min-w-0">
+              <div class="d-flex align-items-center justify-content-between gap-8 mb-8">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">Direct Traffic</h6>
+                <div class="d-flex align-items-center gap-8">
+                  <span class="text-sm fw-bold text-primary-light">$ 475.12</span>
+                  <span class="badge rounded-pill bg-danger-50 text-danger-600 px-8 py-2 fw-semibold text-xs d-inline-flex align-items-center gap-1"><i class="ph ph-arrow-down text-xs"></i>3.1%</span>
+                </div>
+              </div>
+              <div class="channel-progress"><span style="width:65%; background:#6366f1;"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   @@include('../layouts/_footer.html')

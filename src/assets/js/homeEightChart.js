@@ -39,7 +39,7 @@ var projectsRoadmapChart;
       labels: { style: { fontSize: "12px", colors: "#64748b" } },
     },
     grid: {
-      borderColor: "#f1f5f9",
+      borderColor: "#ffffff00",
       strokeDashArray: 0,
       xaxis: { lines: { show: true } },
       yaxis: { lines: { show: false } },
@@ -268,7 +268,7 @@ var projectsAnalysisChart;
       labels: { style: { fontSize: "12px", colors: "#9ca3af" } },
     },
     grid: {
-      borderColor: "#f1f5f9",
+      borderColor: "#ffffff00",
       strokeDashArray: 4,
       xaxis: { lines: { show: false } },
       yaxis: { lines: { show: true } },

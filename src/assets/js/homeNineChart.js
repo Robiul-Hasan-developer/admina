@@ -89,7 +89,7 @@ var cryptoStatsChart;
       },
     },
     grid: {
-      borderColor: "#f1f5f9",
+      borderColor: "#ffffff00",
       strokeDashArray: 0,
       xaxis: { lines: { show: false } },
       yaxis: { lines: { show: true } },

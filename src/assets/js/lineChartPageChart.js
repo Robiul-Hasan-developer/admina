@@ -138,7 +138,7 @@
       },
       grid: {
           show: true,
-          borderColor: '#D1D5DB',
+          borderColor: '#ffffff00',
           strokeDashArray: 3,
           position: 'back',
           xaxis: {
@@ -267,7 +267,7 @@
         },
         grid: {
             show: true,
-            borderColor: '#D1D5DB',
+            borderColor: '#ffffff00',
             strokeDashArray: 3,
           row: {
             colors: ['#f3f3f3', 'transparent'],
@@ -347,7 +347,7 @@
       },
       grid: {
           show: true,
-          borderColor: '#D1D5DB',
+          borderColor: '#ffffff00',
           strokeDashArray: 3,
           position: 'back',
           xaxis: {
@@ -455,7 +455,7 @@
         },
         grid: {
           show: true,
-          borderColor: '#D1D5DB',
+          borderColor: '#ffffff00',
           strokeDashArray: 3,
           position: 'back',
         },
@@ -552,7 +552,7 @@
                 colors: ['transparent', 'transparent'], // takes an array which will be repeated on columns
                 opacity: 0.5
             },
-            borderColor: '#D1D5DB',
+            borderColor: '#ffffff00',
             strokeDashArray: 3,
         },
         yaxis: {

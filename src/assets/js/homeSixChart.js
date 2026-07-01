@@ -72,7 +72,7 @@ var revenueMarginChart;
       },
     },
     grid: {
-      borderColor: "#f1f5f9",
+      borderColor: "#ffffff00",
       strokeDashArray: 4,
       xaxis: { lines: { show: false } },
       yaxis: { lines: { show: true } },
@@ -207,7 +207,7 @@ var receivablesPayableChart;
       labels: { style: { fontSize: "11px", colors: "#9ca3af" } },
     },
     grid: {
-      borderColor: "#f1f5f9",
+      borderColor: "#ffffff00",
       strokeDashArray: 0,
       xaxis: { lines: { show: false } },
       yaxis: { lines: { show: true } },

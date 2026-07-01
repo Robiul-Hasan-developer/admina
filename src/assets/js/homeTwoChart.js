@@ -120,7 +120,7 @@ var audienceOverviewChart = new ApexCharts(
       },
     },
     grid: {
-      borderColor: "#f3f4f6",
+      borderColor: "#ffffff00",
       strokeDashArray: 0,
       xaxis: { lines: { show: false } },
       yaxis: { lines: { show: true } },
@@ -251,7 +251,7 @@ var sessionsOverviewChart = new ApexCharts(document.querySelector("#sessionsOver
     }
   },
   grid: {
-    borderColor: '#f1f5f9',
+    borderColor: '#ffffff00',
     strokeDashArray: 4,
     xaxis: { lines: { show: false } },
     yaxis: { lines: { show: true } }
@@ -353,7 +353,7 @@ var averageIncomeChart = new ApexCharts(document.querySelector("#averageIncomeCh
     }
   },
   grid: {
-    borderColor: '#f1f5f9',
+    borderColor: '#ffffff00',
     strokeDashArray: 0,
     xaxis: { lines: { show: true } },
     yaxis: { lines: { show: false } }
@@ -421,7 +421,7 @@ var performanceOverviewChart = new ApexCharts(document.querySelector("#performan
     }
   },
   grid: {
-    borderColor: '#f1f5f9',
+    borderColor: '#ffffff00',
     strokeDashArray: 0,
     xaxis: { lines: { show: false } },
     yaxis: { lines: { show: true } }
@@ -548,7 +548,7 @@ var totalOrdersChart = new ApexCharts(document.querySelector("#totalOrdersChart"
     }
   },
   grid: {
-    borderColor: '#f1f5f9',
+    borderColor: '#ffffff00',
     strokeDashArray: 3,
     xaxis: { lines: { show: false } },
     yaxis: { lines: { show: true } }
@@ -678,7 +678,7 @@ var dailyVisitInsightsChart = new ApexCharts(document.querySelector("#dailyVisit
     max: 100
   },
   grid: {
-    borderColor: '#a1a1a133',
+    borderColor: '#ffffff00',
     strokeDashArray: 0,
     xaxis: { lines: { show: true } },
     yaxis: { lines: { show: false } },

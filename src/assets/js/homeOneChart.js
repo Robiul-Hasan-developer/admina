@@ -305,7 +305,7 @@ var salesOverviewChart = new ApexCharts(
       tickAmount: 5,
     },
     grid: {
-      borderColor: "#f3f4f6",
+      borderColor: "#ffffff00",
       strokeDashArray: 0,
       xaxis: { lines: { show: false } },
       yaxis: { lines: { show: true } },
@@ -560,7 +560,7 @@ var customerGrowthChart = new ApexCharts(
       },
     },
     grid: {
-      borderColor: "#f1f5f9",
+      borderColor: "#ffffff00",
       strokeDashArray: 0,
       xaxis: { lines: { show: true } },
       yaxis: { lines: { show: true } },

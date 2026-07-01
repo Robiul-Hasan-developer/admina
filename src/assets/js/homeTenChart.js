@@ -63,7 +63,7 @@ var salesRevenueChart;
       labels: { style: { fontSize: "12px", colors: "#9ca3af" } },
     },
     grid: {
-      borderColor: "#f1f5f9",
+      borderColor: "#ffffff00",
       strokeDashArray: 4,
       xaxis: { lines: { show: false } },
       yaxis: { lines: { show: true } },
@@ -84,4 +84,91 @@ function updateChartColors(newColor) {
       colors: [newColor, "#d946ef", "#06b6d4", "#22c55e", "#facc15", "#f87171"],
     });
   }
+  if (electronicsGauge) {
+    electronicsGauge.updateOptions({ colors: [newColor] });
+  }
 }
+
+
+// ================================ Top Categories By Sales - RadialBar gauges ================================
+function makeCategoryGauge(selector, value, color) {
+  var el = document.querySelector(selector);
+  if (!el) return null;
+  var chart = new ApexCharts(el, {
+    series: [value],
+    chart: { type: "radialBar", height: 96, width: 96, sparkline: { enabled: true } },
+    colors: [color],
+    plotOptions: {
+      radialBar: {
+        hollow: { size: "54%" },
+        track: { background: "#eef0f3", strokeWidth: "100%", margin: 2 },
+        dataLabels: {
+          name: { show: false },
+          value: {
+            show: true,
+            offsetY: 5,
+            fontSize: "13px",
+            fontWeight: 700,
+            color: "#1f2937",
+            formatter: function (v) { return Math.round(v) + "%"; },
+          },
+        },
+      },
+    },
+    stroke: { lineCap: "round" },
+  });
+  chart.render();
+  return chart;
+}
+
+var electronicsGauge = makeCategoryGauge("#electronicsGauge", 53, primaryColor);
+makeCategoryGauge("#fashionGauge", 82, "#eab308");
+makeCategoryGauge("#toysGauge", 35, "#14b8a6");
+makeCategoryGauge("#booksGauge", 67, "#22c55e");
+
+
+// ================================ Browser Activity - DataTable ================================
+$(document).ready(function () {
+  if (typeof $.fn === "undefined" || !$.fn.DataTable) return;
+  var el = document.querySelector("#browserActivityTable");
+  if (!el) return;
+  $(el).DataTable({
+    ordering: true,
+    info: false,
+    searching: false,
+    paging: false,
+    dom: "t",
+    order: [],
+  });
+});
+
+
+// ================================ Recent Orders - DataTable ================================
+$(document).ready(function () {
+  if (typeof $.fn === "undefined" || !$.fn.DataTable) return;
+  var el = document.querySelector("#recentOrdersTable");
+  if (!el) return;
+  var table = $(el).DataTable({
+    ordering: true,
+    info: false,
+    searching: true,
+    paging: false,
+    dom: "t",
+    order: [],
+    columnDefs: [{ orderable: false, targets: 7 }], // Action column
+  });
+
+  var search = document.getElementById("recentOrdersSearch");
+  if (search) {
+    search.addEventListener("keyup", function () {
+      table.search(this.value).draw();
+    });
+  }
+
+  var denseSwitch = document.getElementById("recentOrdersDenseSwitch");
+  if (denseSwitch) {
+    denseSwitch.addEventListener("change", function () {
+      el.classList.toggle("table-dense", denseSwitch.checked);
+    });
+  }
+});

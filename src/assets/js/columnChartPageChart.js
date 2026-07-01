@@ -21,7 +21,7 @@
         },
         grid: {
             show: true,
-            borderColor: '#D1D5DB',
+            borderColor: '#ffffff00',
             strokeDashArray: 4, // Use a number for dashed style
             position: 'back',
         },
@@ -149,7 +149,7 @@
       },
       grid: {
           show: true,
-          borderColor: '#D1D5DB',
+          borderColor: '#ffffff00',
           strokeDashArray: 4, // Use a number for dashed style
           position: 'back',
       },
