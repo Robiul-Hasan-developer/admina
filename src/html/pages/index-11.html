@@ -6,8 +6,235 @@
   @@include('../layouts/_nav.html')
 
   <div class="dashboard-main-body">
-    
-    
+
+    <!-- ===== Hero banner + Stat cards ===== -->
+    <div class="row gy-4">
+
+      <!-- Hero banner -->
+      <div class="col-xxl-5 col-lg-6">
+        <div class="nft-hero h-100">
+          <div class="nft-hero__content">
+            <span class="nft-hero__tag">Discover, Collect, Sell and Create NFTs.</span>
+            <h2 class="text-white fw-bold mt-16 mb-16"><span class="nft-hero__accent">Create</span> &amp; <span class="nft-hero__accent">Sell</span> NFTs</h2>
+            <p class="text-white text-opacity-75 mb-24">The world's first and largest digital marketplace, you need to be sure there isn't anything.</p>
+            <div class="d-flex align-items-center gap-12 flex-wrap">
+              <a href="javascript:void(0)" class="bg-white text-primary-600 rounded-pill px-24 py-12 fw-semibold text-sm d-inline-flex align-items-center">Discover Now</a>
+              <a href="javascript:void(0)" class="nft-hero__btn-dark text-white rounded-pill px-24 py-12 fw-semibold text-sm d-inline-flex align-items-center">Create NFT</a>
+            </div>
+          </div>
+          <img src="assets/images/nft/nf-card-img.png" alt="" class="nft-hero__img">
+        </div>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="col-xxl-7 col-lg-6">
+        <div class="row gy-4">
+          <!-- Total Revenue -->
+          <div class="col-sm-6">
+            <div class="bg-base border border-neutral-200 radius-16 p-20 h-100">
+              <div class="d-flex align-items-start justify-content-between gap-8 mb-16">
+                <span class="w-44-px h-44-px bg-primary-50 d-flex align-items-center justify-content-center rounded-circle text-xl text-primary-600 flex-shrink-0">
+                  <i class="ph ph-currency-dollar"></i>
+                </span>
+                <span class="badge rounded-pill bg-success-50 text-success-600 px-12 py-6 fw-semibold text-xs d-inline-flex align-items-center gap-1"><i class="ph ph-arrows-down-up text-xs"></i>60.2%</span>
+              </div>
+              <span class="text-secondary-light text-sm fw-medium d-block mb-1">Total Revenue</span>
+              <div class="d-flex align-items-end justify-content-between gap-8">
+                <h4 class="fw-bold mb-0">$95,89,425</h4>
+                <div id="revenueSpark" class="nft-stat-spark flex-shrink-0"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Total Art Works -->
+          <div class="col-sm-6">
+            <div class="bg-base border border-neutral-200 radius-16 p-20 h-100">
+              <div class="d-flex align-items-start justify-content-between gap-8 mb-16">
+                <span class="w-44-px h-44-px bg-success-50 d-flex align-items-center justify-content-center rounded-circle text-xl text-success-600 flex-shrink-0">
+                  <i class="ph ph-palette"></i>
+                </span>
+                <span class="badge rounded-pill bg-success-50 text-success-600 px-12 py-6 fw-semibold text-xs d-inline-flex align-items-center gap-1"><i class="ph ph-arrows-down-up text-xs"></i>60.2%</span>
+              </div>
+              <span class="text-secondary-light text-sm fw-medium d-block mb-1">Total Art Works</span>
+              <div class="d-flex align-items-end justify-content-between gap-8">
+                <h4 class="fw-bold mb-0">340,230</h4>
+                <div id="artworksSpark" class="nft-stat-spark flex-shrink-0"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Total Auction -->
+          <div class="col-sm-6">
+            <div class="bg-base border border-neutral-200 radius-16 p-20 h-100">
+              <div class="d-flex align-items-start justify-content-between gap-8 mb-16">
+                <span class="w-44-px h-44-px bg-warning-50 d-flex align-items-center justify-content-center rounded-circle text-xl text-warning-600 flex-shrink-0">
+                  <i class="ph ph-hourglass"></i>
+                </span>
+                <span class="badge rounded-pill bg-danger-50 text-danger-600 px-12 py-6 fw-semibold text-xs d-inline-flex align-items-center gap-1"><i class="ph ph-arrows-down-up text-xs"></i>60.2%</span>
+              </div>
+              <span class="text-secondary-light text-sm fw-medium d-block mb-1">Total Auction</span>
+              <div class="d-flex align-items-end justify-content-between gap-8">
+                <h4 class="fw-bold mb-0">89,425</h4>
+                <div id="auctionSpark" class="nft-stat-spark flex-shrink-0"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Total Creators -->
+          <div class="col-sm-6">
+            <div class="bg-base border border-neutral-200 radius-16 p-20 h-100">
+              <div class="d-flex align-items-start justify-content-between gap-8 mb-16">
+                <span class="w-44-px h-44-px bg-danger-50 d-flex align-items-center justify-content-center rounded-circle text-xl text-danger-600 flex-shrink-0">
+                  <i class="ph ph-brain"></i>
+                </span>
+                <span class="badge rounded-pill bg-primary-50 text-primary-600 px-12 py-6 fw-semibold text-xs d-inline-flex align-items-center gap-1"><i class="ph ph-arrows-down-up text-xs"></i>60.2%</span>
+              </div>
+              <span class="text-secondary-light text-sm fw-medium d-block mb-1">Total Creators</span>
+              <div class="d-flex align-items-end justify-content-between gap-8">
+                <h4 class="fw-bold mb-0">89,425</h4>
+                <div id="creatorsSpark" class="nft-stat-spark flex-shrink-0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== Marketplace + NFT Detail ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- Marketplace -->
+      <div class="col-xxl-8 col-lg-7">
+        <div class="bg-base border border-neutral-200 radius-16 p-24 h-100">
+          <div class="d-flex align-items-start justify-content-between gap-16 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <span class="w-44-px h-44-px bg-lilac-100 d-flex align-items-center justify-content-center rounded-circle text-xl text-lilac-600 flex-shrink-0">
+                <i class="ph ph-chart-bar"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Marketplace</h6>
+                <span class="text-secondary-light text-sm fw-normal">Explore a vibrant marketplace for unique NFTs and digital collectibles today!</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-1 bg-neutral-100 rounded-pill p-4 flex-shrink-0">
+              <button type="button" class="btn rounded-pill px-12 py-4 text-sm fw-medium text-secondary-light border-0">1W</button>
+              <button type="button" class="btn rounded-pill px-12 py-4 text-sm fw-medium bg-primary-600 text-white border-0">1M</button>
+              <button type="button" class="btn rounded-pill px-12 py-4 text-sm fw-medium text-secondary-light border-0">6M</button>
+              <button type="button" class="btn rounded-pill px-12 py-4 text-sm fw-medium text-secondary-light border-0">1Y</button>
+              <button type="button" class="btn rounded-pill px-12 py-4 text-sm fw-medium text-secondary-light border-0">ALL</button>
+            </div>
+          </div>
+
+          <div class="row g-0 border-top border-bottom border-neutral-200">
+            <div class="col-6 border-end border-neutral-200 py-16 px-8">
+              <div class="d-flex align-items-center justify-content-center gap-12">
+                <span class="w-44-px h-44-px bg-lilac-100 d-flex align-items-center justify-content-center rounded-circle text-xl text-lilac-600 flex-shrink-0">
+                  <i class="ph ph-palette"></i>
+                </span>
+                <div>
+                  <div class="d-flex align-items-center gap-8">
+                    <h4 class="fw-bold mb-0">36.48k</h4>
+                    <span class="text-success-600 text-xs fw-semibold d-inline-flex align-items-center gap-1"><i class="ph ph-trend-up text-xs"></i></span>
+                  </div>
+                  <span class="text-secondary-light text-sm fw-medium">Artworks</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 py-16 px-8">
+              <div class="d-flex align-items-center justify-content-center gap-12">
+                <span class="w-44-px h-44-px bg-warning-50 d-flex align-items-center justify-content-center rounded-circle text-xl text-warning-600 flex-shrink-0">
+                  <i class="ph ph-hourglass"></i>
+                </span>
+                <div>
+                  <h4 class="fw-bold mb-0">92.54k</h4>
+                  <span class="text-secondary-light text-sm fw-medium">Auction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="marketplaceChart" class="mt-16"></div>
+
+          <div class="d-flex align-items-center justify-content-center flex-wrap gap-24 mt-8">
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#7c5cfc;"></span>
+              <span class="text-secondary-light text-sm fw-medium">Artworks</span>
+            </div>
+            <div class="d-flex align-items-center gap-8">
+              <span class="w-10-px h-10-px rounded-circle flex-shrink-0" style="background:#facc15;"></span>
+              <span class="text-secondary-light text-sm fw-medium">Auction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NFT Detail -->
+      <div class="col-xxl-4 col-lg-5">
+        <div class="bg-base border border-neutral-200 radius-16 p-24 h-100">
+          <div class="d-flex align-items-center justify-content-between gap-8 mb-20">
+            <div class="d-flex align-items-center gap-12">
+              <img src="assets/images/nft/nft-user-img1.png" alt="" class="w-48-px h-48-px rounded-circle flex-shrink-0 object-fit-cover">
+              <div>
+                <h6 class="fw-bold mb-0 text-md">Trendy Fashion Portraits</h6>
+                <span class="text-secondary-light text-sm fw-normal">Artwork</span>
+              </div>
+            </div>
+            <button type="button" class="w-40-px h-40-px bg-neutral-100 rounded-circle d-flex align-items-center justify-content-center text-secondary-light flex-shrink-0">
+              <i class="ph ph-share-network"></i>
+            </button>
+          </div>
+
+          <div class="d-flex align-items-center gap-12 mb-16">
+            <span class="w-44-px h-44-px bg-primary-50 d-flex align-items-center justify-content-center rounded-circle text-xl text-primary-600 flex-shrink-0">
+              <i class="ph ph-diamond"></i>
+            </span>
+            <div>
+              <h4 class="fw-bold mb-0">346.12 ETH</h4>
+              <span class="text-success-600 text-xs fw-semibold d-inline-flex align-items-center gap-1"><i class="ph ph-trend-up text-xs"></i>88.5% <span class="text-secondary-light fw-normal">This Month</span></span>
+            </div>
+          </div>
+
+          <p class="text-secondary-light text-sm mb-20">NFT art is a digital asset that is collectable, unique, and non-transferrable, Cortes explained Every NFT is unique duplicated.</p>
+
+          <div class="d-flex align-items-center justify-content-between gap-8 pb-20 mb-20 border-bottom border-neutral-200">
+            <div>
+              <span class="text-secondary-light text-sm fw-normal d-block mb-1">Current Bid</span>
+              <h6 class="fw-bold mb-0 text-md">342.74 ETH</h6>
+            </div>
+            <div class="text-end">
+              <span class="text-secondary-light text-sm fw-normal d-block mb-1">Highest Bid</span>
+              <h6 class="fw-bold mb-0 text-md">346.67 ETH</h6>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start justify-content-between gap-4 mb-24">
+            <div class="text-center flex-grow-1">
+              <span class="text-secondary-light text-xs d-block mb-8">Days</span>
+              <span class="nft-count-box">145</span>
+            </div>
+            <span class="nft-count-sep">:</span>
+            <div class="text-center flex-grow-1">
+              <span class="text-secondary-light text-xs d-block mb-8">Hours</span>
+              <span class="nft-count-box">8</span>
+            </div>
+            <span class="nft-count-sep">:</span>
+            <div class="text-center flex-grow-1">
+              <span class="text-secondary-light text-xs d-block mb-8">Minutes</span>
+              <span class="nft-count-box">35</span>
+            </div>
+            <span class="nft-count-sep">:</span>
+            <div class="text-center flex-grow-1">
+              <span class="text-secondary-light text-xs d-block mb-8">Seconds</span>
+              <span class="nft-count-box">41</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-12">
+            <a href="javascript:void(0)" class="bg-primary-600 text-white rounded-pill px-24 py-12 fw-semibold text-sm text-center flex-grow-1">View Details</a>
+            <a href="javascript:void(0)" class="bg-danger-500 text-white rounded-pill px-24 py-12 fw-semibold text-sm text-center flex-grow-1">Bid Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 
