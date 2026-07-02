@@ -11,7 +11,7 @@
     <div class="row gy-4">
 
       <!-- Hero banner -->
-      <div class="col-xxl-5 col-lg-6">
+      <div class="col-xxl-6 col-lg-6">
         <div class="nft-hero h-100">
           <div class="nft-hero__content">
             <span class="nft-hero__tag">Discover, Collect, Sell and Create NFTs.</span>
@@ -27,7 +27,7 @@
       </div>
 
       <!-- Stat cards -->
-      <div class="col-xxl-7 col-lg-6">
+      <div class="col-xxl-6 col-lg-6">
         <div class="row gy-4">
           <!-- Total Revenue -->
           <div class="col-sm-6">
@@ -231,6 +231,504 @@
             <a href="javascript:void(0)" class="bg-primary-600 text-white rounded-pill px-24 py-12 fw-semibold text-sm text-center flex-grow-1">View Details</a>
             <a href="javascript:void(0)" class="bg-danger-500 text-white rounded-pill px-24 py-12 fw-semibold text-sm text-center flex-grow-1">Bid Now</a>
           </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== Trending Bids + History of Bids ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- Trending Bids -->
+      <div class="col-xxl-8 col-lg-7">
+        <div class="bg-base border border-neutral-200 radius-16 p-24 h-100">
+          <div class="d-flex align-items-start justify-content-between gap-16 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <span class="w-44-px h-44-px bg-success-50 d-flex align-items-center justify-content-center rounded-circle text-xl text-success-600 flex-shrink-0">
+                <i class="ph ph-chart-line-up"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Trending Bids</h6>
+                <span class="text-secondary-light text-sm fw-normal">Current bids are trending upward significantly now.</span>
+              </div>
+            </div>
+            <ul class="nav nav-pills bid-tabs bg-neutral-100 rounded-pill p-4 gap-1 flex-nowrap flex-shrink-0" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill px-16 py-6 text-sm fw-medium border-0" data-bs-toggle="pill" data-bs-target="#bids-1w" type="button" role="tab">1W</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active rounded-pill px-16 py-6 text-sm fw-medium border-0" data-bs-toggle="pill" data-bs-target="#bids-1m" type="button" role="tab">1M</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill px-16 py-6 text-sm fw-medium border-0" data-bs-toggle="pill" data-bs-target="#bids-6m" type="button" role="tab">6M</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill px-16 py-6 text-sm fw-medium border-0" data-bs-toggle="pill" data-bs-target="#bids-1y" type="button" role="tab">1Y</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill px-16 py-6 text-sm fw-medium border-0" data-bs-toggle="pill" data-bs-target="#bids-all" type="button" role="tab">ALL</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane fade" id="bids-1w" role="tabpanel">
+              @@include('../partial-html/_bid-slider.html')
+            </div>
+            <div class="tab-pane fade show active" id="bids-1m" role="tabpanel">
+              @@include('../partial-html/_bid-slider.html')
+            </div>
+            <div class="tab-pane fade" id="bids-6m" role="tabpanel">
+              @@include('../partial-html/_bid-slider.html')
+            </div>
+            <div class="tab-pane fade" id="bids-1y" role="tabpanel">
+              @@include('../partial-html/_bid-slider.html')
+            </div>
+            <div class="tab-pane fade" id="bids-all" role="tabpanel">
+              @@include('../partial-html/_bid-slider.html')
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- History of Bids -->
+      <div class="col-xxl-4 col-lg-5">
+        <div class="bg-base border border-neutral-200 radius-16 p-24 h-100 d-flex flex-column">
+          <div class="d-flex align-items-center justify-content-between gap-8 mb-16">
+            <div class="d-flex align-items-center gap-12">
+              <span class="w-44-px h-44-px bg-warning-100 d-flex align-items-center justify-content-center rounded-circle text-xl text-warning-600 flex-shrink-0">
+                <i class="ph ph-clock-counter-clockwise"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">History of Bids</h6>
+                <span class="text-secondary-light text-sm fw-normal">Bids have evolved through time.</span>
+              </div>
+            </div>
+            <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+              <option>Weekly</option>
+              <option>Monthly</option>
+              <option>Yearly</option>
+            </select>
+          </div>
+
+          <div class="flex-grow-1">
+            <div class="bid-history-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user1.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Eleanor Pena</h6>
+                  <span class="text-xs text-secondary-light">info@demo.com</span>
+                </div>
+              </div>
+              <span class="text-sm fw-bold text-primary-light">84.50 ETH</span>
+            </div>
+            <div class="bid-history-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user2.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Guy Hawkins</h6>
+                  <span class="text-xs text-secondary-light">info@demo.com</span>
+                </div>
+              </div>
+              <span class="text-sm fw-bold text-primary-light">456.75 ETH</span>
+            </div>
+            <div class="bid-history-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user3.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Cody Fisher</h6>
+                  <span class="text-xs text-secondary-light">info@demo.com</span>
+                </div>
+              </div>
+              <span class="text-sm fw-bold text-primary-light">2,450.00 ETH</span>
+            </div>
+            <div class="bid-history-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user4.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Dianne Russell</h6>
+                  <span class="text-xs text-secondary-light">info@demo.com</span>
+                </div>
+              </div>
+              <span class="text-sm fw-bold text-primary-light">415.00 ETH</span>
+            </div>
+            <div class="bid-history-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user5.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Wade Warren</h6>
+                  <span class="text-xs text-secondary-light">info@demo.com</span>
+                </div>
+              </div>
+              <span class="text-sm fw-bold text-primary-light">812.99 ETH</span>
+            </div>
+            <div class="bid-history-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user6.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Albert Flores</h6>
+                  <span class="text-xs text-secondary-light">info@demo.com</span>
+                </div>
+              </div>
+              <span class="text-sm fw-bold text-primary-light">712.99 ETH</span>
+            </div>
+          </div>
+
+          <div class="mt-16 pt-16">
+            <a href="javascript:void(0)" class="text-primary-600 fw-semibold text-sm d-inline-flex align-items-center gap-2">
+              See All Bids <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== Top Artworks + Recent Exclusive NFTs ===== -->
+    <div class="row gy-4 mt-1">
+
+      <!-- Top Artworks -->
+      <div class="col-xxl-4 col-lg-5">
+        <div class="bg-base border border-neutral-200 radius-16 p-24 h-100 d-flex flex-column">
+          <div class="d-flex align-items-center justify-content-between gap-8 mb-16">
+            <div class="d-flex align-items-center gap-12">
+              <span class="w-44-px h-44-px bg-danger-50 d-flex align-items-center justify-content-center rounded-circle text-xl text-danger-600 flex-shrink-0">
+                <i class="ph ph-palette"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Top Artworks</h6>
+                <span class="text-secondary-light text-sm fw-normal">Explore stunning art pieces today.</span>
+              </div>
+            </div>
+            <select class="form-select form-select-sm w-auto border text-secondary-light rounded-pill bg-neutral-100">
+              <option>Weekly</option>
+              <option>Monthly</option>
+              <option>Yearly</option>
+            </select>
+          </div>
+
+          <div class="flex-grow-1">
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user1.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Dimas Kamal</h6>
+                  <span class="text-xs text-secondary-light">1099 Sales</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$ 92.93</h6>
+                <span class="text-xs text-secondary-light">Total USD</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user2.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Andra Mahmud</h6>
+                  <span class="text-xs text-secondary-light">906 Sales</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$ 74.03</h6>
+                <span class="text-xs text-secondary-light">Total USD</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user3.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Giring Furqon</h6>
+                  <span class="text-xs text-secondary-light">1840 Sales</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$ 830.92</h6>
+                <span class="text-xs text-secondary-light">Total USD</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user4.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Lukman Farhan</h6>
+                  <span class="text-xs text-secondary-light">840 Sales</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$ 91.83</h6>
+                <span class="text-xs text-secondary-light">Total USD</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user5.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Farrel Kurniawan</h6>
+                  <span class="text-xs text-secondary-light">731 Sales</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$ 45.99</h6>
+                <span class="text-xs text-secondary-light">Total USD</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user6.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Anika  Islam</h6>
+                  <span class="text-xs text-secondary-light">351 Sales</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$ 74.24</h6>
+                <span class="text-xs text-secondary-light">Total USD</span>
+              </div>
+            </div>
+            <div class="market-row d-flex align-items-center justify-content-between gap-12">
+              <div class="d-flex align-items-center gap-12">
+                <img src="assets/images/users/user1.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                <div>
+                  <h6 class="text-sm fw-bold mb-0 text-primary-light">Hari Danang</h6>
+                  <span class="text-xs text-secondary-light">612 Sales</span>
+                </div>
+              </div>
+              <div class="text-end">
+                <h6 class="text-sm fw-bold mb-0 text-primary-light">$ 4500</h6>
+                <span class="text-xs text-secondary-light">Total USD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16 pt-16">
+            <a href="javascript:void(0)" class="text-primary-600 fw-semibold text-sm d-inline-flex align-items-center gap-2">
+              See All Artworks <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Exclusive NFTs -->
+      <div class="col-xxl-8 col-lg-7">
+        <div class="bg-base border border-neutral-200 radius-16 p-24 h-100">
+          <div class="d-flex align-items-start justify-content-between gap-16 mb-20 flex-wrap">
+            <div class="d-flex align-items-center gap-12">
+              <span class="w-44-px h-44-px bg-cyan-50 d-flex align-items-center justify-content-center rounded-circle text-xl text-cyan-600 flex-shrink-0">
+                <i class="ph ph-leaf"></i>
+              </span>
+              <div>
+                <h6 class="fw-bold mb-0 text-lg">Recent Exclusive NFTs</h6>
+                <span class="text-secondary-light text-sm fw-normal">Explore the latest exclusive NFT collections today!</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-1 bg-neutral-100 rounded-pill p-4 flex-shrink-0">
+              <button type="button" class="btn rounded-pill px-16 py-6 text-sm fw-medium text-secondary-light border-0">1W</button>
+              <button type="button" class="btn rounded-pill px-16 py-6 text-sm fw-medium bg-primary-600 text-white border-0">1M</button>
+              <button type="button" class="btn rounded-pill px-16 py-6 text-sm fw-medium text-secondary-light border-0">6M</button>
+              <button type="button" class="btn rounded-pill px-16 py-6 text-sm fw-medium text-secondary-light border-0">1Y</button>
+              <button type="button" class="btn rounded-pill px-16 py-6 text-sm fw-medium text-secondary-light border-0">ALL</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-hover table-style" id="recentNftTable">
+              <thead>
+                <tr>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">S.No <i class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Collection <i class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">24h Volume <i class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Creators <i class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">24h Change <i class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Items <i class="ph ph-arrows-down-up ms-1"></i></th>
+                  <th class="text-secondary-light text-sm fw-semibold border-bottom-0 py-16 px-20">Action <i class="ph ph-arrows-down-up ms-1"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">01</td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <img src="assets/images/nft/creator-img1.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Moonbirds</h6>
+                        <span class="text-xs text-secondary-light">Artworks</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="cryptocurrency-color:btc" width="28" height="28" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">21,457.02M</h6>
+                        <span class="text-xs text-secondary-light">(BTC)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 830.92</td>
+                  <td class="py-16 px-20" data-order="22.15"><span class="text-success-600 text-sm fw-semibold d-inline-flex align-items-center gap-1"><i class="ph ph-arrow-up"></i>+22.15%</span></td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 802</td>
+                  <td class="py-16 px-20"><button type="button" class="text-secondary-light"><i class="ph ph-dots-three-vertical text-xl"></i></button></td>
+                </tr>
+                <tr>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">02</td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <img src="assets/images/nft/creator-img2.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Doodles</h6>
+                        <span class="text-xs text-secondary-light">Games</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="cryptocurrency-color:eth" width="28" height="28" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">54,142.27M</h6>
+                        <span class="text-xs text-secondary-light">(ETH)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 92.93</td>
+                  <td class="py-16 px-20" data-order="-3.25"><span class="text-danger-600 text-sm fw-semibold d-inline-flex align-items-center gap-1"><i class="ph ph-arrow-down"></i>-3.25%</span></td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 830.92</td>
+                  <td class="py-16 px-20"><button type="button" class="text-secondary-light"><i class="ph ph-dots-three-vertical text-xl"></i></button></td>
+                </tr>
+                <tr>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">03</td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <img src="assets/images/nft/creator-img3.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">NFArcade Pass</h6>
+                        <span class="text-xs text-secondary-light">Photography</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="cryptocurrency-color:sol" width="28" height="28" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">74,324.12M</h6>
+                        <span class="text-xs text-secondary-light">(SOL)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 74.03</td>
+                  <td class="py-16 px-20" data-order="36.46"><span class="text-success-600 text-sm fw-semibold d-inline-flex align-items-center gap-1"><i class="ph ph-arrow-up"></i>+36.46%</span></td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 73.02</td>
+                  <td class="py-16 px-20"><button type="button" class="text-secondary-light"><i class="ph ph-dots-three-vertical text-xl"></i></button></td>
+                </tr>
+                <tr>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">04</td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <img src="assets/images/nft/creator-img4.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Block Explorer</h6>
+                        <span class="text-xs text-secondary-light">Artworks</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="cryptocurrency-color:bnb" width="28" height="28" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">5,42,748.32M</h6>
+                        <span class="text-xs text-secondary-light">(BNB)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 4500</td>
+                  <td class="py-16 px-20" data-order="-3.25"><span class="text-danger-600 text-sm fw-semibold d-inline-flex align-items-center gap-1"><i class="ph ph-arrow-down"></i>-3.25%</span></td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 45.99</td>
+                  <td class="py-16 px-20"><button type="button" class="text-secondary-light"><i class="ph ph-dots-three-vertical text-xl"></i></button></td>
+                </tr>
+                <tr>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">05</td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <img src="assets/images/nft/creator-img5.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">Moonbirds</h6>
+                        <span class="text-xs text-secondary-light">3d Style</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="cryptocurrency-color:ada" width="28" height="28" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">73,786.14M</h6>
+                        <span class="text-xs text-secondary-light">(ADA)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 91.83</td>
+                  <td class="py-16 px-20" data-order="37.41"><span class="text-success-600 text-sm fw-semibold d-inline-flex align-items-center gap-1"><i class="ph ph-arrow-up"></i>+37.41%</span></td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 91.83</td>
+                  <td class="py-16 px-20"><button type="button" class="text-secondary-light"><i class="ph ph-dots-three-vertical text-xl"></i></button></td>
+                </tr>
+                <tr>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">06</td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <img src="assets/images/nft/featured-creator1.png" alt="" class="w-40-px h-40-px rounded-circle flex-shrink-0 object-fit-cover">
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">ByteGANs</h6>
+                        <span class="text-xs text-secondary-light">Crypto Card</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20">
+                    <div class="d-flex align-items-center gap-10">
+                      <iconify-icon icon="cryptocurrency-color:xrp" width="28" height="28" class="flex-shrink-0"></iconify-icon>
+                      <div>
+                        <h6 class="text-sm fw-bold mb-0 text-primary-light">6,54,954.31M</h6>
+                        <span class="text-xs text-secondary-light">(XRP)</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 837.92</td>
+                  <td class="py-16 px-20" data-order="55.45"><span class="text-success-600 text-sm fw-semibold d-inline-flex align-items-center gap-1"><i class="ph ph-arrow-up"></i>+55.45%</span></td>
+                  <td class="py-16 px-20 text-sm fw-medium text-primary-light">$ 74.03</td>
+                  <td class="py-16 px-20"><button type="button" class="text-secondary-light"><i class="ph ph-dots-three-vertical text-xl"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between gap-8 mt-20 pt-16 border-top border-neutral-200 flex-wrap">
+            <div class="d-flex align-items-center gap-8">
+              <div class="form-switch switch-primary style-big d-flex align-items-center justify-content-center gap-12">
+                <input class="form-check-input w-60-px h-32-px bg-neutral-200 border border-neutral-300" type="checkbox"
+                  role="switch" id="recentNftDenseSwitch">
+                <label class="form-check-label" for="recentNftDenseSwitch">Dense</label>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-16">
+              <div class="d-flex align-items-center gap-8">
+                <span class="text-secondary-light text-sm">Rows per page:</span>
+                <select class="form-select form-select-sm w-auto border text-secondary-light rounded bg-base"
+                  style="width: 64px !important;">
+                  <option>06</option>
+                  <option>25</option>
+                  <option>50</option>
+                </select>
+              </div>
+              <span class="text-secondary-light text-sm">1–06 of 1000</span>
+              <div class="d-flex align-items-center gap-4">
+                <button class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light">
+                  <i class="ph ph-caret-left text-lg"></i>
+                </button>
+                <button class="w-28-px h-28-px bg-neutral-100 rounded d-flex align-items-center justify-content-center text-secondary-light">
+                  <i class="ph ph-caret-right text-lg"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 

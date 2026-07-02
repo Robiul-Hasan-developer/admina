@@ -87,3 +87,66 @@ function updateChartColors(newColor) {
     marketplaceChart.updateOptions({ colors: [newColor, "#facc15"] });
   }
 }
+
+
+// ================================ Trending Bids - Slick slider + Bootstrap tabs ================================
+$(document).ready(function () {
+  if (typeof $ === "undefined" || !$.fn || !$.fn.slick) return;
+
+  function initTrendingSlider($el) {
+    if (!$el.length || $el.hasClass("slick-initialized")) return;
+    $el.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+      infinite: true,
+      speed: 500,
+      responsive: [
+        { breakpoint: 1400, settings: { slidesToShow: 3 } },
+        { breakpoint: 992, settings: { slidesToShow: 2 } },
+        { breakpoint: 576, settings: { slidesToShow: 1 } },
+      ],
+    });
+  }
+
+  // Initialise the slider inside the initially active tab pane.
+  $(".tab-pane.active .trending-bids-slider").each(function () {
+    initTrendingSlider($(this));
+  });
+
+  // Lazy-init + fix layout when a bid tab becomes visible.
+  $('.bid-tabs button[data-bs-toggle="pill"]').on("shown.bs.tab", function (e) {
+    var target = $(e.target).attr("data-bs-target");
+    $(target)
+      .find(".trending-bids-slider")
+      .each(function () {
+        initTrendingSlider($(this));
+        $(this).slick("setPosition");
+      });
+  });
+});
+
+
+// ================================ Recent Exclusive NFTs - DataTable ================================
+$(document).ready(function () {
+  if (typeof $.fn === "undefined" || !$.fn.DataTable) return;
+  var el = document.querySelector("#recentNftTable");
+  if (!el) return;
+  $(el).DataTable({
+    ordering: true,
+    info: false,
+    searching: false,
+    paging: false,
+    dom: "t",
+    order: [],
+    columnDefs: [{ orderable: false, targets: 6 }], // Action column
+  });
+
+  var denseSwitch = document.getElementById("recentNftDenseSwitch");
+  if (denseSwitch) {
+    denseSwitch.addEventListener("change", function () {
+      el.classList.toggle("table-dense", denseSwitch.checked);
+    });
+  }
+});
